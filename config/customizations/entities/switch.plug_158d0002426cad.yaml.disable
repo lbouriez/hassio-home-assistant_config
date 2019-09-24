@@ -1,0 +1,4 @@
+# Xiaomi switch
+switch.plug_158d0002426cad:
+  friendly_name: 'Bedroom TV'
+  icon: mdi:television

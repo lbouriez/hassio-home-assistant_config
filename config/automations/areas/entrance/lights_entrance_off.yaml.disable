@@ -1,0 +1,12 @@
+alias: Entrance - Lights off
+hide_entity: True
+initial_state: True
+trigger:
+  - platform: state
+    entity_id: 'binary_sensor.entrance_sensor_motion'
+    to: 'off'
+    for:
+      minutes: 3
+action:
+  - service: 'light.turn_off'
+    entity_id: 'light.entrance_group'

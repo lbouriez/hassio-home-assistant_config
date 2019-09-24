@@ -1,0 +1,12 @@
+# cloud:
+#   google_actions:
+#     filter:
+#       include_entities:
+#         - media_player.bathroom
+#         - media_player.living_room
+#     entity_config: !include_dir_merge_named ../assistants/google
+#   alexa:
+#     filter:
+#       include_entities:
+#         - switch.circadian_lighting_circadian_lighting
+#     entity_config: !include_dir_merge_named ../assistants/alexa

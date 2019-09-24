@@ -1,0 +1,4 @@
+august:
+  login_method: email
+  username: !secret integration_august_username
+  password: !secret integration_august_password

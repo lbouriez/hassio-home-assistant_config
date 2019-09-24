@@ -1,0 +1,16 @@
+alias: Entrance - Lock front door
+hide_entity: True
+initial_state: True
+trigger:
+  - platform: event
+    event_type: event_lock_front_door
+  - platform: state
+    entity_id: binary_sensor.door_window_sensor_158d00022d2c98
+    from: 'on'
+    to: 'off'
+condition:  
+  - condition: template
+    value_template: '{{ not is_state("lock.front_door", "loked") }}'
+action:
+  - service: lock.lock
+    entity_id: lock.front_door

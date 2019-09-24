@@ -1,0 +1,20 @@
+alias: System - Home Assistant startup fix ring addon
+hide_entity: True
+initial_state: True
+trigger:
+  - platform: homeassistant
+    event: start
+action:
+  # - service: switch.turn_on
+  #   entity_id: switch.alarm_toggle_away
+  - service: automation.turn_off
+    entity_id: automation.security_check_alarm
+  - delay:
+      minutes: 1
+  - service: hassio.addon_restart
+    data:
+      addon: 5e5dfff6_ring_alarm
+  - delay:
+      seconds: 25
+  - service: automation.turn_on
+    entity_id: automation.security_check_alarm

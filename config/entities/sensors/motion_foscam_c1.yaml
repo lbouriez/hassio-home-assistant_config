@@ -1,0 +1,14 @@
+# Foscam C1 motion sensor
+platform: command_line
+name: "Foscam C1 motion"
+command: !secret entitie_motion_foscam_c1_command
+value_template: >-
+  {% set status = value | regex_findall_index('<motionDetectAlarm>(.*)</motionDetectAlarm>') %}
+  {% if status == "0" %}
+    Disabled
+  {%- elif status   == "1" -%}
+    None
+  {%- elif status == "2" -%}
+    Detected
+  {%- endif -%}
+scan_interval: 3 

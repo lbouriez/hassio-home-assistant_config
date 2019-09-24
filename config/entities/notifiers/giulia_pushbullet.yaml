@@ -1,0 +1,3 @@
+name: giulia_pushbullet
+platform: pushbullet
+api_key: !secret integration_notify_giulia_pushbullet_api_key

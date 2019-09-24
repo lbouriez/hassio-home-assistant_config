@@ -1,0 +1,2 @@
+binary_sensor.blink_entrance_motion_detected:
+  friendly_name: Entrance

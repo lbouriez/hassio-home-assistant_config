@@ -1,0 +1,3 @@
+switch.ventilation:
+  friendly_name: 'House ventilation'
+  icon: mdi:fan

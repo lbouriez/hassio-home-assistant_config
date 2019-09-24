@@ -1,0 +1,19 @@
+alias: Living room - Alarm armed
+trigger:
+  - platform: state
+    entity_id: alarm_control_panel.ring_alarm
+    to: 'armed_away'
+  - platform: state
+    entity_id: alarm_control_panel.ring_alarm
+    to: 'armed_home'
+action:
+  - service: light.turn_off
+    entity_id: light.living_room_group
+  - service: media_player.turn_off
+    data:
+      entity_id:
+        - media_player.living_room # Sonos
+        - media_player.living_room_2
+        - media_player.living_room_tv_2
+  - service: switch.turn_off
+    entity_id: switch.harmony_tv

@@ -1,0 +1,2 @@
+"binary_sensor.*_motion_*":
+  icon: mdi:motion-sensor

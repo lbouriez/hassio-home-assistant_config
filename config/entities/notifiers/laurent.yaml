@@ -1,0 +1,4 @@
+name: laurent
+platform: group
+services:
+  - service: laurent_pushover

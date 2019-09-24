@@ -1,0 +1,14 @@
+alias: Bedroom - Closet light
+hide_entity: True
+initial_state: True
+trigger:
+  - platform: state
+    entity_id: 'group.all_family'
+action:
+  - service_template: >
+      {% if trigger.to_state.state == 'home' %}
+        switch.turn_on
+      {% else %}
+        switch.turn_off
+      {% endif %}
+    entity_id: switch.sonoff_100048cb54

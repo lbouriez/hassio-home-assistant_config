@@ -1,0 +1,3 @@
+platform: darksky
+api_key: !secret entitie_weather_darksky_api_key
+mode: daily

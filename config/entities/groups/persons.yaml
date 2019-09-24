@@ -1,0 +1,6 @@
+all_family:
+  name: Us
+  entities:
+    - person.laurent
+    - person.giulia
+    #- person.vincenzo

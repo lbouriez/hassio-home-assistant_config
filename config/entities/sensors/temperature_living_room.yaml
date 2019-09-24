@@ -1,0 +1,7 @@
+# Heat living room
+platform: template
+sensors:
+  climate_living_room_temp:
+    friendly_name: "Climate Living room Temperature"
+    unit_of_measurement: '°C'
+    value_template: "{{ states.climate.living_room.attributes.temperature }}"

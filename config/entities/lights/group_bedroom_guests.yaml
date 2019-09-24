@@ -1,0 +1,5 @@
+platform: group
+name: Bedroom guests group
+entities:
+  - light.berdoom_guests_1
+  - light.bedroom_guests_2

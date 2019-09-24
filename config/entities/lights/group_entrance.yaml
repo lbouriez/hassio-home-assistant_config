@@ -1,0 +1,7 @@
+platform: group
+name: Entrance group
+entities:
+  - light.hue_ambiance_spot_1
+  - light.hue_ambiance_spot_1_2
+  - light.hue_ambiance_spot_1_3
+  - light.hue_ambiance_spot_1_4

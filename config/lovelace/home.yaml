@@ -1,0 +1,203 @@
+path: home
+title: Home
+icon: mdi:home
+background: radial-gradient(crimson, skyblue)
+panel: true
+
+cards:
+  - type: vertical-stack
+    cards:
+      - type: custom:layout-card
+        max_columns: 3
+        layout: horizontal
+        max_width: [40%, 30%, 30%]
+        cards:
+          # Col 1
+          - type: vertical-stack
+            cards:                  
+              # What is on
+              - type: custom:monster-card
+                show_empty: false     
+                card:
+                  title: You forgot to turn off
+                  type: entities
+                filter:
+                  include:
+                    - entity_id: switch.*led
+                      state: 'on'
+                    - entity_id: light.*
+                      state: 'on'
+                    - entity_id: media_player.*
+                      state: 'on'
+                  exclude:
+                    - entity_id: "light.extended_*"
+                    - entity_id: "light.gateway_*"
+                when:
+                  entity: group.all_family
+                  state: 'not_home'
+
+              # Weather
+              - type: custom:weather-card
+                entity: weather.dark_sky
+                name: Montréal
+
+              # Tracker
+              - type: vertical-stack
+                cards:
+                - type: picture-glance
+                  entities:
+                    - entity: person.laurent
+                      icon: mdi:human-male
+                      name: "Laurent"
+                    - entity: person.giulia
+                      icon: mdi:human-female
+                      name: "Giulia"
+                  image: /local/img/tracker_at_home.jpg
+                  title: "Family"
+                  state_image:
+                    "not_home": /local/img/tracker_away.jpg
+                    "home": /local/img/tracker_at_home.jpg
+                  entity: group.all_family
+
+              # Vacuum
+              - type: custom:xiaomi-vacuum-card
+                entity: vacuum.living_room
+                image: /local/img/vacuum.png
+                name: Xiaomi Vacuum
+                buttons: true
+                labels:
+                  status: Etat
+                  battery: Batterie
+                  mode: Puissance
+                  main_brush: Brosse Principale
+                  side_brush: Brosse Latérale
+                  filter: Filtre
+                  sensor: Capteurs
+          # Col 2
+          - type: vertical-stack
+            cards:
+              # Sonos
+              - type: entities
+                title: Sonos
+                show_header_toggle: false
+                entities:
+                  - type: custom:mini-media-player
+                    artwork: cover
+                    entity: media_player.living_room
+                    hide:
+                      power: true
+                      icon: true
+                    sonos:
+                      show_group_count: true
+                      entities:
+                        - entity_id: media_player.living_room
+                          name: Living room
+                        - entity_id: media_player.bathroom
+                          name: Bathroom
+                  - type: custom:mini-media-player
+                    entity: media_player.living_room
+                    group: true
+                  - type: custom:mini-media-player
+                    entity: media_player.bathroom
+                    group: true
+              # Harmony
+              - type: entities
+                title: 'Harmony'
+                show_header_toggle: false
+                entities:
+                  - switch.harmony_tv
+                  - switch.harmony_netflix
+                  - switch.harmony_music
+                  - switch.bedroom_tv
+                  - type: custom:slider-entity-row
+                    entity: media_player.living_room
+                    full_row: true
+              # Doors
+              - type: custom:monster-card
+                show_empty: false
+                card:
+                  type: glance
+                  title: 'Doors'
+                  show_header_toggle: false
+                filter:
+                  include:
+                    - entity_id: "binary_sensor.door_*"
+                    - entity_id: "lock.*"
+          # Col 3
+          - type: vertical-stack
+            cards:
+              # Lights group
+              - type: entities
+                title: 'Lights'
+                show_header_toggle: false
+                entities:
+                    - group.all_lights
+                    - light.balcony_group
+                    - light.bathroom_group
+                    - type: custom:fold-entity-row
+                      head: light.bedroom_group
+                      entity: light.bedroom_group
+                      entities:
+                        - light.giulia_night_table
+                        - light.laurent_night_table
+                        - light.bedroom_2
+                        - light.bedroom_1
+                        - light.bedroom_led
+                        - switch.sonoff_100048cb54
+                    - type: custom:fold-entity-row
+                      head: light.bedroom_guests_group
+                      entity: light.bedroom_guests_group
+                      entities:
+                        - light.berdoom_guests_1
+                        - light.bedroom_guests_2
+                    - light.corridor_group
+                    - type: custom:fold-entity-row
+                      head: light.entrance_group
+                      entity: light.entrance_group
+                      entities:
+                        - light.hue_ambiance_spot_1_3
+                        - light.hue_ambiance_spot_1_4
+                        - light.hue_ambiance_spot_1_2
+                        - light.hue_ambiance_spot_1
+                    - type: custom:fold-entity-row
+                      head: light.kitchen_group
+                      entity: light.kitchen_group
+                      entities:
+                        - light.spot_kitchen
+                        - light.bake_left
+                        - light.bake_right
+                        - light.kitchen_led
+                        - light.dimmable_light_1
+                    - type: custom:fold-entity-row
+                      head: light.living_room_group
+                      entity: light.living_room_group
+                      entities:
+                        - light.living_color
+                        - light.spot_living_room
+                        - light.spot_table
+                        - light.tv_1
+                        - light.tv_2
+              # - type: custom:monster-card
+              #   show_empty: false
+              #   card:
+              #     type: entities
+              #     title: 'Lights'
+              #     show_header_toggle: true
+              #   filter:
+              #     include:
+              #       - entity_id: "light.*_group"
+              # Divers
+              - type: entities
+                title: 'House actions'
+                show_header_toggle: false
+                entities:
+                  - switch.lights_ambiance_tv
+                  - switch.circadian_lighting_circadian_lighting
+                  - type: divider
+                  - switch.alarm_toggle_blink
+                  # - switch.motion_foscam
+                  - type: divider
+                  - switch.ventilation
+                  # - type: divider
+                  # - entity: vacuum.xiaomi_vacuum_cleaner
+              

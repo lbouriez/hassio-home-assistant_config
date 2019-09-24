@@ -1,0 +1,4 @@
+logger:
+  default: warn
+  logs:
+    homeassistant.components.mqtt: debug

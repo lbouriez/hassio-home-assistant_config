@@ -1,0 +1,6 @@
+sonos:
+  name: Sonos speaker
+  icon: mdi:speaker-wireless
+  entities:
+    - media_player.bathroom
+    - media_player.living_room

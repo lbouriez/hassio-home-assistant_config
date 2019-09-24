@@ -1,0 +1,7 @@
+platform: command_line
+switches:
+  motion_foscam:
+    friendly_name: 'Foscam C1 motion'
+    command_on: !secret entitie_motion_foscam_c1_command_on
+    command_off: !secret entitie_motion_foscam_c1_command_off
+    command_state: !secret entitie_motion_foscam_c1_command_state

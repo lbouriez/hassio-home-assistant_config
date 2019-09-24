@@ -1,0 +1,5 @@
+# home:
+#   title: Organizr
+#   icon: mdi:chart-donut-variant
+#   url: !secret global_url_home
+#   require_admin: true

@@ -1,0 +1,5 @@
+sonos:
+  media_player:
+    hosts:
+      - !secret integration_sonos_hosts_living_room
+      - !secret integration_sonos_hosts_bathroom

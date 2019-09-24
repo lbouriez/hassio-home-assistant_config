@@ -1,0 +1,14 @@
+alias: Living room - Toggle AC
+hide_entity: True
+initial_state: True
+trigger:
+  - platform: event
+    event_type: event_toggle_ac
+action:
+  - service_template: >
+      {%- if is_state('climate.living_room', 'off') -%}
+        climate.turn_on
+      {%- else -%}
+        climate.turn_off
+      {%- endif -%}
+    entity_id: climate.living_room

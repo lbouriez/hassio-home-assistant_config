@@ -1,0 +1,29 @@
+alias: Security - Motion detected
+hide_entity: True
+initial_state: True
+trigger:
+  - platform: state
+    entity_id: group.motions_sensor
+    to: 'on'
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: 'group.all_family'
+      state: 'not_home'
+    - condition: template
+      value_template: "{% if not is_state('vacuum.xiaomi_vacuum_cleaner', 'cleaning') %}true{% endif %}"
+action:
+  - event: event_camera_blink_trigger_picture
+  - service: notify.everyone
+    data_template:
+      title: "Alert"
+      data:
+        url: !secret integration_http_base_url
+        priority: 1
+        timestamp: true
+        expire: 3600
+        retry: 30
+      message: >
+        {% set motion = states | selectattr('entity_id', 'in', state_attr('group.motions_sensor','entity_id')) | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+        Motion detected in: {{ motion }}

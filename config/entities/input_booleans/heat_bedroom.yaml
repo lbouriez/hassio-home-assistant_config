@@ -1,0 +1,4 @@
+heat_bedroom:
+  name: Bedroom Heat
+  initial: off
+  icon: mdi:thermometer

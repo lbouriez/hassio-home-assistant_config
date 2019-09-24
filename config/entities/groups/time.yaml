@@ -1,0 +1,11 @@
+time:
+  name: Date & Time infos
+  entities:
+    - sensor.date_time
+    - sensor.internet_time
+    - sensor.time
+    - sensor.date
+    - sensor.time_date
+    - sensor.time_utc
+    - sensor.worldclock_sensor
+    - sensor.worldclock_sensor_2

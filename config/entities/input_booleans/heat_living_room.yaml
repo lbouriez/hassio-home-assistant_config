@@ -1,0 +1,4 @@
+heat_living_room:
+  name: Living room Heat
+  initial: off
+  icon: mdi:thermometer

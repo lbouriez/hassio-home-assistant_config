@@ -1,0 +1,23 @@
+alias: Living room - Heat living room
+hide_entity: True
+initial_state: False
+trigger:
+  - platform: state
+    entity_id: sensor.climate_living_room_temp
+condition:
+  - condition: numeric_state
+    entity_id: weather.dark_sky
+    value_template: '{{ state.attributes.temperature }}'
+    below: 10
+action:
+  - service: notify.laurent
+    data_template:
+      title: "Information"
+      message: Temperature has been set
+      data:
+        url: !secret integration_http_base_url
+        priority: -1
+  - service: ifttt.trigger
+    data_template:
+      event: casa_temperature_set
+      value1: "{{ state_attr('climate.living_room', 'temperature')}}"

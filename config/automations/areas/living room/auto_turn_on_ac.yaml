@@ -1,0 +1,33 @@
+alias: Living room - A/C
+hide_entity: True
+initial_state: True
+trigger:
+  - platform: numeric_state
+    entity_id: sensor.temperature_158d0002461865
+    above: 25.5
+condition:  
+  condition: and
+  conditions:
+    # Bedroom temperature
+    - condition: numeric_state
+      entity_id: sensor.temperature_158d0002461865
+      above: 25.5
+    # Weather outside
+    - condition: template
+      value_template: "{{ state_attr('weather.dark_sky', 'temperature') | float > 25 }}"
+    - condition: state
+      entity_id: climate.living_room
+      state: 'off'
+action:
+  - service: climate.turn_on
+    entity_id: climate.living_room
+  - service: notify.laurent
+    data:
+      title: "A/C"
+      data:
+        url: !secret integration_http_base_url
+        priority: 0
+        timestamp: true
+        expire: 3600
+        retry: 30
+      message: 'The A/C has been turned on'

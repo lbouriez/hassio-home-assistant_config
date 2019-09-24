@@ -1,0 +1,4 @@
+platform: group
+name: Corridor group
+entities:
+  - light.corridor_bedrooms

@@ -1,0 +1,11 @@
+xiaomi:
+  name: Xiaomi sensors
+  icon: mdi:camera-control
+  entities:
+    - sensor.humidity_158d0002461865
+    - sensor.temperature_158d0002461865
+    - light.gateway_light_7811dcdf155b
+    - sensor.illumination_7811dcdf155b
+    - sensor.humidity_158d000245a7d5
+    - sensor.pressure_158d000245a7d5
+    - sensor.temperature_158d000245a7d5

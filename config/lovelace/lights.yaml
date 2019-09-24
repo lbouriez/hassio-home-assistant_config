@@ -1,0 +1,186 @@
+path: lights
+title: Lights
+icon: mdi:lightbulb
+background: radial-gradient(crimson, skyblue)
+panel: true
+
+# popup_cards:
+#   light.living_room_group:
+#     title: "Living room"
+#     card:
+#       type: entities
+#       entities:
+#         - type: custom:slider-entity-row
+#           entity: light.living_color
+#           toggle: true
+#           hide_when_off: true
+#         - type: custom:slider-entity-row
+#           entity: light.spot_living_room
+#           toggle: true
+#           hide_when_off: true
+#         - type: custom:slider-entity-row
+#           entity: light.spot_table
+#           toggle: true
+#           hide_when_off: true
+#         - type: custom:slider-entity-row
+#           entity: light.tv_1
+#           toggle: true
+#           hide_when_off: true
+#         - type: custom:slider-entity-row
+#           entity: light.tv_2
+#           toggle: true
+#           hide_when_off: true
+
+cards:
+  - type: vertical-stack
+    cards: 
+      # - type: entities
+      #   entities:
+      #     - type: custom:slider-entity-row
+      #       entity: light.living_room_group
+      #       toggle: true
+      #     - type: custom:slider-entity-row
+      #       entity: light.kitchen_group
+      #       toggle: true
+      - type: custom:layout-card
+        max_columns: 3
+        layout: horizontal
+        max_width: [33%, 33%, 33%]
+        cards:
+          # Col 1
+          - type: vertical-stack
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - type: "custom:button-card"
+                    entity: group.all_lights
+                    name: House
+                    color: rgb(253, 216, 53)
+                    color_off: rgb(68, 115, 168)
+                    style:
+                      - font-weight: normal
+                    size: 30%
+                  - type: "custom:button-card"
+                    entity: light.kitchen_group
+                    name: Kitchen
+                    color: rgb(253, 216, 53)
+                    color_off: rgb(68, 115, 168)
+                    style:
+                      - font-weight: normal
+                    size: 30%
+              - type: entities
+                title: Kitchen
+                entities:
+                  - light.spot_kitchen
+                  - light.bake_left
+                  - light.bake_right
+                  - light.kitchen_led
+                  - light.dimmable_light_1
+              - type: "custom:button-card"
+                entity: light.balcony_group
+                name: Balcony
+                color: rgb(253, 216, 53)
+                color_off: rgb(68, 115, 168)
+                style:
+                  - font-weight: normal
+                size: 30%
+              - type: "custom:button-card"
+                entity: light.corridor_bedrooms
+                name: Corridor
+                icon: mdi:white-balance-incandescent
+                color: rgb(253, 216, 53)
+                color_off: rgb(68, 115, 168)
+                style:
+                  - font-weight: normal
+                size: 30%
+          # Col 2
+          - type: vertical-stack
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - type: "custom:button-card"
+                    entity: light.living_room_group
+                    name: Living room
+                    color: rgb(253, 216, 53)
+                    color_off: rgb(68, 115, 168)
+                    style:
+                      - font-weight: normal
+                    size: 30%
+                  - type: "custom:button-card"
+                    entity: light.bathroom_group
+                    name: Bathroom
+                    color: rgb(253, 216, 53)
+                    color_off: rgb(68, 115, 168)
+                    style:
+                      - font-weight: normal
+                    size: 30%
+              - type: entities
+                title: Living room
+                entities:
+                  - light.living_color
+                  - light.spot_living_room
+                  - light.spot_table
+                  - light.tv_1
+                  - light.tv_2
+              - type: "custom:button-card"
+                entity: light.entrance_group
+                name: Entrance
+                icon: mdi:white-balance-incandescent
+                color: rgb(253, 216, 53)
+                color_off: rgb(68, 115, 168)
+                style:
+                  - font-weight: normal
+                size: 30%
+              - type: "custom:button-card"
+                entity: light.bedroom_guests_group
+                name: Guests bedroom
+                color: rgb(253, 216, 53)
+                color_off: rgb(68, 115, 168)
+                style:
+                  - font-weight: normal
+                size: 30%
+          # Col 3
+          - type: vertical-stack
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - type: "custom:button-card"
+                    entity: light.bedroom_group
+                    name: Bedroom
+                    icon: mdi:hotel
+                    color: rgb(253, 216, 53)
+                    color_off: rgb(68, 115, 168)
+                    style:
+                      - font-weight: normal
+                    size: 30%
+                  - type: "custom:button-card"
+                    entity: switch.circadian_lighting_circadian_lighting
+                    name: Circadian
+                    icon: mdi:theme-light-dark
+                    color: rgb(255, 160, 73)
+                    color_off: rgb(68, 115, 168)
+                    style:
+                      - font-weight: normal
+                    size: 30%
+              - type: entities
+                title: Bedroom
+                entities:
+                  - light.giulia_night_table
+                  - light.laurent_night_table
+                  - light.bedroom_2
+                  - light.bedroom_1
+                  - light.bedroom_led
+                  - switch.sonoff_100048cb54
+              - type: entities
+                title: Guests bedroom
+                entities:
+                  - light.berdoom_guests_1
+                  - light.bedroom_guests_2
+              - type: entities
+                title: Entrance
+                entities:
+                  - light.hue_ambiance_spot_1_3
+                  - light.hue_ambiance_spot_1_4
+                  - light.hue_ambiance_spot_1_2
+                  - light.hue_ambiance_spot_1
+                  

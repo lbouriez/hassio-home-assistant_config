@@ -1,0 +1,12 @@
+life360:
+  accounts:
+    username: !secret integration_life360_username
+    password: !secret integration_life360_password
+  interval_seconds: 15
+  members:
+    include:
+      - Laurent Bouriez
+      - Giulia
+      - Vincenzo
+  max_update_wait:
+    minutes: 30

@@ -1,0 +1,35 @@
+alias: Security - Doors opened
+hide_entity: True
+initial_state: True
+trigger:
+  - platform: state
+    entity_id: group.doors
+    to: 'on'
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: 'group.all_family'
+      state: 'not_home'
+    - condition: state
+      entity_id: 'alarm_control_panel.ring_alarm'
+      state: 'armed_away'
+action:
+  - service: notify.everyone
+    data_template:
+      title: "Alert"
+      data:
+        url: !secret integration_http_base_url
+        priority: 2
+        timestamp: true
+        expire: 3600
+        retry: 30
+      message: >
+        {% set unlocked = states | selectattr('entity_id', 'in', state_attr('group.doors','entity_id')) | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+        One door ({{ unlocked }}) has been opened, check the cameras !
+  - service: script.sonos_say
+    data:
+      sonos_entity: media_player.living_room
+      volume: 1
+      message: 'Leave immediately the house, alarm will start in a few seconds !'
+      delay: '00:00:05'

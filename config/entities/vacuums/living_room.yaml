@@ -1,0 +1,4 @@
+platform: xiaomi_miio
+name: Living Room
+host: !secret entitie_vacuum_living_room_host
+token: !secret entitie_vacuum_living_room_token

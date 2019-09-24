@@ -1,0 +1,44 @@
+platform: template
+switches:
+  harmony_tv:
+    friendly_name: 'TV'
+    icon_template: mdi:television
+    value_template: "{{ is_state_attr('remote.salon', 'current_activity', 'Watch TV') }}"
+    turn_on:
+      service: remote.turn_on
+      data:
+        entity_id: remote.salon
+        activity: 'Watch TV'
+    turn_off:
+      service: remote.turn_on
+      data:
+        entity_id: remote.salon
+        activity: 'PowerOff'
+  harmony_netflix:
+    friendly_name: 'Netflix'
+    icon_template: mdi:cast
+    value_template: "{{ is_state_attr('remote.salon', 'current_activity', 'Watch Netflix') }}"
+    turn_on:
+      service: remote.turn_on
+      data:
+        entity_id: remote.salon
+        activity: 'Watch Netflix'
+    turn_off:
+      service: remote.turn_on
+      data:
+        entity_id: remote.salon
+        activity: 'PowerOff'
+  harmony_music:
+    friendly_name: 'Music'
+    icon_template: mdi:speaker
+    value_template: "{{ is_state_attr('remote.salon', 'current_activity', 'Listen Music') }}"
+    turn_on:
+      service: remote.turn_on
+      data:
+        entity_id: remote.salon
+        activity: 'Listen Music'
+    turn_off:
+      service: remote.turn_on
+      data:
+        entity_id: remote.salon
+        activity: 'PowerOff'

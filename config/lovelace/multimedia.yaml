@@ -1,0 +1,54 @@
+path: multimedia
+title: Multimedia
+icon: mdi:television
+background: radial-gradient(crimson, skyblue)
+panel: true
+
+cards:
+  - type: vertical-stack
+    cards:
+      - type: custom:layout-card
+        max_columns: 3
+        layout: horizontal
+        max_width: [33%, 33%, 33%]
+        cards:  
+          # Sonos group
+          - type: entities
+            title: Sonos
+            show_header_toggle: false
+            entities:
+              - type: custom:mini-media-player
+                artwork: cover
+                entity: media_player.living_room
+                hide:
+                  power: true
+                  icon: true
+                sonos:
+                  show_group_count: true
+                  entities:
+                    - entity_id: media_player.living_room
+                      name: Living room
+                    - entity_id: media_player.bathroom
+                      name: Bathroom
+              - type: custom:mini-media-player
+                entity: media_player.living_room
+                group: true
+              - type: custom:mini-media-player
+                entity: media_player.bathroom
+                group: true
+          - type: media-control
+            entity: media_player.bathroom
+          - type: media-control
+            entity: media_player.living_room
+          # Harmony
+          - type: entities
+            title: 'Harmony'
+            show_header_toggle: false
+            entities:
+              - switch.harmony_tv
+              - switch.harmony_netflix
+              - switch.harmony_music
+              - type: custom:slider-entity-row
+                entity: media_player.living_room
+                full_row: true
+                

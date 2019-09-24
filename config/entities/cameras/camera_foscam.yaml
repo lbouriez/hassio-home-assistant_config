@@ -1,0 +1,5 @@
+platform: foscam
+name: Foscam_C1
+ip: !secret entitie_camera_foscam_c1_ip
+username: !secret entitie_camera_foscam_c1_username
+password: !secret entitie_camera_foscam_c1_password

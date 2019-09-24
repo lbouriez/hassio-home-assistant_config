@@ -1,0 +1,2 @@
+"binary_sensor.smoke_*":
+  icon: mdi:smoke-detector

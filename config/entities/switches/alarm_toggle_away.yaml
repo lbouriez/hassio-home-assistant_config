@@ -1,0 +1,24 @@
+platform: template
+switches:
+  alarm_toggle_away:
+    friendly_name: 'Alarm house armed away'
+    value_template: "{{ is_state('alarm_control_panel.ring_alarm', 'armed_away') }}"
+    turn_on:
+      - service: alarm_control_panel.alarm_arm_away
+        entity_id: alarm_control_panel.ring_alarm
+      - service: switch.turn_on
+        entity_id: switch.alarm_toggle_blink
+      - service: alarm_control_panel.alarm_arm_away
+        entity_id: alarm_control_panel.alexa_guard_851bb
+      - service: switch.turn_on
+        entity_id: switch.motion_foscam
+      - event: event_lock_front_door
+    turn_off:
+      - service: alarm_control_panel.alarm_disarm
+        entity_id: alarm_control_panel.ring_alarm
+      - service: switch.turn_off
+        entity_id: switch.alarm_toggle_blink
+      - service: alarm_control_panel.alarm_disarm
+        entity_id: alarm_control_panel.alexa_guard_851bb
+      - service: switch.turn_off
+        entity_id: switch.motion_foscam

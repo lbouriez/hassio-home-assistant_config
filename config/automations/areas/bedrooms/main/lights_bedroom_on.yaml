@@ -1,0 +1,21 @@
+alias: Bedroom - Lights on
+hide_entity: True
+initial_state: True
+trigger:
+  - platform: state
+    entity_id: 'binary_sensor.motion_sensor_158d0004140234'
+    to: 'on'
+condition:
+  condition: and
+  conditions:
+    - condition: time
+      after: '09:00:00'
+      before: '22:30:00'
+    - condition: state
+      entity_id: 'light.bedroom_group'
+      state: 'off'
+action:
+  - service: 'light.turn_on'
+    entity_id: 'light.bedroom_group'
+    data:
+      brightness_pct: 100

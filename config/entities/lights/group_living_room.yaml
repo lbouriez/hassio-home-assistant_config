@@ -1,0 +1,8 @@
+platform: group
+name: Living-room group
+entities:
+  - light.living_color
+  - light.spot_living_room
+  - light.spot_table
+  - light.tv_1
+  - light.tv_2

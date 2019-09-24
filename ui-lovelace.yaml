@@ -1,0 +1,72 @@
+title: Casa nostra
+# Include external resources
+resources:
+  # https://github.com/custom-cards/vertical-stack-in-card
+  - url: /community_plugin/vertical-stack-in-card/vertical-stack-in-card.js
+    type: js
+  # https://github.com/ciotlosm/custom-lovelace/tree/master/monster-card
+  - url: /community_plugin/monster-card/monster-card.js
+    type: js
+  # https://github.com/bramkragten/custom-ui/tree/master/weather-card
+  - url: /community_plugin/weather-card/weather-card.js
+    type: module
+  # https://github.com/custom-cards/circle-sensor-card
+  - url: /community_plugin/circle-sensor-card/circle-sensor-card.js
+    type: module
+  # https://github.com/custom-cards/surveillance-card
+  - url: /community_plugin/surveillance-card/surveillance-card.js
+    type: module
+  # https://github.com/thomasloven/lovelace-layout-card
+  - url: /community_plugin/lovelace-layout-card/layout-card.js
+    type: js
+  # https://github.com/thomasloven/lovelace-card-tools
+  - url: /community_plugin/lovelace-card-tools/card-tools.js
+    type: js
+  # https://github.com/maykar/compact-custom-header/
+  - url: /community_plugin/compact-custom-header/compact-custom-header.js
+    type: module
+  # https://github.com/thomasloven/lovelace-slider-entity-row
+  - url: /community_plugin/lovelace-slider-entity-row/slider-entity-row.js
+    type: js
+  # https://github.com/kalkih/mini-media-player
+  - url: /community_plugin/mini-media-player/mini-media-player.js
+    type: module
+  # https://github.com/custom-cards/button-card
+  - url: /community_plugin/button-card/button-card.js
+    type: module
+  # https://github.com/nervetattoo/simple-thermostat
+  - url: /community_plugin/simple-thermostat/simple-thermostat.js
+    type: module
+  - url: /community_plugin/lovelace-xiaomi-vacuum-card/xiaomi-vacuum-card.js
+    type: js
+  # https://github.com/thomasloven/lovelace-popup-card
+  - url: /community_plugin/lovelace-popup-card/popup-card.js
+    type: js
+  # https://github.com/thomasloven/lovelace-fold-entity-row
+  - url: /community_plugin/lovelace-fold-entity-row/fold-entity-row.js
+    type: module
+
+# Optional background for all views. Check https://developer.mozilla.org/en-US/docs/Web/CSS/background for more examples.
+background: center / cover no-repeat url("/background.png") fixed
+
+# Exclude entities from "Unused entities" view
+excluded_entities:
+
+cch:
+  options: show
+  clock_am_pm: false
+  clock_date: true
+  clock_format: 24
+  main_config: true
+  menu: clock
+  swipe: true
+
+views:
+  - !include config/lovelace/home.yaml
+  - !include config/lovelace/cameras.yaml
+  - !include config/lovelace/climate.yaml
+  - !include config/lovelace/multimedia.yaml
+  - !include config/lovelace/lights.yaml
+  - !include config/lovelace/admin.yaml
+  - !include config/lovelace/security.yaml
+  - !include config/lovelace/tv.yaml

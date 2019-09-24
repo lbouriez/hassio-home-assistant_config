@@ -1,0 +1,8 @@
+alias: Entrance - Alarm armed home
+trigger:
+  platform: state
+  entity_id: alarm_control_panel.ring_alarm
+  to: 'armed_home'
+action:
+  - service: switch.turn_off
+    entity_id: switch.ventilation

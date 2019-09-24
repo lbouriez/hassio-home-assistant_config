@@ -1,0 +1,7 @@
+xiaomi_aqara:
+  discovery_retry: 10
+  gateways:
+    - mac: !secret integration_xiaomi_aqara_gateways_mac
+      key: !secret integration_xiaomi_aqara_gateways_key
+      host: !secret integration_xiaomi_aqara_gateways_host
+      

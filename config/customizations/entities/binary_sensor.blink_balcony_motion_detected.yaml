@@ -1,0 +1,2 @@
+binary_sensor.blink_balcony_motion_detected:
+  friendly_name: Balcony

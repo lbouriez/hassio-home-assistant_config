@@ -1,0 +1,6 @@
+name: Costco
+latitude: !secret entitie_zone_costco_latitude
+longitude: !secret entitie_zone_costco_longitude
+radius: !secret entitie_zone_costco_radius
+passive: false
+icon: mdi:cart

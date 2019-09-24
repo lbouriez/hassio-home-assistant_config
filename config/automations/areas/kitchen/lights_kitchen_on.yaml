@@ -1,0 +1,21 @@
+alias: Kitchen - Lights on
+hide_entity: True
+initial_state: True
+trigger:
+  - platform: state
+    entity_id: binary_sensor.motion_sensor_158d0002417b2e
+    to: 'on'
+condition:
+  condition: and
+  conditions:
+    - condition: time
+      after: '10:00:00'
+      before: '23:30:00'
+    - condition: state
+      entity_id: 'light.kitchen_group'
+      state: 'off'
+action:
+  - service: 'light.turn_on'
+    entity_id: 'light.kitchen_group'
+    data:
+      brightness_pct: 100

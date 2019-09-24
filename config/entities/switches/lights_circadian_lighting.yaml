@@ -1,0 +1,35 @@
+platform: circadian_lighting
+name: Circadian lighting
+lights_brightness:
+  # Bedroom
+  - light.giulia_night_table
+  - light.laurent_night_table
+  # Living room
+  - light.spot_living_room
+  - light.spot_table
+  # Kitchen
+  - light.spot_kitchen
+  # Entrance
+  - light.spot_entrance
+  # Bsthroom
+  - light.dimmable_light_1_3
+lights_rgb:
+  # Bedroom
+  - light.bedroom_2
+  - light.bedroom_1
+  - light.bedroom_led
+  # Living room
+  - light.living_color
+  - light.tv_1
+  - light.tv_2
+  # Kitchen
+  - light.dimmable_light_1
+lights_ct:
+  # Bedroom guests
+  - light.berdoom_guests_1
+  - light.bedroom_guests_2
+  # Kitchen
+  - light.bake_left
+  - light.bake_right
+  # Corridor
+  - light.corridor_bedrooms

@@ -1,0 +1,16 @@
+remotes:
+  name: Remotes
+  icon: mdi:remote
+  entities:
+    # Hue
+    - sensor.corridor_bedrooms
+    - sensor.bedroom_wall
+    - sensor.bedroom_giulia
+    - sensor.living_room
+    - sensor.bedroom_bed
+    - sensor.bedroom_guests
+    - sensor.entrance
+    - sensor.kitchen_switch
+    # Xiaomi
+    - binary_sensor.switch_158d000253d163
+    - binary_sensor.switch_158d00027b5181

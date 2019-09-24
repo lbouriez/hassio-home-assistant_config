@@ -1,0 +1,20 @@
+alias: System - Home Assistant startup automations delayed
+hide_entity: True
+initial_state: True
+trigger:
+  - platform: homeassistant
+    event: start
+action:
+  # Automations
+  - service: automation.turn_off
+    entity_id:
+      - automation.light_s_left_on
+      - automation.fix_tracker_state
+      - automation.security_leaving_house
+  - delay:
+      seconds: 45
+  - service: automation.turn_on
+    entity_id:
+      - automation.light_s_left_on
+      - automation.fix_tracker_state
+      - automation.security_leaving_house

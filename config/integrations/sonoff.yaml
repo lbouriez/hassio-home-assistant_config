@@ -1,0 +1,6 @@
+sonoff:
+  username: !secret integration_sonoff_username
+  password: !secret integration_sonoff_password
+  api_region: 'us'
+  entity_prefix: True
+  debug: False

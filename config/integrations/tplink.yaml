@@ -1,0 +1,8 @@
+tplink:
+  discovery: false
+  switch:
+    - host: !secret integration_tplink_switch_hs200_balcony
+    - host: !secret integration_tplink_switch_hs105_ventilation
+    - host: !secret integration_tplink_switch_hs105_christmas
+    - host: !secret integration_tplink_switch_hs200_kitchen_led
+    - host: !secret integration_tplink_switch_hs105_bedroom_tv

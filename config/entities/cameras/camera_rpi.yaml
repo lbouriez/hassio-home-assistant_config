@@ -1,0 +1,5 @@
+platform: mjpeg
+mjpeg_url: http://192.168.1.34:8081/0/action/snapshot
+name: RPI_Cam
+username: !secret entitie_camera_rpi_username
+password: !secret entitie_camera_rpi_password

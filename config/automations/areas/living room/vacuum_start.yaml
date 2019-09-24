@@ -1,0 +1,20 @@
+alias: Living room - Vacuum start when away
+trigger:
+  - platform: state
+    entity_id: alarm_control_panel.ring_alarm
+    to: 'armed_away'
+  - platform: time
+    at: '12:00:00'
+condition:
+  condition: state
+  entity_id: vacuum.living_room
+  state: 'docked'
+  for:
+    hours: 8
+action:
+  - service: vacuum.start
+    entity_id: vacuum.living_room
+  - service: vacuum.set_fan_speed
+    data:
+      entity_id: vacuum.living_room
+      fan_speed: 'Max'

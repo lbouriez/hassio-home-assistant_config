@@ -1,0 +1,2 @@
+platform: sensibo
+api_key: !secret entitie_sensibo_api_key

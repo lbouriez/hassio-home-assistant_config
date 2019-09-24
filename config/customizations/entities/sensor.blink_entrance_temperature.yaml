@@ -1,0 +1,2 @@
+sensor.blink_entrance_temperature:
+  friendly_name: Entrance

@@ -1,0 +1,12 @@
+alias: Entrance - Alarm armed
+trigger:
+  - platform: state
+    entity_id: alarm_control_panel.ring_alarm
+    to: 'armed_home'
+  - platform: state
+    entity_id: alarm_control_panel.ring_alarm
+    to: 'armed_away'
+action:
+  - service: light.turn_off
+    entity_id: light.entrance_group
+  - event: event_lock_front_door

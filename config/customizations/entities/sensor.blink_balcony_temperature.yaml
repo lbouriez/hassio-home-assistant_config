@@ -1,0 +1,2 @@
+sensor.blink_balcony_temperature:
+  friendly_name: Balcony

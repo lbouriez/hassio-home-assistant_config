@@ -1,0 +1,6 @@
+name: Home
+latitude: !secret entitie_zone_home_latitude
+longitude: !secret entitie_zone_home_longitude
+radius: !secret entitie_zone_home_radius
+icon: mdi:home
+passive: false

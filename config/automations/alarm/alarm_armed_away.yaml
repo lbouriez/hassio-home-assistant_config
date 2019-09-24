@@ -1,0 +1,11 @@
+alias: Alarm - Actions when alarm enabled away
+hide_entity: True
+initial_state: True
+trigger:
+  - platform: state
+    entity_id: alarm_control_panel.ring_alarm
+    from: 'disarmed'
+    to: 'armed_away'
+action:
+  - service: switch.turn_on
+    entity_id: switch.alarm_toggle_away

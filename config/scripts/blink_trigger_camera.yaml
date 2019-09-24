@@ -1,0 +1,17 @@
+blink_trigger_camera:
+  alias: Script - Blink Trigger Camera
+  description: Take a picture of the moment on the camera to update the view in the blink app
+  sequence:
+    - service: blink.trigger_camera
+      data:
+        name: "Entrance"
+    - delay: 00:00:06
+    - service: blink.trigger_camera
+      data:
+        name: "Living room"
+    - delay: 00:00:06
+    - service: blink.trigger_camera
+      data:
+        name: "Balcony"
+    - delay: 00:00:06
+    - service: blink.blink_update

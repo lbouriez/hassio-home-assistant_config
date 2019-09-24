@@ -1,0 +1,20 @@
+alias: Security - Water detected
+hide_entity: True
+initial_state: True
+trigger:
+  - platform: state
+    entity_id: group.water_sensors
+    to: 'on'
+action:
+  - service: notify.everyone
+    data_template:
+      title: "Alert"
+      data:
+        url: !secret integration_http_base_url
+        priority: 1
+        timestamp: true
+        expire: 3600
+        retry: 30
+      message: >
+        {% set water = states | selectattr('entity_id', 'in', state_attr('group.water_sensors','entity_id')) | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+        Water detected in: {{ water }}

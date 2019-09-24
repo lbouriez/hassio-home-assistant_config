@@ -1,0 +1,4 @@
+platform: harmony
+name: Salon
+host: !secret entitie_remote_harmony_host
+activity: TV

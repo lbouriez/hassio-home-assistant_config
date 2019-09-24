@@ -1,0 +1,7 @@
+platform: generic_thermostat
+name: Bedroom heat
+min_temp: 5
+max_temp: 30
+ac_mode: false
+heater: switch.heat_bedroom
+target_sensor: sensor.temperature_158d0002461865

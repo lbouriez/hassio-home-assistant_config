@@ -1,0 +1,4 @@
+name: Vincenzo
+id: vincenzo
+device_trackers:
+  - device_tracker.life360_vincenzo

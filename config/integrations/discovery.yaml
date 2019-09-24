@@ -1,0 +1,7 @@
+# Discover some devices automatically
+discovery:
+  ignore:
+    - samsung_tv
+    - philips_hue
+    - google_cast
+    - sonos

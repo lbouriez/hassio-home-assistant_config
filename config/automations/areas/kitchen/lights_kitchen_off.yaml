@@ -1,0 +1,16 @@
+alias: Kitchen - Lights off
+hide_entity: True
+initial_state: True
+trigger:
+  - platform: state
+    entity_id: binary_sensor.motion_sensor_158d0002417b2e
+    to: 'off'
+    for:
+      minutes: 2
+condition:
+  - condition: state
+    entity_id: 'light.kitchen_group'
+    state: 'on'
+action:
+  - service_template: 'light.turn_off'
+    entity_id: 'light.kitchen_group'

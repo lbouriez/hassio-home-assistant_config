@@ -1,0 +1,4 @@
+platform: group
+name: Bathroom group
+entities:
+  - light.dimmable_light_1_3

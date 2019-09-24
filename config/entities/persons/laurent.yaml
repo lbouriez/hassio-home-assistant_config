@@ -1,0 +1,5 @@
+name: Laurent
+id: laurent
+user_id: !secret entitie_person_laurent_user_id
+device_trackers:
+  - device_tracker.life360_laurent_bouriez

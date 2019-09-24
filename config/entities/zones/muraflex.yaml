@@ -1,0 +1,6 @@
+name: Muraflex
+latitude: !secret entitie_zone_nuraflex_latitude
+longitude: !secret entitie_zone_nuraflex_longitude
+radius: !secret entitie_zone_nuraflex_radius
+icon: mdi:worker
+passive: false

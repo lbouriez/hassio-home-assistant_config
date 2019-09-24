@@ -1,0 +1,6 @@
+platform: template
+sensors:
+  motion_foscam_c1:
+    friendly_name: "Foscam C1 binary motion"
+    value_template: >-
+      {{ states.sensor.foscam_c1_motion.state == "Detected" }}

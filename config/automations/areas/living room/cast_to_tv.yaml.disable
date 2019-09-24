@@ -1,0 +1,25 @@
+alias: Living room - Cast lovelace to TV
+hide_entity: True
+initial_state: False
+trigger:
+  - platform: numeric_state
+    entity_id: sensor.temperature_158d0002461865
+    above: 25.5
+# condition:  
+#   condition: and
+#   conditions:
+#     # Bedroom temperature
+#     - condition: numeric_state
+#       entity_id: sensor.temperature_158d0002461865
+#       above: 25.5
+#     # Weather outside
+#     - condition: template
+#       value_template: "{{ state_attr('weather.dark_sky', 'temperature') | float > 25 }}"
+#     - condition: state
+#       entity_id: climate.living_room
+#       state: 'off'
+action:
+  service: cast.show_lovelace_view
+  data:
+    entity_id: 'media_player.living_room_tv_2'
+    view_path: 'tv'

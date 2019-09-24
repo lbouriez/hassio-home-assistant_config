@@ -1,0 +1,5 @@
+hue:
+  bridges:
+    - host: !secret integration_hue_host
+      allow_unreachable: true
+      allow_hue_groups: false

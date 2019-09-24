@@ -1,0 +1,78 @@
+path: security
+title: Security
+icon: mdi:shield
+background: radial-gradient(crimson, skyblue)
+panel: true
+
+cards:
+  - type: vertical-stack
+    cards:
+      - type: custom:layout-card
+        max_columns: 3
+        layout: horizontal
+        max_width: [33%, 33%, 33%]
+        cards:
+          # Alarm
+          - type: vertical-stack
+            cards: 
+            - type: alarm-panel
+              name: House Alarm
+              entity: alarm_control_panel.ring_alarm
+            - type: alarm-panel
+              name: Alexa Guard
+              entity: alarm_control_panel.alexa_guard_851bb
+            - type: alarm-panel
+              name: Blink
+              entity: alarm_control_panel.blink_home
+          # # Switches
+          # - type: entities
+          #   title: 'House actions'
+          #   show_header_toggle: false
+          #   entities:
+          #     - switch.alarm_toggle_away
+          # Motions sensor => Remember to add in the group for security automations
+          - type: custom:monster-card
+            show_empty: false
+            card:
+              type: glance
+              title: 'Motion'
+              show_header_toggle: false
+            filter:
+              include:
+                - entity_id: "binary_sensor.*motion*"
+                - entity_id: binary_sensor.living_room
+                - entity_id: binary_sensor.motion_detector_48836
+          # Doors
+          - type: custom:monster-card
+            show_empty: false
+            card:
+              type: glance
+              title: 'Doors'
+              show_header_toggle: false
+            filter:
+              include:
+                - entity_id: "binary_sensor.door_*"
+                - entity_id: "lock.*"
+                - entity_id: binary_sensor.balcony
+                - entity_id: binary_sensor.front_door
+          # Smoke sensor
+          - type: custom:monster-card
+            show_empty: false
+            card:
+              type: glance
+              title: 'Smoke'
+              show_header_toggle: false
+            filter:
+              include:
+                - entity_id: "binary_sensor.smoke*"
+          # Water sensor
+          - type: custom:monster-card
+            show_empty: false
+            card:
+              type: glance
+              title: 'Water'
+              show_header_toggle: false
+            filter:
+              include:
+                - entity_id: "binary_sensor.water*"
+                

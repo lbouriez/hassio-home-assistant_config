@@ -1,0 +1,2 @@
+binary_sensor.entrance_sensor_motion:
+  friendly_name: Entrance

@@ -1,0 +1,78 @@
+path: climate
+title: Climate
+icon: mdi:oil-temperature
+background: radial-gradient(crimson, skyblue)
+panel: true
+
+cards:
+  - type: vertical-stack
+    cards:
+      - type: custom:layout-card
+        max_columns: 2
+        layout: horizontal
+        max_width: [50%, 50%]
+        cards:
+          - type: vertical-stack
+            cards:
+              # Living room thermostat AC
+              - type: custom:simple-thermostat
+                entity: climate.living_room
+                step_size: 0.5
+                sensors:
+                  - entity: sensor.humidity_158d000245a7d5
+                modes:
+                  some_mode: false
+              # Living room thermostat
+              - type: custom:simple-thermostat
+                entity: climate.living_room_heat
+                step_size: 0.5
+                sensors:
+                  - entity: sensor.humidity_158d000245a7d5
+                modes:
+                  some_mode: false
+              # Bedroom thermostat
+              - type: custom:simple-thermostat
+                entity: climate.bedroom_heat
+                step_size: 0.5
+                sensors:
+                  - entity: sensor.humidity_158d0002461865
+                modes:
+                  some_mode: false
+              # Weather
+              - type: custom:weather-card
+                entity: weather.dark_sky
+                name: Montréal
+          - type: vertical-stack
+            cards:
+              # Sensors temperature
+              - type: custom:monster-card
+                show_empty: false
+                card:
+                  type: entities
+                  title: 'Temperatures'
+                  show_header_toggle: false
+                filter:
+                  include:
+                    - entity_id: "sensor.temperature*"
+                    - entity_id: "sensor.*temperature"
+              # Sensors humidity
+              - type: custom:monster-card
+                show_empty: false
+                card:
+                  type: glance
+                  title: 'Humidity'
+                  show_header_toggle: false
+                filter:
+                  include:
+                    - entity_id: "sensor.humidity*"
+              # Sensors pressure
+              - type: custom:monster-card
+                show_empty: false
+                card:
+                  type: glance
+                  title: 'Pressure'
+                  show_header_toggle: false
+                filter:
+                  include:
+                    - entity_id: "sensor.pressure*"
+                    

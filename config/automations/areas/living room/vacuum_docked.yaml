@@ -1,0 +1,10 @@
+alias: Living room - Vacuum reset fan speed
+trigger:
+  platform: state
+  entity_id: vacuum.living_room
+  to: 'docked'
+action:
+  service: vacuum.set_fan_speed
+  data:
+    entity_id: vacuum.living_room
+    fan_speed: 'Balanced'
