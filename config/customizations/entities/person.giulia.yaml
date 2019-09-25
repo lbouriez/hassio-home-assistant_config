@@ -1,2 +1,4 @@
 person.giulia:
   entity_picture: !secret customization_person_giulia_entity_picture
+  icon: mdi:human-female # Soon => mdi-human-pregnant
+  friendly_name: "Giulia"

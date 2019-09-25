@@ -1,6 +1,6 @@
 all_family:
-  name: Us
+  name: Family
   entities:
     - person.laurent
     - person.giulia
-    #- person.vincenzo
+    - person.vincenzo

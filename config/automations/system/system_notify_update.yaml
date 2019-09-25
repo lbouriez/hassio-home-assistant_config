@@ -2,8 +2,10 @@ alias: System - Upgrade alert
 hide_entity: True
 initial_state: True
 trigger:
-  platform: state
-  entity_id: sensor.version_available
+  - platform: state
+    entity_id: sensor.version_available
+  - platform: homeassistant
+    event: start
 action:
   - service: notify.laurent
     data_template:

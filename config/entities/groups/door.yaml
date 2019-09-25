@@ -2,7 +2,7 @@ doors:
   name: Door sensors
   icon: mdi:exit-to-app
   entities:
-    - binary_sensor.door_window_sensor_158d00022d2c98
-    - binary_sensor.door_window_sensor_158d0002131f3a
+    - binary_sensor.door_window_sensor_158d00022d2c98 # Xiaomi
+    - binary_sensor.door_window_sensor_158d0002131f3a # Xiaomi
     - binary_sensor.balcony # Ring Balcony
     - binary_sensor.front_door # Ring Front door

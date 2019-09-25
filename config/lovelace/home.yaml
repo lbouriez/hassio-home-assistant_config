@@ -47,11 +47,8 @@ cards:
                 - type: picture-glance
                   entities:
                     - entity: person.laurent
-                      icon: mdi:human-male
-                      name: "Laurent"
                     - entity: person.giulia
-                      icon: mdi:human-female
-                      name: "Giulia"
+                    - entity: person.vincenzo
                   image: /local/img/tracker_at_home.jpg
                   title: "Family"
                   state_image:
@@ -91,9 +88,7 @@ cards:
                       show_group_count: true
                       entities:
                         - entity_id: media_player.living_room
-                          name: Living room
                         - entity_id: media_player.bathroom
-                          name: Bathroom
                   - type: custom:mini-media-player
                     entity: media_player.living_room
                     group: true

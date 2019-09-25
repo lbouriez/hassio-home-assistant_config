@@ -1,2 +1,4 @@
 person.laurent:
   entity_picture: !secret customization_person_laurent_entity_picture
+  icon: mdi:human-male
+  friendly_name: "Laurent"

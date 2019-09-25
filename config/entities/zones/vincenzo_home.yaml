@@ -1,0 +1,6 @@
+name: Vincenzo home
+latitude: !secret entitie_zone_vincenzo_home_latitude
+longitude: !secret entitie_zone_vincenzo_home_longitude
+radius: !secret entitie_zone_vincenzo_home_radius
+icon: mdi:home-variant
+passive: false
