@@ -10,7 +10,7 @@ condition:
   entity_id: vacuum.living_room
   state: 'docked'
   for:
-    hours: 8
+    hours: 4 # With * it was not working
 action:
   - service: vacuum.start
     entity_id: vacuum.living_room

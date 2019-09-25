@@ -14,6 +14,7 @@ deps
 custom_components
 icloud
 node-red
+tts
 
 
 # Specific file ignores
