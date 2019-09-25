@@ -1,0 +1,3 @@
+cover.bedroom_1:
+  friendly_name: Bedroom
+  device_class: blind

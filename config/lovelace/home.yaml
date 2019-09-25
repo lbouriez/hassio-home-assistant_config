@@ -200,4 +200,6 @@ cards:
                   - switch.ventilation
                   # - type: divider
                   # - entity: vacuum.xiaomi_vacuum_cleaner
+                  - type: divider
+                  - cover.bedroom_1
               
