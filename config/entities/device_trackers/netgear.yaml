@@ -1,0 +1,10 @@
+platform: netgear
+host: !secret entitie_device_tracker_netgear_host
+username: !secret entitie_device_tracker_netgear_username
+password: !secret entitie_device_tracker_netgear_password
+track_new_devices: False
+consider_home: 120
+interval_seconds: 20
+new_device_defaults:
+  track_new_devices: False
+  hide_if_away: False

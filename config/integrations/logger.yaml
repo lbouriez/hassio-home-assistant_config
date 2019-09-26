@@ -1,4 +1,5 @@
 logger:
-  default: warn
+  default: info
   logs:
     homeassistant.components.mqtt: debug
+    pynetgear: debug

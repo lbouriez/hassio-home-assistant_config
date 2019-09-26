@@ -6,6 +6,14 @@ trigger:
     entity_id: sensor.version_available
   - platform: homeassistant
     event: start
+condition:
+  - condition: template
+    value_template: >-
+      {{
+        states('sensor.version_available')
+        !=
+        states('sensor.version_current')
+      }}
 action:
   - service: notify.laurent
     data_template:
