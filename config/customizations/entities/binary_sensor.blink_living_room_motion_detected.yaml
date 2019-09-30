@@ -1,2 +1,2 @@
 binary_sensor.blink_living_room_motion_detected:
-  friendly_name: Living room
+  friendly_name: Living room (Blink)

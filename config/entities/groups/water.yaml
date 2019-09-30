@@ -1,4 +1,4 @@
-water_sensors:
+water_all:
   name: Water sensors
   icon: mdi:water
   entities:

@@ -1,0 +1,3 @@
+switch.living_room_netflix:
+  friendly_name: 'Netflix'
+  icon: mdi:netflix

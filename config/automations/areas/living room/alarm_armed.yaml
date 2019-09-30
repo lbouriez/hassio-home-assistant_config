@@ -13,7 +13,6 @@ action:
     data:
       entity_id:
         - media_player.living_room # Sonos
-        - media_player.living_room_2
-        - media_player.living_room_tv_2
-  - service: switch.turn_off
-    entity_id: switch.harmony_tv
+        - media_player.living_room_v # Media player TV
+  # - service: switch.turn_off
+  #   entity_id: switch.harmony_tv

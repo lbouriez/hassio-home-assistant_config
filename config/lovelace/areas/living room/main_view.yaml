@@ -1,0 +1,77 @@
+path: areas.living_room
+title: Living room
+icon: mdi:sofa
+background: radial-gradient(crimson, skyblue)
+panel: true
+
+cards:
+  - type: vertical-stack
+    cards:
+      - type: custom:layout-card
+        max_columns: 3
+        layout: horizontal
+        max_width: [33%, 33%, 33%]
+        cards:
+          # Col 1
+          - type: vertical-stack
+            cards:
+              # Lights
+              - type: entities
+                entity: light.living_room_group
+                title: Lights
+                entities:
+                  - light.living_color
+                  - light.spot_living_room
+                  - light.spot_table
+                  - light.tv_1
+                  - light.tv_2
+              # Switches
+              - type: entities
+                title: 'Actions'
+                show_header_toggle: false
+                entities:
+                  - switch.lights_ambiance_tv
+                  - switch.living_room_tv
+                  - switch.living_room_netflix
+                  - !include /config/config/lovelace/areas/living room/views/media_player_sonos.yaml
+                  # - type: divider
+                  # - switch.christmas
+          # Col 2
+          - type: vertical-stack
+            cards:
+              # Vacuum
+              - !include /config/config/lovelace/areas/living room/views/vacuum.yaml
+              # Camera
+              - type: horizontal-stack
+                cards:
+                  - !include /config/config/lovelace/areas/living room/views/camera_blink.yaml
+                  - !include /config/config/lovelace/areas/living room/views/camera_foscam.yaml
+              # AC
+              - !include /config/config/lovelace/areas/living room/views/climate_ac.yaml
+              # Thermostat
+              - !include /config/config/lovelace/areas/living room/views/climate_heat.yaml
+          # Col 3
+          - type: vertical-stack
+            cards:
+              # Sensors
+              - type: entities
+                title: 'Sensors'
+                show_header_toggle: false
+                entities:
+                  - sensor.temperature_158d000245a7d5
+                  - sensor.humidity_158d000245a7d5
+                  - sensor.pressure_158d000245a7d5
+                  - binary_sensor.smoke_sensor_158d000257927b
+                  - type: divider
+                  - group.door_balcony
+                  - group.motion_living_room
+              # Automations
+              - type: custom:monster-card
+                show_empty: false
+                card:
+                  type: entities
+                  title: 'Automations'
+                  show_header_toggle: false
+                filter:
+                  include:
+                    - entity_id: "automation.living_room*"

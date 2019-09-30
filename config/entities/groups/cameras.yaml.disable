@@ -1,0 +1,32 @@
+camera_all:
+  name: All cameras
+  icon: mdi:cctv
+  control: hidden
+  entities:
+    - camera.blink_890_510_485
+    - camera.blink_balcony
+    - camera.blink_entrance
+    - camera.foscam_c1
+    # - camera.rpi_cam
+
+camera_living_room:
+  name: Living room
+  icon: mdi:cctv
+  control: hidden
+  entities:
+    - camera.blink_890_510_485
+    - camera.foscam_c1
+
+camera_balcony:
+  name: Balcony
+  icon: mdi:cctv
+  control: hidden
+  entities:
+    - camera.blink_balcony
+
+camera_entrance:
+  name: Entrance
+  icon: mdi:cctv
+  control: hidden
+  entities:
+    - camera.blink_entrance

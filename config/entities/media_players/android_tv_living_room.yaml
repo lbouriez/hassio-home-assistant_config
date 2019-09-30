@@ -1,0 +1,23 @@
+platform: androidtv
+host: !secret entitie_media_player_android_tv_living_room_host
+name: "Living room TV"
+device_class: androidtv
+adb_server_ip: 127.0.0.1
+adb_server_port: 5037
+apps:
+  com.google.android.tvlauncher: "Android TV"
+state_detection_rules:
+  'com.google.android.tvlauncher':
+    - 'standby'
+  'com.netflix.ninja':
+    - 'media_session_state'
+  'com.ellation.vrv':
+    - 'audio_state'
+  'com.plexapp.android':
+    - 'playing':
+        'media_session_state': 3  # this indentation is important!
+        'wake_lock_size': 3       # this indentation is important!
+    - 'paused':
+        'media_session_state': 3  # this indentation is important!
+        'wake_lock_size': 1       # this indentation is important!
+    - 'standby'

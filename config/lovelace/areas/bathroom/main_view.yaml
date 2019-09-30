@@ -1,0 +1,65 @@
+path: areas.bathroom
+title: Bathroom
+icon: mdi:shower
+background: radial-gradient(crimson, skyblue)
+panel: true
+
+cards:
+  - type: vertical-stack
+    cards:
+      - type: custom:layout-card
+        max_columns: 3
+        layout: horizontal
+        max_width: [33%, 33%, 33%]
+        cards:
+          # Col 1
+          - type: vertical-stack
+            cards:
+              # Lights
+              - type: entities
+                entity: light.bathroom_group
+                title: Lights
+                entities:
+                  - light.dimmable_light_1_3
+              # Switches
+              - type: entities
+                title: 'Actions'
+                show_header_toggle: false
+                entities:
+                  - !include /config/config/lovelace/areas/bathroom/views/media_player_sonos.yaml
+          # Col 2
+          - type: vertical-stack
+            cards: []
+              # # Alarm house
+              # - type: alarm-panel
+              #   name: House Alarm
+              #   entity: alarm_control_panel.ring_alarm
+              # # Thermostat
+              # - type: custom:simple-thermostat
+              #   entity: climate.bedroom_heat
+              #   step_size: 0.5
+              #   sensors:
+              #     - entity: sensor.humidity_158d0002461865
+              #   modes:
+              #     some_mode: false
+          # Col 3
+          - type: vertical-stack
+            cards:
+              # Sensors
+              - type: entities
+                title: 'Sensors'
+                show_header_toggle: false
+                entities:
+                  - sensor.entrance_sensor_2_temperature
+                  - type: divider
+                  - group.motion_bathroom
+              # Automations
+              - type: custom:monster-card
+                show_empty: false
+                card:
+                  type: entities
+                  title: 'Automations'
+                  show_header_toggle: false
+                filter:
+                  include:
+                    - entity_id: "automation.bathroom_*"

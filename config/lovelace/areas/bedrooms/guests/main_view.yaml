@@ -1,0 +1,59 @@
+path: areas.bedrooms.guests
+title: Guest bedroom
+icon: mdi:bed-queen
+background: radial-gradient(crimson, skyblue)
+panel: true
+
+cards:
+  - type: vertical-stack
+    cards:
+      - type: custom:layout-card
+        max_columns: 3
+        layout: horizontal
+        max_width: [33%, 33%, 33%]
+        cards:
+          # Col 1
+          - type: vertical-stack
+            cards:
+              # Lights
+              - type: entities
+                entity: light.bedroom_guests_group
+                title: Lights
+                entities:
+                  - light.berdoom_guests_1
+                  - light.bedroom_guests_2
+              # # Switches
+              # - type: entities
+              #   title: 'Actions'
+              #   show_header_toggle: false
+              #   entities:
+              #     - cover.bedroom_1
+              #     - entity: switch.sonoff_100086f608
+              #       type: custom:toggle-lock-entity-row
+              #     - switch.sonoff_100048cb54
+          # Col 2
+          - type: vertical-stack
+            cards:
+              # Alarm house
+              - !include /config/config/lovelace/areas/entrance/views/alarm_ring.yaml
+          # Col 3
+          - type: vertical-stack
+            cards:
+              # Sensors
+              - type: entities
+                title: 'Sensors'
+                show_header_toggle: false
+                entities:
+                  - sensor.bedroom_guests_sensor_temperature
+                  - type: divider
+                  - group.motion_guests_bedroom
+              # Automations
+              - type: custom:monster-card
+                show_empty: false
+                card:
+                  type: entities
+                  title: 'Automations'
+                  show_header_toggle: false
+                filter:
+                  include:
+                    - entity_id: "automation.guests_*"

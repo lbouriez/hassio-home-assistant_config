@@ -1,4 +1,4 @@
-alias: Bedroom guests - Alarm armed away
+alias: Guests bedroom - Alarm armed away
 trigger:
   platform: state
   entity_id: alarm_control_panel.ring_alarm

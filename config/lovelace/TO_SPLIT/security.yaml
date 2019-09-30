@@ -1,5 +1,5 @@
 path: security
-title: Security
+title: Security old
 icon: mdi:shield
 background: radial-gradient(crimson, skyblue)
 panel: true
@@ -43,6 +43,27 @@ cards:
                 - entity_id: binary_sensor.living_room
                 - entity_id: binary_sensor.motion_detector_48836
           # Doors
+          # - type: entities
+          #   entity: cover.garage_door_opener
+          #   - type: 'custom:button-card'
+          #     tap_action:
+          #       action: toggle
+          #     show_name: true
+          #     show_state: true
+          #     lock: true
+          #     state:
+          #       - value: closed
+          #         icon: 'mdi:garage'
+          #         styles:
+          #           state:
+          #             - font-size: 12px
+          #             - color: green
+          #       - value: open
+          #         icon: 'mdi:garage-open'
+          #         styles:
+          #           state:
+          #             - font-size: 12px
+          #             - color: red
           - type: custom:monster-card
             show_empty: false
             card:

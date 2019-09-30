@@ -5,7 +5,7 @@ trigger:
   - platform: event
     event_type: event_lock_front_door
   - platform: state
-    entity_id: binary_sensor.door_window_sensor_158d00022d2c98
+    entity_id: group.front_door
     from: 'on'
     to: 'off'
 condition:  

@@ -1,5 +1,6 @@
 name: Vincenzo
 id: vincenzo
 device_trackers:
-  # - device_tracker.life360_vincenzo #Temporary disabled
+  # - device_tracker.life360_vincenzo
   - device_tracker.iphone
+  # - device_tracker.iphone_vincenzo

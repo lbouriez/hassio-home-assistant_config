@@ -3,7 +3,7 @@ hide_entity: True
 initial_state: True
 trigger:
   - platform: state
-    entity_id: group.motions_sensor
+    entity_id: group.motion_all
     to: 'on'
 condition:
   condition: and
@@ -25,5 +25,5 @@ action:
         expire: 3600
         retry: 30
       message: >
-        {% set motion = states | selectattr('entity_id', 'in', state_attr('group.motions_sensor','entity_id')) | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+        {% set motion = states | selectattr('entity_id', 'in', state_attr('group.motion_all','entity_id')) | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
         Motion detected in: {{ motion }}

@@ -1,0 +1,2 @@
+binary_sensor.living_room:
+  friendly_name: Living room (Ring)

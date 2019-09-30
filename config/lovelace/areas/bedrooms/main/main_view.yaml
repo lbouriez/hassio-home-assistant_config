@@ -1,0 +1,67 @@
+path: areas.bedrooms.main
+title: Main bedroom
+icon: mdi:bed-king
+background: radial-gradient(crimson, skyblue)
+panel: true
+
+cards:
+  - type: vertical-stack
+    cards:
+      - type: custom:layout-card
+        max_columns: 3
+        layout: horizontal
+        max_width: [33%, 33%, 33%]
+        cards:
+          # Col 1
+          - type: vertical-stack
+            cards:
+              # Lights
+              - type: entities
+                entity: light.bedroom_group
+                title: Lights
+                entities:
+                  - light.giulia_night_table
+                  - light.laurent_night_table
+                  - light.bedroom_2
+                  - light.bedroom_1
+                  - light.bedroom_led
+              # Switches
+              - type: entities
+                title: 'Actions'
+                show_header_toggle: false
+                entities:
+                  - switch.bedroom_tv
+                  - type: divider
+                  - cover.bedroom_1
+                  - !include /config/config/lovelace/areas/bedrooms/main/views/switch_soma.yaml
+                  - switch.sonoff_100048cb54
+          # Col 2
+          - type: vertical-stack
+            cards:
+              # Alarm house
+              - !include /config/config/lovelace/areas/entrance/views/alarm_ring.yaml
+              # Thermostat
+              - !include /config/config/lovelace/areas/bedrooms/main/views/climate_heat.yaml
+          # Col 3
+          - type: vertical-stack
+            cards:
+              # Sensors
+              - type: entities
+                title: 'Sensors'
+                show_header_toggle: false
+                entities:
+                  - sensor.temperature_158d0002461865
+                  - sensor.humidity_158d0002461865
+                  - type: divider
+                  - group.motion_bedroom
+              # Automations
+              - type: custom:monster-card
+                show_empty: false
+                card:
+                  type: entities
+                  title: 'Automations'
+                  show_header_toggle: false
+                filter:
+                  include:
+                    - entity_id: "automation.bedroom_*"
+                    

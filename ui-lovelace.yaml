@@ -45,12 +45,15 @@ resources:
   # https://github.com/thomasloven/lovelace-fold-entity-row
   - url: /community_plugin/lovelace-fold-entity-row/fold-entity-row.js
     type: module
+  # https://github.com/thomasloven/lovelace-toggle-lock-entity-row
+  - url: /community_plugin/lovelace-toggle-lock-entity-row/toggle-lock-entity-row.js
+    type: js
 
 # Optional background for all views. Check https://developer.mozilla.org/en-US/docs/Web/CSS/background for more examples.
 background: center / cover no-repeat url("/background.png") fixed
 
 # Exclude entities from "Unused entities" view
-excluded_entities:
+excluded_entities: []
 
 cch:
   options: show
@@ -60,13 +63,23 @@ cch:
   main_config: true
   menu: clock
   swipe: true
+  hide_tabs: ''
 
 views:
-  - !include config/lovelace/home.yaml
-  - !include config/lovelace/cameras.yaml
-  - !include config/lovelace/climate.yaml
-  - !include config/lovelace/multimedia.yaml
-  - !include config/lovelace/lights.yaml
-  - !include config/lovelace/admin.yaml
-  - !include config/lovelace/security.yaml
-  - !include config/lovelace/tv.yaml
+  - !include /config/config/lovelace/house/main_view.yaml
+  # - !include /config/config/lovelace/house/views/alarm_ring.yaml
+  - !include /config/config/lovelace/areas/living room/main_view.yaml
+  - !include /config/config/lovelace/areas/kitchen/main_view.yaml
+  - !include /config/config/lovelace/areas/entrance/main_view.yaml
+  - !include /config/config/lovelace/areas/bedrooms/main/main_view.yaml
+  - !include /config/config/lovelace/areas/bedrooms/guests/main_view.yaml
+  - !include /config/config/lovelace/areas/bathroom/main_view.yaml
+  - !include /config/config/lovelace/areas/balcony/main_view.yaml
+  - title: '|'
+  - !include /config/config/lovelace/TO_SPLIT/cameras.yaml
+  - !include /config/config/lovelace/TO_SPLIT/climate.yaml
+  - !include /config/config/lovelace/TO_SPLIT/multimedia.yaml
+  - !include /config/config/lovelace/TO_SPLIT/lights.yaml
+  - !include /config/config/lovelace/TO_SPLIT/admin.yaml
+  - !include /config/config/lovelace/TO_SPLIT/security.yaml
+  

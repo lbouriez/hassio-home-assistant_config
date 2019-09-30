@@ -2,6 +2,7 @@ platform: template
 switches:
   lights_ambiance_tv:
     friendly_name: "Living Room - TV"
+    icon_template: mdi:projector-screen
     value_template: "{{ is_state('light.living_room_group', 'on') }}"
     turn_on:
       service: hue.hue_activate_scene
@@ -11,4 +12,3 @@ switches:
     turn_off:
       service: light.turn_off
       entity_id: 'light.living_room_group'
-    icon_template: mdi:projector-screen

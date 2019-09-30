@@ -1,4 +1,4 @@
-smokes_sensor:
+smoke_all:
   name: Smoke sensors
   icon: mdi:smoke-detector
   entities:

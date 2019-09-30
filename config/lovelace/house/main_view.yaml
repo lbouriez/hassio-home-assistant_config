@@ -1,0 +1,67 @@
+path: house.home
+title: Home
+icon: mdi:home
+background: radial-gradient(crimson, skyblue)
+panel: true
+
+cards:
+  - type: vertical-stack
+    cards:
+      - type: custom:layout-card
+        max_columns: 3
+        layout: horizontal
+        max_width: [30%, 30%, 40%]
+        cards:
+          # Col 1
+          - type: vertical-stack
+            cards:
+              # What is on - Always on top
+              - !include /config/config/lovelace/views/notify_what_is_on.yaml
+              # Lights group
+              - !include /config/config/lovelace/house/views/light_all.yaml
+              # Divers
+              - type: entities
+                title: 'House actions'
+                show_header_toggle: false
+                entities:
+                  - switch.lights_ambiance_tv
+                  - switch.circadian_lighting_circadian_lighting
+                  - type: divider
+                  - switch.alarm_toggle_blink
+                  - type: divider
+                  - switch.ventilation
+                  - type: divider
+                  - cover.bedroom_1
+                  - !include /config/config/lovelace/areas/bedrooms/main/views/switch_soma.yaml
+          # Col 2
+          - type: vertical-stack
+            cards:
+              # TV's
+              - type: entities
+                title: 'TV''s'
+                show_header_toggle: false
+                entities:
+                  - switch.living_room_tv
+                  # - switch.living_room_plex
+                  - switch.living_room_netflix
+                  - switch.bedroom_tv
+                  - type: custom:slider-entity-row
+                    entity: media_player.living_room
+                    full_row: true
+              # Sonos
+              - type: entities
+                title: Sonos
+                show_header_toggle: false
+                entities:
+                  - !include /config/config/lovelace/house/views/media_player_sonos_all.yaml
+                  - !include /config/config/lovelace/areas/bathroom/views/media_player_sonos.yaml
+                  - !include /config/config/lovelace/areas/living room/views/media_player_sonos.yaml
+          # Col 3
+          - type: vertical-stack
+            cards:
+              # Weather
+              - !include /config/config/lovelace/views/weather.yaml
+              # Tracker
+              - !include /config/config/lovelace/house/views/tracker_all.yaml
+              # Vacuum
+              - !include /config/config/lovelace/areas/living room/views/vacuum.yaml

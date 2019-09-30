@@ -1,0 +1,2 @@
+binary_sensor.bedroom_guests_sensor_motion:
+  friendly_name: 'Guests bedroom'

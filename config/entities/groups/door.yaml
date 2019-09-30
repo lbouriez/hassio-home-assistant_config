@@ -1,8 +1,25 @@
-doors:
-  name: Door sensors
-  icon: mdi:exit-to-app
+door_all:
+  name: All doors
+  icon: mdi:door
+  control: hidden
   entities:
-    - binary_sensor.door_window_sensor_158d00022d2c98 # Xiaomi
-    - binary_sensor.door_window_sensor_158d0002131f3a # Xiaomi
-    - binary_sensor.balcony # Ring Balcony
-    - binary_sensor.front_door # Ring Front door
+    - binary_sensor.door_window_sensor_158d00022d2c98 # Xiaomi front door
+    - binary_sensor.door_window_sensor_158d0002131f3a # Xiaomi balcony
+    - binary_sensor.balcony # Ring balcony
+    - binary_sensor.front_door # Ring front door
+
+door_front:
+  name: Front door
+  icon: mdi:door
+  control: hidden
+  entities:
+    - binary_sensor.door_window_sensor_158d00022d2c98
+    - binary_sensor.front_door
+
+door_balcony:
+  name: Balcony
+  icon: mdi:door
+  control: hidden
+  entities:
+    - binary_sensor.door_window_sensor_158d0002131f3a
+    - binary_sensor.balcony

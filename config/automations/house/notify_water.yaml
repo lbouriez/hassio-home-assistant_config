@@ -3,7 +3,7 @@ hide_entity: True
 initial_state: True
 trigger:
   - platform: state
-    entity_id: group.water_sensors
+    entity_id: group.water_all
     to: 'on'
 action:
   - service: notify.everyone
@@ -16,5 +16,5 @@ action:
         expire: 3600
         retry: 30
       message: >
-        {% set water = states | selectattr('entity_id', 'in', state_attr('group.water_sensors','entity_id')) | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+        {% set water = states | selectattr('entity_id', 'in', state_attr('group.water_all','entity_id')) | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
         Water detected in: {{ water }}

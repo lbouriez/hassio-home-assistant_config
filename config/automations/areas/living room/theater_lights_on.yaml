@@ -1,9 +1,17 @@
-alias: Living room - Ambiance TV
+alias: Living room - Ambiance TV on
 trigger:
+  # - platform: state
+  #   entity_id: switch.harmony_tv
+  #   from: 'off'
+  #   to: 'on'
   - platform: state
-    entity_id: switch.harmony_tv
+    entity_id: media_player.living_room_v
     from: 'off'
-    to: 'on'
+    to: 'standby'
+  - platform: state
+    entity_id: media_player.living_room_v
+    from: 'off'
+    to: 'playing'
 condition:
   - condition: state
     entity_id: 'switch.lights_ambiance_tv'

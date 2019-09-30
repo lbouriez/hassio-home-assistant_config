@@ -3,3 +3,4 @@ id: giulia
 user_id: !secret entitie_person_giulia_user_id
 device_trackers:
   - device_tracker.life360_giulia
+  - device_tracker.giulias_iphone

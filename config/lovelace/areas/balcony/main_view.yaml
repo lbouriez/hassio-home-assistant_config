@@ -1,0 +1,10 @@
+path: areas.balcony
+title: Balcony
+icon: mdi:grill
+background: radial-gradient(crimson, skyblue)
+panel: true
+
+cards:
+  - type: vertical-stack
+    cards:
+      []

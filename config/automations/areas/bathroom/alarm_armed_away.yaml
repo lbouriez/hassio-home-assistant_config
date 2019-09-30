@@ -10,5 +10,3 @@ action:
     data:
       entity_id:
         - media_player.bathroom # Sonos
-        - media_player.bathroom_2
-        - media_player.bathroom_sonos

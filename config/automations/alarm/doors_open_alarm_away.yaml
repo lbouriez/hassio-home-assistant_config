@@ -3,7 +3,7 @@ hide_entity: True
 initial_state: True
 trigger:
   - platform: state
-    entity_id: group.doors
+    entity_id: group.door_all
     to: 'on'
 condition:
   condition: and
@@ -29,7 +29,7 @@ action:
         expire: 3600
         retry: 30
       message: >
-        {% set unlocked = states | selectattr('entity_id', 'in', state_attr('group.doors','entity_id')) | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+        {% set unlocked = states | selectattr('entity_id', 'in', state_attr('group.door_all','entity_id')) | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
         One door ({{ unlocked }}) has been opened, check the cameras !
   - service: script.sonos_say
     data:

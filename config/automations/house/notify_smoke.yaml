@@ -3,7 +3,7 @@ hide_entity: True
 initial_state: True
 trigger:
   - platform: state
-    entity_id: group.smokes_sensor
+    entity_id: group.smoke_all
     to: 'on'
 action:
   - service: notify.everyone
@@ -16,5 +16,5 @@ action:
         expire: 3600
         retry: 30
       message: >
-        {% set smoke = states | selectattr('entity_id', 'in', state_attr('group.smokes_sensor','entity_id')) | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+        {% set smoke = states | selectattr('entity_id', 'in', state_attr('group.smoke_all','entity_id')) | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
         Smoke detected in: {{ smoke }}

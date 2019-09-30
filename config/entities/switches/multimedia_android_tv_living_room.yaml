@@ -1,0 +1,95 @@
+platform: template
+switches:
+  # # ADB
+  # living_room_tv:
+  #   value_template: "{{ not is_state('media_player.living_room_v', 'off') }}"
+  #   turn_on:
+  #     service: media_player.turn_on
+  #     data:
+  #       entity_id: media_player.living_room_v
+  #   turn_off:
+  #     service: media_player.turn_off
+  #     data:
+  #       entity_id: media_player.living_room_v
+  # Harmony
+  living_room_tv:
+    #value_template: "{{ is_state_attr('remote.salon', 'current_activity', 'Watch TV') }}"
+    value_template: "{{ not is_state('media_player.living_room_v', 'off') }}"
+    turn_on:
+      service: remote.turn_on
+      data:
+        entity_id: remote.salon
+        activity: 'Watch TV'
+    turn_off:
+      service: media_player.turn_off
+      data:
+        entity_id: media_player.living_room_v
+    # turn_off:
+    #   service: remote.turn_on
+    #   data:
+    #     entity_id: remote.salon
+    #     activity: 'PowerOff'
+  # # ADB
+  # living_room_plex:
+  #   value_template: "{{ is_state_attr('media_player.living_room_v', 'app_id', 'com.plexapp.android') }}"
+  #   turn_on:
+  #     - service: switch.turn_on
+  #       data:
+  #         entity_id: switch.living_room_tv
+  #     - service: media_player.select_source
+  #       data:
+  #         entity_id: media_player.living_room_v
+  #         source: 'com.plexapp.android'
+  #   turn_off:
+  #     service: media_player.select_source
+  #     data:
+  #       entity_id: media_player.living_room_v
+  #       source: 'com.google.android.tvlauncher'
+  # ADB
+  # living_room_netflix:
+  #   value_template: "{{ is_state_attr('media_player.living_room_v', 'app_id', 'com.netflix.ninja') }}"
+  #   turn_on:
+  #     - service: media_player.turn_on
+  #       data:
+  #         entity_id: media_player.living_room_v
+  #     - service: media_player.select_source
+  #       data:
+  #         entity_id: media_player.living_room_v
+  #         source: 'com.netflix.ninja'
+  #   turn_off:
+  #     service: media_player.select_source
+  #     data:
+  #       entity_id: media_player.living_room_v
+  #       source: 'com.google.android.tvlauncher'
+  # Harmony
+  living_room_netflix:
+    #value_template: "{{ is_state_attr('remote.salon', 'current_activity', 'Watch Netflix') }}"
+    value_template: "{{ is_state_attr('media_player.living_room_v', 'app_id', 'com.netflix.ninja') }}"
+    turn_on:
+      service: remote.turn_on
+      data:
+        entity_id: remote.salon
+        activity: 'Watch Netflix'
+    turn_off:
+      - service: switch.turn_off
+        data:
+          entity_id: switch.living_room_tv
+      # service: remote.turn_on
+      # data:
+      #   entity_id: remote.salon
+      #   activity: 'PowerOff'
+  # Harmony
+  # harmony_music:
+  #   friendly_name: 'Music'
+  #   icon_template: mdi:speaker
+  #   value_template: "{{ is_state_attr('remote.salon', 'current_activity', 'Listen Music') }}"
+  #   turn_on:
+  #     service: remote.turn_on
+  #     data:
+  #       entity_id: remote.salon
+  #       activity: 'Listen Music'
+  #   turn_off:
+  #     service: remote.turn_on
+  #     data:
+  #       entity_id: remote.salon
+  #       activity: 'PowerOff'

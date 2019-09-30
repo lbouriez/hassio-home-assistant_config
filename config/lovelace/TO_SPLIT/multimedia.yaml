@@ -42,13 +42,13 @@ cards:
             entity: media_player.living_room
           # Harmony
           - type: entities
-            title: 'Harmony'
+            title: 'TV''s'
             show_header_toggle: false
             entities:
-              - switch.harmony_tv
-              - switch.harmony_netflix
-              - switch.harmony_music
+              - switch.living_room_tv
+              # - switch.living_room_plex
+              - switch.living_room_netflix
+              - switch.bedroom_tv
               - type: custom:slider-entity-row
                 entity: media_player.living_room
                 full_row: true
-                

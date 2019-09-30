@@ -1,0 +1,50 @@
+type: entities
+title: 'Lights'
+show_header_toggle: false
+entities:
+    - group.all_lights
+    - light.balcony_group
+    - light.bathroom_group
+    - type: custom:fold-entity-row
+      head: light.bedroom_group
+      entity: light.bedroom_group
+      entities:
+        - light.giulia_night_table
+        - light.laurent_night_table
+        - light.bedroom_2
+        - light.bedroom_1
+        - light.bedroom_led
+        - switch.sonoff_100048cb54
+    - type: custom:fold-entity-row
+      head: light.bedroom_guests_group
+      entity: light.bedroom_guests_group
+      entities:
+        - light.berdoom_guests_1
+        - light.bedroom_guests_2
+    - light.corridor_group
+    - type: custom:fold-entity-row
+      head: light.entrance_group
+      entity: light.entrance_group
+      entities:
+        - light.hue_ambiance_spot_1_3
+        - light.hue_ambiance_spot_1_4
+        - light.hue_ambiance_spot_1_2
+        - light.hue_ambiance_spot_1
+    - type: custom:fold-entity-row
+      head: light.kitchen_group
+      entity: light.kitchen_group
+      entities:
+        - light.spot_kitchen
+        - light.bake_left
+        - light.bake_right
+        - light.kitchen_led
+        - light.dimmable_light_1
+    - type: custom:fold-entity-row
+      head: light.living_room_group
+      entity: light.living_room_group
+      entities:
+        - light.living_color
+        - light.spot_living_room
+        - light.spot_table
+        - light.tv_1
+        - light.tv_2

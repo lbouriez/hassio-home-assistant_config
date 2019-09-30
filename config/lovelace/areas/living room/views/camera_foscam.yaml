@@ -1,0 +1,4 @@
+type: picture-glance
+entities:
+  - entity: switch.motion_foscam
+camera_image: camera.foscam_c1
