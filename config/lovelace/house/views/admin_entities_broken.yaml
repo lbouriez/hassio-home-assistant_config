@@ -1,0 +1,15 @@
+type: custom:monster-card
+show_empty: false
+card:
+  type: entities
+  title: Things that are broken
+  show_header_toggle: false
+filter:
+  include:
+    - state: "unknown"
+  exclude:
+    - entity_id: group.*
+    - entity_id: sensor.bedroom*
+    - entity_id: sensor.entrance
+    - entity_id: sensor.*bedrooms
+    - entity_id: sensor.kitchen_switch

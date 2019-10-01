@@ -1,0 +1,7 @@
+type: glance
+entities:
+  - group.door_all
+  - group.motion_all
+  - sensor.group_temperature_all
+  - alarm_control_panel.alexa_guard_851bb
+  - alarm_control_panel.blink_home

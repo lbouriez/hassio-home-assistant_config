@@ -7,4 +7,46 @@ panel: true
 cards:
   - type: vertical-stack
     cards:
-      []
+      - type: custom:layout-card
+        max_columns: 2
+        layout: horizontal
+        max_width: [50%, 50%]
+        cards:
+          # Col 1
+          - type: vertical-stack
+            cards:
+              # Lights
+              - type: entities
+                entity: light.kitchen_group
+                title: Lights
+                entities:
+                  - light.spot_kitchen
+                  - light.bake_left
+                  - light.bake_right
+                  - light.kitchen_led
+                  - light.dimmable_light_1
+              # Switches
+              - type: entities
+                title: 'Actions'
+                show_header_toggle: false
+                entities:
+                  - !include /config/config/lovelace/areas/kitchen/views/media_player_alexa.yaml
+          # Col 3
+          - type: vertical-stack
+            cards:
+              # Sensors
+              - type: entities
+                title: 'Sensors'
+                show_header_toggle: false
+                entities:
+                  - group.motion_kitchen
+              # Automations
+              - type: custom:monster-card
+                show_empty: false
+                card:
+                  type: entities
+                  title: 'Automations'
+                  show_header_toggle: false
+                filter:
+                  include:
+                    - entity_id: "automation.kitchen_*"

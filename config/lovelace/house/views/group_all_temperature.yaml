@@ -1,0 +1,11 @@
+type: custom:monster-card
+show_empty: false
+card:
+  type: glance
+  title: 'Temperature sensors'
+  show_header_toggle: false
+filter:
+  include:
+    - entity_id: "sensor.group_temperature_*"
+  exclude:
+    - entity_id: sensor.group_temperature_all

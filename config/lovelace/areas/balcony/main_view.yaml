@@ -7,4 +7,43 @@ panel: true
 cards:
   - type: vertical-stack
     cards:
-      []
+      - type: custom:layout-card
+        max_columns: 2
+        layout: horizontal
+        max_width: [50%, 50%]
+        cards:
+          # Col 1
+          - type: vertical-stack
+            cards:
+              # Lights
+              - type: entities
+                entity: light.balcony_group
+                title: Lights
+                entities:
+                  - light.balcony
+              # Camera
+              - type: horizontal-stack
+                cards:
+                  - !include /config/config/lovelace/areas/balcony/views/camera_blink.yaml
+          # Col 3
+          - type: vertical-stack
+            cards:
+              # Sensors
+              - type: entities
+                title: 'Sensors'
+                show_header_toggle: false
+                entities:
+                  - sensor.group_temperature_balcony
+                  - type: divider
+                  - group.door_balcony
+                  - group.motion_balcony
+              # Automations
+              - type: custom:monster-card
+                show_empty: false
+                card:
+                  type: entities
+                  title: 'Automations'
+                  show_header_toggle: false
+                filter:
+                  include:
+                    - entity_id: "automation.balcony_*"

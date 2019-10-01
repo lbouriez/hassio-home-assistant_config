@@ -1,0 +1,52 @@
+type: vertical-stack
+cards:
+  - type: glance
+    title: Syno monitoring
+    entities:
+      #- sensor.average_disk_temp_volume_1
+      #- sensor.maximum_disk_temp_volume_1
+      #- sensor.disk_smart_status
+      - sensor.synology_dsm_status_volume_1
+      - sensor.synology_dsm_used_space_volume_1
+      - sensor.synology_dsm_network_up
+  - type: custom:layout-card
+    max_columns: 2
+    layout: horizontal
+    max_width: [50%, 50%]
+    cards:
+      - type: entities
+        entities:
+          - type: weblink
+            name: Synology
+            url: !secret global_url_synology
+            icon: mdi:harddisk
+      - type: gauge
+        entity: sensor.synology_dsm_volume_used_volume_1
+        title: Disk
+        unit_of_measurement: '%'
+        min: 0
+        max: 100
+        severity:
+          yellow: 45
+          green: 10
+          red: 90
+      - type: gauge
+        entity: sensor.synology_dsm_cpu_load_total
+        title: CPU
+        unit_of_measurement: '%'
+        min: 0
+        max: 100
+        severity:
+          yellow: 45
+          green: 10
+          red: 90
+      - type: gauge
+        entity: sensor.synology_dsm_memory_usage_real
+        title: RAM
+        unit_of_measurement: '%'
+        min: 0
+        max: 100
+        severity:
+          yellow: 45
+          green: 10
+          red: 90

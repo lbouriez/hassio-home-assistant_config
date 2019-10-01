@@ -1,5 +1,5 @@
 type: custom:mini-media-player
-entity: media_player.bathroom
+entity: media_player.bedroom
 group: true
 tts:
   platform: sonos

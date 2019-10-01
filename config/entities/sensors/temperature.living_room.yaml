@@ -1,0 +1,8 @@
+platform: template
+sensors:
+  group_temperature_living_room:
+    friendly_name: "Living room"
+    unit_of_measurement: '°C'
+    icon_template: mdi:oil-temperature
+    value_template: >-
+      {{ ((states('sensor.temperature_158d000245a7d5')|float + states('sensor.blink_890_510_485_temperature')|float) / 2) | round(2) }}

@@ -8,9 +8,9 @@ cards:
   - type: vertical-stack
     cards:
       - type: custom:layout-card
-        max_columns: 3
+        max_columns: 2
         layout: horizontal
-        max_width: [33%, 33%, 33%]
+        max_width: [50%, 50%]
         cards:
           # Col 1
           - type: vertical-stack
@@ -22,18 +22,6 @@ cards:
                 entities:
                   - light.berdoom_guests_1
                   - light.bedroom_guests_2
-              # # Switches
-              # - type: entities
-              #   title: 'Actions'
-              #   show_header_toggle: false
-              #   entities:
-              #     - cover.bedroom_1
-              #     - entity: switch.sonoff_100086f608
-              #       type: custom:toggle-lock-entity-row
-              #     - switch.sonoff_100048cb54
-          # Col 2
-          - type: vertical-stack
-            cards:
               # Alarm house
               - !include /config/config/lovelace/areas/entrance/views/alarm_ring.yaml
           # Col 3
@@ -44,7 +32,7 @@ cards:
                 title: 'Sensors'
                 show_header_toggle: false
                 entities:
-                  - sensor.bedroom_guests_sensor_temperature
+                  - sensor.group_temperature_guests_bedroom
                   - type: divider
                   - group.motion_guests_bedroom
               # Automations
@@ -57,3 +45,4 @@ cards:
                 filter:
                   include:
                     - entity_id: "automation.guests_*"
+                    - entity_id: "automation.corridor*"

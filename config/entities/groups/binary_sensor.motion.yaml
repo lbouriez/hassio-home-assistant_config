@@ -1,5 +1,5 @@
 motion_all:
-  name: All motion sensors
+  name: All motions
   icon: mdi:motion-sensor
   control: hidden
   entities:

@@ -1,0 +1,8 @@
+platform: template
+sensors:
+  group_temperature_balcony:
+    friendly_name: "Balcony"
+    unit_of_measurement: '°C'
+    icon_template: mdi:oil-temperature
+    value_template: >-
+      {{ ((states('sensor.blink_balcony_temperature')|float) / 1) | round(2) }}

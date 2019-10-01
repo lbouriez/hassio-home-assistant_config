@@ -48,3 +48,6 @@ entities:
         - light.spot_table
         - light.tv_1
         - light.tv_2
+    - type: divider
+    - switch.circadian_lighting_circadian_lighting
+    - switch.lights_ambiance_tv

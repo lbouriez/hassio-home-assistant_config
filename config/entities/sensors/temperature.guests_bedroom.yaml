@@ -1,0 +1,8 @@
+platform: template
+sensors:
+  group_temperature_guests_bedroom:
+    friendly_name: "Guests bedroom"
+    unit_of_measurement: '°C'
+    icon_template: mdi:oil-temperature
+    value_template: >-
+      {{ ((states('sensor.bedroom_guests_sensor_temperature')|float) / 1) | round(2) }}
