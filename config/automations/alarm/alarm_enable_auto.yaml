@@ -13,6 +13,9 @@ condition:
   condition: and
   conditions:
     - condition: state
+      entity_id: input_boolean.guest_mode
+      state: 'off'
+    - condition: state
       entity_id: 'alarm_control_panel.ring_alarm'
       state: 'disarmed'
     - condition: state

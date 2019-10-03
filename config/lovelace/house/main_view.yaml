@@ -37,6 +37,7 @@ cards:
                 show_header_toggle: false
                 entities:
                   - switch.ventilation
+                  - input_boolean.guest_mode
               # Sonos
               - !include /config/config/lovelace/house/views/media_player_sonos_all.yaml
           # Col 3

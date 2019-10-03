@@ -51,3 +51,5 @@ entities:
     - type: divider
     - switch.circadian_lighting_circadian_lighting
     - switch.lights_ambiance_tv
+    - type: custom:slider-entity-row
+      entity: input_number.light_variable_brightness

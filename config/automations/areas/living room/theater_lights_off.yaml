@@ -8,5 +8,5 @@ trigger:
     entity_id: media_player.living_room_v
     to: 'off'
 action:
-  service: light.turn_off
-  entity_id: light.living_room_group
+  - service: light.turn_off
+    entity_id: light.living_room_group

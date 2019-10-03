@@ -32,3 +32,5 @@ Non exhaustive list
 - IR to control the air-conditionning
 ### Casa
 - [Thermostat for the heat](https://casa.energy/fr/caleo)
+### Conbee II
+- [Zigbee USB key](https://phoscon.de/en/conbee2)

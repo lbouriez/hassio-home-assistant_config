@@ -1,0 +1,25 @@
+alias: House - Set the variable brightness
+hide_entity: True
+initial_state: True
+trigger:
+  - platform: time
+    at: '07:00:00'
+  - platform: time
+    at: '09:00:00'
+  - platform: time
+    at: '22:00:00'
+  - platform: time
+    at: '23:45:00'
+  - platform: event
+    event_type: event_load_variable_brightness
+action:
+  - service: input_number.set_value
+    entity_id: 'input_number.light_variable_brightness'
+    data_template:
+      value: >-
+        {% if (now().hour <= 7) %} 0
+        {% elif (now().hour <= 9) %} 25
+        {% elif (now().hour <= 22) %} 100
+        {% elif (now().hour <= 23) and (now().minute <= 45) %} 25
+        {% else %} 0
+        {% endif%}

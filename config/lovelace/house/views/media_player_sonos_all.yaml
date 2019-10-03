@@ -7,6 +7,7 @@ hide:
 tts:
   platform: sonos
   sync_volume: true
+  language: en
 # sonos:
 #   show_group_count: true
 #   entities:

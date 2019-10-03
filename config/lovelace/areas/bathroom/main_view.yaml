@@ -20,7 +20,7 @@ cards:
                 entity: light.bathroom_group
                 title: Lights
                 entities:
-                  - light.dimmable_light_1_3
+                  - light.bathroom_spots
               # Switches
               - type: entities
                 title: 'Actions'

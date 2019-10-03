@@ -1,9 +1,9 @@
-alias: House - Ventilation
+alias: Entrance - Ventilation
 hide_entity: True
 initial_state: True
 trigger:
   - platform: state
-    entity_id: 'binary_sensor.bathroom_motion'
+    entity_id: 'group.motion_all'
     from: 'off'
     to: 'on'
 condition:  
