@@ -63,7 +63,7 @@ cch:
   main_config: true
   menu: clock
   swipe: true
-  hide_tabs: ''
+  hide_tabs: 'house.cameras'
 
 views:
   - !include /config/config/lovelace/house/main_view.yaml
@@ -77,6 +77,5 @@ views:
   - !include /config/config/lovelace/areas/bedrooms/guests/main_view.yaml
   - !include /config/config/lovelace/areas/bathroom/main_view.yaml
   - !include /config/config/lovelace/areas/balcony/main_view.yaml
-  - title: '|'
-  - !include /config/config/lovelace/TO_SPLIT/cameras.yaml
+  - !include /config/config/lovelace/house/cameras.yaml
   

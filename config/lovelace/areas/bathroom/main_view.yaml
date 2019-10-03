@@ -19,8 +19,7 @@ cards:
               - type: entities
                 entity: light.bathroom_group
                 title: Lights
-                entities:
-                  - light.bathroom_spots
+                entities: !include /config/config/lovelace/areas/bathroom/views/lights.yaml
               # Switches
               - type: entities
                 title: 'Actions'

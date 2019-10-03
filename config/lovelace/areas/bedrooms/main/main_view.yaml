@@ -19,12 +19,7 @@ cards:
               - type: entities
                 entity: light.bedroom_group
                 title: Lights
-                entities:
-                  - light.giulia_night_table
-                  - light.laurent_night_table
-                  - light.bedroom_2
-                  - light.bedroom_1
-                  - light.bedroom_led
+                entities: !include /config/config/lovelace/areas/bedrooms/main/views/lights.yaml
               # Alarm house
               - !include /config/config/lovelace/areas/entrance/views/alarm_ring.yaml
               # Thermostat

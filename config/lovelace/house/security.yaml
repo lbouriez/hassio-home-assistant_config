@@ -18,6 +18,13 @@ cards:
           # Camera
           - type: horizontal-stack
             cards:
+              - type: custom:button-card
+                name: Cameras
+                tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/house.cameras
+          - type: horizontal-stack
+            cards:
               - !include /config/config/lovelace/areas/living room/views/camera_blink.yaml
               - !include /config/config/lovelace/areas/living room/views/camera_foscam.yaml
           - type: horizontal-stack

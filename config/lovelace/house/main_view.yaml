@@ -18,7 +18,7 @@ cards:
               # What is on - Always on top
               - !include /config/config/lovelace/views/notify_what_is_on.yaml
               # Lights group
-              - !include /config/config/lovelace/house/views/light_all.yaml
+              - !include /config/config/lovelace/house/views/group_all_lights.yaml
           # Col 2
           - type: vertical-stack
             cards:

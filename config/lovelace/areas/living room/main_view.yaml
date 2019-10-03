@@ -19,12 +19,7 @@ cards:
               - type: entities
                 entity: light.living_room_group
                 title: Lights
-                entities:
-                  - light.living_color
-                  - light.spot_living_room
-                  - light.spot_table
-                  - light.tv_1
-                  - light.tv_2
+                entities: !include /config/config/lovelace/areas/living room/views/lights.yaml
               # Switches
               - type: entities
                 title: 'Actions'

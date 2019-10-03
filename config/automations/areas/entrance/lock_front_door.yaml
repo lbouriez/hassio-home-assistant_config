@@ -5,7 +5,7 @@ trigger:
   - platform: event
     event_type: event_lock_front_door
   - platform: state
-    entity_id: group.door_front
+    entity_id: group.door_entrance
     from: 'on'
     to: 'off'
 condition:  

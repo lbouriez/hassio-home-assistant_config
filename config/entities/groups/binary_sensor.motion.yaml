@@ -3,25 +3,21 @@ motion_all:
   icon: mdi:motion-sensor
   control: hidden
   entities:
-    - binary_sensor.bedroom_guests_sensor_motion
-    - binary_sensor.entrance_sensor_motion
-    - binary_sensor.bathroom_motion
-    - binary_sensor.motion_foscam_c1
-    - binary_sensor.motion_sensor_158d0002417b2e # Aqara Kitchen
-    - binary_sensor.living_room # Ring Living room
-    - binary_sensor.motion_detector_48836 # Ring Bedroom guests
-    - binary_sensor.blink_entrance_motion_detected # Blink entrance
-    - binary_sensor.blink_living_room_motion_detected # Blink living room
-    - binary_sensor.blink_balcony_motion_detected # Blink balcony
-    - binary_sensor.motion_sensor_158d0004140234 # Aqara Bedroom
+    - group.motion_living_room
+    - group.motion_bedroom
+    - group.motion_guests_bedroom
+    - group.motion_entrance
+    - group.motion_bathroom
+    - group.motion_balcony
+    - group.motion_kitchen
 
 motion_living_room:
   name: Living room
   icon: mdi:motion-sensor
   control: hidden
   entities:
-    - binary_sensor.living_room
-    - binary_sensor.blink_living_room_motion_detected
+    - binary_sensor.living_room # Ring Living room
+    - binary_sensor.blink_living_room_motion_detected # Blink living room
     - binary_sensor.motion_foscam_c1
 
 motion_bedroom:
@@ -29,14 +25,14 @@ motion_bedroom:
   icon: mdi:motion-sensor
   control: hidden
   entities:
-    - binary_sensor.motion_sensor_158d0004140234
+    - binary_sensor.motion_sensor_158d0004140234 # Aqara Bedroom
 
 motion_guests_bedroom:
   name: Guests bedroom
   icon: mdi:motion-sensor
   control: hidden
   entities:
-    - binary_sensor.motion_detector_48836
+    - binary_sensor.motion_detector_48836 # Ring Bedroom guests
     - binary_sensor.bedroom_guests_sensor_motion
 
 motion_entrance:
@@ -44,7 +40,7 @@ motion_entrance:
   icon: mdi:motion-sensor
   control: hidden
   entities:
-    - binary_sensor.blink_entrance_motion_detected
+    - binary_sensor.blink_entrance_motion_detected # Blink entrance
     - binary_sensor.entrance_sensor_motion
 
 motion_bathroom:
@@ -59,11 +55,11 @@ motion_balcony:
   icon: mdi:motion-sensor
   control: hidden
   entities:
-    - binary_sensor.blink_balcony_motion_detected
+    - binary_sensor.blink_balcony_motion_detected # Blink balcony
 
 motion_kitchen:
   name: Kitchen
   icon: mdi:motion-sensor
   control: hidden
   entities:
-    - binary_sensor.motion_sensor_158d0002417b2e
+    - binary_sensor.motion_sensor_158d0002417b2e # Aqara Kitchen

@@ -19,8 +19,7 @@ cards:
               - type: entities
                 entity: light.balcony_group
                 title: Lights
-                entities:
-                  - light.balcony
+                entities: !include /config/config/lovelace/areas/balcony/views/lights.yaml
               # Camera
               - type: horizontal-stack
                 cards:

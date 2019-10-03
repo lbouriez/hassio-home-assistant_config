@@ -19,9 +19,7 @@ cards:
               - type: entities
                 entity: light.bedroom_guests_group
                 title: Lights
-                entities:
-                  - light.berdoom_guests_1
-                  - light.bedroom_guests_2
+                entities: !include /config/config/lovelace/areas/bedrooms/guests/views/lights.yaml
               # Alarm house
               - !include /config/config/lovelace/areas/entrance/views/alarm_ring.yaml
           # Col 3

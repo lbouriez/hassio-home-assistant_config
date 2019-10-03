@@ -1,4 +1,4 @@
-path: cameras
+path: house.cameras
 title: Surveillance
 icon: mdi:cctv
 background: radial-gradient(crimson, skyblue)

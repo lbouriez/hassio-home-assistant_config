@@ -19,12 +19,7 @@ cards:
               - type: entities
                 entity: light.kitchen_group
                 title: Lights
-                entities:
-                  - light.spot_kitchen
-                  - light.bake_left
-                  - light.bake_right
-                  - light.kitchen_led
-                  - light.dimmable_light_1
+                entities: !include /config/config/lovelace/areas/kitchen/views/lights.yaml
               # Switches
               - type: entities
                 title: 'Actions'
