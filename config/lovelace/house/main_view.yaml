@@ -1,7 +1,6 @@
 path: house.home
 title: Home
 icon: mdi:home
-background: radial-gradient(crimson, skyblue)
 panel: true
 
 cards:

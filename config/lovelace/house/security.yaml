@@ -1,7 +1,6 @@
 path: house.security
 title: Security
 icon: mdi:shield
-background: radial-gradient(crimson, skyblue)
 panel: true
 
 cards:

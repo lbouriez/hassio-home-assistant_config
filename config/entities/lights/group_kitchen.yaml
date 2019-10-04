@@ -1,8 +1,8 @@
 platform: group
 name: Kitchen group
 entities:
-  - light.spot_kitchen
+  - light.kitchen_spots
   - light.bake_left
   - light.bake_right
   - light.kitchen_led
-  - light.dimmable_light_1
+  - light.kitchen_led_strip

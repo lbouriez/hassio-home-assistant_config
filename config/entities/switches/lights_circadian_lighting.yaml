@@ -18,10 +18,10 @@ lights_rgb:
   - light.bedroom_led
   # Living room
   - light.living_color
-  - light.tv_1
-  - light.tv_2
+  - light.tv_led_1
+  - light.tv_led_2
   # Kitchen
-  - light.dimmable_light_1
+  - light.kitchen_led_strip
 lights_ct:
   # Bedroom guests
   - light.berdoom_guests_1

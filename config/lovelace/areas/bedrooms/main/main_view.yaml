@@ -1,7 +1,6 @@
 path: areas.bedrooms.main
 title: Main bedroom
 icon: mdi:bed-king
-background: radial-gradient(crimson, skyblue)
 panel: true
 
 cards:

@@ -1,7 +1,6 @@
 path: areas.bedrooms.guests
 title: Guest bedroom
 icon: mdi:bed-queen
-background: radial-gradient(crimson, skyblue)
 panel: true
 
 cards:

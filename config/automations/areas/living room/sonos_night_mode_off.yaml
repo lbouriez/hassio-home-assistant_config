@@ -1,0 +1,20 @@
+alias: Living room - Sonos night mode off
+trigger:
+  - platform: time
+    at: '07:00:00'
+  - platform: state
+    entity_id: media_player.living_room_v
+    to: 'off'
+# condition:
+#   - condition: time
+#     after: '06:59:00'
+#     before: '20:30:00'
+action:
+  - service: sonos.set_option
+    data:
+      entity_id: media_player.living_room
+      night_sound: false
+  - service: sonos.set_option
+    data:
+      entity_id: media_player.living_room
+      speech_enhance: false

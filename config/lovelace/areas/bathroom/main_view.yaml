@@ -1,7 +1,6 @@
 path: areas.bathroom
 title: Bathroom
 icon: mdi:shower
-background: radial-gradient(crimson, skyblue)
 panel: true
 
 cards:

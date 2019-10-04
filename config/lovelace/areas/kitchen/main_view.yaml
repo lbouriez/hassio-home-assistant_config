@@ -1,7 +1,6 @@
 path: areas.kitchen
 title: Kitchen
 icon: mdi:fridge
-background: radial-gradient(crimson, skyblue)
 panel: true
 
 cards:

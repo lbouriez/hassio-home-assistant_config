@@ -1,7 +1,6 @@
 path: house.cameras
 title: Surveillance
 icon: mdi:cctv
-background: radial-gradient(crimson, skyblue)
 panel: true
 
 cards:

@@ -1,4 +1,4 @@
-type: entities
+type: glance
 show_header_toggle: false
 title: Pi-hole
 entities:

@@ -1,2 +1,2 @@
-"light.*_led_*":
+light.kitchen_led_strip:
   icon: mdi:led-strip-variant

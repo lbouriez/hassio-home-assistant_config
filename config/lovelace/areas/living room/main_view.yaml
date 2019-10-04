@@ -1,7 +1,6 @@
 path: areas.living_room
 title: Living room
 icon: mdi:sofa
-background: radial-gradient(crimson, skyblue)
 panel: true
 
 cards:

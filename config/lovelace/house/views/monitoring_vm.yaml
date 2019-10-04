@@ -8,43 +8,47 @@ cards:
     title: VM monitoring
     entities:
       - sensor.last_boot
-  - type: gauge
-    entity: sensor.processor_use
-    name: CPU
-    unit_of_measurement: '%'
-    min: 0
-    max: 100
-    severity:
-      yellow: 45
-      green: 10
-      red: 85
-  - type: gauge
-    entity: sensor.disk_use_percent
-    name: Disk
-    unit_of_measurement: '%'
-    min: 0
-    max: 100
-    severity:
-      yellow: 45
-      green: 90
-      red: 10
-  - type: gauge
-    entity: sensor.memory_free
-    name: Memory
-    unit_of_measurement: '%'
-    min: 0
-    max: 2000
-    severity:
-      yellow: 1200
-      green: 250
-      red: 1800
-  - type: gauge
-    entity: sensor.memory_use_percent
-    name: Memory
-    unit_of_measurement: '%'
-    min: 0
-    max: 100
-    severity:
-      yellow: 45
-      green: 90
-      red: 10
+  - type: horizontal-stack
+    cards:
+      - type: gauge
+        entity: sensor.processor_use
+        name: CPU
+        unit_of_measurement: '%'
+        min: 0
+        max: 100
+        severity:
+          yellow: 45
+          green: 10
+          red: 85
+      - type: gauge
+        entity: sensor.disk_use_percent
+        name: Disk
+        unit_of_measurement: '%'
+        min: 0
+        max: 100
+        severity:
+          yellow: 45
+          green: 90
+          red: 10
+  - type: horizontal-stack
+    cards:
+      - type: gauge
+        entity: sensor.memory_free
+        name: Memory
+        unit_of_measurement: '%'
+        min: 0
+        max: 2000
+        severity:
+          yellow: 1200
+          green: 250
+          red: 1800
+      - type: gauge
+        entity: sensor.memory_use_percent
+        name: Memory
+        unit_of_measurement: '%'
+        min: 0
+        max: 100
+        severity:
+          yellow: 45
+          green: 90
+          red: 10

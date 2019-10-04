@@ -1,7 +1,6 @@
 path: areas.entrance
 title: Entrance
 icon: mdi:door
-background: radial-gradient(crimson, skyblue)
 panel: true
 
 cards:

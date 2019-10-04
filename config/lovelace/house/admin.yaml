@@ -1,7 +1,6 @@
 path: house.admin
 title: Administration
 icon: mdi:home-assistant
-background: radial-gradient(crimson, skyblue)
 panel: true
 
 cards:

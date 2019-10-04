@@ -2,7 +2,7 @@ platform: group
 name: Living-room group
 entities:
   - light.living_color
-  - light.spot_living_room
-  - light.spot_table
-  - light.tv_1
-  - light.tv_2
+  - light.living_room_spots
+  - light.table_spots
+  - light.tv_led_1
+  - light.tv_led_2
