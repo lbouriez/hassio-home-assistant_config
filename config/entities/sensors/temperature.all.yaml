@@ -5,4 +5,4 @@ sensors:
     unit_of_measurement: '°C'
     icon_template: mdi:oil-temperature
     value_template: >-
-      {{ ((states('sensor.temperature_158d000245a7d5')|float + states('sensor.temperature_158d0002461865')|float + states('sensor.bedroom_guests_sensor_temperature')|float + states('sensor.blink_890_510_485_temperature')|float + states('sensor.blink_entrance_temperature')|float + states('sensor.entrance_sensor_2_temperature')|float + states('sensor.entrance_sensor_temperature')|float) / 7) | round(2) }}
+      {{ ((states('sensor.group_temperature_living_room')|float + states('sensor.group_temperature_bedroom')|float + states('sensor.group_temperature_guests_bedroom')|float + states('sensor.group_temperature_bathroom')|float + states('sensor.group_temperature_entrance')|float) / 5) | round(2) }}

@@ -23,6 +23,9 @@ condition:
         - condition: state
           entity_id: 'person.giulia'
           state: 'home'
+    - condition: state
+      entity_id: input_boolean.sleep_mode
+      state: 'off'
 action:
   - service: notify.alexa_media
     data_template:

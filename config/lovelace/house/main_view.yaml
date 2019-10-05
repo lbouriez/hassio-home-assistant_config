@@ -37,6 +37,7 @@ cards:
                 entities:
                   - switch.ventilation
                   - input_boolean.guest_mode
+                  - input_boolean.sleep_mode
               # Sonos
               - !include /config/config/lovelace/house/views/media_player_sonos_all.yaml
           # Col 3

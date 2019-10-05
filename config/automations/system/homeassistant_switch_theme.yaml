@@ -1,0 +1,16 @@
+alias: System - Switch themes
+trigger:
+  - platform: time
+    at: '06:00:00'
+  - platform: time
+    at: '20:00:00'
+  - platform: homeassistant
+    event: start
+action:
+  service: frontend.set_theme
+  data_template:
+    name: >-
+      {% if (now().hour < 6) %} slate
+      {% elif (now().hour < 20) %} default
+      {% else %} slate
+      {% endif%}

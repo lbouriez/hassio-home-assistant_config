@@ -1,0 +1,4 @@
+sleep_mode:
+  name: Sleeping
+  initial: false
+  icon: mdi:sleep

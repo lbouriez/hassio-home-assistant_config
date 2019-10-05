@@ -48,7 +48,7 @@ motion_bathroom:
   icon: mdi:motion-sensor
   control: hidden
   entities:
-    - binary_sensor.bathroom_motion
+    - binary_sensor.bathroom_motion_deconz
 
 motion_balcony:
   name: Balcony

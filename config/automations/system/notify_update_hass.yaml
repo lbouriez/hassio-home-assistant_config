@@ -1,4 +1,4 @@
-alias: System - Upgrade alert
+alias: System - Hass update alert
 hide_entity: True
 initial_state: True
 trigger:

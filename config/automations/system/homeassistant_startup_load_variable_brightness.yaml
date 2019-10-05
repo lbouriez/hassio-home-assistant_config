@@ -1,8 +1,0 @@
-alias: System - Home Assistant startup load variable brightness
-hide_entity: True
-initial_state: True
-trigger:
-  - platform: homeassistant
-    event: start
-action:
-  - event: event_load_variable_brightness

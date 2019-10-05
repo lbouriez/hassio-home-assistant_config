@@ -26,7 +26,6 @@ tts
 .uuid
 core
 html5_push_registrations.conf
-ip_bans.yaml
 known_devices.yaml
 options.xml
 OZW_Log.txt

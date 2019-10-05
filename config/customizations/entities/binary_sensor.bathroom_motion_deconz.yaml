@@ -1,0 +1,2 @@
+binary_sensor.bathroom_motion_deconz:
+  friendly_name: Bathroom
