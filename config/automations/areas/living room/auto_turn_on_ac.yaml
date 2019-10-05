@@ -1,16 +1,16 @@
-alias: Living room - A/C
+alias: Living room - A/C on for bedroom
 hide_entity: True
 initial_state: True
 trigger:
   - platform: numeric_state
-    entity_id: sensor.temperature_158d0002461865
+    entity_id: sensor.group_temperature_bedroom
     above: 25.5
 condition:  
   condition: and
   conditions:
     # Bedroom temperature
     - condition: numeric_state
-      entity_id: sensor.temperature_158d0002461865
+      entity_id: sensor.group_temperature_bedroom
       above: 25.5
     # Weather outside
     - condition: template
