@@ -8,9 +8,12 @@ trigger:
     entity_id: group.door_entrance
     from: 'on'
     to: 'off'
-# condition:  
-#   - condition: template
-#     value_template: '{{ not is_state("lock.front_door", "loked") }}'
+condition:  
+  - condition: state
+    entity_id: group.door_entrance
+    state: 'off'
+  # - condition: template
+  #   value_template: '{{ not is_state("lock.front_door", "loked") }}'
 action:
   - service: lock.lock
     entity_id: lock.front_door

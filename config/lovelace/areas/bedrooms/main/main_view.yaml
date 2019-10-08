@@ -33,7 +33,7 @@ cards:
                 entities:
                   - switch.bedroom_tv
                   - type: divider
-                  - cover.bedroom_1
+                  - cover.bedroom
                   - !include /config/config/lovelace/areas/bedrooms/main/views/switch_soma.yaml
                   - switch.sonoff_100048cb54
                   - type: divider

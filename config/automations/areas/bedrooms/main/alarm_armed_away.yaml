@@ -1,11 +1,11 @@
 alias: Bedroom - Alarm armed away
 trigger:
-  platform: state
-  entity_id: alarm_control_panel.ring_alarm
-  to: 'armed_away'
+  - platform: state
+    entity_id: alarm_control_panel.ring_alarm
+    to: 'armed_away'
 action:
+  - service: cover.open_cover
+    data:
+      entity_id: cover.bedroom
   - service: light.turn_off
     entity_id: light.bedroom_group
-  - service: cover.close_cover
-    data:
-      entity_id: cover.bedroom_1

@@ -1,0 +1,4 @@
+group.all_lights:
+  name: House
+  description: All lights
+  display_categories: LIGHT

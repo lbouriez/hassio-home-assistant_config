@@ -7,6 +7,6 @@ http:
   login_attempts_threshold: 3
   base_url: !secret integration_http_base_url
   trusted_proxies:
-    - 127.0.0.1
+    # - 127.0.0.1
     - 172.30.33.0/24
   use_x_forwarded_for: true

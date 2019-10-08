@@ -1,12 +1,27 @@
-# cloud:
-#   google_actions:
-#     filter:
-#       include_entities:
-#         - media_player.bathroom
-#         - media_player.living_room
-#     entity_config: !include_dir_merge_named ../assistants/google
-#   alexa:
-#     filter:
-#       include_entities:
-#         - switch.circadian_lighting_circadian_lighting
-#     entity_config: !include_dir_merge_named ../assistants/alexa
+cloud:
+  # google_actions:
+  #   filter:
+  #     include_entities:
+  #       - media_player.bathroom
+  #       - media_player.living_room
+  #   entity_config: !include_dir_merge_named ../assistants/google
+  alexa:
+    filter:
+      include_entities:
+        # Lights
+        - light.balcony_group
+        - light.bathroom_group
+        - light.bedroom_group
+        - light.bedroom_guests_group
+        - light.corridor_group
+        - light.entrance_group
+        - light.kitchen_group
+        - light.living_room_group
+        - group.all_lights
+        # Switchs
+        - switch.ventilation
+        - switch.sonoff_100048cb54 #Bedroom closet
+        - switch.christmas
+        # Plugs
+        #- switch.circadian_lighting_circadian_lighting
+    entity_config: !include_dir_merge_named ../assistants/alexa

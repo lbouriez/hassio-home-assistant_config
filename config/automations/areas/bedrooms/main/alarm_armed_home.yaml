@@ -1,0 +1,9 @@
+alias: Bedroom - Alarm armed home
+trigger:
+  - platform: state
+    entity_id: alarm_control_panel.ring_alarm
+    to: 'armed_home'
+action:
+  - service: cover.close_cover
+    data:
+      entity_id: cover.bedroom

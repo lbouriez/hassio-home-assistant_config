@@ -10,7 +10,7 @@ trigger:
 action:
   - service: alarm_control_panel.alarm_arm_home
     entity_id: alarm_control_panel.ring_alarm
-  - service: script.lights_turn_off
+  - service: light.turn_off
     data:
       entity_id: 'group.all_lights'
   # For fun

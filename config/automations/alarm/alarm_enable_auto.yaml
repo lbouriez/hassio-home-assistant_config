@@ -15,14 +15,15 @@ condition:
     - condition: state
       entity_id: input_boolean.guest_mode
       state: 'off'
-    - condition: state
-      entity_id: 'alarm_control_panel.ring_alarm'
-      state: 'disarmed'
-    - condition: state
-      entity_id: 'alarm_control_panel.ring_alarm'
-      state: 'disarmed'
-      for:
-        minutes: 5
+    - condition: template
+      value_template: "{{ (not is_state('alarm_control_panel.ring_alarm', 'armed_home')) and ((as_timestamp(now()) - as_timestamp(states.alarm_control_panel.ring_alarm.last_changed)) > 300) }}"
+    - condition: template
+      value_template: "{{ (not is_state('alarm_control_panel.ring_alarm', 'armed_away')) and ((as_timestamp(now()) - as_timestamp(states.alarm_control_panel.ring_alarm.last_changed)) > 300) }}"
+    # - condition: state
+    #   entity_id: 'alarm_control_panel.ring_alarm'
+    #   state: 'disarmed'
+    #   for:
+    #     minutes: 5
     - condition: state
       entity_id: 'group.all_family'
       state: 'not_home'
