@@ -71,12 +71,12 @@ My home assistant configuration
 | **Lights** |
 | Hue | Lights | Led, spots, bulbs, strip | N/A |
 | Quotra | Lights | Mural switch hue compatible | N/A |
-| **Switchs & remotes** |
+| **Switches & remotes** |
 | Xiaomi | Remotes | Aqara Wireless Switch Mini | [Link]( https://www.aliexpress.com/item/32999952824.html) |
 | TP-Link | Switch | HS200 switch mural | [Link](https://www.tp-link.com/ca/home-networking/smart-plug/hs200/) |
 | TP-Link | Switch | HS105 electric plug | [Link](https://www.tp-link.com/ca/home-networking/smart-plug/hs105/) |
 | Philips | Remotes | Dimmer switch and Tap switch | N/A |
-| Sonoff | Switchs | | |
+| Sonoff | Switches | | |
 | **Security** |
 | Xiaomi | Camera | 2019 Aqara 1080P Smart Camera G2 hub Gateways Edition | [Link](https://www.aliexpress.com/item/32993932041.html?spm=a2g0s.9042311.0.0.27426c37RVPJpl)] |
 | Amazon Blink | Cameras | Camera surveillance system for the alarm | N/A |
