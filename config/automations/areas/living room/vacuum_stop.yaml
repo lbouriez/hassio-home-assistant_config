@@ -1,4 +1,4 @@
-alias: Living room - Vacuum disable whnen arriving
+alias: Living room - Vacuum disable when arriving
 trigger:
   platform: state
   entity_id: alarm_control_panel.ring_alarm

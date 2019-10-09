@@ -9,3 +9,7 @@ action:
       entity_id: cover.bedroom
   - service: light.turn_off
     entity_id: light.bedroom_group
+  - service: media_player.media_pause
+    data:
+      entity_id:
+        - media_player.bedroom # Sonos

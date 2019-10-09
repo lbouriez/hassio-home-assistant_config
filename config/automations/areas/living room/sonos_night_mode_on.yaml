@@ -1,11 +1,11 @@
 alias: Living room - Sonos night mode on
 trigger:
   - platform: state
-    entity_id: media_player.living_room_v
+    entity_id: media_player.living_room_tv
     from: 'off'
     to: 'standby'
   - platform: state
-    entity_id: media_player.living_room_v
+    entity_id: media_player.living_room_tv
     from: 'off'
     to: 'playing'
 condition:

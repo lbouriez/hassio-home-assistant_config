@@ -3,7 +3,7 @@ trigger:
   - platform: time
     at: '07:00:00'
   - platform: state
-    entity_id: media_player.living_room_v
+    entity_id: media_player.living_room_tv
     to: 'off'
 # condition:
 #   - condition: time

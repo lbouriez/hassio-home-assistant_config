@@ -9,10 +9,13 @@ trigger:
 action:
   - service: light.turn_off
     entity_id: light.living_room_group
-  - service: media_player.turn_off
+  - service: media_player.media_pause
     data:
       entity_id:
         - media_player.living_room # Sonos
-        - media_player.living_room_v # Media player TV
+  - service: media_player.turn_off
+    data:
+      entity_id:
+        - media_player.living_room_tv # TV
   # - service: switch.turn_off
   #   entity_id: switch.harmony_tv

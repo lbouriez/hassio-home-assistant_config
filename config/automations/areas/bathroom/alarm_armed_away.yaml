@@ -6,7 +6,7 @@ trigger:
 action:
   - service: light.turn_off
     entity_id: light.bathroom_group
-  - service: media_player.turn_off
+  - service: media_player.media_pause
     data:
       entity_id:
         - media_player.bathroom # Sonos
