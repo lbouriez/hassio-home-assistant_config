@@ -2,49 +2,120 @@
 My home assistant configuration
 
 ## Hardware
-
 <table>
     <tr>
-        <th>Category</th>
+        <th colspan="4">Gateway</th>
+    </tr>
+    <tr>
         <th>Brand</th>
         <th>Type</th>
         <th>Details</th>
         <th>Link</th>
     </tr>
-        <td>Gateway</td>
+    <tr>
         <td>Xiaomi</td>
         <td>Mijia Gateway</td>
         <td>Aqara zigbee gateway</td>
         <td><a href="https://www.aliexpress.com/item/32635362864.html?spm=a2g0s.9042311.0.0.27424c4dJ8VS7Z">Link</a></td>
     <tr>
     </tr>
-        <td>Gateway</td>
         <td>Logitech</td>
         <td>Infrared control</td>
         <td>Hub harmony</td>
         <td></td>
     <tr>
     </tr>
-        <td>Gateway</td>
         <td>Philips</td>
         <td>Light control</td>
         <td>Hue hub v2</td>
         <td></td>
     <tr>
     </tr>
-        <td>Gateway</td>
         <td>Conbee</td>
         <td>Zigbee hub</td>
         <td>Zigbee USB key</td>
         <td><a href="https://phoscon.de/en/conbee2">Link</a></td>
     <tr>
     </tr>
-        <td>Gateway</td>
         <td>Ring</td>
         <td>Alarm</td>
         <td>Amazon DIY Ring alarm</td>
         <td></td>
     <tr>
+    <tr>
+        <th colspan="4">Sensors</th>
+    </tr>
+    <tr>
+        <th>Brand</th>
+        <th>Type</th>
+        <th>Details</th>
+        <th>Link</th>
+    </tr>
+    </tr>
+        <td>Xiaomi</td>
+        <td>Door</td>
+        <td>Doors sensors</td>
+        <td></td>
+        <td></td>
+    <tr>
+    </tr>
+        <td>Xiaomi</td>
+        <td>Water</td>
+        <td>Water sensor</td>
+        <td></td>
+        <td></td>
+    <tr>
+    </tr>
+        <td>Xiaomi</td>
+        <td>Motion</td>
+        <td>Motions and light sensor</td>
+        <td></td>
+        <td></td>
+    <tr>
+    </tr>
+        <td>Xiaomi</td>
+        <td>Smoke</td>
+        <td>Smoke sensor</td>
+        <td></td>
+        <td></td>
+    <tr>
+    </tr>
+        <td>Xiaomi</td>
+        <td>Temperature</td>
+        <td>Temperature & humidity sensor</td>
+        <td></td>
+        <td></td>
+    <tr>
+    </tr>
+        <td>Philips</td>
+        <td>Motion</td>
+        <td>Motion, temperature and light sensor</td>
+        <td></td>
+        <td></td>
+    <tr>
+    </tr>
+        <td>Ring</td>
+        <td>Motion</td>
+        <td>Motion sensor for alarm</td>
+        <td></td>
+        <td></td>
+    <tr>
+    </tr>
+        <td>Ring</td>
+        <td>Door</td>
+        <td>Door sensor for alarm</td>
+        <td></td>
+        <td></td>
+    <tr>
+    <tr>
+        <th colspan="4">Lights</th>
+    </tr>
+    <tr>
+        <th>Brand</th>
+        <th>Type</th>
+        <th>Details</th>
+        <th>Link</th>
+    </tr>
     </tr>
         <td></td>
         <td></td>
@@ -54,6 +125,225 @@ My home assistant configuration
     <tr>
     </tr>
         <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    <tr>
+    <tr>
+        <th colspan="4">Switches</th>
+    </tr>
+    <tr>
+        <th>Brand</th>
+        <th>Type</th>
+        <th>Details</th>
+        <th>Link</th>
+    </tr>
+    </tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    <tr>
+    </tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    <tr>
+    <tr>
+        <th colspan="4">Remotes</th>
+    </tr>
+    <tr>
+        <th>Brand</th>
+        <th>Type</th>
+        <th>Details</th>
+        <th>Link</th>
+    </tr>
+    </tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    <tr>
+    </tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    <tr>
+    <tr>
+        <th colspan="4">Security</th>
+    </tr>
+    <tr>
+        <th>Brand</th>
+        <th>Type</th>
+        <th>Details</th>
+        <th>Link</th>
+    </tr>
+    </tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    <tr>
+    </tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    <tr>
+    </tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    <tr>
+    <tr>
+        <th colspan="4">Audio</th>
+    </tr>
+    <tr>
+        <th>Brand</th>
+        <th>Type</th>
+        <th>Details</th>
+        <th>Link</th>
+    </tr>
+    </tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    <tr>
+    </tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    <tr>
+    </tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    <tr>
+    </tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    <tr>
+    </tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    <tr>
+    <tr>
+        <th colspan="4">Others</th>
+    </tr>
+    <tr>
+        <th>Brand</th>
+        <th>Type</th>
+        <th>Details</th>
+        <th>Link</th>
+    </tr>
+    </tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    <tr>
+    </tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    <tr>
+    </tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    <tr>
+    </tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    <tr>
+    </tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    <tr>
+    <tr>
+        <th colspan="4">Network</th>
+    </tr>
+    <tr>
+        <th>Brand</th>
+        <th>Type</th>
+        <th>Details</th>
+        <th>Link</th>
+    </tr>
+    </tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    <tr>
+    </tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    <tr>
+    <tr>
+        <th colspan="4">Battery</th>
+    </tr>
+    <tr>
+        <th>Brand</th>
+        <th>Type</th>
+        <th>Details</th>
+        <th>Link</th>
+    </tr>
+    </tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    <tr>
+     <tr>
+        <th colspan="4">Serveurs</th>
+    </tr>
+    <tr>
+        <th>Brand</th>
+        <th>Type</th>
+        <th>Details</th>
+        <th>Link</th>
+    </tr>
+    </tr>
+        <td>Intel</td>
         <td></td>
         <td></td>
         <td></td>
@@ -63,15 +353,10 @@ My home assistant configuration
 
 | Brand | What | Details | Link |
 | ----- | ---- | ------- | -----:|
-| **Sensors** |
-| Xiaomi | Sensors | Doors, water, motion, smoke, temperature | N/A |
-| Hue | Motions | Motions sensor | N/A |
-| Amazon Ring | Motions | Ring | N/A |
-| Amazon Ring | Door sensor | Ring | N/A |
 | **Lights** |
 | Hue | Lights | Led, spots, bulbs, strip | N/A |
 | Quotra | Lights | Mural switch hue compatible | N/A |
-| **Switchs & remotes** |
+| **Switches & remotes** |
 | Xiaomi | Remotes | Aqara Wireless Switch Mini | [Link]( https://www.aliexpress.com/item/32999952824.html) |
 | TP-Link | Switch | HS200 switch mural | [Link](https://www.tp-link.com/ca/home-networking/smart-plug/hs200/) |
 | TP-Link | Switch | HS105 electric plug | [Link](https://www.tp-link.com/ca/home-networking/smart-plug/hs105/) |

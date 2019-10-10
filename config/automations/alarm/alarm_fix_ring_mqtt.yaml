@@ -22,3 +22,4 @@ action:
       addon: 5e5dfff6_ring_alarm
   - delay:
       minutes: 1
+      seconds: 30
