@@ -1,0 +1,12 @@
+device_tracker_familly_fix_state:
+  alias: Script - Fix device tracker state
+  description: Fix the group.all_familly device tracker state
+  sequence:
+    - condition: template
+      value_template: "{% if not is_state('person.laurent', 'home') %}true{% endif %}"
+    - condition: template
+      value_template: "{% if not is_state('person.giulia', 'home') %}true{% endif %}"
+    - service: python_script.set_state
+      data_template:
+        entity_id: group.all_family
+        state: 'not_home'

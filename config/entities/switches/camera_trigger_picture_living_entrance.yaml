@@ -1,0 +1,12 @@
+platform: template
+switches:
+  camera_trigger_picture_entrance:
+    friendly_name: 'Blink trigger picture'
+    icon_template: mdi:camera
+    value_template: "{{ is_state('script.camera_blink_trigger_camera', 'on') }}"
+    turn_on:
+      - wait_template: "{{ is_state('script.camera_blink_trigger_camera', 'off') }}"
+      - service: script.camera_blink_trigger_camera
+        data:
+          name: "Entrance"
+    turn_off:

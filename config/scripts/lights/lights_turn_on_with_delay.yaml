@@ -1,0 +1,27 @@
+light_turn_on_then_off:
+  alias: Script - Turn on light entity with delay
+  description: Turn on lights with a delay then off
+  fields:
+    entity_id:
+      description: 'Entity id that has to be turned on'
+      example: 'light.living_room'
+    delay_minutes:
+      description: 'Delay (in minutes) before to turn if off'
+      example: 3
+    delay_seconds:
+      description: 'Delay (in seconds) before to turn if off'
+      example: 3
+    brightness_pct:
+      description: 'Brightness to apply'
+      example: 50
+  sequence:
+    - service: 'light.turn_on'
+      data_template:
+        entity_id: "{{ entity_id }}"
+        brightness_pct: "{{ brightness_pct }}"
+    - delay:
+        minutes: "{{ delay_minutes | default(0) }}"
+        seconds: "{{ delay_seconds | default(0) }}"
+    - service: 'light.turn_off'
+      data_template:
+        entity_id: "{{ entity_id }}"

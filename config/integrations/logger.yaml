@@ -1,5 +1,6 @@
 logger:
-  default: info
+  default: error
   logs:
-    homeassistant.components.mqtt: debug
-    pynetgear: debug
+    homeassistant.core: warning
+    homeassistant.components.mqtt: warning
+    # pynetgear: debug

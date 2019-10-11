@@ -1,5 +1,5 @@
 type: picture-glance
 entities:
-  - entity: script.blink_trigger_camera
+  - entity: switch.camera_trigger_picture_entrance
   - entity: switch.alarm_toggle_blink
 camera_image: camera.blink_entrance

@@ -1,0 +1,17 @@
+light_turn_on_if_necessary:
+  alias: Script - Turn on light entity
+  description: Turn on lights and handle the time of the day
+  fields:
+    entity_id:
+      description: 'Entity id that has to be turned on'
+      example: 'light.living_room_group'
+    brightness_pct:
+      description: 'Brightness to apply'
+      example: 50
+  sequence:
+    - condition: time
+      after: '18:00:00'
+    - service: 'light.turn_on'
+      data_template:
+        entity_id: "{{ entity_id }}"
+        brightness_pct: "{{ brightness_pct }}"

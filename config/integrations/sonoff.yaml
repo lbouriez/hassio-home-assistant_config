@@ -1,3 +1,4 @@
+# https://github.com/peterbuga/HASS-sonoff-ewelink
 sonoff:
   username: !secret integration_sonoff_username
   password: !secret integration_sonoff_password

@@ -24,7 +24,11 @@ cards:
             - entity: camera.blink_balcony
               motion_entity: binary_sensor.blink_balcony_motion_detected
         - type: "custom:button-card"
-          entity: script.blink_trigger_camera
+          tap_action:
+            action: call-service
+            service: automation.trigger
+            service_data:
+              entity_id: automation.camera_update_blink_picture
           name: Update
           show_icon: false
           show_state: false

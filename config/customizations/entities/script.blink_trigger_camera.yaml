@@ -1,3 +1,0 @@
-script.blink_trigger_camera:
-  icon: mdi:camera
-  can_cancel: false

@@ -1,0 +1,42 @@
+alias: Entities - Giulia position
+hide_entity: True
+initial_state: True
+trigger:
+  - platform: state
+    entity_id: 'person.giulia'
+    from: 'Muraflex'
+    to: 'not_home'
+  - platform: state
+    entity_id: 'person.giulia'
+    to: 'home'
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: 'person.laurent'
+      state: 'home'
+    - condition: or
+      conditions:
+        - condition: state
+          entity_id: 'person.giulia'
+          state: 'not_home'
+        - condition: state
+          entity_id: 'person.giulia'
+          state: 'home'
+    - condition: state
+      entity_id: input_boolean.sleep_mode
+      state: 'off'
+action:
+  - service: notify.alexa_media
+    data_template:
+      target: 
+        - media_player.kitchen_dot
+        - media_player.bedroom_dot
+      data:
+        type: announce
+      message: >-
+        "{% if is_state('person.giulia', 'not_home') %}
+          Giulia is leaving Muraflex and will probably be there in around 20 minutes.
+        {% elif is_state('person.giulia', 'home') %}
+          Giulia is parking the car and will be there in a few minutes.
+        {% endif %}"

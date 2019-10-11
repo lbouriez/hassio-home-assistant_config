@@ -9,5 +9,10 @@ trigger:
   - platform: event
     event_type: event_camera_blink_trigger_picture
 action:
-  - service: script.turn_on
-    entity_id: script.blink_trigger_camera
+  - service: switch.turn_on
+    entity_id: switch.camera_trigger_picture_living_room
+  - service: switch.turn_on
+    entity_id: switch.camera_trigger_picture_entrance
+  - service: switch.turn_on
+    entity_id: switch.camera_trigger_picture_balcony
+  

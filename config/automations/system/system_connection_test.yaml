@@ -15,7 +15,7 @@ trigger:
 action:
   - service: persistent_notification.create
     data:
-      title: Upgrade time!
+      title: Home Assistant was down!
       message: 'Home Assistant disconneted from router - rebooting hassio...'
       notification_id: hassio_upgrade
   - service: notify.everyone

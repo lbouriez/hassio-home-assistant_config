@@ -1,0 +1,23 @@
+vacuum_clean_zone_kitchen:
+  alias: Script - Vacuum clean kitchen
+  description: Send the vacuum to clean only the kitchen
+  sequence:
+    - service: vacuum.send_command
+      data:
+        entity_id: 'vacuum.living_room'
+        command: 'zoned_cleanup'
+        params:
+          'zone_ids': '[[18430,24562,20430,28662,2]]'
+
+
+# Kitchen
+# [[18430,24562,20430,28662,1]]
+
+# Dining room
+# [[19810,25081,23410,27131,1]]
+
+# Bathroom
+# [[20786,30335,22286,32385,1],[20480,28838,21580,30338,1]]
+
+# [[20786,30335,22286,32385,2],[20480,28838,21580,30338,2]]
+

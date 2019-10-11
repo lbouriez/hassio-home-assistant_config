@@ -1,0 +1,10 @@
+alias: Entities - Fix tracker state
+hide_entity: True
+initial_state: True
+trigger:
+  - platform: homeassistant
+    event: start
+  - platform: template
+    value_template: "{% if is_state('group.all_family', 'unknown') %}true{% endif %}"
+action:
+  - service: script.device_tracker_familly_fix_state

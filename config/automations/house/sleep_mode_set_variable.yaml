@@ -12,7 +12,7 @@ trigger:
     event: start
 action:
   - service_template: >
-      {% if trigger.to_state.state == 'armed_home' %}
+      {% if (trigger.to_state is defined) and (trigger.to_state.state == 'armed_home') %}
         input_boolean.turn_on
       {% else %}
         input_boolean.turn_off

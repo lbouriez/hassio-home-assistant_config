@@ -15,6 +15,6 @@ condition:
     entity_id: 'light.bedroom_group'
     state: 'on'
 action:
-  - service: 'script.lights_turn_off'
+  - service: 'light.turn_off'
     data:
       entity_id: 'light.bedroom_group'
