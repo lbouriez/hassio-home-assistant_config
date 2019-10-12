@@ -8,7 +8,7 @@ trigger:
     entity_id: group.door_entrance
     from: 'on'
     to: 'off'
-condition:  
+condition:
   - condition: state
     entity_id: group.door_entrance
     state: 'off'

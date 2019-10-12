@@ -11,4 +11,4 @@ value_template: >-
   {%- elif status == "2" -%}
     Detected
   {%- endif -%}
-scan_interval: 3 
+scan_interval: 3

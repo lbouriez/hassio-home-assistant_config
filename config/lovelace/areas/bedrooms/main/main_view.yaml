@@ -62,4 +62,3 @@ cards:
                   include:
                     - entity_id: "automation.bedroom_*"
                     - entity_id: "automation.corridor*"
-                    

@@ -1,6 +1,6 @@
 notify:
   alias: Script - Notify
-  description: Notify 
+  description: Notify
   fields:
     notify_id:
       description: 'Notifier to use'

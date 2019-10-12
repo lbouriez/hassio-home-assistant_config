@@ -1,5 +1,5 @@
 type: custom:monster-card
-show_empty: false     
+show_empty: false
 card:
   title: You forgot to turn off
   type: entities

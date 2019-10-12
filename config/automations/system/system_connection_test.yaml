@@ -25,8 +25,3 @@ action:
       title: "Alert"
       message: 'Home Assistant disconneted from router - rebooting hassio...'
   - service: hassio.host_reboot
-
-
-
-
-  

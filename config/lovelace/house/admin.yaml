@@ -26,7 +26,7 @@ cards:
           - type: vertical-stack
             cards:
               # Synology
-              - !include /config/config/lovelace/house/views/monitoring_synology.yaml 
+              - !include /config/config/lovelace/house/views/monitoring_synology.yaml
               # Automations
               - type: custom:monster-card
                 show_empty: false

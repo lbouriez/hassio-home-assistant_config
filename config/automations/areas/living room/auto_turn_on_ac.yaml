@@ -5,7 +5,7 @@ trigger:
   - platform: numeric_state
     entity_id: sensor.group_temperature_bedroom
     above: 25.5
-condition:  
+condition:
   condition: and
   conditions:
     # Bedroom temperature

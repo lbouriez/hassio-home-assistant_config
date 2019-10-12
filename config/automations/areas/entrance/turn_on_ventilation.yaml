@@ -6,7 +6,7 @@ trigger:
     entity_id: 'group.motion_all'
     from: 'off'
     to: 'on'
-condition:  
+condition:
   condition: and
   conditions:
     - condition: time

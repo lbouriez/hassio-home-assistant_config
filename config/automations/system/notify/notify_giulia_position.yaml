@@ -29,7 +29,7 @@ condition:
 action:
   - service: notify.alexa
     data_template:
-      target: 
+      target:
         - media_player.kitchen_dot
         - media_player.bedroom_dot
       data:

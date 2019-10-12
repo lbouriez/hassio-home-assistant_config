@@ -14,7 +14,7 @@ trigger:
     at: '20:00:00'
   - platform: time
     at: '21:00:00'
-condition:  
+condition:
   condition: and
   conditions:
     - condition: state

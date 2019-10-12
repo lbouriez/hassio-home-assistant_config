@@ -3,5 +3,4 @@ xiaomi_aqara:
   gateways:
     - mac: !secret integration_xiaomi_aqara_gateways_mac
       key: !secret integration_xiaomi_aqara_gateways_key
-      host: !secret integration_xiaomi_aqara_gateways_host
-      
+      host: !secret integration_xiaomi_aqara_gateways_host      
