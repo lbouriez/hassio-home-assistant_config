@@ -1,5 +1,5 @@
 name: everyone
 platform: group
 services:
-  - service: laurent_pushover
-  - service: giulia_pushbullet
+  - service: laurent
+  - service: giulia

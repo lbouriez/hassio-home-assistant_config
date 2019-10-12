@@ -6,6 +6,8 @@ panel: true
 cards:
   - type: vertical-stack
     cards:
+      # - type: custom:gui-sandbox
+      - !include /config/config/lovelace/views/banner.yaml
       - type: custom:layout-card
         max_columns: 3
         layout: horizontal

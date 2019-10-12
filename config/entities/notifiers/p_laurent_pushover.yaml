@@ -1,0 +1,4 @@
+name: p_laurent_pushover
+platform: pushover
+api_key: !secret integration_notify_laurent_pushover_api_key
+user_key: !secret integration_notify_laurent_pushover_user_key

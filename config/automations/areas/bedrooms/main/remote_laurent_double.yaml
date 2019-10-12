@@ -24,7 +24,7 @@ action:
       - condition: time
         after: '22:30:00'
         before: '23:50:00'
-  - service: notify.alexa_media
+  - service: notify.alexa
     data:
       target: 
         - media_player.bedroom_dot

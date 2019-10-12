@@ -10,6 +10,6 @@ action:
     after: '22:00:00'
   - service: 'script.light_turn_on_then_off'
     data:
-      entity_id: 'light.corridor_group'
+      entity_id: 'light.living_room_group'
       delay_minutes: 3
-      brightness_pct: 10
+      brightness_pct: 2

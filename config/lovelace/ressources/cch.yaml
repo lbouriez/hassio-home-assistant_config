@@ -1,0 +1,8 @@
+options: show
+clock_am_pm: false
+clock_date: true
+clock_format: 24
+main_config: true
+menu: clock
+swipe: true
+hide_tabs: 'house.cameras'

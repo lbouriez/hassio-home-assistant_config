@@ -10,3 +10,7 @@ life360:
       - Vincenzo
   max_update_wait:
     minutes: 30
+  warning_threshold: 2
+  error_threshold: 3
+  circles:
+    include: [Extended Family]

@@ -3,4 +3,5 @@ logger:
   logs:
     homeassistant.core: warning
     homeassistant.components.mqtt: warning
+    homeassistant.components.life360: fatal
     # pynetgear: debug

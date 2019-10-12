@@ -11,8 +11,12 @@ trigger:
 action:
   - service: switch.turn_on
     entity_id: switch.camera_trigger_picture_living_room
+  - delay:
+      seconds: 5
   - service: switch.turn_on
     entity_id: switch.camera_trigger_picture_entrance
+  - delay:
+      seconds: 5
   - service: switch.turn_on
     entity_id: switch.camera_trigger_picture_balcony
   
