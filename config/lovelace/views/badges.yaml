@@ -1,4 +1,4 @@
-- entity: sensor.time
+# No more than 6 for the mobile view to be good
 - entity: group.door_all
   name: 'Doors'
 - entity: group.motion_all

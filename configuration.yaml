@@ -14,3 +14,6 @@ homeassistant:
     - type: homeassistant
   # Load packages
   packages: !include_dir_named config/integrations
+  auth_mfa_modules:
+      - type: totp
+        name: Authenticator app

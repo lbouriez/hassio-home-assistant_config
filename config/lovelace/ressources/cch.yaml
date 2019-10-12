@@ -1,8 +1,29 @@
+main_config: true
+disable: false
+compact_header: true
+header: true
+# default_tab:
+# default_tab_template:
+kiosk_mode: false
+disable_sidebar: false
+sidebar_swipe: true
+sidebar_closed: false
+# show_tabs: ""
+redirect: true
+chevrons: false
+hide_help: false
+hide_config: false
+hide_unused: false
+edit_mode_show_tabs: false
+# exceptions: Top to have different display (mobil, user, etc.)
+hide_tabs: 'house.cameras'
+menu: clock
+notifications: show
+voice: hide
 options: show
+clock_format: 24
 clock_am_pm: false
 clock_date: true
-clock_format: 24
-main_config: true
-menu: clock
+# date_locale: 
 swipe: true
-hide_tabs: 'house.cameras'
+swipe_animate: fade
