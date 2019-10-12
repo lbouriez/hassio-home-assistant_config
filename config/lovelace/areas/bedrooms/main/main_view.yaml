@@ -5,7 +5,7 @@ panel: false
 
 badges:
   !include /config/config/lovelace/views/badges.yaml
-  
+
 cards:
   # Col 1
   - type: vertical-stack
