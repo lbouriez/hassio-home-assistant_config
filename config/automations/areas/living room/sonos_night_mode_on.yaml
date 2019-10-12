@@ -10,7 +10,7 @@ trigger:
     to: 'playing'
 condition:
   - condition: time
-    after: '20:30:00'
+    after: '18:30:00'
     before: '07:00:00'
 action:
   - service: sonos.set_option

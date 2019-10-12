@@ -11,15 +11,11 @@ condition:
     entity_id: 'group.door_all'
     state: 'on'
 action:
-  - service: notify.everyone
-    data_template:
+  - service: script.notify
+    data:
+      notify_id: everyone
+      priority: 2
       title: "Alert"
-      data:
-        url: !secret integration_http_base_url
-        priority: 2
-        timestamp: true
-        expire: 3600
-        retry: 30
       message: >
         {% set unlocked = states | selectattr('entity_id', 'in', state_attr('group.door_all','entity_id')) | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
         You forgot to close ({{ unlocked }}) !

@@ -15,18 +15,14 @@ condition:
         states('sensor.version_current')
       }}
 action:
-  - service: notify.laurent
-    data_template:
-      title: 'New Home Assistant Release'
+  - service: script.notify
+    data:
+      notify_id: laurent
+      priority: 0
+      title: "New Home Assistant Release"
       message: >-
         There is a Home Assistant upgrade for Hass.io pending!
         Version {{ states('sensor.version_available') }} just got released!
-      data:
-        url: !secret integration_http_base_url
-        priority: -1
-        timestamp: true
-        expire: 3600
-        retry: 30
   - service: persistent_notification.create
     data_template:
       title: Upgrade time!

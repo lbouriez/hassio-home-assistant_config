@@ -18,16 +18,12 @@ action:
       title: Home Assistant was down!
       message: 'Home Assistant disconneted from router - rebooting hassio...'
       notification_id: hassio_upgrade
-  - service: notify.everyone
+  - service: script.notify
     data:
+      notify_id: everyone
+      priority: 2
       title: "Alert"
       message: 'Home Assistant disconneted from router - rebooting hassio...'
-      data:
-        priority: 2
-        url: !secret integration_http_base_url
-        timestamp: true
-        expire: 3600
-        retry: 30
   - service: hassio.host_reboot
 
 

@@ -1,0 +1,27 @@
+notify:
+  alias: Script - Notify
+  description: Notify 
+  fields:
+    notify_id:
+      description: 'Notifier to use'
+      example: 'everyone'
+    title:
+      description: 'Title of the message'
+      example: 'Alert'
+    priority:
+      description: 'Priority'
+      example: '0'
+    message:
+      description: 'Message to send'
+      example: 'This is a test message'
+  sequence:
+    - service_template: "notify.{{ notify_id | default('everyone') }}"
+      data_template:
+        title: "{{ title | default('Alert') }}"
+        data:
+          url: !secret integration_http_base_url
+          priority: "{{ priority | default(0) }}"
+          timestamp: true
+          expire: 3600
+          retry: 30
+        message: "{{ message | default('Default message for the script.notify') }}"

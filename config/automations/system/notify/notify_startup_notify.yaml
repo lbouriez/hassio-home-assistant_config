@@ -5,13 +5,9 @@ trigger:
   - platform: homeassistant
     event: start
 action:
-  - service: notify.laurent
-    data_template:
+  - service: script.notify
+    data:
+      notify_id: laurent
+      priority: 0
       title: "Information"
-      message: Home Assistant has just been started
-      data:
-        priority: -1
-        url: !secret integration_http_base_url
-        timestamp: true
-        expire: 3600
-        retry: 30
+      message: "Home Assistant has just been started"

@@ -11,10 +11,3 @@ camera_blink_trigger_camera:
         name: "{{ name }}"
     - delay: 00:00:05
     - service: blink.blink_update
-    - service: notify.laurent
-      data_template:
-        title: "Information"
-        message: "|{{ name }}|"
-        data:
-          url: !secret integration_http_base_url
-          priority: -1

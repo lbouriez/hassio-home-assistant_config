@@ -1,0 +1,18 @@
+alias: Camera - Update blink picture
+hide_entity: True
+initial_state: True
+trigger:
+  - platform: time_pattern
+    hours: '/1'
+    minutes: 0
+    seconds: 0
+  - platform: event
+    event_type: event_camera_blink_trigger_picture
+action:
+  - service: switch.turn_on
+    entity_id: switch.camera_trigger_picture_living_room
+  - service: switch.turn_on
+    entity_id: switch.camera_trigger_picture_entrance
+  - service: switch.turn_on
+    entity_id: switch.camera_trigger_picture_balcony
+  

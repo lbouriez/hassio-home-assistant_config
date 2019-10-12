@@ -1,0 +1,32 @@
+alias: Alarm - Enable alarm auto
+hide_entity: True
+initial_state: True
+trigger:
+  - platform: state
+    entity_id: group.all_family
+    from: 'home'
+    to: 'not_home'
+  - platform: state
+    entity_id: 'lock.front_door'
+    to: 'locked'
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: input_boolean.guest_mode
+      state: 'off'
+    - condition: template
+      value_template: "{{ (not is_state('alarm_control_panel.ring_alarm', 'armed_home')) and ((as_timestamp(now()) - as_timestamp(states.alarm_control_panel.ring_alarm.last_changed)) > 300) }}"
+    - condition: template
+      value_template: "{{ (not is_state('alarm_control_panel.ring_alarm', 'armed_away')) and ((as_timestamp(now()) - as_timestamp(states.alarm_control_panel.ring_alarm.last_changed)) > 300) }}"
+    # - condition: state
+    #   entity_id: 'alarm_control_panel.ring_alarm'
+    #   state: 'disarmed'
+    #   for:
+    #     minutes: 5
+    - condition: state
+      entity_id: 'group.all_family'
+      state: 'not_home'
+action:
+  - service: alarm_control_panel.alarm_arm_away
+    entity_id: alarm_control_panel.ring_alarm

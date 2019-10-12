@@ -1,16 +1,19 @@
 light_turn_on_if_necessary:
   alias: Script - Turn on light entity
-  description: Turn on lights and handle the time of the day
+  description: Turn on light it time is after 6pm (or another in time_after)
   fields:
     entity_id:
-      description: 'Entity id that has to be turned on'
+      description: 'Entity id'
       example: 'light.living_room_group'
     brightness_pct:
-      description: 'Brightness to apply'
+      description: 'Brightness in %'
       example: 50
+    hour_after:
+      description: 'Time from which the light will turn on'
+      example: '18'
   sequence:
-    - condition: time
-      after: '18:00:00'
+    - condition: template
+      value_template: "{{ now().hour > hour_after | default(18) }}"
     - service: 'light.turn_on'
       data_template:
         entity_id: "{{ entity_id }}"

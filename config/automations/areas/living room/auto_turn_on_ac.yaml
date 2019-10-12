@@ -21,13 +21,9 @@ condition:
 action:
   - service: climate.turn_on
     entity_id: climate.living_room
-  - service: notify.laurent
+  - service: script.notify
     data:
+      notify_id: laurent
+      priority: 0
       title: "A/C"
-      data:
-        url: !secret integration_http_base_url
-        priority: 0
-        timestamp: true
-        expire: 3600
-        retry: 30
-      message: 'The A/C has been turned on'
+      message: "The A/C has been turned on"
