@@ -1,5 +1,5 @@
-# home-assistant Config
-My home assistant configuration
+# My Home Assistant conf
+[![CodeFactor](https://www.codefactor.io/repository/github/lbouriez/hassio-home-assistant_config/badge)](https://www.codefactor.io/repository/github/lbouriez/hassio-home-assistant_config)
 
 ## Hardware
 <table>

@@ -1,0 +1,12 @@
+- entity: sensor.time
+- entity: group.door_all
+  name: 'Doors'
+- entity: group.motion_all
+  name: 'Motions'
+- entity: sensor.group_temperature_all
+  name: 'Temperature'
+# Alarms
+- entity: alarm_control_panel.ring_alarm
+- entity: alarm_control_panel.alexa_guard_851bb
+  name: 'Guard'
+- entity: alarm_control_panel.blink_home

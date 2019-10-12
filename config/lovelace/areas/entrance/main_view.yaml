@@ -1,54 +1,50 @@
 path: areas.entrance
 title: Entrance
 icon: mdi:door
-panel: true
+panel: false
 
+badges:
+  !include /config/config/lovelace/views/badges.yaml
+  
 cards:
+  # Col 1
   - type: vertical-stack
     cards:
-      - type: custom:layout-card
-        max_columns: 2
-        layout: horizontal
-        max_width: [50%, 50%]
+      # Lights
+      - type: entities
+        entity: light.entrance_group
+        title: Lights
+        entities: !include /config/config/lovelace/areas/entrance/views/lights.yaml
+      # Camera
+      - type: horizontal-stack
         cards:
-          # Col 1
-          - type: vertical-stack
-            cards:
-              # Lights
-              - type: entities
-                entity: light.entrance_group
-                title: Lights
-                entities: !include /config/config/lovelace/areas/entrance/views/lights.yaml
-              # Camera
-              - type: horizontal-stack
-                cards:
-                  - !include /config/config/lovelace/areas/entrance/views/camera_blink.yaml
-          # Col 3
-          - type: vertical-stack
-            cards:
-              # Divers
-              - type: entities
-                title: 'House actions'
-                show_header_toggle: false
-                entities:
-                  - switch.ventilation
-                  - lock.front_door
-              # Sensors
-              - type: entities
-                title: 'Sensors'
-                show_header_toggle: false
-                entities:
-                  - sensor.group_temperature_entrance
-                  - type: divider
-                  - group.door_entrance
-                  - group.motion_entrance
-              # Automations
-              - type: custom:monster-card
-                show_empty: false
-                card:
-                  type: entities
-                  title: 'Automations'
-                  show_header_toggle: false
-                filter:
-                  include:
-                    - entity_id: "automation.entrance_*"
+          - !include /config/config/lovelace/areas/entrance/views/camera_blink.yaml
+  # Col 3
+  - type: vertical-stack
+    cards:
+      # Divers
+      - type: entities
+        title: 'House actions'
+        show_header_toggle: false
+        entities:
+          - switch.ventilation
+          - lock.front_door
+      # Sensors
+      - type: entities
+        title: 'Sensors'
+        show_header_toggle: false
+        entities:
+          - sensor.group_temperature_entrance
+          - type: divider
+          - group.door_entrance
+          - group.motion_entrance
+      # Automations
+      - type: custom:monster-card
+        show_empty: false
+        card:
+          type: entities
+          title: 'Automations'
+          show_header_toggle: false
+        filter:
+          include:
+            - entity_id: "automation.entrance_*"

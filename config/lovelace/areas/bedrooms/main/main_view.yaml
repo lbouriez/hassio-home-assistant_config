@@ -1,64 +1,60 @@
 path: areas.bedrooms.main
 title: Main bedroom
 icon: mdi:bed-king
-panel: true
+panel: false
 
+badges:
+  !include /config/config/lovelace/views/badges.yaml
+  
 cards:
+  # Col 1
   - type: vertical-stack
     cards:
-      - type: custom:layout-card
-        max_columns: 3
-        layout: horizontal
-        max_width: [33%, 33%, 33%]
-        cards:
-          # Col 1
-          - type: vertical-stack
-            cards:
-              # Lights
-              - type: entities
-                entity: light.bedroom_group
-                title: Lights
-                entities: !include /config/config/lovelace/areas/bedrooms/main/views/lights.yaml
-              # Alarm house
-              - !include /config/config/lovelace/areas/entrance/views/alarm_ring.yaml
-              # Thermostat
-              - !include /config/config/lovelace/areas/bedrooms/main/views/climate_heat.yaml
-          # Col 2
-          - type: vertical-stack
-            cards:
-              # Switches
-              - type: entities
-                title: 'Actions'
-                show_header_toggle: false
-                entities:
-                  - switch.bedroom_tv
-                  - type: divider
-                  - cover.bedroom
-                  - !include /config/config/lovelace/areas/bedrooms/main/views/switch_soma.yaml
-                  - switch.sonoff_100048cb54
-                  - type: divider
-                  - !include /config/config/lovelace/areas/bedrooms/main/views/media_player_sonos.yaml
-                  # - !include /config/config/lovelace/areas/bedrooms/main/views/media_player_alexa.yaml
-          # Col 3
-          - type: vertical-stack
-            cards:
-              # Sensors
-              - type: entities
-                title: 'Sensors'
-                show_header_toggle: false
-                entities:
-                  - sensor.group_temperature_bedroom
-                  - sensor.humidity_158d0002461865
-                  - type: divider
-                  - group.motion_bedroom
-              # Automations
-              - type: custom:monster-card
-                show_empty: false
-                card:
-                  type: entities
-                  title: 'Automations'
-                  show_header_toggle: false
-                filter:
-                  include:
-                    - entity_id: "automation.bedroom_*"
-                    - entity_id: "automation.corridor*"
+      # Lights
+      - type: entities
+        entity: light.bedroom_group
+        title: Lights
+        entities: !include /config/config/lovelace/areas/bedrooms/main/views/lights.yaml
+      # Alarm house
+      - !include /config/config/lovelace/areas/entrance/views/alarm_ring.yaml
+      # Thermostat
+      - !include /config/config/lovelace/areas/bedrooms/main/views/climate_heat.yaml
+  # Col 2
+  - type: vertical-stack
+    cards:
+      # Switches
+      - type: entities
+        title: 'Actions'
+        show_header_toggle: false
+        entities:
+          - switch.bedroom_tv
+          - type: divider
+          - cover.bedroom
+          - !include /config/config/lovelace/areas/bedrooms/main/views/switch_soma.yaml
+          - switch.sonoff_100048cb54
+          - type: divider
+          - !include /config/config/lovelace/areas/bedrooms/main/views/media_player_sonos.yaml
+          # - !include /config/config/lovelace/areas/bedrooms/main/views/media_player_alexa.yaml
+  # Col 3
+  - type: vertical-stack
+    cards:
+      # Sensors
+      - type: entities
+        title: 'Sensors'
+        show_header_toggle: false
+        entities:
+          - sensor.group_temperature_bedroom
+          - sensor.humidity_158d0002461865
+          - type: divider
+          - group.motion_bedroom
+      # Automations
+      - type: custom:monster-card
+        show_empty: false
+        card:
+          type: entities
+          title: 'Automations'
+          show_header_toggle: false
+        filter:
+          include:
+            - entity_id: "automation.bedroom_*"
+            - entity_id: "automation.corridor*"

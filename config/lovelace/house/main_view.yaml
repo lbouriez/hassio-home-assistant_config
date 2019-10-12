@@ -1,61 +1,56 @@
 path: house.home
 title: Home
 icon: mdi:home
-panel: true
+panel: false
+
+badges:
+  !include /config/config/lovelace/views/badges.yaml
 
 cards:
+  # - type: custom:gui-sandbox
+  # Col 1
   - type: vertical-stack
     cards:
-      # - type: custom:gui-sandbox
-      - !include /config/config/lovelace/views/banner.yaml
-      - type: custom:layout-card
-        max_columns: 3
-        layout: horizontal
-        max_width: [30%, 30%, 40%]
-        cards:
-          # Col 1
-          - type: vertical-stack
-            cards:
-              # What is on - Always on top
-              - !include /config/config/lovelace/views/notify_what_is_on.yaml
-              # Lights group
-              - !include /config/config/lovelace/house/views/group_all_lights.yaml
-          # Col 2
-          - type: vertical-stack
-            cards:
-              # TV's
-              - type: entities
-                title: 'TV''s'
-                show_header_toggle: false
-                entities:
-                  - switch.living_room_tv
-                  # - switch.living_room_plex
-                  - switch.living_room_netflix
-                  - switch.bedroom_tv
-              # Divers
-              - type: entities
-                title: 'House actions'
-                show_header_toggle: false
-                entities:
-                  - switch.ventilation
-                  - input_boolean.guest_mode
-                  - input_boolean.sleep_mode
-              # Sonos
-              - !include /config/config/lovelace/house/views/media_player_sonos_all.yaml
-          # Col 3
-          - type: vertical-stack
-            cards:
-              # Weather
-              - !include /config/config/lovelace/views/weather.yaml
-              # Vacuum
-              - !include /config/config/lovelace/areas/living room/views/vacuum.yaml
-              # Automations
-              - type: custom:monster-card
-                show_empty: false
-                card:
-                  type: entities
-                  title: 'Automations'
-                  show_header_toggle: false
-                filter:
-                  include:
-                    - entity_id: "automation.house*"
+      # What is on - Always on top
+      - !include /config/config/lovelace/views/notify_what_is_on.yaml
+      # Lights group
+      - !include /config/config/lovelace/house/views/group_all_lights.yaml
+  # Col 2
+  - type: vertical-stack
+    cards:
+      # TV's
+      - type: entities
+        title: 'TV''s'
+        show_header_toggle: false
+        entities:
+          - switch.living_room_tv
+          # - switch.living_room_plex
+          - switch.living_room_netflix
+          - switch.bedroom_tv
+      # Divers
+      - type: entities
+        title: 'House actions'
+        show_header_toggle: false
+        entities:
+          - switch.ventilation
+          - input_boolean.guest_mode
+          - input_boolean.sleep_mode
+      # Sonos
+      - !include /config/config/lovelace/house/views/media_player_sonos_all.yaml
+  # Col 3
+  - type: vertical-stack
+    cards:
+      # Weather
+      - !include /config/config/lovelace/views/weather.yaml
+      # Vacuum
+      - !include /config/config/lovelace/areas/living room/views/vacuum.yaml
+      # Automations
+      - type: custom:monster-card
+        show_empty: false
+        card:
+          type: entities
+          title: 'Automations'
+          show_header_toggle: false
+        filter:
+          include:
+            - entity_id: "automation.house*"
