@@ -1,29 +1,26 @@
+# Exemple of nice confs:
+# https://github.com/abeksis/My-HomeAssistant-Config/blob/41e51df1bb83b1024978c6ebb3a2df19e3ec1973/HomeAssistant_File/lovelace/cch/compact-custom-header.yaml
+# https://github.com/Holewijn/Smarthome-Homeassistant-config/blob/master/lovelace/cch/compact-custom-header.yaml
 main_config: true
-disable: false
-compact_header: true
-header: true
-# default_tab:
-# default_tab_template:
-kiosk_mode: false
-disable_sidebar: false
-sidebar_swipe: true
-sidebar_closed: false
-# show_tabs: ""
-redirect: true
-chevrons: false
-hide_help: false
-hide_config: false
-hide_unused: false
-edit_mode_show_tabs: false
-# exceptions: Top to have different display (mobil, user, etc.)
-hide_tabs: 'house.cameras'
-menu: clock
-notifications: show
+background: 'rgba(0,0,0,0.3)'
+menu: overflow
+options: clock
 voice: hide
-options: show
-clock_format: 24
-clock_am_pm: false
+hide_tabs: 'house.cameras'
+notifications: overflow
+hide_config: true
+hide_help: true
+clock_format: '24'
 clock_date: true
-# date_locale: 
-swipe: true
-swipe_animate: fade
+disable: false
+exceptions:
+  - conditions:
+      user_agent: Mobile
+      media_query: "(max-width: 600px)"
+    config:
+      menu: hide
+      options: hide
+      swipe: true
+      swipe_skip: "3"
+      swipe_animate: fade
+      # kiosk_mode: true

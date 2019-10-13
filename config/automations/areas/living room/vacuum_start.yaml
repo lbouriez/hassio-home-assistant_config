@@ -4,7 +4,7 @@ trigger:
     entity_id: alarm_control_panel.ring_alarm
     to: 'armed_away'
   - platform: time
-    at: '12:00:00'
+    at: '16:00:00'
 condition:
   # condition: state
   # entity_id: vacuum.living_room
@@ -12,7 +12,7 @@ condition:
   # for:
   #   hours: 4 # With 8 it was not working
   - condition: template
-    value_template: "{{ (is_state('vacuum.living_room', 'docked')) and (((as_timestamp(now()) - as_timestamp(states.vacuum.living_room.attributes.clean_stop))) > 18000) }}"
+    value_template: "{{ (is_state('vacuum.living_room', 'docked')) and (((as_timestamp(now()) - as_timestamp(states.vacuum.living_room.attributes.clean_stop))) > 28800) }}"
 action:
   - service: vacuum.start
     entity_id: vacuum.living_room

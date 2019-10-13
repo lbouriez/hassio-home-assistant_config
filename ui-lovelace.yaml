@@ -1,16 +1,13 @@
-title: Casa nostra
-# Include external resources
 resources:
   !include /config/config/lovelace/ressources/ressources.yaml
-
-# Optional background for all views. Check https://developer.mozilla.org/en-US/docs/Web/CSS/background for more examples.
-# background: center / cover no-repeat url("/background.png") fixed
-
-# Exclude entities from "Unused entities" view
-excluded_entities: []
 
 cch:
   !include /config/config/lovelace/ressources/cch.yaml
 
+decluttering_templates:
+  !include_dir_named /config/config/lovelace/templates
+
+title: Casa nostra
+background: var(--background-image)
 views:
   !include /config/config/lovelace/ressources/views.yaml
