@@ -211,6 +211,12 @@
         <td><a href="https://iportproducts.com/xpress">Link</a></td>
     </tr>
     <tr>
+        <td>Ikea</td>
+        <td>Remote</td>
+        <td>Sonos remote symfonisk</td>
+        <td></td>
+    </tr>
+    <tr>
         <th colspan="4">Security</th>
     </tr>
     <tr>
@@ -381,3 +387,6 @@
 Virtualbox  
 Hass.io  
 To be completed...
+
+## Missing
+Improve the Lovelace interface...
