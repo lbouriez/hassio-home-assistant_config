@@ -17,10 +17,20 @@ exceptions:
   - conditions:
       user_agent: Mobile
       media_query: "(max-width: 600px)"
+      user: Laurent
     config:
       menu: hide
       options: hide
       swipe: true
       swipe_skip: "3"
-      swipe_animate: fade
       # kiosk_mode: true
+  - conditions:
+      user: Giulia, Vincenzo
+    config:
+      menu: hide
+      options: hide
+      swipe: true
+      swipe_skip: "3"
+      kiosk_mode: true
+      default_tab: 'house.home'
+      hide_tabs: '1 to 30'
