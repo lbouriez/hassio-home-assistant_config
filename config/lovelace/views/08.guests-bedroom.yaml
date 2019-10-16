@@ -1,0 +1,45 @@
+path: areas.bedrooms.guests
+title: Guest bedroom
+icon: mdi:bed-queen
+panel: false
+
+badges:
+  !include ../views/divers_badges.yaml
+
+popup_cards: []
+
+cards:
+  # Col 1
+  - type: vertical-stack
+    cards:
+      # Lights
+      - type: entities
+        entity: light.bedroom_guests_group
+        title: Lights
+        entities: !include ../views/guests-bedroom_lights.yaml
+      # Alarm house
+      - !include ../views/entrance_alarm_ring.yaml
+      - !include ../includes/bottom-card.yaml
+  # Col 2
+  - type: vertical-stack
+    cards:
+      # Sensors
+      - type: entities
+        title: 'Sensors'
+        show_header_toggle: false
+        entities:
+          - sensor.group_temperature_guests_bedroom
+          - type: divider
+          - group.motion_guests_bedroom
+      # Automations
+      - type: custom:monster-card
+        show_empty: false
+        card:
+          type: entities
+          title: 'Automations'
+          show_header_toggle: false
+        filter:
+          include:
+            - entity_id: "automation.guests_*"
+            - entity_id: "automation.corridor*"
+      - !include ../includes/bottom-card.yaml

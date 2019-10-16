@@ -1,0 +1,19 @@
+bathroom:
+  sensor:
+    - group.motion_bathroom
+  entity:
+    - light.bathroom_group
+  sensor_type: duration
+  delay: 420
+  service_data:
+    brightness_pct: 100 # input_number.light_variable_brightness soom I hope...
+  start_time: '09:00:00'
+  end_time: '23:45:00'
+  overrides:
+    - input_boolean.guest_mode
+  night_mode:
+    delay: 420
+    service_data:
+      brightness_pct: 12
+    start_time: '22:00:00'
+    end_time: '23:45:00'

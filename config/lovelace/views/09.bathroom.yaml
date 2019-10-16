@@ -1,0 +1,49 @@
+path: areas.bathroom
+title: Bathroom
+icon: mdi:shower
+panel: false
+
+badges:
+  !include ../views/divers_badges.yaml
+
+popup_cards: []
+
+cards:
+  # Col 1
+  - type: vertical-stack
+    cards:
+      # Lights
+      - type: entities
+        entity: light.bathroom_group
+        title: Lights
+        entities: !include ../views/bathroom_lights.yaml
+      # Switches
+      - type: entities
+        title: 'Actions'
+        show_header_toggle: false
+        entities:
+          - !include ../views/bathroom_media_player_sonos.yaml
+          # - !include ../views/bathroom_media_player_alexa.yaml
+      - !include ../includes/bottom-card.yaml
+  # Col 2
+  - type: vertical-stack
+    cards:
+      # Sensors
+      - type: entities
+        title: 'Sensors'
+        show_header_toggle: false
+        entities:
+          - sensor.group_temperature_bathroom
+          - type: divider
+          - group.motion_bathroom
+      # Automations
+      - type: custom:monster-card
+        show_empty: false
+        card:
+          type: entities
+          title: 'Automations'
+          show_header_toggle: false
+        filter:
+          include:
+            - entity_id: "automation.bathroom_*"
+      - !include ../includes/bottom-card.yaml

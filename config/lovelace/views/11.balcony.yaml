@@ -1,0 +1,47 @@
+path: areas.balcony
+title: Balcony
+icon: mdi:grill
+panel: false
+
+badges:
+  !include ../views/divers_badges.yaml
+
+popup_cards: []
+
+cards:
+  # Col 1
+  - type: vertical-stack
+    cards:
+      # Lights
+      - type: entities
+        entity: light.balcony_group
+        title: Lights
+        entities: !include ../views/balcony_lights.yaml
+      # Camera
+      - type: horizontal-stack
+        cards:
+          - !include ../views/balcony_camera_blink.yaml
+      - !include ../includes/bottom-card.yaml
+  # Col 2
+  - type: vertical-stack
+    cards:
+      # Sensors
+      - type: entities
+        title: 'Sensors'
+        show_header_toggle: false
+        entities:
+          - sensor.group_temperature_balcony
+          - type: divider
+          - group.door_balcony
+          - group.motion_balcony
+      # Automations
+      - type: custom:monster-card
+        show_empty: false
+        card:
+          type: entities
+          title: 'Automations'
+          show_header_toggle: false
+        filter:
+          include:
+            - entity_id: "automation.balcony_*"
+      - !include ../includes/bottom-card.yaml

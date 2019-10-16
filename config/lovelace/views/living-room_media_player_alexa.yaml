@@ -1,0 +1,7 @@
+type: custom:mini-media-player
+entity: media_player.living_room_2
+group: true
+tts:
+  platform: alexa
+  sync_volume: true
+  type: announce

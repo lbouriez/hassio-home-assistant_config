@@ -1,9 +1,0 @@
-type: custom:monster-card
-show_empty: false
-card:
-  type: glance
-  title: 'Smoke sensors'
-  show_header_toggle: false
-filter:
-  include:
-    - entity_id: "binary_sensor.smoke*"

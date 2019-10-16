@@ -1,0 +1,1 @@
+entity_controller: !include_dir_merge_named ../entities/entity_controllers

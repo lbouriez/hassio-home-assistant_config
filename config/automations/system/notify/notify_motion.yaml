@@ -12,7 +12,7 @@ condition:
       entity_id: 'group.all_family'
       state: 'not_home'
     - condition: template
-      value_template: "{% if not is_state('vacuum.xiaomi_vacuum_cleaner', 'cleaning') %}true{% endif %}"
+      value_template: "{% not is_state('vacuum.xiaomi_vacuum_cleaner', 'cleaning') %}"
 action:
   - event: event_camera_blink_trigger_picture
   - service: script.notify

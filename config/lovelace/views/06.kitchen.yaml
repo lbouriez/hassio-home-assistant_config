@@ -1,0 +1,46 @@
+path: areas.kitchen
+title: Kitchen
+icon: mdi:fridge
+panel: false
+
+badges:
+  !include ../views/divers_badges.yaml
+
+popup_cards: []
+
+cards:
+  # Col 1
+  - type: vertical-stack
+    cards:
+      # Lights
+      - type: entities
+        entity: light.kitchen_group
+        title: Lights
+        entities: !include ../views/kitchen_lights.yaml
+      # Switches
+      - type: entities
+        title: 'Actions'
+        show_header_toggle: false
+        entities:
+          - !include ../views/kitchen_media_player_alexa.yaml
+      - !include ../includes/bottom-card.yaml
+  # Col 2
+  - type: vertical-stack
+    cards:
+      # Sensors
+      - type: entities
+        title: 'Sensors'
+        show_header_toggle: false
+        entities:
+          - group.motion_kitchen
+      # Automations
+      - type: custom:monster-card
+        show_empty: false
+        card:
+          type: entities
+          title: 'Automations'
+          show_header_toggle: false
+        filter:
+          include:
+            - entity_id: "automation.kitchen_*"
+      - !include ../includes/bottom-card.yaml

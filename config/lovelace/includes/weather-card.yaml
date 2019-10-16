@@ -1,0 +1,22 @@
+type: vertical-stack
+cards:
+  - type: custom:weather-card
+    style: |
+      ha-card {
+        border-radius: var(--border-radius);
+        opacity: 0.8;
+        font-size: 12px;
+        font-family: Helvetica;
+        font-weight: bold;
+      }
+    entity: weather.dark_sky
+    name: Montréal
+    backdrop:
+      fade: true
+      day: "var(--weather-night)"
+      night: "var(--weather-day)"
+      text: "var(--weather-color)"
+    tap_action:
+      action: navigate
+      navigation_path: /lovelace/weather
+  - !include ../includes/blank-card.yaml

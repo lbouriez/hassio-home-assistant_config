@@ -1,7 +1,0 @@
-type: custom:simple-thermostat
-entity: climate.living_room
-step_size: 0.5
-sensors:
-  - entity: sensor.humidity_158d000245a7d5
-modes:
-  some_mode: false

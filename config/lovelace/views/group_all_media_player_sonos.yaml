@@ -1,0 +1,27 @@
+type: custom:mini-media-player
+artwork: cover
+entity: media_player.living_room
+hide:
+  power: true
+  icon: true
+tts:
+  platform: sonos
+  sync_volume: true
+  language: en
+# sonos:
+#   show_group_count: true
+#   entities:
+#     - entity_id: media_player.living_room
+#     - entity_id: media_player.bathroom
+#     - entity_id: media_player.bedroom
+speaker_group:
+  entities:
+    - entity_id: media_player.living_room
+      name: Living room
+    - entity_id: media_player.bathroom
+      name: Bathroom
+    - entity_id: media_player.bedroom
+      name: Bedroom
+  plateform: sonos
+  show_group_count: true
+  sync_volume: true

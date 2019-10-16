@@ -1,0 +1,38 @@
+path: house.cameras
+title: Surveillance
+icon: mdi:cctv
+panel: true
+
+cards:
+  - type: vertical-stack
+    cards:
+      - type: custom:layout-card
+        max_columns: 2
+        max_width: [100%]
+        cards:
+        - type: custom:surveillance-card
+          thumb_interval: 15
+          update_interval: 2
+          focus_motion: true
+          cameras:
+            - entity: camera.foscam_c1
+              motion_entity: binary_sensor.motion_foscam_c1
+            - entity: camera.blink_entrance
+              motion_entity: binary_sensor.blink_entrance_motion_detected
+            - entity: camera.blink_890_510_485
+              motion_entity: binary_sensor.blink_living_room_motion_detected
+            - entity: camera.blink_balcony
+              motion_entity: binary_sensor.blink_balcony_motion_detected
+        - type: "custom:button-card"
+          tap_action:
+            action: call-service
+            service: automation.trigger
+            service_data:
+              entity_id: automation.camera_update_blink_picture
+          name: Update
+          show_icon: false
+          show_state: false
+          styles:
+            card:
+              - height: 10px
+  - !include ../includes/bottom-card.yaml

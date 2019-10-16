@@ -49,6 +49,7 @@ motion_bathroom:
   control: hidden
   entities:
     - binary_sensor.bathroom_motion_deconz
+    - binary_sensor.shower_motion_deconz
 
 motion_balcony:
   name: Balcony

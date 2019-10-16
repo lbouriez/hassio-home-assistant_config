@@ -1,0 +1,6 @@
+type: custom:mini-media-player
+entity: media_player.bathroom
+group: true
+tts:
+  platform: sonos
+  sync_volume: true

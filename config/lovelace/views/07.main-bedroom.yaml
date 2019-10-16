@@ -1,0 +1,65 @@
+path: areas.bedrooms.main
+title: Main bedroom
+icon: mdi:bed-king
+panel: false
+
+badges:
+  !include ../views/divers_badges.yaml
+
+popup_cards: []
+
+cards:
+  # Col 1
+  - type: vertical-stack
+    cards:
+      # Lights
+      - type: entities
+        entity: light.bedroom_group
+        title: Lights
+        entities: !include ../views/main-bedroom_lights.yaml
+      # Alarm house
+      - !include ../views/entrance_alarm_ring.yaml
+      # Thermostat
+      - !include ../views/main-bedroom_climate_heat.yaml
+      - !include ../includes/bottom-card.yaml
+  # Col 2
+  - type: vertical-stack
+    cards:
+      # Switches
+      - type: entities
+        title: 'Actions'
+        show_header_toggle: false
+        entities:
+          - switch.bedroom_tv
+          - type: divider
+          - cover.bedroom
+          - !include ../views/main-bedroom_switch_soma.yaml
+          - switch.sonoff_100048cb54
+          - type: divider
+          - !include ../views/main-bedroom_media_player_sonos.yaml
+          # - !include ../views/main-bedroom_media_player_alexa.yaml
+          - !include ../includes/bottom-card.yaml
+  # Col 3
+  - type: vertical-stack
+    cards:
+      # Sensors
+      - type: entities
+        title: 'Sensors'
+        show_header_toggle: false
+        entities:
+          - sensor.group_temperature_bedroom
+          - sensor.humidity_158d0002461865
+          - type: divider
+          - group.motion_bedroom
+      # Automations
+      - type: custom:monster-card
+        show_empty: false
+        card:
+          type: entities
+          title: 'Automations'
+          show_header_toggle: false
+        filter:
+          include:
+            - entity_id: "automation.bedroom_*"
+            - entity_id: "automation.corridor*"
+      - !include ../includes/bottom-card.yaml

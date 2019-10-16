@@ -47,3 +47,5 @@
   type: js
 - url: /community_plugin/lovelace-gui-sandbox/gui-sandbox.js
   type: module
+- url: /community_plugin/decluttering-card/decluttering-card.js
+  type: module

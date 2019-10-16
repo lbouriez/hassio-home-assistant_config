@@ -1,0 +1,5 @@
+- entity: group.door_all
+- entity: group.motion_all
+- entity: sensor.group_temperature_all
+- entity: alarm_control_panel.alexa_guard_851bb
+- entity: alarm_control_panel.blink_home

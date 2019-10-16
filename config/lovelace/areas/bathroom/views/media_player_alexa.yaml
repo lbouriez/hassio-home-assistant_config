@@ -1,7 +1,0 @@
-type: custom:mini-media-player
-entity: media_player.bathroom_dot
-group: true
-tts:
-  platform: alexa
-  sync_volume: true
-  type: announce

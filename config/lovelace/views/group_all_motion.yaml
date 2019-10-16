@@ -1,0 +1,11 @@
+type: custom:monster-card
+show_empty: false
+card:
+  type: glance
+  title: 'Motion sensors'
+  show_header_toggle: false
+filter:
+  include:
+    - entity_id: "group.motion_*"
+  exclude:
+    - entity_id: group.motion_all

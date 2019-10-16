@@ -1,3 +1,0 @@
-type: alarm-panel
-name: House Alarm
-entity: alarm_control_panel.ring_alarm

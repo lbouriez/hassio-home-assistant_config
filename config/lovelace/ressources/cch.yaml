@@ -6,7 +6,7 @@ background: 'rgba(0,0,0,0.3)'
 menu: overflow
 options: clock
 voice: hide
-hide_tabs: 'house.cameras'
+hide_tabs: '11 to 100'
 notifications: overflow
 hide_config: true
 hide_help: true
@@ -33,4 +33,4 @@ exceptions:
       swipe_skip: "3"
       kiosk_mode: true
       default_tab: 'house.home'
-      hide_tabs: '1 to 30'
+      hide_tabs: '1 to 100'

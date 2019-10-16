@@ -4,7 +4,10 @@ resources:
 cch:
   !include /config/config/lovelace/ressources/cch.yaml
 
+decluttering_templates:
+  !include_dir_named /config/config/lovelace/decluttering_templates
+
 title: Casa nostra
 background: var(--background-image)
 views:
-  !include /config/config/lovelace/ressources/views.yaml
+  !include_dir_list /config/config/lovelace/views

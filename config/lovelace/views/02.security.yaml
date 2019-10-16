@@ -1,0 +1,61 @@
+path: house.security
+title: Security
+icon: mdi:shield
+panel: false
+
+badges:
+  !include ../views/divers_badges.yaml
+
+popup_cards: []
+
+cards:
+  # Col 1
+  - type: vertical-stack
+    cards:
+      - !include ../views/entrance_alarm_ring.yaml
+      - type: glance
+        entities: !include ../views/group_all.yaml
+      # Camera
+      - type: horizontal-stack
+        cards:
+          - type: custom:button-card
+            name: Cameras
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/house.cameras
+      - type: horizontal-stack
+        cards:
+          - !include ../views/living-room_camera_blink.yaml
+          - !include ../views/living-room_camera_foscam.yaml
+      - type: horizontal-stack
+        cards:
+          - !include ../views/entrance_camera_blink.yaml
+          - !include ../views/balcony_camera_blink.yaml
+      - !include ../views/group_all_door.yaml
+      - !include ../includes/bottom-card.yaml
+  # Col 2
+  - type: vertical-stack
+    cards:
+      # Tracker
+      - !include ../views/security_tracker_all.yaml
+      - !include ../views/group_all_motion.yaml
+      - !include ../views/group_all_temperature.yaml
+      - !include ../includes/bottom-card.yaml
+  # Col 3
+  - type: vertical-stack
+    cards:
+      - !include ../views/group_all_water_smoke.yaml
+      # Automations
+      - type: custom:monster-card
+        show_empty: false
+        card:
+          type: entities
+          title: 'Automations'
+          show_header_toggle: false
+        filter:
+          include:
+            - entity_id: "automation.alarm*"
+            - entity_id: "automation.camera*"
+            - entity_id: "automation.security*"
+            - entity_id: "automation.person*"
+      - !include ../includes/bottom-card.yaml

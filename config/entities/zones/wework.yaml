@@ -1,0 +1,6 @@
+name: WeWork
+latitude: !secret entitie_zone_wework_latitude
+longitude: !secret entitie_zone_wework_longitude
+radius: !secret entitie_zone_wework_radius
+icon: mdi:worker
+passive: false

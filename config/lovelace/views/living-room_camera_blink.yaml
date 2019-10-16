@@ -1,0 +1,5 @@
+type: picture-glance
+entities:
+  - entity: switch.camera_trigger_picture_living_room
+  - entity: switch.alarm_toggle_blink
+camera_image: camera.blink_890_510_485

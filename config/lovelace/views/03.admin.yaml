@@ -1,0 +1,44 @@
+path: house.admin
+title: Administration
+icon: mdi:home-assistant
+panel: false
+
+badges:
+  !include ../views/divers_badges.yaml
+
+popup_cards: []
+
+cards:
+  # Col 1
+  - type: vertical-stack
+    cards:
+      # Battery almost done
+      - !include ../views/admin_battery_dead.yaml
+      # Things with issues
+      - !include ../views/admin_entities_broken.yaml
+      - !include ../includes/bottom-card.yaml
+  # Col 2
+  - type: vertical-stack
+    cards:
+      # Pi-hole
+      - !include ../views/admin_monitoring_pi_hole.yaml
+      # VM
+      - !include ../views/admin_monitoring_vm.yaml
+      - !include ../includes/bottom-card.yaml
+  # Col 3
+  - type: vertical-stack
+    cards:
+      # Synology
+      - !include ../views/admin_monitoring_synology.yaml
+      # Automations
+      - type: custom:monster-card
+        show_empty: false
+        card:
+          type: entities
+          title: 'Automations'
+          show_header_toggle: false
+        filter:
+          include:
+            - entity_id: "automation.system*"
+            - entity_id: "automation.entities*"
+      - !include ../includes/bottom-card.yaml

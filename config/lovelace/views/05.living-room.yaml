@@ -1,0 +1,73 @@
+path: areas.living_room
+title: Living room
+icon: mdi:sofa
+panel: false
+
+badges:
+  !include ../views/divers_badges.yaml
+
+popup_cards: []
+
+cards:
+  # Col 1
+  - type: vertical-stack
+    cards:
+      # Lights
+      - type: entities
+        entity: light.living_room_group
+        title: Lights
+        entities: !include ../views/living-room_lights.yaml
+      # Switches
+      - type: entities
+        title: 'Actions'
+        show_header_toggle: false
+        entities:
+          - switch.lights_ambiance_tv
+          - switch.living_room_tv
+          - switch.living_room_netflix
+          - !include ../views/living-room_media_player_sonos.yaml
+          # - !include ../views/media_player_alexa.yaml
+          # - type: divider
+          # - switch.christmas
+      - !include ../includes/bottom-card.yaml
+  # Col 2
+  - type: vertical-stack
+    cards:
+      # Vacuum
+      - !include ../views/living-room_vacuum.yaml
+      # Camera
+      - type: horizontal-stack
+        cards:
+          - !include ../views/living-room_camera_blink.yaml
+          - !include ../views/living-room_camera_foscam.yaml
+      # AC
+      - !include ../views/living-room_climate_ac.yaml
+      # Thermostat
+      - !include ../views/living-room_climate_heat.yaml
+      - !include ../includes/bottom-card.yaml
+  # Col 3
+  - type: vertical-stack
+    cards:
+      # Sensors
+      - type: entities
+        title: 'Sensors'
+        show_header_toggle: false
+        entities:
+          - sensor.group_temperature_living_room
+          - sensor.humidity_158d000245a7d5
+          - sensor.pressure_158d000245a7d5
+          - binary_sensor.smoke_sensor_158d000257927b
+          - type: divider
+          - group.door_balcony
+          - group.motion_living_room
+      # Automations
+      - type: custom:monster-card
+        show_empty: false
+        card:
+          type: entities
+          title: 'Automations'
+          show_header_toggle: false
+        filter:
+          include:
+            - entity_id: "automation.living_room*"
+      - !include ../includes/bottom-card.yaml

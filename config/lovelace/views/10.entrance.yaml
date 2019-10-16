@@ -1,0 +1,54 @@
+path: areas.entrance
+title: Entrance
+icon: mdi:door
+panel: false
+
+badges:
+  !include ../views/divers_badges.yaml
+
+popup_cards: []
+
+cards:
+  # Col 1
+  - type: vertical-stack
+    cards:
+      # Lights
+      - type: entities
+        entity: light.entrance_group
+        title: Lights
+        entities: !include ../views/entrance_lights.yaml
+      # Camera
+      - type: horizontal-stack
+        cards:
+          - !include ../views/entrance_camera_blink.yaml
+      - !include ../includes/bottom-card.yaml
+  # Col 2
+  - type: vertical-stack
+    cards:
+      # Divers
+      - type: entities
+        title: 'House actions'
+        show_header_toggle: false
+        entities:
+          - switch.ventilation
+          - lock.front_door
+      # Sensors
+      - type: entities
+        title: 'Sensors'
+        show_header_toggle: false
+        entities:
+          - sensor.group_temperature_entrance
+          - type: divider
+          - group.door_entrance
+          - group.motion_entrance
+      # Automations
+      - type: custom:monster-card
+        show_empty: false
+        card:
+          type: entities
+          title: 'Automations'
+          show_header_toggle: false
+        filter:
+          include:
+            - entity_id: "automation.entrance_*"
+      - !include ../includes/bottom-card.yaml

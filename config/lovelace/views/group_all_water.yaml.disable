@@ -1,0 +1,9 @@
+type: custom:monster-card
+show_empty: false
+card:
+  type: glance
+  title: 'Water sensors'
+  show_header_toggle: false
+filter:
+  include:
+    - entity_id: "binary_sensor.water*"
