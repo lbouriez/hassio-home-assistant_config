@@ -32,12 +32,14 @@ cards:
         entities:
           - switch.bedroom_tv
           - type: divider
-          - cover.bedroom
+          - cover.bedroom_1
           - !include ../views/main-bedroom_switch_soma.yaml
           - switch.sonoff_100048cb54
           - type: divider
-          - !include ../views/main-bedroom_media_player_sonos.yaml
-          # - !include ../views/main-bedroom_media_player_alexa.yaml
+          - type: custom:decluttering-card
+            template: media_player
+            variables:
+              - entity: "bedroom" 
           - !include ../includes/bottom-card.yaml
   # Col 3
   - type: vertical-stack

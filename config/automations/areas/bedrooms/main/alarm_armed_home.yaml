@@ -6,4 +6,4 @@ trigger:
 action:
   - service: cover.close_cover
     data:
-      entity_id: cover.bedroom
+      entity_id: cover.bedroom_1

@@ -20,13 +20,8 @@ action:
       notify_id: laurent
       priority: 0
       title: "New Home Assistant Release"
+      persistent_notification: True
+      persistent_notification_id: hassio_upgrade
       message: >-
         There is a Home Assistant upgrade for Hass.io pending!
         Version {{ states('sensor.version_available') }} just got released!
-  - service: persistent_notification.create
-    data_template:
-      title: Upgrade time!
-      message: >-
-        There is a Home Assistant upgrade for Hass.io pending!
-        Version {{ states('sensor.version_available') }} just got released!
-      notification_id: hassio_upgrade

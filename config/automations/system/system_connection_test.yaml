@@ -13,15 +13,12 @@ trigger:
     for:
       minutes: 3
 action:
-  - service: persistent_notification.create
-    data:
-      title: Home Assistant was down!
-      message: 'Home Assistant disconneted from router - rebooting hassio...'
-      notification_id: hassio_upgrade
   - service: script.notify
     data:
       notify_id: everyone
       priority: 2
       title: "Alert"
+      persistent_notification: True
+      persistent_notification_id: hassio_down
       message: 'Home Assistant disconneted from router - rebooting hassio...'
   - service: hassio.host_reboot

@@ -14,6 +14,12 @@ notify:
     message:
       description: 'Message to send'
       example: 'This is a test message'
+    persistent_notification:
+      description: 'Show a persistent notification'
+      example: true
+    persistent_notification_id:
+      description: 'To be able to remove the notification by calling a service'
+      example: 'hacs_upgrade'
   sequence:
     - service_template: "notify.{{ notify_id | default('everyone') }}"
       data_template:
@@ -25,3 +31,10 @@ notify:
           expire: 3600
           retry: 30
         message: "{{ message | default('Default message for the script.notify') }}"
+    - condition: template
+      value_template: "{{ (persistent_notification | default(false)) == true }}"
+    - service: persistent_notification.create
+      data_template:
+        title:  "{{ title | default('Alert') }}"
+        message: "{{ message | default('Default message for the script.notify') }}"
+        notification_id: "{{ persistent_notification_id | default(('random_number_'+(range(1,100)|random)|string)) }}"

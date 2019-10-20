@@ -52,7 +52,7 @@ cards:
   - type: vertical-stack
     cards:
       # Weather
-      - !include ../includes/weather-card.yaml 
+      - !include ../includes/weather-card.yaml
       # - !include ../views/divers_weather.yaml
       # Vacuum
       - !include ../views/living-room_vacuum.yaml

@@ -24,4 +24,6 @@ cloud:
         - switch.christmas
         # Plugs
         #- switch.circadian_lighting_circadian_lighting
+        # Covers
+        - cover.bedroom_1
     entity_config: !include_dir_merge_named ../assistants/alexa

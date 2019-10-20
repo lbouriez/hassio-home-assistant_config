@@ -1,0 +1,13 @@
+default:
+  - entity: 'bedroom'
+  - group: true
+  - tts_plateform: sonos
+
+card:
+  type: custom:mini-media-player
+  entity: media_player.[[entity]]
+  group: [[group]]
+  tts:
+    platform: [[tts_plateform]]
+    sync_volume: true
+    type: announce

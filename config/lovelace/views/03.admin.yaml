@@ -13,9 +13,9 @@ cards:
   - type: vertical-stack
     cards:
       # Battery almost done
-      - !include ../views/admin_battery_dead.yaml
+      - !include ../includes/low_battery_devices.yaml
       # Things with issues
-      - !include ../views/admin_entities_broken.yaml
+      - !include ../includes/broken_entities.yaml
       - !include ../includes/bottom-card.yaml
   # Col 2
   - type: vertical-stack
