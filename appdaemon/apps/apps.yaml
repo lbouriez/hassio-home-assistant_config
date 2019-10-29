@@ -8,3 +8,15 @@ remote_living_room:
   class: RemoteControl
   event: deconz_event
   id: living_room
+
+# light_kitchen:
+#   module: light_control
+#   class: MotionLights
+#   lights:
+#     - light.living_room_group
+#   motion: group.motion_living_room
+#   luminosity:
+#     - sensor.bathroom_lightlevel_deconz
+#   luminosity_min: 8
+#   timer: 240
+#   # disabler:
