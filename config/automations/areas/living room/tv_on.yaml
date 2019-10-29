@@ -2,12 +2,15 @@ alias: Living room - Ambiance TV playing
 trigger:
   - platform: state
     entity_id: media_player.living_room_tv
+    from: 'off'
     to: 'paused'
   - platform: state
     entity_id: media_player.living_room_tv
+    from: 'off'
     to: 'standby'
 action:
   - service: script.light_turn_on_if_necessary
     data:
       entity_id: 'light.living_room_spots'
       brightness_pct: 20
+      hour_after: 18

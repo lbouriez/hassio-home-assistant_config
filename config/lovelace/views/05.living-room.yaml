@@ -22,7 +22,7 @@ cards:
         title: 'Actions'
         show_header_toggle: false
         entities:
-          - switch.lights_ambiance_tv
+          - scene.living_room_ambiance_tv
           - switch.living_room_tv
           - switch.living_room_netflix
           - !include ../views/living-room_media_player_sonos.yaml

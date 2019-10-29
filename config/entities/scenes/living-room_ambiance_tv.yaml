@@ -1,0 +1,16 @@
+- name: Living room - Ambiance TV
+  entities:
+    light.living_room_spots: off
+    light.table_spots: off
+    light.tv_led_1:
+      state: on
+      rgb_color: [255,230,152]
+      brightness_pct: 50
+    light.tv_led_2:
+      state: on
+      rgb_color: [255,230,152]
+      brightness_pct: 50
+    light.living_color:
+      state: on
+      rgb_color: [255,230,152]
+      brightness_pct: 50

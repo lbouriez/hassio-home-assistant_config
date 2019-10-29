@@ -10,30 +10,19 @@ trigger:
 condition:
   condition: and
   conditions:
-    - condition: numeric_state
-      entity_id: input_number.light_variable_brightness
-      above: 0
     - condition: template
       value_template: "{{ not is_state('alarm_control_panel.ring_alarm', 'armed_away') }}"
-    - condition: or
-      conditions:
-        - condition: template
-          value_template: "{{ (trigger.entity_id == 'group.motion_bathroom') and is_state('light.bathroom_group', 'off') }}"
-        - condition: template
-          value_template: "{{ (trigger.entity_id == 'input_number.light_variable_brightness') and is_state('light.bathroom_group', 'on') }}"
+    - condition: template
+      value_template: "{{ (trigger.entity_id == 'group.motion_bathroom') and is_state('light.bathroom_group', 'off') }}"
+    - condition: time
+      after: '06:50:00'
 action:
-  # # Issue on bathroom not turning on the light
   - service: 'light.turn_on'
     entity_id: 'light.bathroom_group'
     data_template:
-      brightness_pct: '{{ states("input_number.light_variable_brightness") | int }}'
-  - condition: state
-    entity_id: 'light.bathroom_group'
-    state: 'off'
-  - condition: numeric_state
-    entity_id: 'input_number.light_variable_brightness'
-    below: 91
-  - service: 'light.turn_on'
-    entity_id: 'light.bathroom_group'
-    data_template:
-      brightness_pct: '{{ (states("input_number.light_variable_brightness") | int) + 10 }}'
+      brightness_pct: >-
+        {% if (now().hour < 8) %} 31
+        {% elif (now().hour < 22) %} 100
+        {% elif (now().hour < 23) or ((now().hour == 23) and (now().minute < 45)) %} 31
+        {% else %} 0
+        {% endif%}

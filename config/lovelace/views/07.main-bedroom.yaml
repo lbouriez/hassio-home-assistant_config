@@ -39,7 +39,7 @@ cards:
           - type: custom:decluttering-card
             template: media_player
             variables:
-              - entity: "bedroom" 
+              - entity: "bedroom"
           - !include ../includes/bottom-card.yaml
   # Col 3
   - type: vertical-stack

@@ -2,6 +2,6 @@ name: Vincenzo
 id: vincenzo
 device_trackers:
   - device_tracker.life360_vincenzo
-  - device_tracker.iphone
+  # - device_tracker.iphone
   # - device_tracker.iphone_vincenzo
   # - device_tracker.vincenzo_presence # A better presence hassio addon

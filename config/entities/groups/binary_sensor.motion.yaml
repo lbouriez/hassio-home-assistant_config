@@ -63,4 +63,5 @@ motion_kitchen:
   icon: mdi:motion-sensor
   control: hidden
   entities:
-    - binary_sensor.motion_sensor_158d0002417b2e # Aqara Kitchen
+    - binary_sensor.presence_8 # Aqara
+    # - binary_sensor.motion_sensor_158d0002417b2e # Aqara Kitchen pluged to xiaomi

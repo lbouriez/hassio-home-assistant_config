@@ -14,7 +14,7 @@ switches:
   # Harmony
   living_room_tv:
     #value_template: "{{ is_state_attr('remote.salon', 'current_activity', 'Watch TV') }}"
-    value_template: "{{ not is_state('media_player.living_room_tv', 'off') }}"
+    value_template: "{{ (not is_state('media_player.living_room_tv', 'off')) and (not is_state('media_player.living_room_tv', 'unavailable')) }}"
     turn_on:
       service: remote.turn_on
       data:
