@@ -1,0 +1,13 @@
+alias: Living room - Remote off
+hide_entity: True
+initial_state: True
+trigger:
+  - platform: event
+    event_type: app_daemon_remote
+    event_data:
+      entity_id: living_room
+      state: "off"
+action:
+  - service: light.turn_off
+    data_template:
+      entity_id: light.living_room_group
