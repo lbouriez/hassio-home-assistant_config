@@ -1,0 +1,5 @@
+remote_living_room:
+  module: remote_control
+  class: RemoteControl
+  event: deconz_event
+  id: living_room
