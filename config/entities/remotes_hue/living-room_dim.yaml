@@ -23,8 +23,4 @@ action:
         {% elif trigger.event.data.state == "dimdown" %}
           {% set bri = state_attr('light.living_room_group', 'brightness') | int %}
           {{ [bri-20, 0] | max }}
-        {% endif%}      
-
-
-
-            
+        {% endif%}
