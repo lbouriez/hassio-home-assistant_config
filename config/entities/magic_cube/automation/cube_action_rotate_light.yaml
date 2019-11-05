@@ -10,7 +10,7 @@ trigger:
 condition:
   - condition: state
     entity_id: input_select.cube_mode
-    state: 'Light' 
+    state: 'Light'
 action:
   - service: light.turn_on
     data_template:
