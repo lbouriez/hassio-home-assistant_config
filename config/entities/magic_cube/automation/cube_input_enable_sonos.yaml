@@ -1,4 +1,4 @@
-alias: House - Magic cube enable sonos
+alias: Living room - Magic cube enable sonos
 hide_entity: True
 initial_state: True
 trigger:
