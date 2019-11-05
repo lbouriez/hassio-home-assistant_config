@@ -7,10 +7,6 @@ trigger:
     event_data:
       entity_id: magic_cube
       action_type: flip90
-condition:
-  - condition: state
-    entity_id: input_select.cube_mode
-    state: 'Light'
 action:
   - service: input_select.select_option
     data:
