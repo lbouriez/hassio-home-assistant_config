@@ -1,0 +1,30 @@
+alias: Living room - Magic cube fall sonos play
+hide_entity: True
+initial_state: True
+trigger:
+  - platform: event
+    event_type: app_daemon_magic_cube
+    event_data:
+      entity_id: magic_cube
+      action_type: free_fall
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: input_select.cube_mode
+      state: 'Sonos'
+    - condition: or
+      conditions:
+        - condition: state
+          entity_id: 'media_player.living_room'
+          state: 'paused'
+        - condition: template
+          value_template: '{{ states.media_player.living_room.attributes.source == "TV" }}'
+action:
+  - service: media_player.select_source
+    data:
+      entity_id: media_player.living_room
+      source: 'Song to Sing in the Shower!'
+  - service: media_player.media_play
+    data:
+      entity_id: media_player.living_room

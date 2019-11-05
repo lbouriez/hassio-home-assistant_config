@@ -1,0 +1,17 @@
+alias: Living room - Magic cube fall light
+hide_entity: True
+initial_state: True
+trigger:
+  - platform: event
+    event_type: app_daemon_magic_cube
+    event_data:
+      entity_id: magic_cube
+      action_type: free_fall
+condition:
+  - condition: state
+    entity_id: input_select.cube_mode
+    state: 'Light'
+action:
+  - service: scene.turn_on
+    data_template:
+      entity_id: scene.living_room_ambiance_tv

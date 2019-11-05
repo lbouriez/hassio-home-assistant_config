@@ -217,6 +217,12 @@
         <td></td>
     </tr>
     <tr>
+        <td>Xiaomi</td>
+        <td>Magic cube</td>
+        <td>Magic remote with many actions</td>
+        <td><a href="https://www.aliexpress.com/item/32812410838.html">Link</a></td>
+    </tr>
+    <tr>
         <th colspan="4">Security</th>
     </tr>
     <tr>
