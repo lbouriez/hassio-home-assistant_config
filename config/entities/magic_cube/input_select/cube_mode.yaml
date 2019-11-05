@@ -1,0 +1,8 @@
+cube_mode:
+  name: "Cube Control"
+  options:
+    - Sonos
+    - Light
+    - Disable
+  initial: Disable
+  icon: mdi:cube-outline

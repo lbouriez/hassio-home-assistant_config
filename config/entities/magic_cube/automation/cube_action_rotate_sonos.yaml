@@ -1,0 +1,25 @@
+alias: Living room - Magic cube rotate volume
+hide_entity: True
+initial_state: True
+trigger:
+  - platform: event
+    event_type: app_daemon_magic_cube
+    event_data:
+      entity_id: magic_cube
+      action_type: rotate
+condition:
+  - condition: state
+    entity_id: input_select.cube_mode
+    state: 'Sonos' 
+action:
+  - service: media_player.volume_set
+    data_template:
+      entity_id: media_player.living_room         
+      volume_level: >
+        {%if trigger.event.data.action_value | float > 0 %}
+          {% set lvl = state_attr('media_player.living_room', 'volume_level') | float %}
+          {{ [lvl+0.05, 1] | min }}
+        {% else %} 
+          {% set lvl = state_attr('media_player.living_room', 'volume_level') | float %}
+          {{ [lvl-0.05, 0] | max }}
+        {% endif %}

@@ -1,0 +1,17 @@
+alias: Kitchen - Magic cube double tap
+hide_entity: True
+initial_state: True
+trigger:
+  - platform: event
+    event_type: app_daemon_magic_cube
+    event_data:
+      entity_id: magic_cube
+      action_type: tap_twice
+action:
+  - service_template: >
+      {%- if is_state('light.kitchen_group', 'off') -%}
+        light.turn_on
+      {%- else -%}
+        light.turn_off
+      {%- endif -%}
+    entity_id: light.kitchen_group

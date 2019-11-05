@@ -45,6 +45,7 @@ cards:
           - switch.ventilation
           - input_boolean.guest_mode
           - input_boolean.sleep_mode
+          - input_select.cube_mode
       # Sonos
       - !include ../views/group_all_media_player_sonos.yaml
       - !include ../includes/bottom-card.yaml

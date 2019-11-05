@@ -1,0 +1,2 @@
+automation: !include_dir_list ../entities/magic_cube/automation/
+input_select: !include_dir_merge_named ../entities/magic_cube/input_select/

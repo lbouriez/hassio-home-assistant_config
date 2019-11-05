@@ -1,4 +1,4 @@
-alias: Living room - Remote on
+alias: Living room - Remote on hold
 hide_entity: True
 initial_state: True
 trigger:
