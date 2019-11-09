@@ -6,7 +6,7 @@ trigger:
     event_type: app_daemon_magic_cube
     event_data:
       entity_id: magic_cube
-      action_type: free_fall
+      action_type: tap_twice
 condition:
   - condition: state
     entity_id: input_select.cube_mode

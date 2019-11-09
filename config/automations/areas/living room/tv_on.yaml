@@ -9,6 +9,9 @@ trigger:
     from: 'off'
     to: 'standby'
 action:
+  - service: script.turn_off
+    data:
+      entity_id: script.light_turn_on_if_necessary
   - service: script.light_turn_on_if_necessary
     data:
       entity_id: 'light.living_room_spots'

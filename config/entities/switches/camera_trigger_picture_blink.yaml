@@ -5,6 +5,9 @@ switches:
     icon_template: mdi:camera
     value_template: "{{ is_state('script.camera_blink_trigger_camera', 'on') }}"
     turn_on:
+      - service: script.turn_off
+        data:
+          entity_id: script.camera_blink_trigger_camera
       - service: script.camera_blink_trigger_camera
         data:
           name: "Balcony"
@@ -14,6 +17,9 @@ switches:
     icon_template: mdi:camera
     value_template: "{{ is_state('script.camera_blink_trigger_camera', 'on') }}"
     turn_on:
+      - service: script.turn_off
+        data:
+          entity_id: script.camera_blink_trigger_camera
       - service: script.camera_blink_trigger_camera
         data:
           name: "Entrance"
@@ -23,6 +29,9 @@ switches:
     icon_template: mdi:camera
     value_template: "{{ is_state('script.camera_blink_trigger_camera', 'on') }}"
     turn_on:
+      - service: script.turn_off
+        data:
+          entity_id: script.camera_blink_trigger_camera
       - service: script.camera_blink_trigger_camera
         data:
           name: "Living room"

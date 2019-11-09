@@ -1,4 +1,4 @@
-alias: Kitchen - Magic cube double tap
+alias: Kitchen - Magic cube double tap light
 hide_entity: True
 initial_state: True
 trigger:
@@ -7,6 +7,10 @@ trigger:
     event_data:
       entity_id: magic_cube
       action_type: tap_twice
+condition:
+  - condition: state
+    entity_id: input_select.cube_mode
+    state: 'Disable'
 action:
   - service_template: >
       {%- if is_state('light.kitchen_group', 'off') -%}

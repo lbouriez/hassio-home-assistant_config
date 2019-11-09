@@ -12,6 +12,9 @@ action:
     entity_id: light.living_room_group
   - condition: time
     after: '22:00:00'
+  - service: script.turn_off
+    data:
+      entity_id: script.light_turn_on_then_off
   - service: 'script.light_turn_on_then_off'
     data:
       entity_id: 'light.living_room_group'

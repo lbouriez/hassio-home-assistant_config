@@ -1,0 +1,15 @@
+living_room_symfonisk:
+  module: symfonisk_sonos
+  class: SymfoniskSonos
+  event: deconz_event
+  remotes:
+    - symfonisk_sound_controller
+  sonos:
+    - media_player.living_room
+  sources:
+    - 'Song to Sing in the Shower!'
+    - 'commerciale 2017/2018'
+    - 'Contemporary Blend'
+    - 'Sympa'
+    - 'Wake Up Happy'
+  play_shuffle: True

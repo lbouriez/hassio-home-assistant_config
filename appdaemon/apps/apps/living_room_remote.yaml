@@ -1,4 +1,4 @@
-remote_living_room:
+living_room_remote:
   module: remote_control
   class: RemoteControl
   event: deconz_event

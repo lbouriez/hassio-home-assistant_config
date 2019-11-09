@@ -6,7 +6,7 @@ trigger:
     event_type: app_daemon_magic_cube
     event_data:
       entity_id: magic_cube
-      action_type: rotate
+      action_type: move
 condition:
   condition: and
   conditions:

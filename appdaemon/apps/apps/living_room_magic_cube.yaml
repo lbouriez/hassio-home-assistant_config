@@ -1,0 +1,5 @@
+living_room_magic_cube:
+  module: magic_cube
+  class: MagicCube
+  event: deconz_event
+  id: magic_cube

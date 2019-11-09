@@ -1,5 +1,0 @@
-remote_magic_cube:
-  module: magic_cube_control
-  class: CubeControl
-  event: deconz_event
-  id: magic_cube

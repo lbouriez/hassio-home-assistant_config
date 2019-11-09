@@ -1,0 +1,16 @@
+alias: Kitchen - Alarm triggered
+hide_entity: True
+initial_state: True
+trigger:
+  - platform: state
+    entity_id: alarm_control_panel.ring_alarm
+    to: 'triggered'
+action:
+  - service: light.turn_on
+    data:
+      entity_id: light.kitchen_group
+  - delay:
+        minutes: 3
+  - service: light.turn_off
+    data:
+      entity_id: light.kitchen_group
