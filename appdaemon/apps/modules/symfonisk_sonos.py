@@ -18,7 +18,7 @@ class SymfoniskSonos(hass.Hass):
         # Define the time that will automatically
         # stop the volume change in case we
         # didn't receive the stop event
-        self.change_volume_max = 2.2
+        self.change_volume_max = 3
         # Define the between time before
         # the next increase, smaller = faster
         self.change_volume_between = 0.2
