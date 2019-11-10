@@ -1,0 +1,4 @@
+switch.bedroom_tv:
+  name: Screen
+  description: Bedroom TV
+  display_categories: SWITCH

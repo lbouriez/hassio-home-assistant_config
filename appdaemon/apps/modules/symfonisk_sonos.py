@@ -1,5 +1,4 @@
 import appdaemon.plugins.hass.hassapi as hass
-import time
 
 class SymfoniskSonos(hass.Hass):
     """ [summary]
@@ -38,7 +37,7 @@ class SymfoniskSonos(hass.Hass):
         self.call_service("media_player/volume_" + kwargs["way"], entity_id = self.sonos)
         if self.volume_change:
             self.run_in(self.handle_volume, 0.2, way = kwargs["way"])
-        
+
     def handle_event(self, event_name, data, kwargs):
         remote_id = data['id']
 
@@ -68,7 +67,7 @@ class SymfoniskSonos(hass.Hass):
                 self.volume_change = True
                 self.handle_volume({'way': 'down'})
                 self.fire_event(self.event_name, entity_id = self.sonos, state="voldown")
-            elif data['event'] in [2003, 3003]: 
+            elif data['event'] in [2003, 3003]:
                 self.log('Button volume stop')
                 self.volume_change = False
                 self.fire_event(self.event_name, entity_id = self.sonos, state="volstop")

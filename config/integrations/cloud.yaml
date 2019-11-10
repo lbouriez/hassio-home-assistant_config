@@ -22,6 +22,7 @@ cloud:
         - switch.ventilation
         - switch.sonoff_100048cb54 #Bedroom closet
         - switch.christmas
+        - switch.bedroom_tv
         # Plugs
         #- switch.circadian_lighting_circadian_lighting
         # Covers
