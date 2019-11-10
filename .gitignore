@@ -15,7 +15,8 @@ custom_components
 icloud
 node-red
 tts
-
+www/community/**
+www/github/**
 
 # Specific file ignores
 .config_entries.json

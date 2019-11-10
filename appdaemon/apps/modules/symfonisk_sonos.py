@@ -15,13 +15,21 @@ class SymfoniskSonos(hass.Hass):
             self.listen_event(self.handle_event, self.args['event'])
 
     def handle_params(self):
+        # Define the time that will automatically
+        # stop the volume change in case we
+        # didn't receive the stop event
+        self.change_volume_max = 2.2
+        # Define the between time before
+        # the next increase, smaller = faster
+        self.change_volume_between = 0.2
+
+        # Do not touche below
         self.log(self.args)
         self.event_name = "app_daemon_symfonisk"
         self.sonos = self.args.get('sonos')
         self.sources = self.args.get('sources')
         self.remotes = self.args.get('remotes')
         self.play_shuffle = self.args.get('play_shuffle', False)
-
         self.initial_source = 0
         self.volume_change = False
 
@@ -31,12 +39,16 @@ class SymfoniskSonos(hass.Hass):
         if self.initial_source >= len(self.sources):
             self.initial_source = 0
         return selected_source
+    
+    def disable_volume_change(self, kwargs):
+        self.log("Change volume disabled by " + kwargs["emit"])
+        self.volume_change = False
 
     def handle_volume(self, kwargs):
         self.log("Change volume loop " + kwargs["way"])
         self.call_service("media_player/volume_" + kwargs["way"], entity_id = self.sonos)
         if self.volume_change:
-            self.run_in(self.handle_volume, 0.2, way = kwargs["way"])
+            self.run_in(self.handle_volume, self.change_volume_between, way = kwargs["way"])
 
     def handle_event(self, event_name, data, kwargs):
         remote_id = data['id']
@@ -61,15 +73,17 @@ class SymfoniskSonos(hass.Hass):
                 self.log('Button volume up')
                 self.volume_change = True
                 self.handle_volume({'way': 'up'})
+                self.run_in(self.disable_volume_change, self.change_volume_max, emit = "auto vol down")
                 self.fire_event(self.event_name, entity_id = self.sonos, state="volup")
             elif data['event'] == 2001:
                 self.log('Button volume down')
                 self.volume_change = True
                 self.handle_volume({'way': 'down'})
+                self.run_in(self.disable_volume_change, self.change_volume_max, emit = "auto vol down")
                 self.fire_event(self.event_name, entity_id = self.sonos, state="voldown")
             elif data['event'] in [2003, 3003]:
                 self.log('Button volume stop')
-                self.volume_change = False
+                self.disable_volume_change({'emit': 'event'})
                 self.fire_event(self.event_name, entity_id = self.sonos, state="volstop")
             else:
                 self.log('Unkown action: ' + data['event'])
