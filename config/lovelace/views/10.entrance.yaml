@@ -42,7 +42,7 @@ cards:
           - group.door_entrance
           - group.motion_entrance
       # Automations
-      - type: custom:monster-card
+      - type: custom:auto-entities
         show_empty: false
         card:
           type: entities

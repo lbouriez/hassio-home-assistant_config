@@ -1,6 +1,6 @@
 living_room_symfonisk:
-  module: symfonisk_sonos
-  class: SymfoniskSonos
+  module: deconz_symfonisk_remote
+  class: DeconzSymfoniskRemote
   event: deconz_event
   remotes:
     - symfonisk_sound_controller

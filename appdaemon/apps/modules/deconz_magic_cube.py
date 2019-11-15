@@ -16,7 +16,7 @@ class Action(str, Enum):
     FREE_FALL = 'free_fall'
     ROTATE = 'rotate'
 
-class MagicCube(hass.Hass):
+class DeconzMagicCube(hass.Hass):
     
     def initialize(self):
         self.event_name = "app_daemon_magic_cube"

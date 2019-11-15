@@ -34,7 +34,7 @@ cards:
         entities:
           - group.motion_kitchen
       # Automations
-      - type: custom:monster-card
+      - type: custom:auto-entities
         show_empty: false
         card:
           type: entities

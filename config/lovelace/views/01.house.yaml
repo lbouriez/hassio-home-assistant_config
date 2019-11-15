@@ -58,7 +58,7 @@ cards:
       # Vacuum
       - !include ../views/living-room_vacuum.yaml
       # Automations
-      - type: custom:monster-card
+      - type: custom:auto-entities
         show_empty: false
         card:
           type: entities

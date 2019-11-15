@@ -1,5 +1,5 @@
 living_room_magic_cube:
-  module: magic_cube
-  class: MagicCube
+  module: deconz_magic_cube
+  class: DeconzMagicCube
   event: deconz_event
   id: magic_cube

@@ -35,7 +35,7 @@ cards:
           - group.door_balcony
           - group.motion_balcony
       # Automations
-      - type: custom:monster-card
+      - type: custom:auto-entities
         show_empty: false
         card:
           type: entities

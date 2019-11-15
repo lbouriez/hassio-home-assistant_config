@@ -32,7 +32,7 @@ cards:
           - type: divider
           - group.motion_guests_bedroom
       # Automations
-      - type: custom:monster-card
+      - type: custom:auto-entities
         show_empty: false
         card:
           type: entities

@@ -1,6 +1,35 @@
 import appdaemon.plugins.hass.hassapi as hass
 
-class SymfoniskSonos(hass.Hass):
+#
+# App which set the symfonisk remote
+#
+# Args:
+#   [event] {string} -- Event name that will be fired (ex: deconz_event)
+#   [remotes] {list} -- List of the symfonisk remote id in DeconZ (ex: - symfonisk_sound_controller)
+#   [sonos] {list} -- List of the sonos media player to control (ex: - media_player.bathroom)
+#   [sources] {list} -- Name of the source to play when double clicking (ex: - 'Sonos favoris name')
+#   [play_shuffle] {boolean} -- Shuffle play the playlist
+#
+# Release Notes
+#
+# Version 1.2:
+#   Bug fixes
+#
+# Version 1.1:
+#   Handling volume
+#
+# Version 1.0:
+#   Initial Version
+
+# Define the max time when the volume can change
+# There to avoid an unlimited change when
+# not receiveing stop event
+CHANGE_VOLUME_TIME_MAX = 4
+# Define the interval between
+# each call to change volume, smaller = faster
+CHANGE_VOLUME_INTERVAL = 0.8
+
+class DeconzSymfoniskRemote(hass.Hass):
     """ [summary]
         [event] {string} -- Event name that will be fired (ex: deconz_event)
         [remotes] {list} -- List of the symfonisk remote id in DeconZ (ex: - symfonisk_sound_controller)
@@ -15,15 +44,6 @@ class SymfoniskSonos(hass.Hass):
             self.listen_event(self.handle_event, self.args['event'])
 
     def handle_params(self):
-        # Define the time that will automatically
-        # stop the volume change in case we
-        # didn't receive the stop event
-        self.change_volume_max = 3
-        # Define the between time before
-        # the next increase, smaller = faster
-        self.change_volume_between = 0.2
-
-        # Do not touche below
         self.log(self.args)
         self.event_name = "app_daemon_symfonisk"
         self.sonos = self.args.get('sonos')
@@ -48,7 +68,7 @@ class SymfoniskSonos(hass.Hass):
         self.log("Change volume loop " + kwargs["way"])
         self.call_service("media_player/volume_" + kwargs["way"], entity_id = self.sonos)
         if self.volume_change:
-            self.run_in(self.handle_volume, self.change_volume_between, way = kwargs["way"])
+            self.run_in(self.handle_volume, CHANGE_VOLUME_INTERVAL, way = kwargs["way"])
 
     def handle_event(self, event_name, data, kwargs):
         remote_id = data['id']
@@ -73,13 +93,13 @@ class SymfoniskSonos(hass.Hass):
                 self.log('Button volume up')
                 self.volume_change = True
                 self.handle_volume({'way': 'up'})
-                self.run_in(self.disable_volume_change, self.change_volume_max, emit = "auto vol down")
+                self.run_in(self.disable_volume_change, CHANGE_VOLUME_TIME_MAX, emit = "auto vol up")
                 self.fire_event(self.event_name, entity_id = self.sonos, state="volup")
             elif data['event'] == 2001:
                 self.log('Button volume down')
                 self.volume_change = True
                 self.handle_volume({'way': 'down'})
-                self.run_in(self.disable_volume_change, self.change_volume_max, emit = "auto vol down")
+                self.run_in(self.disable_volume_change, CHANGE_VOLUME_TIME_MAX, emit = "auto vol down")
                 self.fire_event(self.event_name, entity_id = self.sonos, state="voldown")
             elif data['event'] in [2003, 3003]:
                 self.log('Button volume stop')

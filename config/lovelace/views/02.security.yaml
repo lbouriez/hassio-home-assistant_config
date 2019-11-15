@@ -46,7 +46,7 @@ cards:
     cards:
       - !include ../views/group_all_water_smoke.yaml
       # Automations
-      - type: custom:monster-card
+      - type: custom:auto-entities
         show_empty: false
         card:
           type: entities

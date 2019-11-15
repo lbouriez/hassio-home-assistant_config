@@ -17,9 +17,6 @@ cards:
       # Things with issues
       - !include ../includes/broken_entities.yaml
       - !include ../includes/bottom-card.yaml
-  # Col 2
-  - type: vertical-stack
-    cards:
       # Pi-hole
       - !include ../views/admin_monitoring_pi_hole.yaml
       # VM
@@ -31,7 +28,7 @@ cards:
       # Synology
       - !include ../views/admin_monitoring_synology.yaml
       # Automations
-      - type: custom:monster-card
+      - type: custom:auto-entities
         show_empty: false
         card:
           type: entities

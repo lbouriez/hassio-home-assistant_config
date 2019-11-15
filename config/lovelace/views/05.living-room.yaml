@@ -61,7 +61,7 @@ cards:
           - group.door_balcony
           - group.motion_living_room
       # Automations
-      - type: custom:monster-card
+      - type: custom:auto-entities
         show_empty: false
         card:
           type: entities

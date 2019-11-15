@@ -1,6 +1,6 @@
 import appdaemon.plugins.hass.hassapi as hass
 
-class RemoteControl(hass.Hass):
+class DeconzHueDimmer(hass.Hass):
 
     def initialize(self):
         self.event_name = "app_daemon_remote"

@@ -1,9 +1,6 @@
 # https://github.com/custom-cards/vertical-stack-in-card
 - url: /community_plugin/vertical-stack-in-card/vertical-stack-in-card.js
   type: js
-# https://github.com/ciotlosm/custom-lovelace/tree/master/monster-card
-- url: /community_plugin/monster-card/monster-card.js
-  type: js
 # https://github.com/bramkragten/custom-ui/tree/master/weather-card
 - url: /community_plugin/weather-card/weather-card.js
   type: module
@@ -48,4 +45,6 @@
 - url: /community_plugin/lovelace-gui-sandbox/gui-sandbox.js
   type: module
 - url: /community_plugin/decluttering-card/decluttering-card.js
+  type: module
+- url: /community_plugin/lovelace-auto-entities/auto-entities.js
   type: module
