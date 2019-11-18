@@ -4,16 +4,14 @@ bathroom:
   entity:
     - light.bathroom_group
   sensor_type: duration
-  delay: 420
+  delay: 240
   service_data:
     brightness_pct: 100
-  start_time: '09:00:00'
+  start_time: '07:00:00'
   end_time: '23:45:00'
-  overrides:
-    - input_boolean.guest_mode
   night_mode:
-    delay: 420
+    delay: 240
     service_data:
-      brightness_pct: 12
+      brightness_pct: 50
     start_time: '22:00:00'
     end_time: '23:45:00'

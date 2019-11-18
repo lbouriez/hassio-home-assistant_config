@@ -23,7 +23,7 @@
 - url: /community_plugin/lovelace-slider-entity-row/slider-entity-row.js
   type: js
 # https://github.com/kalkih/mini-media-player
-- url: /community_plugin/mini-media-player/mini-media-player.js
+- url: /community_plugin/mini-media-player/mini-media-player-bundle.js
   type: module
 # https://github.com/custom-cards/button-card
 - url: /community_plugin/button-card/button-card.js
