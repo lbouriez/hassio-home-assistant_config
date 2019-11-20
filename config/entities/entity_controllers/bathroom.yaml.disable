@@ -1,0 +1,18 @@
+bathroom:
+  sensor:
+    - group.motion_bathroom
+  entity:
+    - light.bathroom_group
+  sensor_type: duration
+  delay: 200
+  service_data:
+    brightness_pct: 100
+  start_time: '07:00:00'
+  end_time: '23:45:00'
+  block_timeout: 210
+  night_mode:
+    delay: 200
+    service_data:
+      brightness_pct: 50
+    start_time: '22:00:00'
+    end_time: '23:45:00'

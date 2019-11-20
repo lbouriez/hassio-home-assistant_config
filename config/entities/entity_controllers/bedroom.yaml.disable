@@ -1,0 +1,19 @@
+bedroom:
+  sensor:
+    - group.motion_bedroom
+  entity:
+    - light.bedroom_group
+  sensor_type: duration
+  delay: 240
+  service_data:
+    brightness_pct: 100
+  start_time: '10:00:00'
+  end_time: '23:45:00'
+  block_timeout: 250
+  night_mode:
+    delay: 160
+    block_timeout: 170
+    service_data:
+      brightness_pct: 30
+    start_time: '21:00:00'
+    end_time: '23:45:00'
