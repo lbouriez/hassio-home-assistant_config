@@ -1,4 +1,4 @@
-alias: Living room - Ambiance TV playing
+alias: Living room - Ambiance TV on
 trigger:
   - platform: state
     entity_id: media_player.living_room_tv

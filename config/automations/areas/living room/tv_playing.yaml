@@ -1,7 +1,16 @@
-alias: Living room - Ambiance TV on
+alias: Living room - Ambiance TV playing
 trigger:
   - platform: state
     entity_id: media_player.living_room_tv
+    from: 'off'
+    to: 'playing'
+  - platform: state
+    entity_id: media_player.living_room_tv
+    from: 'standby'
+    to: 'playing'
+  - platform: state
+    entity_id: media_player.living_room_tv
+    from: 'paused'
     to: 'playing'
 condition:
   - condition: time
