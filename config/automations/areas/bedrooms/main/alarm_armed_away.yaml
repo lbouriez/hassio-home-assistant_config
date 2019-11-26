@@ -13,3 +13,6 @@ action:
     data:
       entity_id:
         - media_player.bedroom # Sonos
+  - service: switch.turn_off # TV
+    data:
+      entity_id: switch.bedroom_tv

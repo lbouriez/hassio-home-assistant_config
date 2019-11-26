@@ -13,7 +13,6 @@ cards:
   # Col 1
   - type: vertical-stack
     cards:
-      - !include ../views/living-room_vacuum_2.yaml
       # - type: entities
       #   title: Entities card sample
       #   show_header_toggle: true
@@ -53,11 +52,12 @@ cards:
   # Col 3
   - type: vertical-stack
     cards:
+      # Vacuum
+      - !include ../views/living-room_vacuum.yaml
+      - !include ../views/living-room_vacuum_map.yaml
       # Weather
       - !include ../includes/weather-card.yaml
       # - !include ../views/divers_weather.yaml
-      # Vacuum
-      - !include ../views/living-room_vacuum.yaml
       # Automations
       - type: custom:auto-entities
         show_empty: false

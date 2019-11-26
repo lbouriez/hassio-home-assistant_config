@@ -2,16 +2,9 @@ alias: Living room - Ambiance TV off
 trigger:
   - platform: state
     entity_id: media_player.living_room_tv
-    from: 'standby'
     to: 'off'
-  - platform: state
-    entity_id: media_player.living_room_tv
-    from: 'playing'
-    to: 'off'
-  - platform: state
-    entity_id: media_player.living_room_tv
-    from: 'paused'
-    to: 'off'
+    for:
+      seconds: 30
 condition:
   - condition: time
     after: '18:30:00'

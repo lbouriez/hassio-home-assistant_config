@@ -1,8 +1,16 @@
 # No more than 6 for the mobile view to be good
-- entity: group.door_all
-  name: 'Doors'
-- entity: group.motion_all
-  name: 'Motions'
+- type: entity-filter
+  entities:
+    - entity: group.door_all
+      name: 'Doors'
+  state_filter:
+    - "on"
+- type: entity-filter
+  entities:
+    - entity: group.motion_all
+      name: 'Motions'
+  state_filter:
+    - "on"
 - entity: sensor.group_temperature_all
   name: 'Temperature'
 # Alarms
@@ -10,3 +18,14 @@
 - entity: alarm_control_panel.alexa_guard_851bb
   name: 'Guard'
 - entity: alarm_control_panel.blink_home
+  # - type: entity-filter
+  #   entities:
+  #     - light.bathroom_group
+  #     - light.bedroom_group
+  #     - light.kitchen_group
+  #     - light.entrance_group
+  #     - light.bedroom_guests_group
+  #     - light.corridor_group
+  #     - light.living_room_group
+  #   state_filter:
+  #     - "on"

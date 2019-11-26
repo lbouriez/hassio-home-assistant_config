@@ -1,0 +1,31 @@
+type: custom:xiaomi-vacuum-map-card
+entity: vacuum.living_room
+map_image: '/local/img/vacuum_card.jpg'
+default_mode: 'zoned_cleanup'
+debug: false
+calibration_points:
+  - vacuum:
+      x: 25500
+      y: 25500
+    map:
+      x: 1015
+      y: 800
+  - vacuum:
+      x: 23700
+      y: 27500
+    map:
+      x: 834
+      y: 585
+  - vacuum:
+      x: 19350
+      y: 26450
+    map:
+      x: 426
+      y: 681
+zones:
+  - [[20369,25123,26069,28923]]
+  - [[18463,25145,20363,28645]]
+  - [[20876,30066,22660,32178]]
+  - [[14828,23558,20250,25269]]
+  - [[22543,28836,26311,32989],[21763,28709,22859,30329]]
+  - [[18008,29099,20985,32851]]
