@@ -8,24 +8,24 @@ entities:
     - type: custom:fold-entity-row
       head: light.bedroom_group
       entity: light.bedroom_group
-      entities: !include ../views/main-bedroom_lights.yaml
+      entities: !include ../entities/lights_main-bedroom.yaml
     - type: custom:fold-entity-row
       head: light.bedroom_guests_group
       entity: light.bedroom_guests_group
-      entities: !include ../views/guests-bedroom_lights.yaml
+      entities: !include ../entities/lights_guests-bedroom.yaml
     - light.corridor_group
     - type: custom:fold-entity-row
       head: light.entrance_group
       entity: light.entrance_group
-      entities: !include ../views/entrance_lights.yaml
+      entities: !include ../entities/lights_entrance.yaml
     - type: custom:fold-entity-row
       head: light.kitchen_group
       entity: light.kitchen_group
-      entities: !include ../views/kitchen_lights.yaml
+      entities: !include ../entities/lights_kitchen.yaml
     - type: custom:fold-entity-row
       head: light.living_room_group
       entity: light.living_room_group
-      entities: !include ../views/living-room_lights.yaml
+      entities: !include ../entities/lights_living-room.yaml
     - type: divider
     - switch.circadian_lighting_circadian_lighting
     - scene.living_room_ambiance_tv

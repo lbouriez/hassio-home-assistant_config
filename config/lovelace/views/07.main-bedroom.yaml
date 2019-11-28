@@ -4,7 +4,7 @@ icon: mdi:bed-king
 panel: false
 
 badges:
-  !include ../views/divers_badges.yaml
+  !include ../includes/_badges.yaml
 
 popup_cards: []
 
@@ -16,11 +16,11 @@ cards:
       - type: entities
         entity: light.bedroom_group
         title: Lights
-        entities: !include ../views/main-bedroom_lights.yaml
+        entities: !include ../includes/entities/lights_main-bedroom.yaml
       # Alarm house
-      - !include ../views/entrance_alarm_ring.yaml
+      - !include ../includes/areas/entrance/alarm_ring.yaml
       # Thermostat
-      - !include ../views/main-bedroom_climate_heat.yaml
+      - !include ../includes/areas/bedrooms/main/climate_heat.yaml
       - !include ../includes/bottom-card.yaml
   # Col 2
   - type: vertical-stack
@@ -33,7 +33,7 @@ cards:
           - switch.bedroom_tv
           - type: divider
           - cover.bedroom_1
-          - !include ../views/main-bedroom_switch_soma.yaml
+          - !include ../includes/areas/bedrooms/main/switch_soma.yaml
           - switch.sonoff_100048cb54
           - type: divider
           - type: custom:decluttering-card

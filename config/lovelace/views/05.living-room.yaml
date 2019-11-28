@@ -4,7 +4,7 @@ icon: mdi:sofa
 panel: false
 
 badges:
-  !include ../views/divers_badges.yaml
+  !include ../includes/_badges.yaml
 
 popup_cards: []
 
@@ -16,7 +16,7 @@ cards:
       - type: entities
         entity: light.living_room_group
         title: Lights
-        entities: !include ../views/living-room_lights.yaml
+        entities: !include ../includes/entities/lights_living-room.yaml
       # Switches
       - type: entities
         title: 'Actions'
@@ -25,25 +25,25 @@ cards:
           - scene.living_room_ambiance_tv
           - switch.living_room_tv
           - switch.living_room_netflix
-          - !include ../views/living-room_media_player_sonos.yaml
+          - !include ../includes/areas/living room/media_player_sonos.yaml
           # - !include ../views/media_player_alexa.yaml
           # - type: divider
-          # - switch.christmas
+          - switch.christmas
       - !include ../includes/bottom-card.yaml
   # Col 2
   - type: vertical-stack
     cards:
       # Vacuum
-      - !include ../views/living-room_vacuum.yaml
+      - !include ../includes/areas/living room/vacuum.yaml
       # Camera
       - type: horizontal-stack
         cards:
-          - !include ../views/living-room_camera_blink.yaml
-          - !include ../views/living-room_camera_foscam.yaml
+          - !include ../includes/areas/living room/camera_blink.yaml
+          - !include ../includes/areas/living room/camera_foscam.yaml
       # AC
-      - !include ../views/living-room_climate_ac.yaml
+      - !include ../includes/areas/living room/climate_ac.yaml
       # Thermostat
-      - !include ../views/living-room_climate_heat.yaml
+      - !include ../includes/areas/living room/climate_heat.yaml
       - !include ../includes/bottom-card.yaml
   # Col 3
   - type: vertical-stack

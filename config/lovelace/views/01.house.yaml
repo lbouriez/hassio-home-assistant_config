@@ -4,7 +4,7 @@ icon: mdi:home
 panel: false
 
 badges:
-  !include ../views/divers_badges.yaml
+  !include ../includes/_badges.yaml
 
 popup_cards: []
 
@@ -21,9 +21,9 @@ cards:
       #       view: 0
       #       hide_if_unavailable: true
       # What is on - Always on top
-      - !include ../views/divers_notify_what_is_on.yaml
+      - !include ../includes/divers_notify_what_is_on.yaml
       # Lights group
-      - !include ../views/group_all_lights.yaml
+      - !include ../includes/all/group_all_lights.yaml
       - !include ../includes/bottom-card.yaml
   # Col 2
   - type: vertical-stack
@@ -47,17 +47,16 @@ cards:
           - input_boolean.sleep_mode
           - input_select.cube_mode
       # Sonos
-      - !include ../views/group_all_media_player_sonos.yaml
+      - !include ../includes/all/group_all_media_player_sonos.yaml
       - !include ../includes/bottom-card.yaml
   # Col 3
   - type: vertical-stack
     cards:
       # Vacuum
-      - !include ../views/living-room_vacuum.yaml
-      - !include ../views/living-room_vacuum_map.yaml
+      - !include ../includes/areas/living room/vacuum.yaml
       # Weather
       - !include ../includes/weather-card.yaml
-      # - !include ../views/divers_weather.yaml
+      # - !include ../includes/divers_weather.yaml
       # Automations
       - type: custom:auto-entities
         show_empty: false

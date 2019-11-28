@@ -4,7 +4,7 @@ icon: mdi:door
 panel: false
 
 badges:
-  !include ../views/divers_badges.yaml
+  !include ../includes/_badges.yaml
 
 popup_cards: []
 
@@ -16,11 +16,11 @@ cards:
       - type: entities
         entity: light.entrance_group
         title: Lights
-        entities: !include ../views/entrance_lights.yaml
+        entities: !include ../includes/entities/lights_entrance.yaml
       # Camera
       - type: horizontal-stack
         cards:
-          - !include ../views/entrance_camera_blink.yaml
+          - !include ../includes/areas/entrance/camera_blink.yaml
       - !include ../includes/bottom-card.yaml
   # Col 2
   - type: vertical-stack

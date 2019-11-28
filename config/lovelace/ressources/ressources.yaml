@@ -50,3 +50,5 @@
   type: module
 - url: /community_plugin/lovelace-xiaomi-vacuum-map-card/xiaomi-vacuum-map-card.js
   type: module
+- url: /community_plugin/banner-card/banner-card.js
+  type: module

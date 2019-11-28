@@ -1,0 +1,51 @@
+path: house.test
+title: Test
+icon: mdi:alert
+panel: false
+
+badges:
+  !include ../includes/_badges.yaml
+
+popup_cards: []
+
+cards:
+  # Col 1
+  - type: vertical-stack
+    cards: 
+      - type: custom:banner-card
+        background: "#EDE7B0"
+        heading: "🛋️ Living room"
+        link: /lovelace/areas.living_room
+        row_size: 4
+        entities:
+          - entity: light.living_room_group
+            name: Lights
+          - entity: scene.living_room_ambiance_tv
+            name: TV light
+            value: mdi:projector-screen
+            action:
+              service: scene.turn_on
+              entity_id: scene.living_room_ambiance_tv
+          - switch.christmas
+          - entity: sensor.group_temperature_living_room
+            name: Temperature
+
+          - entity: media_player.living_room
+            name: Sonos
+      - !include ../includes/bottom-card.yaml
+  # Col 2
+  - type: vertical-stack
+    cards:
+      - type: custom:banner-card
+        heading: "🛁 Bathroom"
+        background: "#B0C2ED"
+        link: /lovelace/areas.bathroom
+        entities:
+          - entity: light.bathroom_group
+            name: Lights
+          - entity: sensor.group_temperature_bathroom
+            name: Temperature
+
+          - entity: media_player.bathroom
+            name: Sonos
+      - !include ../includes/bottom-card.yaml

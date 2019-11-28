@@ -4,7 +4,7 @@ icon: mdi:bed-queen
 panel: false
 
 badges:
-  !include ../views/divers_badges.yaml
+  !include ../includes/_badges.yaml
 
 popup_cards: []
 
@@ -16,9 +16,9 @@ cards:
       - type: entities
         entity: light.bedroom_guests_group
         title: Lights
-        entities: !include ../views/guests-bedroom_lights.yaml
+        entities: !include ../includes/entities/lights_guests-bedroom.yaml
       # Alarm house
-      - !include ../views/entrance_alarm_ring.yaml
+      - !include ../includes/areas/entrance/alarm_ring.yaml
       - !include ../includes/bottom-card.yaml
   # Col 2
   - type: vertical-stack

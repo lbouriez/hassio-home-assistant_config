@@ -4,7 +4,7 @@ icon: mdi:shield
 panel: false
 
 badges:
-  !include ../views/divers_badges.yaml
+  !include ../includes/_badges.yaml
 
 popup_cards: []
 
@@ -12,9 +12,9 @@ cards:
   # Col 1
   - type: vertical-stack
     cards:
-      - !include ../views/entrance_alarm_ring.yaml
+      - !include ../includes/areas/entrance/alarm_ring.yaml
       - type: glance
-        entities: !include ../views/group_all.yaml
+        entities: !include ../includes/entities/group_all.yaml
       # Camera
       - type: horizontal-stack
         cards:
@@ -25,26 +25,26 @@ cards:
               navigation_path: /lovelace/house.cameras
       - type: horizontal-stack
         cards:
-          - !include ../views/living-room_camera_blink.yaml
-          - !include ../views/living-room_camera_foscam.yaml
+          - !include ../includes/areas/living room/camera_blink.yaml
+          - !include ../includes/areas/living room/camera_foscam.yaml
       - type: horizontal-stack
         cards:
-          - !include ../views/entrance_camera_blink.yaml
-          - !include ../views/balcony_camera_blink.yaml
-      - !include ../views/group_all_door.yaml
+          - !include ../includes/areas/entrance/camera_blink.yaml
+          - !include ../includes/areas/balcony/camera_blink.yaml
+      - !include ../includes/all/group_all_door.yaml
       - !include ../includes/bottom-card.yaml
   # Col 2
   - type: vertical-stack
     cards:
       # Tracker
-      - !include ../views/security_tracker_all.yaml
-      - !include ../views/group_all_motion.yaml
-      - !include ../views/group_all_temperature.yaml
+      - !include ../includes/security_tracker_all.yaml
+      - !include ../includes/all/group_all_motion.yaml
+      - !include ../includes/all/group_all_temperature.yaml
       - !include ../includes/bottom-card.yaml
   # Col 3
   - type: vertical-stack
     cards:
-      - !include ../views/group_all_water_smoke.yaml
+      - !include ../includes/all/group_all_water_smoke.yaml
       # Automations
       - type: custom:auto-entities
         show_empty: false

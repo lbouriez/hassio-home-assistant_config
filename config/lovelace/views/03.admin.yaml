@@ -4,7 +4,7 @@ icon: mdi:home-assistant
 panel: false
 
 badges:
-  !include ../views/divers_badges.yaml
+  !include ../includes/_badges.yaml
 
 popup_cards: []
 
@@ -18,15 +18,15 @@ cards:
       - !include ../includes/broken_entities.yaml
       - !include ../includes/bottom-card.yaml
       # Pi-hole
-      - !include ../views/admin_monitoring_pi_hole.yaml
+      - !include ../includes/admin/admin_monitoring_pi_hole.yaml
       # VM
-      - !include ../views/admin_monitoring_vm.yaml
+      - !include ../includes/admin/admin_monitoring_vm.yaml
       - !include ../includes/bottom-card.yaml
   # Col 3
   - type: vertical-stack
     cards:
       # Synology
-      - !include ../views/admin_monitoring_synology.yaml
+      - !include ../includes/admin/admin_monitoring_synology.yaml
       # Automations
       - type: custom:auto-entities
         show_empty: false

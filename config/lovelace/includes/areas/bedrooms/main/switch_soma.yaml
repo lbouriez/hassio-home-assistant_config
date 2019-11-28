@@ -1,2 +1,2 @@
-entity: switch.sonoff_100086f608
 type: custom:toggle-lock-entity-row
+entity: switch.sonoff_100086f608

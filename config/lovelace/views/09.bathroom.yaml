@@ -4,7 +4,7 @@ icon: mdi:shower
 panel: false
 
 badges:
-  !include ../views/divers_badges.yaml
+  !include ../includes/_badges.yaml
 
 popup_cards: []
 
@@ -16,14 +16,14 @@ cards:
       - type: entities
         entity: light.bathroom_group
         title: Lights
-        entities: !include ../views/bathroom_lights.yaml
+        entities: !include ../includes/entities/lights_bathroom.yaml
       # Switches
       - type: entities
         title: 'Actions'
         show_header_toggle: false
         entities:
-          - !include ../views/bathroom_media_player_sonos.yaml
-          # - !include ../views/bathroom_media_player_alexa.yaml
+          - !include ../includes/areas/bathroom/media_player_sonos.yaml
+          # - !include ../includes/areas/bathroom/media_player_alexa.yaml
       - !include ../includes/bottom-card.yaml
   # Col 2
   - type: vertical-stack

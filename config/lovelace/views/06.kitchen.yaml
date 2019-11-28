@@ -4,7 +4,7 @@ icon: mdi:fridge
 panel: false
 
 badges:
-  !include ../views/divers_badges.yaml
+  !include ../includes/_badges.yaml
 
 popup_cards: []
 
@@ -16,13 +16,13 @@ cards:
       - type: entities
         entity: light.kitchen_group
         title: Lights
-        entities: !include ../views/kitchen_lights.yaml
+        entities: !include ../includes/entities/lights_kitchen.yaml
       # Switches
       - type: entities
         title: 'Actions'
         show_header_toggle: false
         entities:
-          - !include ../views/kitchen_media_player_alexa.yaml
+          - !include ../includes/areas/kitchen/media_player_alexa.yaml
       - !include ../includes/bottom-card.yaml
   # Col 2
   - type: vertical-stack

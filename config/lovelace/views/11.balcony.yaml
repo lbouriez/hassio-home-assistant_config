@@ -4,7 +4,7 @@ icon: mdi:grill
 panel: false
 
 badges:
-  !include ../views/divers_badges.yaml
+  !include ../includes/_badges.yaml
 
 popup_cards: []
 
@@ -16,11 +16,11 @@ cards:
       - type: entities
         entity: light.balcony_group
         title: Lights
-        entities: !include ../views/balcony_lights.yaml
+        entities: !include ../includes/entities/lights_balcony.yaml
       # Camera
       - type: horizontal-stack
         cards:
-          - !include ../views/balcony_camera_blink.yaml
+          - !include ../includes/areas/balcony/camera_blink.yaml
       - !include ../includes/bottom-card.yaml
   # Col 2
   - type: vertical-stack

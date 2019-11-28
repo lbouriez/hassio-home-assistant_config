@@ -6,7 +6,7 @@ background: 'rgba(0,0,0,0.3)'
 menu: overflow
 options: clock
 voice: hide
-hide_tabs: '11 to 100'
+hide_tabs: '12 to 100'
 notifications: overflow
 hide_config: true
 hide_help: true
