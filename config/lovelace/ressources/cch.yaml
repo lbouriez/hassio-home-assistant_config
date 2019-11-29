@@ -29,6 +29,7 @@ exceptions:
       user: Giulia, Vincenzo
     config:
       menu: hide
+      disable_sidebar: true
       options: hide
       kiosk_mode: true
       default_tab: 'house.home.light'
