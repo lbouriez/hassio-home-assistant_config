@@ -1,0 +1,138 @@
+path: house.home.light
+title: Test
+icon: mdi:alert
+panel: false
+
+badges:
+  !include ../includes/_badges.yaml
+
+popup_cards: []
+
+cards:
+  # Col 1
+  - type: vertical-stack
+    cards: 
+      - type: custom:banner-card
+        background: "#EDE7B0"
+        heading: "🛋️ Living room"
+        link: /lovelace/areas.living_room
+        entities:
+          - entity: light.living_room_group
+            name: Lights
+          - entity: light.christmas
+            name: 🎄 lights
+          - entity: sensor.group_temperature_living_room
+            name: Temperature
+          - entity: scene.living_room_ambiance_tv
+            name: TV light
+            value: mdi:projector-screen
+            action:
+              service: scene.turn_on
+              entity_id: scene.living_room_ambiance_tv
+
+
+
+          - entity: vacuum.living_room
+            value: mdi:robot-vacuum-variant
+            map_state:
+              docked:
+                name: Vacuum (docked)
+                action:
+                  service: automation.trigger
+                  entity_id: automation.living_room_vacuum_start_when_away
+              cleaning:
+                name: Vacuum (cleaning)
+                action:
+                  service: vacuum.return_to_base
+                  entity_id: vacuum.living_room
+          - sensor.humidity_158d000245a7d5
+          - entity: media_player.living_room
+            name: Sonos
+      - type: custom:banner-card
+        heading: "🍳 Kitchen"
+        background: "#57B07A"
+        link: /lovelace/areas.kitchen
+        entities:
+          - entity: light.kitchen_group
+            name: Lights
+          - entity: input_boolean.guest_mode
+            name: Disable lights auto
+          - sensor.time
+  # Col 2
+  - type: vertical-stack
+    cards:
+      - type: custom:banner-card
+        heading: "🛏️ Bedroom"
+        background: "#ed9a73"
+        link: /lovelace/areas.bedrooms.main
+        entities:
+          - entity: light.bedroom_group
+            name: Lights
+          - entity: switch.bedroom_tv
+          - sensor.group_temperature_bedroom
+          - entity: cover.bedroom_1
+            size: 2
+          - sensor.humidity_158d0002461865
+          - entity: media_player.bedroom
+            name: Sonos
+      - type: custom:banner-card
+        heading: "🛁 Bathroom"
+        background: "#B0C2ED"
+        link: /lovelace/areas.bathroom
+        entities:
+          - entity: light.bathroom_group
+            name: Lights
+          - entity: sensor.bathroom_lightlevel_deconz
+            name: Light
+          - entity: sensor.group_temperature_bathroom
+            name: Temperature
+          - entity: media_player.bathroom
+            name: Sonos
+  # Col 3
+  - type: vertical-stack
+    cards:
+      - type: custom:banner-card
+        heading: "🚪 Entrance"
+        background: "#99d8d0"
+        link: /lovelace/areas.entrance
+        row_size: 4
+        entities:
+          - entity: light.entrance_group
+            name: Lights
+          - entity: lock.front_door
+            map_state:
+              locked:
+                name: Door (close)
+                value: mdi:lock
+                action:
+                  service: lock.unlock
+                  entity_id: lock.front_door
+              unlocked:
+                name: Door (open)
+                value: mdi:lock-open
+                action:
+                  service: lock.unlock
+                  entity_id: lock.front_door
+          - entity: sensor.entrance_sensor_light_level
+            name: Light
+          - sensor.group_temperature_entrance
+      - type: custom:banner-card
+        heading: "🍖 Balcony"
+        background: "#fff1ac"
+        row_size: 2
+        link: /lovelace/areas.balcony
+        entities:
+          - entity: light.balcony_group
+            name: Lights
+          - entity: sensor.group_temperature_balcony
+      - type: custom:banner-card
+        heading: "👫 Guests"
+        background: "#C07373"
+        link: /lovelace/areas.bedrooms.guests
+        entities:
+          - entity: light.bedroom_guests_group
+            name: Lights
+          - entity: sensor.bedroom_guests_sensor_light_level
+            name: Light
+          - sensor.group_temperature_guests_bedroom
+      - !include ../includes/bottom-card.yaml

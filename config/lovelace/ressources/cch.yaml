@@ -6,13 +6,16 @@ background: 'rgba(0,0,0,0.3)'
 menu: overflow
 options: clock
 voice: hide
-hide_tabs: '12 to 100'
+hide_tabs: '11 to 100'
 notifications: overflow
 hide_config: true
 hide_help: true
 clock_format: '24'
 clock_date: true
 disable: false
+swipe_skip: "3"
+swipe: true
+redirect: false
 exceptions:
   - conditions:
       user_agent: Mobile
@@ -21,16 +24,12 @@ exceptions:
     config:
       menu: hide
       options: hide
-      swipe: true
-      swipe_skip: "3"
-      # kiosk_mode: true
+      default_tab: 'house.home'
   - conditions:
       user: Giulia, Vincenzo
     config:
       menu: hide
       options: hide
-      swipe: true
-      swipe_skip: "3"
       kiosk_mode: true
-      default_tab: 'house.home'
+      default_tab: 'house.home.light'
       hide_tabs: '1 to 100'

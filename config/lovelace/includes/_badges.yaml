@@ -1,4 +1,12 @@
 # No more than 6 for the mobile view to be good
+- type: state-label
+  entity: sun.sun
+  name: Go home
+  tap_action:
+    action: navigate
+    navigation_path: 'house.home.light'
+  double_tap_action:
+    action: more-info
 - type: entity-filter
   entities:
     - entity: group.door_all
@@ -18,14 +26,3 @@
 - entity: alarm_control_panel.alexa_guard_851bb
   name: 'Guard'
 - entity: alarm_control_panel.blink_home
-  # - type: entity-filter
-  #   entities:
-  #     - light.bathroom_group
-  #     - light.bedroom_group
-  #     - light.kitchen_group
-  #     - light.entrance_group
-  #     - light.bedroom_guests_group
-  #     - light.corridor_group
-  #     - light.living_room_group
-  #   state_filter:
-  #     - "on"

@@ -13,8 +13,13 @@ trigger:
     from: 'paused'
     to: 'playing'
 condition:
-  - condition: time
-    after: '19:00:00'
+  condition: and
+  conditions:
+    - condition: time
+      after: '19:00:00'
+    - condition: state
+      entity_id: input_boolean.guest_mode
+      state: 'off'
 action:
   - service: scene.turn_on
     entity_id: scene.living_room_ambiance_tv

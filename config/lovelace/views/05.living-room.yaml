@@ -28,7 +28,6 @@ cards:
           - !include ../includes/areas/living room/media_player_sonos.yaml
           # - !include ../views/media_player_alexa.yaml
           # - type: divider
-          - switch.christmas
       - !include ../includes/bottom-card.yaml
   # Col 2
   - type: vertical-stack
