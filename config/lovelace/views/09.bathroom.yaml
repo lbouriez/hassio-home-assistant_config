@@ -34,6 +34,7 @@ cards:
         title: 'Sensors'
         show_header_toggle: false
         entities:
+          - sensor.group_light_level_bathroom
           - sensor.group_temperature_bathroom
           - type: divider
           - group.motion_bathroom

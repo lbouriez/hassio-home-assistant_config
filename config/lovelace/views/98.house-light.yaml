@@ -55,6 +55,16 @@ cards:
           - entity: input_boolean.guest_mode
             name: Disable lights auto
           - sensor.time
+      - type: custom:banner-card
+        heading: "👫 Guests"
+        background: "#C07373"
+        link: /lovelace/areas.bedrooms.guests
+        entities:
+          - entity: light.bedroom_guests_group
+            name: Lights
+          - entity: sensor.group_light_level_guests_bedroom
+            name: Light
+          - sensor.group_temperature_guests_bedroom
   # Col 2
   - type: vertical-stack
     cards:
@@ -89,6 +99,45 @@ cards:
   - type: vertical-stack
     cards:
       - type: custom:banner-card
+        heading: "🚨 Security"
+        background: "#dfdfdf"
+        row_size: 4
+        link: /lovelace/house.security
+        entities:
+          - entity: alarm_control_panel.ring_alarm
+            name: Alarm away
+            action:
+              service: alarm_control_panel.alarm_arm_away
+            when: disarmed
+          - entity: alarm_control_panel.ring_alarm
+            name: Alarm home
+            action:
+              service: alarm_control_panel.alarm_arm_home
+            when: disarmed
+          - entity: alarm_control_panel.ring_alarm
+            name: Disarm
+            action:
+              service: alarm_control_panel.alarm_disarm
+            when:
+              state: ['=', 'armed_home', 'armed_away']
+          - entity: group.motion_all
+            map_state:
+              'on':
+                name: Motions
+                value: mdi:run-fast
+              'off':
+                name: No motions
+                value: mdi:motion-sensor
+          - entity: group.door_all
+            map_state:
+              'on':
+                name: Doors opened
+                value: mdi:door-open
+              'off':
+                name: Doors closed
+                value: mdi:door
+          # - entity: sensor.group_temperature_balcony
+      - type: custom:banner-card
         heading: "🚪 Entrance"
         background: "#99d8d0"
         link: /lovelace/areas.entrance
@@ -122,14 +171,5 @@ cards:
           - entity: light.balcony_group
             name: Lights
           - entity: sensor.group_temperature_balcony
-      - type: custom:banner-card
-        heading: "👫 Guests"
-        background: "#C07373"
-        link: /lovelace/areas.bedrooms.guests
-        entities:
-          - entity: light.bedroom_guests_group
-            name: Lights
-          - entity: sensor.group_light_level_guests_bedroom
-            name: Light
-          - sensor.group_temperature_guests_bedroom
+
       - !include ../includes/bottom-card.yaml

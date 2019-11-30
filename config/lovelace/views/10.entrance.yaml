@@ -38,6 +38,7 @@ cards:
         title: 'Sensors'
         show_header_toggle: false
         entities:
+          - sensor.group_light_level_entrance
           - sensor.group_temperature_entrance
           - type: divider
           - group.door_entrance

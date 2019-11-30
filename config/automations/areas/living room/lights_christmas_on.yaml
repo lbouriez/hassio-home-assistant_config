@@ -2,8 +2,9 @@ alias: Living room - Lights christmas on
 hide_entity: True
 initial_state: True
 trigger:
-  - platform: time
-    at: '18:30:00'
+  platform: state
+  entity_id: alarm_control_panel.ring_alarm
+  to: 'disarmed'
 action:
   - service: light.turn_on
     data:
