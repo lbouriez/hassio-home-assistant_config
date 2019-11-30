@@ -20,8 +20,6 @@ cards:
         entities: !include ../includes/entities/lights_main-bedroom.yaml
       # Alarm house
       - !include ../includes/areas/entrance/alarm_ring.yaml
-      # Thermostat
-      - !include ../includes/areas/bedrooms/main/climate_heat.yaml
       - !include ../includes/bottom-card.yaml
   # Col 2
   - type: vertical-stack
@@ -54,6 +52,8 @@ cards:
           - sensor.humidity_158d0002461865
           - type: divider
           - group.motion_bedroom
+          # Thermostat
+      - !include ../includes/areas/bedrooms/main/climate_heat.yaml
       # Automations
       - type: custom:decluttering-card
         template: automation

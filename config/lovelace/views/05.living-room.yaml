@@ -35,11 +35,6 @@ cards:
     cards:
       # Vacuum
       - !include ../includes/areas/living room/vacuum.yaml
-      # Camera
-      - type: horizontal-stack
-        cards:
-          - !include ../includes/areas/living room/camera_blink.yaml
-          - !include ../includes/areas/living room/camera_foscam.yaml
       # AC
       - !include ../includes/areas/living room/climate_ac.yaml
       # Thermostat
@@ -60,6 +55,11 @@ cards:
           - type: divider
           - group.door_balcony
           - group.motion_living_room
+      # Camera
+      - type: horizontal-stack
+        cards:
+          - !include ../includes/areas/living room/camera_blink.yaml
+          - !include ../includes/areas/living room/camera_foscam.yaml
       # Automations
       - type: custom:decluttering-card
         template: automation
