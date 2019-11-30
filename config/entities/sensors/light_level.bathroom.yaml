@@ -1,0 +1,8 @@
+platform: template
+sensors:
+  group_light_level_bathroom:
+    friendly_name: "Bathroom"
+    unit_of_measurement: 'lx'
+    icon_template: mdi:brightness-6
+    value_template: >-
+      {{ ((states('sensor.bathroom_lightlevel_deconz')|float + states('sensor.shower_lightlevel_deconz')|float) / 2) | round(2) }}

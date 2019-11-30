@@ -1,0 +1,8 @@
+platform: template
+sensors:
+  group_light_level_guests_bedroom:
+    friendly_name: "Guests bedroom"
+    unit_of_measurement: 'lx'
+    icon_template: mdi:brightness-6
+    value_template: >-
+      {{ ((states('sensor.bedroom_guests_sensor_light_level')|float) / 1) | round(2) }}
