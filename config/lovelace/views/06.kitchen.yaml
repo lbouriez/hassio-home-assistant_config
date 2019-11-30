@@ -35,13 +35,8 @@ cards:
         entities:
           - group.motion_kitchen
       # Automations
-      - type: custom:auto-entities
-        show_empty: false
-        card:
-          type: entities
-          title: 'Automations'
-          show_header_toggle: false
-        filter:
-          include:
-            - entity_id: "automation.kitchen_*"
+      - type: custom:decluttering-card
+        template: automation
+        variables:
+          - entity1: 'kitchen_*'
       - !include ../includes/bottom-card.yaml

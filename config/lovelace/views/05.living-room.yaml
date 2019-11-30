@@ -61,13 +61,8 @@ cards:
           - group.door_balcony
           - group.motion_living_room
       # Automations
-      - type: custom:auto-entities
-        show_empty: false
-        card:
-          type: entities
-          title: 'Automations'
-          show_header_toggle: false
-        filter:
-          include:
-            - entity_id: "automation.living_room*"
+      - type: custom:decluttering-card
+        template: automation
+        variables:
+          - entity1: 'living_room*'
       - !include ../includes/bottom-card.yaml

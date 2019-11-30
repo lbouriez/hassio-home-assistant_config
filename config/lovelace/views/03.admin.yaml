@@ -29,14 +29,9 @@ cards:
       # Synology
       - !include ../includes/admin/admin_monitoring_synology.yaml
       # Automations
-      - type: custom:auto-entities
-        show_empty: false
-        card:
-          type: entities
-          title: 'Automations'
-          show_header_toggle: false
-        filter:
-          include:
-            - entity_id: "automation.system*"
-            - entity_id: "automation.entities*"
+      - type: custom:decluttering-card
+        template: automation
+        variables:
+          - entity1: 'system*'
+          - entity2: 'entities*'
       - !include ../includes/bottom-card.yaml

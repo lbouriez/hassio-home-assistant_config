@@ -33,14 +33,9 @@ cards:
           - type: divider
           - group.motion_guests_bedroom
       # Automations
-      - type: custom:auto-entities
-        show_empty: false
-        card:
-          type: entities
-          title: 'Automations'
-          show_header_toggle: false
-        filter:
-          include:
-            - entity_id: "automation.guests_*"
-            - entity_id: "automation.corridor*"
+      - type: custom:decluttering-card
+        template: automation
+        variables:
+          - entity1: 'guests_*'
+          - entity2: 'corridor*'
       - !include ../includes/bottom-card.yaml

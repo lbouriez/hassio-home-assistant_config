@@ -43,13 +43,8 @@ cards:
           - group.door_entrance
           - group.motion_entrance
       # Automations
-      - type: custom:auto-entities
-        show_empty: false
-        card:
-          type: entities
-          title: 'Automations'
-          show_header_toggle: false
-        filter:
-          include:
-            - entity_id: "automation.entrance_*"
+      - type: custom:decluttering-card
+        template: automation
+        variables:
+          - entity1: 'entrance_*'
       - !include ../includes/bottom-card.yaml

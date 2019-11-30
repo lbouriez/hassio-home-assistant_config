@@ -59,13 +59,8 @@ cards:
       - !include ../includes/weather-card.yaml
       # - !include ../includes/divers_weather.yaml
       # Automations
-      - type: custom:auto-entities
-        show_empty: false
-        card:
-          type: entities
-          title: 'Automations'
-          show_header_toggle: false
-        filter:
-          include:
-            - entity_id: "automation.house*"
+      - type: custom:decluttering-card
+        template: automation
+        variables:
+          - entity1: 'house*'
       - !include ../includes/bottom-card.yaml

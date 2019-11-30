@@ -1,0 +1,25 @@
+default:
+  - entity1: '*'
+  - entity2: 'null'
+  - entity3: 'null'
+  - entity4: 'null'
+
+card:
+  type: entities
+  show_header_toggle: false
+  entities:
+    - type: custom:auto-entities
+      filter:
+        include:
+          - entity_id: 'automation.[[entity1]]'
+          - entity_id: 'automation.[[entity2]]'
+          - entity_id: 'automation.[[entity3]]'
+          - entity_id: 'automation.[[entity4]]'
+      card:
+        type: custom:fold-entity-row
+        head:
+          type: section
+          label: 'Automations'
+        padding: 0
+        group_config:
+          secondary_info: last-changed

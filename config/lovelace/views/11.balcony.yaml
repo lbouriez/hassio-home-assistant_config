@@ -36,13 +36,8 @@ cards:
           - group.door_balcony
           - group.motion_balcony
       # Automations
-      - type: custom:auto-entities
-        show_empty: false
-        card:
-          type: entities
-          title: 'Automations'
-          show_header_toggle: false
-        filter:
-          include:
-            - entity_id: "automation.balcony_*"
+      - type: custom:decluttering-card
+        template: automation
+        variables:
+          - entity1: 'balcony_*'
       - !include ../includes/bottom-card.yaml
