@@ -1,12 +1,4 @@
 # No more than 6 for the mobile view to be good
-- type: state-label
-  entity: sun.sun
-  name: Go home
-  tap_action:
-    action: navigate
-    navigation_path: 'house.home.light'
-  double_tap_action:
-    action: more-info
 - type: entity-filter
   entities:
     - entity: group.door_all

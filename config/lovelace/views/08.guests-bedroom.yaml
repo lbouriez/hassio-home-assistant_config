@@ -12,6 +12,7 @@ cards:
   # Col 1
   - type: vertical-stack
     cards:
+      - !include ../includes/footer_card.yaml
       # Lights
       - type: entities
         entity: light.bedroom_guests_group

@@ -12,6 +12,7 @@ cards:
   # Col 1
   - type: vertical-stack
     cards:
+      - !include ../includes/footer_card.yaml
       - !include ../includes/areas/entrance/alarm_ring.yaml
       - type: glance
         entities: !include ../includes/entities/group_all.yaml

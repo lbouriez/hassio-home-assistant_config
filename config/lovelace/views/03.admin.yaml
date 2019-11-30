@@ -12,6 +12,7 @@ cards:
   # Col 1
   - type: vertical-stack
     cards:
+      - !include ../includes/footer_card.yaml
       # Battery almost done
       - !include ../includes/low_battery_devices.yaml
       # Things with issues

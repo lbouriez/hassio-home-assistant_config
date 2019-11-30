@@ -1,0 +1,5 @@
+type: custom:button-card
+name: 🔙 Go home 🏠
+tap_action:
+  action: navigate
+  navigation_path: 'house.home.light'
