@@ -1,0 +1,4 @@
+input_boolean.guest_mode:
+  name: Guests at home
+  description: Guests at home
+  display_categories: SWITCH

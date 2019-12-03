@@ -18,7 +18,7 @@ condition:
       entity_id: input_boolean.sleep_mode
       state: 'off'
     - condition: time
-      after: '09:30:00'
+      after: '18:00:00'
       before: '22:45:00'
 action:
   - service: 'light.turn_on'

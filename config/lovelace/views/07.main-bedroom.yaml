@@ -39,6 +39,11 @@ cards:
             template: media_player
             variables:
               - entity: "bedroom"
+          - type: custom:decluttering-card
+            template: media_player
+            variables:
+              - entity: "bedroom_dot"
+              - tts_plateform: "alexa"
           - !include ../includes/bottom-card.yaml
   # Col 3
   - type: vertical-stack
@@ -48,6 +53,7 @@ cards:
         title: 'Sensors'
         show_header_toggle: false
         entities:
+          - sensor.group_light_level_bedroom
           - sensor.group_temperature_bedroom
           - sensor.humidity_158d0002461865
           - type: divider

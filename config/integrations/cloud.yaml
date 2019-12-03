@@ -23,6 +23,8 @@ cloud:
         - switch.ventilation
         - switch.sonoff_100048cb54 #Bedroom closet
         - switch.bedroom_tv
+        # Inputs boolean
+        - input_boolean.guest_mode
         # Plugs
         #- switch.circadian_lighting_circadian_lighting
         # Covers

@@ -8,6 +8,6 @@ card:
   entity: media_player.[[entity]]
   group: [[group]]
   tts:
-    platform: [[tts_plateform]]
+    platform: '[[tts_plateform]]'
     sync_volume: true
     type: announce

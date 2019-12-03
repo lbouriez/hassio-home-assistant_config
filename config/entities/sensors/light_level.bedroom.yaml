@@ -1,0 +1,8 @@
+platform: template
+sensors:
+  group_light_level_bedroom:
+    friendly_name: "Bedroom"
+    unit_of_measurement: 'lx'
+    icon_template: mdi:brightness-6
+    value_template: >-
+      {{ ((states('sensor.illumination_158d0004140234')|float) / 1) | round(2) }}

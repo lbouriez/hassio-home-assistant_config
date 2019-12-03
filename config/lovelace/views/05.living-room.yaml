@@ -26,8 +26,15 @@ cards:
           - scene.living_room_ambiance_tv
           - switch.living_room_tv
           - switch.living_room_netflix
-          - !include ../includes/areas/living room/media_player_sonos.yaml
-          # - !include ../views/media_player_alexa.yaml
+          - type: custom:decluttering-card
+            template: media_player
+            variables:
+              - entity: "living_room"
+          - type: custom:decluttering-card
+            template: media_player
+            variables:
+              - entity: "living_room_echo_dot"
+              - tts_plateform: alexa
           # - type: divider
       - !include ../includes/bottom-card.yaml
   # Col 2

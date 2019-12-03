@@ -1,6 +1,6 @@
 path: house.home.light
 title: Test
-icon: mdi:alert
+icon: mdi:home-assistant
 panel: false
 
 badges:
@@ -72,13 +72,14 @@ cards:
         heading: "🛏️ Bedroom"
         background: "#ed9a73"
         link: /lovelace/areas.bedrooms.main
+        row_size: 3
         entities:
           - entity: light.bedroom_group
             name: Lights
           - entity: switch.bedroom_tv
           - sensor.group_temperature_bedroom
           - entity: cover.bedroom_1
-            size: 2
+          - sensor.group_light_level_bedroom
           - sensor.humidity_158d0002461865
           - entity: media_player.bedroom
             name: Sonos

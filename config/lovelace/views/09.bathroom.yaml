@@ -23,8 +23,15 @@ cards:
         title: 'Actions'
         show_header_toggle: false
         entities:
-          - !include ../includes/areas/bathroom/media_player_sonos.yaml
-          # - !include ../includes/areas/bathroom/media_player_alexa.yaml
+          - type: custom:decluttering-card
+            template: media_player
+            variables:
+              - entity: "bathroom"
+          - type: custom:decluttering-card
+            template: media_player
+            variables:
+              - entity: "bathroom_dot"
+              - tts_plateform: "alexa"
       - !include ../includes/bottom-card.yaml
   # Col 2
   - type: vertical-stack
