@@ -1,0 +1,20 @@
+platform: apcupsd
+resources:
+  - apc
+  - date
+  - hostname
+  - version
+  - upsname
+  - cable
+  - driver
+  - upsmode
+  - starttime
+  - model
+  - status
+  - linev
+  - loadpct
+  - bcharge
+  - timeleft
+  - mbattchg
+  - mintimel
+  - maxtime

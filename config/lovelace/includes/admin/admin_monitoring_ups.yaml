@@ -1,0 +1,30 @@
+type: vertical-stack
+cards:
+  - type: glance
+    title: UPS monitoring
+    entities:
+      - binary_sensor.ups
+      - sensor.ups_battery
+      - sensor.ups_time_left
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: custom:auto-entities
+        filter:
+          include:
+            - entity_id: sensor.ups_*
+          exclude:
+            - sensor.ups_battery
+            - sensor.ups_time_left
+        card:
+          type: custom:fold-entity-row
+          head:
+            type: section
+            label: 'UPS - More informations'
+          padding: 0
+          group_config:
+            secondary_info: last-changed
+
+
+
+
