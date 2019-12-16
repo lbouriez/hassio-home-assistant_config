@@ -1,7 +1,7 @@
 type: vertical-stack
 cards:
   - type: glance
-    title: UPS monitoring
+    title: Internet speed monitoring
     style: |
       .card-header {
         padding-top: 10px;
