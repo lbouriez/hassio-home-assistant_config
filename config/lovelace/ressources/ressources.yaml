@@ -51,3 +51,5 @@
   type: module
 - url: /community_plugin/banner-card/banner-card.js
   type: module
+- url: /community_plugin/lovelace-card-mod/card-mod.js
+  type: module

@@ -3,7 +3,7 @@ cards:
   - type: glance
     title: UPS monitoring
     entities:
-      - binary_sensor.ups
+      - binary_sensor.ups_online_status
       - sensor.ups_battery
       - sensor.ups_time_left
   - type: entities

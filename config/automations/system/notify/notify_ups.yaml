@@ -4,10 +4,23 @@ initial_state: True
 trigger:
   - platform: state
     entity_id: sensor.ups_status
-    to: ONLINE
+    to: 'ONLINE'
   - platform: state
     entity_id: binary_sensor.ups_online_status
     to: 'off'
+  - platform: event
+    event_type: event_notify_ups_enable
+  # - platform: time_pattern
+  #   minutes: '/10'
+condition:
+  condition: or
+  conditions:
+    - condition: state
+      entity_id: 'sensor.ups_status'
+      state: 'ONLINE'
+    - condition: state
+      entity_id: 'binary_sensor.ups_online_status'
+      state: 'off'
 action:
   - service: script.notify
     data:
@@ -17,4 +30,7 @@ action:
       persistent_notification: True
       persistent_notification_id: hass_ups_enabled
       message: >
-          The electricity is off and I am actually running on the UPS. I still have {{ states.sensor.ups_time_left.state | round(0) }} minutes remaining.
+          The electricity is off and I am actually running on the UPS. I still have {{ states.sensor.ups_time_left.state | round(1) }} minutes remaining.
+  - delay:
+      minutes: 5
+  - event: event_notify_ups_enable

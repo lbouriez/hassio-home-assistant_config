@@ -1,0 +1,53 @@
+type: vertical-stack
+cards:
+  - type: glance
+    title: UPS monitoring
+    style: |
+      .card-header {
+        padding-top: 10px;
+        padding-bottom: 5px;
+      }
+      .entity {
+        margin: 0px !important;
+      }
+    entities:
+      - entity: sensor.speedtest_download
+        name: Update Speedtest
+        show_state: false
+        icon: mdi:speedometer
+        tap_action:
+          action: call-service
+          service: speedtestdotnet.speedtest
+      - sensor.speedtest_last_updated
+  - type: horizontal-stack
+    cards:
+    - entity: sensor.speedtest_download
+      max: 140
+      min: 0
+      name: Download Speed
+      severity:
+        green: 90
+        red: 0
+        yellow: 30
+      theme: speedtest_gauge
+      type: gauge
+    - entity: sensor.speedtest_upload
+      max: 25
+      min: 0
+      name: Upload Speed
+      severity:
+        green: 15
+        red: 0
+        yellow: 9
+      theme: speedtest_gauge
+      type: gauge
+    - entity: sensor.speedtest_ping
+      max: 0
+      min: 200
+      name: Ping
+      severity:
+        green: 0
+        red: 50
+        yellow: 30
+      theme: speedtest_gauge
+      type: gauge

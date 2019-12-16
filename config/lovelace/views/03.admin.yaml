@@ -28,6 +28,8 @@ cards:
     cards:
       # Synology
       - !include ../includes/admin/admin_monitoring_synology.yaml
+      # Speed test
+      - !include ../includes/admin/admin_monitoring_speed_test.yaml
       # UPS
       - !include ../includes/admin/admin_monitoring_ups.yaml
       # Automations
