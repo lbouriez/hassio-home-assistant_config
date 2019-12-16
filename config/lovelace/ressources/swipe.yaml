@@ -1,0 +1,5 @@
+wrap: false
+animate: swipe
+skip_tabs: 3
+prevent_default: true
+swipe_amount: 30

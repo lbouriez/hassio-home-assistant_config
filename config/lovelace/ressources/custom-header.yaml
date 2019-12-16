@@ -1,0 +1,78 @@
+# https://maykar.github.io/custom-header/
+# Main config
+compact_mode: true
+footer_mode: false
+hide_help: true
+disabled_mode: false
+
+# Styling
+background: 'rgba(0,0,0,0.3)'
+
+# Buttons
+menu_hide: false
+voice_hide: true
+
+# Tabs
+chevrons: false
+hide_tabs: '11 to 100'
+hidden_tab_redirect: false
+default_tab: 'house.home.light'
+
+# Exceptions
+exceptions:
+  - conditions:
+      user_agent: Mobile
+      media_query: "(max-width: 600px)"
+      user: Laurent
+    config:
+      menu_hide: hide
+      options_hide: hide
+      default_tab: 'house.home.light'
+  - conditions:
+      user: Giulia, Vincenzo
+    config:
+      menu_hide: hide
+      disable_sidebar: true
+      options_hide: hide
+      kiosk_mode: true
+      default_tab: 'house.home.light'
+      hide_tabs: '1 to 100'
+  - conditions:
+      query_string: kiosk
+    config:
+      kiosk_mode: true
+      default_tab: 'house.home.light'
+
+# main_config: true
+# background: 'rgba(0,0,0,0.3)'
+# menu: overflow
+# options: clock
+# voice: hide
+# hide_tabs: '11 to 100'
+# notifications: overflow
+# hide_config: true
+# hide_help: true
+# clock_format: '24'
+# clock_date: true
+# disable: false
+# swipe_skip: "3"
+# swipe: true
+# redirect: false
+# exceptions:
+#   - conditions:
+#       user_agent: Mobile
+#       media_query: "(max-width: 600px)"
+#       user: Laurent
+#     config:
+#       menu: hide
+#       options: hide
+#       default_tab: 'house.home.light'
+#   - conditions:
+#       user: Giulia, Vincenzo
+#     config:
+#       menu: hide
+#       disable_sidebar: true
+#       options: hide
+#       kiosk_mode: true
+#       default_tab: 'house.home.light'
+#       hide_tabs: '1 to 100'

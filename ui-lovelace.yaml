@@ -2,7 +2,10 @@ resources:
   !include /config/config/lovelace/ressources/ressources.yaml
 
 custom_header:
-  !include /config/config/lovelace/ressources/cch.yaml
+  !include /config/config/lovelace/ressources/custom-header.yaml
+
+swipe_nav:
+  !include /config/config/lovelace/ressources/swipe.yaml
 
 decluttering_templates:
   !include_dir_named /config/config/lovelace/decluttering_templates
