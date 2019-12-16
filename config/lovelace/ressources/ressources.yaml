@@ -16,8 +16,7 @@
 # https://github.com/thomasloven/lovelace-card-tools
 - url: /community_plugin/lovelace-card-tools/card-tools.js
   type: js
-# https://github.com/maykar/compact-custom-header/
-- url: /community_plugin/compact-custom-header/compact-custom-header.js
+- url: /community_plugin/custom-header/custom-header.js
   type: module
 # https://github.com/thomasloven/lovelace-slider-entity-row
 - url: /community_plugin/lovelace-slider-entity-row/slider-entity-row.js

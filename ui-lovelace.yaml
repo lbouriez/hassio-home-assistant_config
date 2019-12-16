@@ -1,7 +1,7 @@
 resources:
   !include /config/config/lovelace/ressources/ressources.yaml
 
-cch:
+custom_header:
   !include /config/config/lovelace/ressources/cch.yaml
 
 decluttering_templates:
