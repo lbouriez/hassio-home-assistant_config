@@ -1,0 +1,424 @@
+binary_sensor:
+  - platform: mqtt
+    name: "pc_nuc - Connected"
+    state_topic: "iotlink/workgroup/nuc/lwt"
+    value_template: "{{ value }}"
+    payload_on: "ON"
+    payload_off: "OFF"
+    device_class: "connectivity"
+    qos: 1
+
+sensor:
+
+  - platform: mqtt
+    name: "pc_nuc - Current User"
+    state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/current-user"
+    unit_of_measurement: ''
+    icon: mdi:account
+    value_template: "{{ value }}"
+    availability_topic: "iotlink/workgroup/nuc/lwt"
+    payload_available: "ON"
+    payload_not_available: "OFF"
+    qos: 1
+
+  # - platform: mqtt
+  #   name: "pc_nuc - Idle Time"
+  #   state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/idle-time"
+  #   unit_of_measurement: 'seconds'
+  #   icon: mdi:timer
+  #   value_template: "{{ value }}"
+  #   availability_topic: "iotlink/workgroup/nuc/lwt"
+  #   payload_available: "ON"
+  #   payload_not_available: "OFF"
+  #   qos: 1
+
+  - platform: mqtt
+    name: "pc_nuc - CPU Usage"
+    state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/cpu"
+    unit_of_measurement: '%'
+    icon: mdi:speedometer
+    value_template: "{{ value }}"
+    availability_topic: "iotlink/workgroup/nuc/lwt"
+    payload_available: "ON"
+    payload_not_available: "OFF"
+    qos: 1
+
+  - platform: mqtt
+    name: "pc_nuc - RAM Usage"
+    state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/memory/usage"
+    unit_of_measurement: '%'
+    icon: mdi:memory
+    value_template: "{{ value }}"
+    availability_topic: "iotlink/workgroup/nuc/lwt"
+    payload_available: "ON"
+    payload_not_available: "OFF"
+    qos: 1
+
+  - platform: mqtt
+    name: "pc_nuc - RAM Available"
+    state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/memory/available"
+    unit_of_measurement: 'MB'
+    icon: mdi:memory
+    value_template: "{{ value }}"
+    availability_topic: "iotlink/workgroup/nuc/lwt"
+    payload_available: "ON"
+    payload_not_available: "OFF"
+    qos: 1
+
+  - platform: mqtt
+    name: "pc_nuc - RAM Used"
+    state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/memory/used"
+    unit_of_measurement: 'MB'
+    icon: mdi:memory
+    value_template: "{{ value }}"
+    availability_topic: "iotlink/workgroup/nuc/lwt"
+    payload_available: "ON"
+    payload_not_available: "OFF"
+    qos: 1
+
+  - platform: mqtt
+    name: "pc_nuc - RAM Total"
+    state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/memory/total"
+    unit_of_measurement: 'MB'
+    icon: mdi:memory
+    value_template: "{{ value }}"
+    availability_topic: "iotlink/workgroup/nuc/lwt"
+    payload_available: "ON"
+    payload_not_available: "OFF"
+    qos: 1
+
+  # - platform: mqtt
+  #   name: "pc_nuc - Remaining Battery"
+  #   state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/battery/remaining-percent"
+  #   unit_of_measurement: '%'
+  #   device_class: battery
+  #   value_template: "{{ value }}"
+  #   availability_topic: "iotlink/workgroup/nuc/lwt"
+  #   payload_available: "ON"
+  #   payload_not_available: "OFF"
+  #   qos: 1
+
+  # - platform: mqtt
+  #   name: "pc_nuc - Remaining Battery Time"
+  #   state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/battery/remaining-time"
+  #   unit_of_measurement: 'minutes'
+  #   icon: mdi:timer
+  #   value_template: "{{ ( value | float / 60 ) | int }}"
+  #   availability_topic: "iotlink/workgroup/nuc/lwt"
+  #   payload_available: "ON"
+  #   payload_not_available: "OFF"
+  #   qos: 1
+
+  # - platform: mqtt
+  #   name: "pc_nuc - Predicted Lifetime"
+  #   state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/battery/full-lifetime"
+  #   unit_of_measurement: 'minutes'
+  #   icon: mdi:timer
+  #   value_template: "{{ ( value | float / 60 ) | int }}"
+  #   availability_topic: "iotlink/workgroup/nuc/lwt"
+  #   payload_available: "ON"
+  #   payload_not_available: "OFF"
+  #   qos: 1
+
+  - platform: mqtt
+    name: "pc_nuc - HDD Usage (C)"
+    state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/hard-drive/c/drive-usage"
+    unit_of_measurement: '%'
+    icon: mdi:chart-donut
+    value_template: "{{ value }}"
+    availability_topic: "iotlink/workgroup/nuc/lwt"
+    payload_available: "ON"
+    payload_not_available: "OFF"
+    qos: 1
+  
+  - platform: mqtt
+    name: "pc_nuc - HDD Usage (D)"
+    state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/hard-drive/d/drive-usage"
+    unit_of_measurement: '%'
+    icon: mdi:chart-donut
+    value_template: "{{ value }}"
+    availability_topic: "iotlink/workgroup/nuc/lwt"
+    payload_available: "ON"
+    payload_not_available: "OFF"
+    qos: 1
+
+  - platform: mqtt
+    name: "pc_nuc - HDD Total Size (C)"
+    state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/hard-drive/c/total-size"
+    unit_of_measurement: 'GB'
+    icon: mdi:harddisk
+    value_template: "{{ value }}"
+    availability_topic: "iotlink/workgroup/nuc/lwt"
+    payload_available: "ON"
+    payload_not_available: "OFF"
+    qos: 1
+
+  - platform: mqtt
+    name: "pc_nuc - HDD Total Size (D)"
+    state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/hard-drive/d/total-size"
+    unit_of_measurement: 'GB'
+    icon: mdi:harddisk
+    value_template: "{{ value }}"
+    availability_topic: "iotlink/workgroup/nuc/lwt"
+    payload_available: "ON"
+    payload_not_available: "OFF"
+    qos: 1
+
+  # - platform: mqtt
+  #   name: "pc_nuc - HDD Total Free Space (C)"
+  #   state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/hard-drive/c/total-free-space"
+  #   unit_of_measurement: 'GB'
+  #   icon: mdi:harddisk
+  #   value_template: "{{ value }}"
+  #   availability_topic: "iotlink/workgroup/nuc/lwt"
+  #   payload_available: "ON"
+  #   payload_not_available: "OFF"
+  #   qos: 1
+
+  - platform: mqtt
+    name: "pc_nuc - HDD Free Space (C)"
+    state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/hard-drive/c/available-free-space"
+    unit_of_measurement: 'GB'
+    icon: mdi:harddisk
+    value_template: "{{ value }}"
+    availability_topic: "iotlink/workgroup/nuc/lwt"
+    payload_available: "ON"
+    payload_not_available: "OFF"
+    qos: 1
+
+  - platform: mqtt
+    name: "pc_nuc - HDD Free Space (D)"
+    state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/hard-drive/d/available-free-space"
+    unit_of_measurement: 'GB'
+    icon: mdi:harddisk
+    value_template: "{{ value }}"
+    availability_topic: "iotlink/workgroup/nuc/lwt"
+    payload_available: "ON"
+    payload_not_available: "OFF"
+    qos: 1
+
+  - platform: mqtt
+    name: "pc_nuc - HDD Used Space (C)"
+    state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/hard-drive/c/used-space"
+    unit_of_measurement: 'GB'
+    icon: mdi:harddisk
+    value_template: "{{ value }}"
+    availability_topic: "iotlink/workgroup/nuc/lwt"
+    payload_available: "ON"
+    payload_not_available: "OFF"
+    qos: 1
+
+  - platform: mqtt
+    name: "pc_nuc - HDD Used Space (D)"
+    state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/hard-drive/d/used-space"
+    unit_of_measurement: 'GB'
+    icon: mdi:harddisk
+    value_template: "{{ value }}"
+    availability_topic: "iotlink/workgroup/nuc/lwt"
+    payload_available: "ON"
+    payload_not_available: "OFF"
+    qos: 1
+
+  # - platform: mqtt
+  #   name: "pc_nuc - HDD Format (C)"
+  #   state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/hard-drive/c/drive-format"
+  #   unit_of_measurement: ''
+  #   icon: mdi:harddisk
+  #   value_template: "{{ value }}"
+  #   availability_topic: "iotlink/workgroup/nuc/lwt"
+  #   payload_available: "ON"
+  #   payload_not_available: "OFF"
+  #   qos: 1
+
+  # - platform: mqtt
+  #   name: "pc_nuc - HDD Label (C)"
+  #   state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/hard-drive/c/volume-label"
+  #   unit_of_measurement: ''
+  #   icon: mdi:harddisk
+  #   value_template: "{{ value }}"
+  #   availability_topic: "iotlink/workgroup/nuc/lwt"
+  #   payload_available: "ON"
+  #   payload_not_available: "OFF"
+  #   qos: 1
+
+  - platform: mqtt
+    name: "pc_nuc - Network IPv4"
+    state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/network/0/ipv4"
+    unit_of_measurement: ''
+    icon: mdi:lan
+    value_template: "{{ value }}"
+    availability_topic: "iotlink/workgroup/nuc/lwt"
+    payload_available: "ON"
+    payload_not_available: "OFF"
+    qos: 1
+
+  - platform: mqtt
+    name: "pc_nuc - Network IPv6"
+    state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/network/0/ipv6"
+    unit_of_measurement: ''
+    icon: mdi:lan
+    value_template: "{{ value }}"
+    availability_topic: "iotlink/workgroup/nuc/lwt"
+    payload_available: "ON"
+    payload_not_available: "OFF"
+    qos: 1
+
+  - platform: mqtt
+    name: "pc_nuc - Network Speed"
+    state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/network/0/speed"
+    unit_of_measurement: 'Mbps'
+    icon: mdi:speedometer
+    value_template: "{{ value }}"
+    availability_topic: "iotlink/workgroup/nuc/lwt"
+    payload_available: "ON"
+    payload_not_available: "OFF"
+    qos: 1
+
+  - platform: mqtt
+    name: "pc_nuc - Network Wired"
+    state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/network/0/wired"
+    unit_of_measurement: ''
+    icon: mdi:ethernet
+    value_template: "{{ value }}"
+    availability_topic: "iotlink/workgroup/nuc/lwt"
+    payload_available: "ON"
+    payload_not_available: "OFF"
+    qos: 1
+
+# camera:
+#   - platform: mqtt
+#     name: "pc_nuc - Screen 0"
+#     topic: "iotlink/workgroup/nuc/windows-monitor/stats/display/0/screen"
+
+# switch:
+#   - platform: template
+#     switches:
+#       my_computer:
+#         friendly_name: "pc_nuc"
+#         value_template: "{{ is_state('binary_sensor.my_computer_connected', 'on') }}"
+#         turn_on:
+#           service: script.my_computer_wake
+#         turn_off:
+#           service: script.my_computer_shutdown
+#         icon_template: mdi:laptop
+
+script:
+  # my_computer_wake:
+  #   # To enable see https://www.home-assistant.io/components/wake_on_lan/
+  #   alias: "pc_nuc - Wake"
+  #   sequence:
+  #     - service: wake_on_lan.send_magic_packet
+  #       data:
+  #         mac: "70:85:C2:63:9F:11"
+
+  my_computer_shutdown:
+    alias: "pc_nuc - Shutdown"
+    sequence:
+      - service: mqtt.publish
+        data:
+          topic: "iotlink/workgroup/nuc/commands/shutdown"
+          payload: ""
+
+  # my_computer_suspend:
+  #   alias: "pc_nuc - Suspend"
+  #   sequence:
+  #     - service: mqtt.publish
+  #       data:
+  #         topic: "iotlink/workgroup/nuc/commands/suspend"
+  #         payload: ""
+
+  # my_computer_hibernate:
+  #   alias: "pc_nuc - Hibernate"
+  #   sequence:
+  #     - service: mqtt.publish
+  #       data:
+  #         topic: "iotlink/workgroup/nuc/commands/hibernate"
+  #         payload: ""
+
+  my_computer_reboot:
+    alias: "pc_nuc - Reboot"
+    sequence:
+      - service: mqtt.publish
+        data:
+          topic: "iotlink/workgroup/nuc/commands/reboot"
+          payload: ""
+
+  my_computer_lock:
+    alias: "pc_nuc - Lock"
+    sequence:
+      - service: mqtt.publish
+        data:
+          topic: "iotlink/workgroup/nuc/commands/lock"
+          payload: ""
+
+  # my_computer_logoff:
+  #   alias: "pc_nuc - Logoff"
+  #   sequence:
+  #     - service: mqtt.publish
+  #       data:
+  #         topic: "iotlink/workgroup/nuc/commands/logoff"
+  #         payload: ""
+
+  # my_computer_vol_mute:
+  #   alias: "pc_nuc - Toggle Mute"
+  #   sequence:
+  #     - service: mqtt.publish
+  #       data:
+  #         topic: "iotlink/workgroup/nuc/commands/volume/mute"
+  #         payload: ""
+
+  # my_computer_vol_max:
+  #   alias: "pc_nuc - Vol Max"
+  #   sequence:
+  #     - service: mqtt.publish
+  #       data:
+  #         topic: "iotlink/workgroup/nuc/commands/volume/set"
+  #         payload: "100"
+
+  # my_computer_displays_on:
+  #   alias: "pc_nuc - Displays ON"
+  #   sequence:
+  #     - service: mqtt.publish
+  #       data:
+  #         topic: "iotlink/workgroup/nuc/commands/displays/on"
+  #         payload: ""
+
+  # my_computer_displays_off:
+  #   alias: "pc_nuc - Displays OFF"
+  #   sequence:
+  #     - service: mqtt.publish
+  #       data:
+  #         topic: "iotlink/workgroup/nuc/commands/displays/off"
+  #         payload: ""
+
+  my_computer_refresh:
+    alias: "pc_nuc - Refresh"
+    sequence:
+      - service: mqtt.publish
+        data:
+          topic: "iotlink/workgroup/nuc/refresh"
+          payload: ""
+
+  # my_computer_notify:
+  #   alias: "pc_nuc - Notify"
+  #   sequence:
+  #     - service: mqtt.publish
+  #       data:
+  #         topic: "iotlink/workgroup/nuc/commands/notify"
+  #         payload: '{ "title": "My Notification Title", "message": "This is an example of notification using IOT Link", "launchParams": "toast://open/https://iotlink.gitlab.io" }'
+
+  # my_computer_run_chrome:
+  #   alias: "pc_nuc - Run Chrome"
+  #   sequence:
+  #     - service: mqtt.publish
+  #       data:
+  #         topic: "iotlink/workgroup/nuc/commands/run"
+  #         payload: '{ "command": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe", "args": "https://iotlink.gitlab.io", "path": "C:\\Program Files (x86)\\Google\\Chrome\\Application", "user": "", "visible": true, "fallback": true }'
+
+  # my_computer_run_ccleaner:
+  #   alias: "pc_nuc - Run CCleaner"
+  #   sequence:
+  #     - service: mqtt.publish
+  #       data:
+  #         topic: "iotlink/workgroup/nuc/commands/run"
+  #         payload: '{ "command": "C:\\Program Files\\CCleaner\\CCleaner64.exe", "args": "/AUTO", "path": "C:\\Program Files\\CCleaner\\", "user": "", "visible": true, "fallback": true }'
