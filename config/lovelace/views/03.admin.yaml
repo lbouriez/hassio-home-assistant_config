@@ -17,23 +17,26 @@ cards:
       - !include ../includes/low_battery_devices.yaml
       # Things with issues
       - !include ../includes/broken_entities.yaml
-      - !include ../includes/bottom-card.yaml
+      # UPS
+      - !include ../includes/admin/admin_monitoring_ups.yaml
       # Pi-hole
       - !include ../includes/admin/admin_monitoring_pi_hole.yaml
-      # VM
-      - !include ../includes/admin/admin_monitoring_vm.yaml
+      - !include ../includes/bottom-card.yaml
+  # Col 2
+  - type: vertical-stack
+    cards:
+      # Speed test
+      - !include ../includes/admin/admin_monitoring_speed_test.yaml
+      # NUC
+      - !include ../includes/admin/admin_monitoring_nuc.yaml
       - !include ../includes/bottom-card.yaml
   # Col 3
   - type: vertical-stack
     cards:
-      # NUC
-      - !include ../includes/admin/admin_monitoring_nuc.yaml
+      # VM
+      - !include ../includes/admin/admin_monitoring_vm.yaml
       # Synology
       - !include ../includes/admin/admin_monitoring_synology.yaml
-      # Speed test
-      - !include ../includes/admin/admin_monitoring_speed_test.yaml
-      # UPS
-      - !include ../includes/admin/admin_monitoring_ups.yaml
       # Automations
       - type: custom:decluttering-card
         template: automation
