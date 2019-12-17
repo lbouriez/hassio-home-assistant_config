@@ -4,7 +4,7 @@ initial_state: True
 trigger:
   - platform: state
     entity_id: sensor.ups_status
-    to: 'ONLINE'
+    to: 'ONBATT'
   - platform: state
     entity_id: binary_sensor.ups_online_status
     to: 'off'
@@ -17,7 +17,7 @@ condition:
   conditions:
     - condition: state
       entity_id: 'sensor.ups_status'
-      state: 'ONLINE'
+      state: 'ONBATT'
     - condition: state
       entity_id: 'binary_sensor.ups_online_status'
       state: 'off'
