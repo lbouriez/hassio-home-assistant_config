@@ -26,6 +26,8 @@ cards:
   # Col 3
   - type: vertical-stack
     cards:
+      # NUC
+      - !include ../includes/admin/admin_monitoring_nuc.yaml
       # Synology
       - !include ../includes/admin/admin_monitoring_synology.yaml
       # Speed test

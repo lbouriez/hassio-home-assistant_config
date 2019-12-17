@@ -1,4 +1,4 @@
-type: vertical-stack
+type: custom:vertical-stack-in-card
 cards:
   - type: glance
     title: Internet speed monitoring

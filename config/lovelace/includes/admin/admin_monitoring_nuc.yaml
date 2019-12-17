@@ -1,0 +1,84 @@
+type: vertical-stack
+cards:
+  - type: entities
+    title: NUC monitoring
+    show_header_toggle: false
+    entities:
+      - type: custom:auto-entities
+        show_empty: false
+        filter:
+          include:
+            - entity_id: "script.pc_nuc*"
+        card:
+          type: custom:fold-entity-row
+          head:
+            type: section
+            label: 'Scripts ⚠️'
+          padding: 0
+          group_config:
+            secondary_info: last-changed
+      - type: custom:auto-entities
+        show_empty: false
+        filter:
+          include:
+            - entity_id: "binary_sensor.pc_nuc*"
+            - entity_id: "sensor.pc_nuc*"
+          exclude:
+            - entity_id: sensor.pc_nuc_hdd_usage_d
+            - entity_id: sensor.pc_nuc_hdd_usage_c
+            - entity_id: sensor.pc_nuc_ram_usage
+            - entity_id: sensor.pc_nuc_cpu_usage
+        card:
+          type: custom:fold-entity-row
+          head:
+            type: section
+            label: 'Other sensors'
+          padding: 0
+          group_config:
+            secondary_info: last-changed
+      - type: custom:vertical-stack-in-card
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: gauge
+                entity: sensor.pc_nuc_cpu_usage
+                unit_of_measurement: '%'
+                title: CPU Usage
+                min: 0
+                max: 100
+                severity:
+                  yellow: 45
+                  green: 10
+                  red: 90
+              - type: gauge
+                entity: sensor.pc_nuc_ram_usage
+                unit_of_measurement: '%'
+                title: RAM Usage
+                min: 0
+                max: 100
+                severity:
+                  yellow: 45
+                  green: 10
+                  red: 90
+          - type: horizontal-stack
+            cards:
+              - type: gauge
+                entity: sensor.pc_nuc_hdd_usage_c
+                unit_of_measurement: '%'
+                title: DDD C Usage
+                min: 0
+                max: 100
+                severity:
+                  yellow: 45
+                  green: 10
+                  red: 90
+              - type: gauge
+                entity: sensor.pc_nuc_hdd_usage_d
+                unit_of_measurement: '%'
+                title: HDD D Usage
+                min: 0
+                max: 100
+                severity:
+                  yellow: 45
+                  green: 10
+                  red: 90

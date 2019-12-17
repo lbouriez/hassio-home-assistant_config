@@ -1,4 +1,4 @@
-type: vertical-stack
+type: custom:vertical-stack-in-card
 cards:
   - type: glance
     title: UPS monitoring
@@ -24,7 +24,3 @@ cards:
           padding: 0
           group_config:
             secondary_info: last-changed
-
-
-
-

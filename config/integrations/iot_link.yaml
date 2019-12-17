@@ -9,10 +9,9 @@ binary_sensor:
     qos: 1
 
 sensor:
-
   - platform: mqtt
     name: "pc_nuc - Current User"
-    state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/current-user"
+    state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/system/current-user"
     unit_of_measurement: ''
     icon: mdi:account
     value_template: "{{ value }}"
@@ -34,7 +33,7 @@ sensor:
 
   - platform: mqtt
     name: "pc_nuc - CPU Usage"
-    state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/cpu"
+    state_topic: "iotlink/workgroup/nuc/windows-monitor/stats/cpu/usage"
     unit_of_measurement: '%'
     icon: mdi:speedometer
     value_template: "{{ value }}"
@@ -295,15 +294,15 @@ sensor:
 #     switches:
 #       my_computer:
 #         friendly_name: "pc_nuc"
-#         value_template: "{{ is_state('binary_sensor.my_computer_connected', 'on') }}"
+#         value_template: "{{ is_state('binary_sensor.pc_nuc_connected', 'on') }}"
 #         turn_on:
-#           service: script.my_computer_wake
+#           service: script.pc_nuc_wake
 #         turn_off:
-#           service: script.my_computer_shutdown
+#           service: script.pc_nuc_shutdown
 #         icon_template: mdi:laptop
 
 script:
-  # my_computer_wake:
+  # pc_nuc_wake:
   #   # To enable see https://www.home-assistant.io/components/wake_on_lan/
   #   alias: "pc_nuc - Wake"
   #   sequence:
@@ -311,15 +310,15 @@ script:
   #       data:
   #         mac: "70:85:C2:63:9F:11"
 
-  my_computer_shutdown:
-    alias: "pc_nuc - Shutdown"
+  pc_nuc_shutdown:
+    alias: "NUC Shutdown"
     sequence:
       - service: mqtt.publish
         data:
           topic: "iotlink/workgroup/nuc/commands/shutdown"
           payload: ""
 
-  # my_computer_suspend:
+  # pc_nuc_suspend:
   #   alias: "pc_nuc - Suspend"
   #   sequence:
   #     - service: mqtt.publish
@@ -327,7 +326,7 @@ script:
   #         topic: "iotlink/workgroup/nuc/commands/suspend"
   #         payload: ""
 
-  # my_computer_hibernate:
+  # pc_nuc_hibernate:
   #   alias: "pc_nuc - Hibernate"
   #   sequence:
   #     - service: mqtt.publish
@@ -335,23 +334,23 @@ script:
   #         topic: "iotlink/workgroup/nuc/commands/hibernate"
   #         payload: ""
 
-  my_computer_reboot:
-    alias: "pc_nuc - Reboot"
+  pc_nuc_reboot:
+    alias: "NUC Reboot"
     sequence:
       - service: mqtt.publish
         data:
           topic: "iotlink/workgroup/nuc/commands/reboot"
           payload: ""
 
-  my_computer_lock:
-    alias: "pc_nuc - Lock"
+  pc_nuc_lock:
+    alias: "NUC Lock"
     sequence:
       - service: mqtt.publish
         data:
           topic: "iotlink/workgroup/nuc/commands/lock"
           payload: ""
 
-  # my_computer_logoff:
+  # pc_nuc_logoff:
   #   alias: "pc_nuc - Logoff"
   #   sequence:
   #     - service: mqtt.publish
@@ -359,7 +358,7 @@ script:
   #         topic: "iotlink/workgroup/nuc/commands/logoff"
   #         payload: ""
 
-  # my_computer_vol_mute:
+  # pc_nuc_vol_mute:
   #   alias: "pc_nuc - Toggle Mute"
   #   sequence:
   #     - service: mqtt.publish
@@ -367,7 +366,7 @@ script:
   #         topic: "iotlink/workgroup/nuc/commands/volume/mute"
   #         payload: ""
 
-  # my_computer_vol_max:
+  # pc_nuc_vol_max:
   #   alias: "pc_nuc - Vol Max"
   #   sequence:
   #     - service: mqtt.publish
@@ -375,7 +374,7 @@ script:
   #         topic: "iotlink/workgroup/nuc/commands/volume/set"
   #         payload: "100"
 
-  # my_computer_displays_on:
+  # pc_nuc_displays_on:
   #   alias: "pc_nuc - Displays ON"
   #   sequence:
   #     - service: mqtt.publish
@@ -383,7 +382,7 @@ script:
   #         topic: "iotlink/workgroup/nuc/commands/displays/on"
   #         payload: ""
 
-  # my_computer_displays_off:
+  # pc_nuc_displays_off:
   #   alias: "pc_nuc - Displays OFF"
   #   sequence:
   #     - service: mqtt.publish
@@ -391,15 +390,15 @@ script:
   #         topic: "iotlink/workgroup/nuc/commands/displays/off"
   #         payload: ""
 
-  my_computer_refresh:
-    alias: "pc_nuc - Refresh"
+  pc_nuc_refresh:
+    alias: "NUC Refresh"
     sequence:
       - service: mqtt.publish
         data:
           topic: "iotlink/workgroup/nuc/refresh"
           payload: ""
 
-  # my_computer_notify:
+  # pc_nuc_notify:
   #   alias: "pc_nuc - Notify"
   #   sequence:
   #     - service: mqtt.publish
@@ -407,7 +406,7 @@ script:
   #         topic: "iotlink/workgroup/nuc/commands/notify"
   #         payload: '{ "title": "My Notification Title", "message": "This is an example of notification using IOT Link", "launchParams": "toast://open/https://iotlink.gitlab.io" }'
 
-  # my_computer_run_chrome:
+  # pc_nuc_run_chrome:
   #   alias: "pc_nuc - Run Chrome"
   #   sequence:
   #     - service: mqtt.publish
@@ -415,7 +414,7 @@ script:
   #         topic: "iotlink/workgroup/nuc/commands/run"
   #         payload: '{ "command": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe", "args": "https://iotlink.gitlab.io", "path": "C:\\Program Files (x86)\\Google\\Chrome\\Application", "user": "", "visible": true, "fallback": true }'
 
-  # my_computer_run_ccleaner:
+  # pc_nuc_run_ccleaner:
   #   alias: "pc_nuc - Run CCleaner"
   #   sequence:
   #     - service: mqtt.publish
