@@ -4,3 +4,4 @@ entities:
   - light.bake_left
   - light.bake_right
   - light.kitchen_led_strip
+  - light.kitchen_spots

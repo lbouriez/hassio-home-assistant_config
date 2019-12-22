@@ -24,7 +24,7 @@ import appdaemon.plugins.hass.hassapi as hass
 # Define the max time when the volume can change
 # There to avoid an unlimited change when
 # not receiveing stop event
-CHANGE_VOLUME_TIME_MAX = 5
+CHANGE_VOLUME_TIME_MAX = 10
 # Define the interval between
 # each call to change volume, smaller = faster
 CHANGE_VOLUME_INTERVAL = 1
@@ -66,8 +66,8 @@ class DeconzSymfoniskRemote(hass.Hass):
 
     def handle_volume(self, kwargs):
         self.log("Change volume loop " + kwargs["way"])
-        self.call_service("media_player/volume_" + kwargs["way"], entity_id = self.sonos)
         if self.volume_change:
+            self.call_service("media_player/volume_" + kwargs["way"], entity_id = self.sonos)
             self.run_in(self.handle_volume, CHANGE_VOLUME_INTERVAL, way = kwargs["way"])
 
     def handle_event(self, event_name, data, kwargs):
