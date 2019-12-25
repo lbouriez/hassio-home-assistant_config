@@ -10,7 +10,7 @@ action:
   service: frontend.set_theme
   data_template:
     name: >-
-      {% if (now().hour < 6) %} slate
-      {% elif (now().hour < 20) %} default
-      {% else %} slate
+      {% if (now().hour < 6) %} 'slate'
+      {% elif (now().hour < 20) %} 'ios-dark-mode'
+      {% else %} 'slate'
       {% endif%}

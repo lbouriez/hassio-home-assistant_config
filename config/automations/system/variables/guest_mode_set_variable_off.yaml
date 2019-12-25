@@ -1,0 +1,9 @@
+alias: House - Set the variable guest mode
+hide_entity: true
+initial_state: true
+trigger:
+  platform: time
+  at: '03:00:00'
+action:
+  - service: input_boolean.turn_off
+    entity_id: 'input_boolean.guest_mode'
