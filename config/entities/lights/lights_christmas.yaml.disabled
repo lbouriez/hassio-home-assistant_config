@@ -1,0 +1,16 @@
+platform: template
+lights:
+  christmas:
+    value_template: "{{ (is_state('switch.christmas', 'on')) and (is_state('switch.twinkly', 'on')) }}"
+    turn_on:
+      service: switch.turn_on
+      data:
+        entity_id:
+          - switch.christmas
+          - switch.twinkly
+    turn_off:
+      service: switch.turn_off
+      data:
+        entity_id:
+          - switch.christmas
+          - switch.twinkly

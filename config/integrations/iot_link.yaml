@@ -398,6 +398,14 @@ script:
           topic: "iotlink/workgroup/nuc/refresh"
           payload: ""
 
+  pc_nuc_run_plex:
+    alias: "Start plex server"
+    sequence:
+      - service: mqtt.publish
+        data:
+          topic: "iotlink/workgroup/nuc/commands/run"
+          payload: '{ "command": "C:\\Program Files (x86)\\Plex\\Plex Media Server\\Plex Media Server.exe", "args": "", "path": "C:\\Program Files (x86)\\Plex\\Plex Media Server\\", "user": "", "visible": true, "fallback": true }'
+
   # pc_nuc_notify:
   #   alias: "pc_nuc - Notify"
   #   sequence:

@@ -1,0 +1,7 @@
+platform: command_line
+switches:
+  twinkly:
+    command_on: "python3 /config/python_scripts/twinkly.py 192.168.1.28 on"
+    command_off: "python3 /config/python_scripts/twinkly.py 192.168.1.28 off"
+    command_state: "python3 /config/python_scripts/twinkly.py 192.168.1.28 state"
+    value_template: "{{ value == \"1\" }}"
