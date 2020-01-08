@@ -6,6 +6,8 @@ trigger:
     entity_id: 'group.motion_all'
     from: 'off'
     to: 'on'
+  - platform: time
+    at: '11:00:00'
 condition:
   condition: and
   conditions:

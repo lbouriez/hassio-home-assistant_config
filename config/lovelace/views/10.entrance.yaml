@@ -40,6 +40,7 @@ cards:
         entities:
           - sensor.group_light_level_entrance
           - sensor.group_temperature_entrance
+          - binary_sensor.water_leak_sensor_158d000271bf19
           - type: divider
           - group.door_entrance
           - group.motion_entrance

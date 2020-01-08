@@ -46,6 +46,7 @@ cards:
           - switch.ventilation
           - input_boolean.guest_mode
           - input_boolean.sleep_mode
+          - input_boolean.christmas_time
           - input_select.cube_mode
       # Sonos
       - !include ../includes/all/group_all_media_player_sonos.yaml

@@ -5,6 +5,12 @@ trigger:
   platform: state
   entity_id: alarm_control_panel.ring_alarm
   to: 'disarmed'
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: input_boolean.christmas_time
+      state: 'on'
 action:
   - service: light.turn_on
     data:
