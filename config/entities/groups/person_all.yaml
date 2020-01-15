@@ -3,4 +3,4 @@ all_family:
   entities:
     - person.laurent
     - person.giulia
-    - person.vincenzo
+    # - person.vincenzo
