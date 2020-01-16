@@ -10,7 +10,7 @@ trigger:
 action:
   - service: light.turn_off
     data:
-      entity_id: 'group.all_lights'
+      entity_id: 'light.house_group'
   - delay:
       seconds: 2
   - service: light.turn_on

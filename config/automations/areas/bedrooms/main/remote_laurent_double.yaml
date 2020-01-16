@@ -12,7 +12,7 @@ action:
     entity_id: alarm_control_panel.ring_alarm
   - service: light.turn_off
     data:
-      entity_id: 'group.all_lights'
+      entity_id: 'light.house_group'
   # For fun
   - condition: and
     conditions:

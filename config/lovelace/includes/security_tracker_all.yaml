@@ -10,4 +10,4 @@ cards:
   state_image:
     "not_home": /local/img/tracker_away.jpg
     "home": /local/img/tracker_at_home.jpg
-  entity: group.all_family
+  entity: group.family

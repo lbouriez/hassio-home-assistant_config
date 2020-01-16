@@ -3,7 +3,7 @@ hide_entity: True
 initial_state: True
 trigger:
   - platform: state
-    entity_id: group.all_family
+    entity_id: group.family
     from: 'home'
     to: 'not_home'
   - platform: state
@@ -25,7 +25,7 @@ condition:
     #   for:
     #     minutes: 5
     - condition: state
-      entity_id: 'group.all_family'
+      entity_id: 'group.family'
       state: 'not_home'
 action:
   - service: alarm_control_panel.alarm_arm_away

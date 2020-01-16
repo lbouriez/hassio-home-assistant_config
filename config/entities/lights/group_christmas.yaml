@@ -1,5 +1,5 @@
 platform: group
-name: Christmas
+name: Christmas group
 entities:
   - light.twinkly
   - light.tplink_christmas

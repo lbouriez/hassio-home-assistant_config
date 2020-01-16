@@ -1,6 +1,6 @@
 type: conditional
 conditions:
-  - entity: group.all_family
+  - entity: group.family
     state: 'not_home'
 card:
   type: custom:auto-entities

@@ -3,7 +3,7 @@ hide_entity: True
 initial_state: True
 trigger:
   - platform: state
-    entity_id: group.all_family
+    entity_id: group.family
     from: 'home'
     to: 'not_home'
 condition:

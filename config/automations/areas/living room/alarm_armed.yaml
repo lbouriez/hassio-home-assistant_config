@@ -21,4 +21,4 @@ action:
   #   entity_id: switch.harmony_tv
   - service: light.turn_off
     data:
-      entity_id: light.christmas
+      entity_id: light.christmas_group

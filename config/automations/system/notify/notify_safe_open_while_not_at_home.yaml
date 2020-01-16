@@ -9,7 +9,7 @@ condition:
   condition: or
   conditions:
     - condition: state
-      entity_id: 'group.all_family'
+      entity_id: 'group.family'
       state: 'not_home'
     - condition: template
       value_template: "{{ not is_state('alarm_control_panel.ring_alarm', 'disarmed') }}"

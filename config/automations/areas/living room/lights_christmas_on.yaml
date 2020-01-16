@@ -14,4 +14,4 @@ condition:
 action:
   - service: light.turn_on
     data:
-      entity_id: light.christmas
+      entity_id: light.christmas_group

@@ -1,4 +1,4 @@
-group.all_lights:
+light.house_group:
   name: House
   description: All lights
   display_categories: LIGHT

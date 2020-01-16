@@ -17,8 +17,8 @@ cloud:
         - light.entrance_group
         - light.kitchen_group
         - light.living_room_group
-        - group.all_lights
-        - light.christmas
+        - light.house_group
+        - light.christmas_group
         # Switchs
         - switch.ventilation
         - switch.sonoff_100048cb54 #Bedroom closet

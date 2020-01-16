@@ -2,7 +2,7 @@ type: entities
 title: 'Lights'
 show_header_toggle: false
 entities:
-    - group.all_lights
+    - light.house_group
     - light.balcony_group
     - light.bathroom_group
     - type: custom:fold-entity-row
