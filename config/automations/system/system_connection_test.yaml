@@ -1,5 +1,4 @@
 alias: System - Reboot if connection is down
-hide_entity: true
 initial_state: true
 trigger:
   - platform: state

@@ -1,10 +1,9 @@
 alias: System - HACS update alert
-hide_entity: True
 initial_state: True
 trigger:
   - platform: numeric_state
     entity_id: sensor.hacs
-    above: 0
+    above: 2
   - platform: homeassistant
     event: start
 condition:
@@ -16,5 +15,5 @@ action:
     data_template:
       title: HACS update available
       message: >-
-        There is a new update available in HACS
+        There are new updates available in HACS
       notification_id: hacs_upgrade

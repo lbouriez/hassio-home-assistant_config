@@ -1,5 +1,4 @@
 alias: Alarm - Actions when alarm enabled away
-hide_entity: True
 initial_state: True
 trigger:
   - platform: state

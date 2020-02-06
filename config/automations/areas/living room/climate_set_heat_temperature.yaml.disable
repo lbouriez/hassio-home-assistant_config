@@ -1,5 +1,4 @@
 alias: Living room - Heat living room
-hide_entity: True
 initial_state: False
 trigger:
   - platform: state

@@ -4,7 +4,7 @@ cards:
   entities:
     - entity: person.laurent
     - entity: person.giulia
-    - entity: person.vincenzo
+    # - entity: person.vincenzo
   image: /local/img/tracker_at_home.jpg
   title: "Family"
   state_image:

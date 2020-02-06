@@ -1,7 +1,6 @@
 motion_all:
   name: All motions
   icon: mdi:motion-sensor
-  control: hidden
   entities:
     - group.motion_living_room
     - group.motion_bedroom
@@ -14,7 +13,6 @@ motion_all:
 motion_living_room:
   name: Living room
   icon: mdi:motion-sensor
-  control: hidden
   entities:
     - binary_sensor.living_room # Ring Living room
     - binary_sensor.blink_living_room_motion_detected # Blink living room
@@ -23,14 +21,12 @@ motion_living_room:
 motion_bedroom:
   name: Bedroom
   icon: mdi:motion-sensor
-  control: hidden
   entities:
     - binary_sensor.motion_sensor_158d0004140234 # Aqara Bedroom
 
 motion_guests_bedroom:
   name: Guests bedroom
   icon: mdi:motion-sensor
-  control: hidden
   entities:
     - binary_sensor.motion_detector_48836 # Ring Bedroom guests
     - binary_sensor.bedroom_guests_sensor_motion
@@ -38,7 +34,6 @@ motion_guests_bedroom:
 motion_entrance:
   name: Entrance
   icon: mdi:motion-sensor
-  control: hidden
   entities:
     - binary_sensor.blink_entrance_motion_detected # Blink entrance
     - binary_sensor.entrance_sensor_motion
@@ -46,7 +41,6 @@ motion_entrance:
 motion_bathroom:
   name: Bathroom
   icon: mdi:motion-sensor
-  control: hidden
   entities:
     - binary_sensor.bathroom_motion_deconz
     - binary_sensor.shower_motion_deconz
@@ -54,14 +48,12 @@ motion_bathroom:
 motion_balcony:
   name: Balcony
   icon: mdi:motion-sensor
-  control: hidden
   entities:
     - binary_sensor.blink_balcony_motion_detected # Blink balcony
 
 motion_kitchen:
   name: Kitchen
   icon: mdi:motion-sensor
-  control: hidden
   entities:
     - binary_sensor.presence_8 # Aqara
     # - binary_sensor.motion_sensor_158d0002417b2e # Aqara Kitchen pluged to xiaomi

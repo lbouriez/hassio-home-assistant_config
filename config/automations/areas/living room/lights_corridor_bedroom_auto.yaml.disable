@@ -1,5 +1,4 @@
 alias: Living room - Lights corridor berdoom auto
-hide_entity: True
 initial_state: True
 trigger:
   platform: state

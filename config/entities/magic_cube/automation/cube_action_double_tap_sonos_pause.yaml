@@ -1,5 +1,4 @@
 alias: Living room - Magic cube fall sonos pause
-hide_entity: True
 initial_state: True
 trigger:
   - platform: event

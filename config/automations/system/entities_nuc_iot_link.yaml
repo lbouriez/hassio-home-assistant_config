@@ -1,5 +1,4 @@
 alias: Entities - Refresh IOT link
-hide_entity: True
 initial_state: True
 trigger:
   - platform: homeassistant

@@ -1,5 +1,4 @@
 alias: System - Clear TTS cache
-hide_entity: true
 initial_state: true
 trigger:
   platform: time

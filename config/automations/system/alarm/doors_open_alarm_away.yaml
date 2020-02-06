@@ -1,5 +1,4 @@
 alias: Alarm - Doors opened while alarm on
-hide_entity: True
 initial_state: True
 trigger:
   - platform: state

@@ -1,7 +1,6 @@
 door_all:
   name: All doors
   icon: mdi:door
-  control: hidden
   entities:
     - group.door_entrance
     - group.door_balcony
@@ -9,7 +8,6 @@ door_all:
 door_entrance:
   name: Front door
   icon: mdi:door
-  control: hidden
   entities:
     - binary_sensor.door_window_sensor_158d00022d2c98 # Xiaomi front door
     - binary_sensor.front_door # Ring front door
@@ -17,7 +15,6 @@ door_entrance:
 door_balcony:
   name: Balcony
   icon: mdi:door
-  control: hidden
   entities:
     - binary_sensor.door_window_sensor_158d0002131f3a # Xiaomi balcony
     - binary_sensor.balcony # Ring balcony

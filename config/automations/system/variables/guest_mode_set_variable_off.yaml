@@ -1,5 +1,4 @@
 alias: House - Set the variable guest mode
-hide_entity: true
 initial_state: true
 trigger:
   platform: time

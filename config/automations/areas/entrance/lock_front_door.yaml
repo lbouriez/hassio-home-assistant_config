@@ -1,5 +1,4 @@
 alias: Entrance - Lock front door
-hide_entity: True
 initial_state: True
 trigger:
   - platform: event

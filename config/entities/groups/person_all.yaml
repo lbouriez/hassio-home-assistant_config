@@ -1,4 +1,4 @@
-all_family:
+family:
   name: Family
   entities:
     - person.laurent

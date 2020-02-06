@@ -1,5 +1,4 @@
 alias: Bathroom - Lights off
-hide_entity: True
 initial_state: True
 trigger:
   - platform: state

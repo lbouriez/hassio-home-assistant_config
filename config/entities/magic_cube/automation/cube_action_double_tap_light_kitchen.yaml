@@ -1,5 +1,4 @@
 alias: Kitchen - Magic cube double tap light
-hide_entity: True
 initial_state: True
 trigger:
   - platform: event

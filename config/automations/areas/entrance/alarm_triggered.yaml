@@ -1,5 +1,4 @@
 alias: Entrance - Alarm triggered
-hide_entity: True
 initial_state: True
 trigger:
   - platform: state
