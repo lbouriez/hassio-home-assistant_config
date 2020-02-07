@@ -9,5 +9,5 @@ camera_blink_trigger_camera:
     - service: blink.trigger_camera
       data_template:
         name: "{{ name }}"
-    - delay: 00:00:05
+    - delay: 00:00:06
     - service: blink.blink_update

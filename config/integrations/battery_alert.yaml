@@ -411,7 +411,7 @@ input_text:
     initial: ''
 
   notifier_name:
-    name: laurent
+    name: Notifier Name
     mode: text
 
 ################################################

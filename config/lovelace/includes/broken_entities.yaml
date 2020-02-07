@@ -15,3 +15,4 @@ filter:
     - entity_id: sensor.*_dot_*
     - entity_id: sensor.bouriez_s_sonos_one_*
     - entity_id: sensor.*_next*
+    - entity_id: input_text.notifier_name
