@@ -89,13 +89,13 @@ class DeconzSymfoniskRemote(hass.Hass):
                 self.call_service("media_player/shuffle_set", entity_id = self.sonos, shuffle = self.play_shuffle)
                 self.call_service("media_player/select_source", entity_id = self.sonos, source = self.handle_source())
                 self.fire_event(self.event_name, entity_id = self.sonos, state="click3")
-            elif data['event'] == 3001:
+            elif data['event'] == 2001:
                 self.log('Button volume up')
                 self.volume_change = True
                 self.handle_volume({'way': 'up'})
                 self.run_in(self.disable_volume_change, CHANGE_VOLUME_TIME_MAX, emit = "auto vol up")
                 self.fire_event(self.event_name, entity_id = self.sonos, state="volup")
-            elif data['event'] == 2001:
+            elif data['event'] == 3001:
                 self.log('Button volume down')
                 self.volume_change = True
                 self.handle_volume({'way': 'down'})
