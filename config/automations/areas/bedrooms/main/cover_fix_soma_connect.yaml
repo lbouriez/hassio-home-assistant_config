@@ -1,0 +1,21 @@
+alias: Bedroom - Fix Soma Connect
+initial_state: True
+trigger:
+  - platform: state
+    entity_id: cover.bedroom_1
+  - platform: time_pattern
+    minutes: '/30'
+    seconds: 0
+condition:
+  condition: and
+  conditions:
+    - condition: template
+      value_template: "{{ not is_state('cover.bedroom_1', 'open') }}"
+    - condition: template
+      value_template: "{{ not is_state('cover.bedroom_1', 'closed') }}"
+action:
+  - service: automation.trigger
+    data:
+      entity_id: automation.bedroom_reboot_soma_connect
+  - delay:
+      minutes: 3

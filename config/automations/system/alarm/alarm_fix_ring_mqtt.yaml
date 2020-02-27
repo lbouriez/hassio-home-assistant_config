@@ -18,7 +18,7 @@ condition:
 action:
   - service: hassio.addon_restart
     data:
-      addon: 5e5dfff6_ring_alarm
+      addon: 1c0fc3cd_ring_alarm
   - delay:
       minutes: 1
       seconds: 30

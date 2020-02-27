@@ -60,7 +60,7 @@ cards:
           - type: divider
           - group.motion_bedroom
       # Thermostat
-      - !include ../includes/areas/bedrooms/main/climate_heat.yaml
+      # - !include ../includes/areas/bedrooms/main/climate_heat.yaml
       # Automations
       - type: custom:decluttering-card
         template: automation

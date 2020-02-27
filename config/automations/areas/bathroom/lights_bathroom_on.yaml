@@ -20,8 +20,8 @@ action:
     entity_id: 'light.bathroom_group'
     data_template:
       brightness_pct: >-
-        {% if (now().hour < 8) %} 31
+        {% if (now().hour < 7) %} 40
         {% elif (now().hour < 22) %} 100
-        {% elif (now().hour < 23) or ((now().hour == 23) and (now().minute < 45)) %} 31
+        {% elif (now().hour < 23) or ((now().hour == 23) and (now().minute < 45)) %} 40
         {% else %} 0
         {% endif%}

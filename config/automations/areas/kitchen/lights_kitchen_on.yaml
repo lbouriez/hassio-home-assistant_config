@@ -22,7 +22,7 @@ action:
         {% else %} light.kitchen_group
         {% endif%}
       brightness_pct: >-
-        {% if (now().hour < 10) %} 20
+        {% if (now().hour < 7) %} 20
         {% elif (now().hour < 21) %} 100
         {% elif (now().hour < 23) or ((now().hour == 23) and (now().minute < 45)) %} 20
         {% else %} 0

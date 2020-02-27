@@ -45,7 +45,7 @@ cards:
       # AC
       - !include ../includes/areas/living room/climate_ac.yaml
       # Thermostat
-      - !include ../includes/areas/living room/climate_heat.yaml
+      # - !include ../includes/areas/living room/climate_heat.yaml
       - !include ../includes/bottom-card.yaml
   # Col 3
   - type: vertical-stack

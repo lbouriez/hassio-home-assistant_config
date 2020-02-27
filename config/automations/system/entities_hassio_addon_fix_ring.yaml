@@ -7,13 +7,13 @@ action:
   # - service: switch.turn_on
   #   entity_id: switch.alarm_toggle_away
   - service: automation.turn_off
-    entity_id: automation.security_check_alarm
+    entity_id: automation.alarm_check_alarm
   - delay:
       minutes: 1
   - service: hassio.addon_restart
     data:
-      addon: 5e5dfff6_ring_alarm
+      addon: 1c0fc3cd_ring_alarm
   - delay:
       seconds: 25
   - service: automation.turn_on
-    entity_id: automation.security_check_alarm
+    entity_id: automation.alarm_check_alarm
