@@ -3,11 +3,15 @@ recorder:
   purge_interval: 1
   purge_keep_days: 3
   db_url: mysql://hass:hass@core-mariadb/homeassistant?charset=utf8
-  include:
-    domains:
-      - sensor
-      - switch
-      - media_player
+  # include:
+  #   domains:
+  #     - sensor
+  #     - switch
+  #     - media_player
+  #     - cover
+  #     - light
+  #     - binary_sensor
+  #     - vacuum
   exclude:
     entities:
      - sensor.last_boot

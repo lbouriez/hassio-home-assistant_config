@@ -3,19 +3,30 @@ initial_state: True
 trigger:
   - platform: state
     entity_id: cover.bedroom_1
+    to: 'unavailable'
+    for:
+      minutes: 5
   - platform: time_pattern
     minutes: '/30'
     seconds: 0
 condition:
   condition: and
   conditions:
-    - condition: template
-      value_template: "{{ not is_state('cover.bedroom_1', 'open') }}"
-    - condition: template
-      value_template: "{{ not is_state('cover.bedroom_1', 'closed') }}"
+    - condition: state
+      entity_id: cover.bedroom_1
+      state: 'unavailable'
+    - condition: time
+      after: '08:00:00'
+      before: '22:30:00'
 action:
   - service: automation.trigger
     data:
       entity_id: automation.bedroom_reboot_soma_connect
+  - service: persistent_notification.create
+    data_template:
+      title: Soma connect has been reboot
+      message: >-
+        I had to reboot soma connect
+      notification_id: entitie_soma_reboot
   - delay:
-      minutes: 3
+      hours: 1

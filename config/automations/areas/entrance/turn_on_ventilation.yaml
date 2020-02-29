@@ -2,7 +2,7 @@ alias: Entrance - Ventilation
 initial_state: True
 trigger:
   - platform: state
-    entity_id: 'group.motion_all'
+    entity_id: group.motion_all
     from: 'off'
     to: 'on'
   - platform: time
@@ -11,11 +11,8 @@ condition:
   condition: and
   conditions:
     - condition: time
-      after: '07:00:00'
+      after: '06:30:00'
       before: '21:00:00'
-    - condition: state
-      entity_id: 'switch.ventilation'
-      state: 'off'
 action:
   - service: switch.turn_on
     entity_id: switch.ventilation
