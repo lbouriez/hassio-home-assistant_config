@@ -9,3 +9,4 @@ filter:
     - entity_id: "group.motion_*"
   exclude:
     - entity_id: group.motion_all
+    - entity_id: group.motion_inside

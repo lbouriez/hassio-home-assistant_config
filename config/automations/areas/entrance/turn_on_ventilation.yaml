@@ -2,8 +2,7 @@ alias: Entrance - Ventilation
 initial_state: True
 trigger:
   - platform: state
-    entity_id: group.motion_all
-    from: 'off'
+    entity_id: group.motion_inside
     to: 'on'
   - platform: time
     at: '11:00:00'

@@ -2,12 +2,18 @@ motion_all:
   name: All motions
   icon: mdi:motion-sensor
   entities:
+    - group.motion_inside
+    - group.motion_balcony
+
+motion_inside:
+  name: All motions
+  icon: mdi:motion-sensor
+  entities:
     - group.motion_living_room
     - group.motion_bedroom
     - group.motion_guests_bedroom
     - group.motion_entrance
     - group.motion_bathroom
-    - group.motion_balcony
     - group.motion_kitchen
 
 motion_living_room:
@@ -15,7 +21,7 @@ motion_living_room:
   icon: mdi:motion-sensor
   entities:
     - binary_sensor.living_room # Ring Living room
-    - binary_sensor.blink_living_room_motion_detected # Blink living room
+    # - binary_sensor.blink_living_room_motion_detected # Blink living room
     - binary_sensor.motion_foscam_c1
 
 motion_bedroom:
@@ -35,7 +41,7 @@ motion_entrance:
   name: Entrance
   icon: mdi:motion-sensor
   entities:
-    - binary_sensor.blink_entrance_motion_detected # Blink entrance
+    # - binary_sensor.blink_entrance_motion_detected # Blink entrance
     - binary_sensor.entrance_sensor_motion
 
 motion_bathroom:

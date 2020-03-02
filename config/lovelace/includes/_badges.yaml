@@ -7,7 +7,7 @@
     - "on"
 - type: entity-filter
   entities:
-    - entity: group.motion_all
+    - entity: group.motion_inside
       name: 'Motions'
   state_filter:
     - "on"

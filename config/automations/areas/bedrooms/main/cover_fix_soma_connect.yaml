@@ -22,11 +22,11 @@ action:
   - service: automation.trigger
     data:
       entity_id: automation.bedroom_reboot_soma_connect
-  - service: persistent_notification.create
-    data_template:
-      title: Soma connect has been reboot
-      message: >-
-        I had to reboot soma connect
-      notification_id: entitie_soma_reboot
+  # - service: persistent_notification.create
+  #   data_template:
+  #     title: Soma connect has been reboot
+  #     message: >-
+  #       I had to reboot soma connect
+  #     notification_id: entitie_soma_reboot
   - delay:
       hours: 1

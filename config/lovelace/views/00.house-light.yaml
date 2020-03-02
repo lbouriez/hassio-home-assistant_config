@@ -86,7 +86,7 @@ cards:
               service: alarm_control_panel.alarm_disarm
             when:
               state: ['=', 'armed_home', 'armed_away']
-          - entity: group.motion_all
+          - entity: group.motion_inside
             map_state:
               'on':
                 name: Motions

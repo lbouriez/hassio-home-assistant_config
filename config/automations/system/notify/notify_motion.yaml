@@ -2,7 +2,7 @@ alias: Security - Motion detected
 initial_state: True
 trigger:
   - platform: state
-    entity_id: group.motion_all
+    entity_id: group.motion_inside
     to: 'on'
 condition:
   condition: and
@@ -20,5 +20,5 @@ action:
       priority: 1
       title: "Alert"
       message: >
-        {% set motion = states | selectattr('entity_id', 'in', state_attr('group.motion_all','entity_id')) | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+        {% set motion = states | selectattr('entity_id', 'in', state_attr('group.motion_inside','entity_id')) | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
         Motion detected in: {{ motion }}
