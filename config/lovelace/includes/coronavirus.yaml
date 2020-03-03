@@ -1,0 +1,23 @@
+type: vertical-stack
+cards:
+- type: glance
+  title: Worldwide
+  entities:
+    - sensor.worldwide_current
+    - sensor.worldwide_recovered
+    - sensor.worldwide_confirmed
+    - sensor.worldwide_deaths
+- type: glance
+  title: Canada
+  entities:
+    - sensor.canada_current
+    - sensor.canada_recovered
+    - sensor.canada_confirmed
+    - sensor.canada_deaths
+- type: glance
+  title: Italy
+  entities:
+    - sensor.italy_current
+    - sensor.italy_recovered
+    - sensor.italy_confirmed
+    - sensor.italy_deaths
