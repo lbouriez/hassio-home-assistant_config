@@ -14,7 +14,7 @@ voice_hide: true
 
 # Tabs
 chevrons: false
-hide_tabs: '12 to 100'
+hide_tabs: '0, 12 to 100'
 hidden_tab_redirect: false
 default_tab: 'house.home.light'
 
