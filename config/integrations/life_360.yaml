@@ -7,7 +7,7 @@ life360:
     include:
       - Laurent Bouriez
       - Giulia
-      - Vincenzo
+      # - Vincenzo
   max_update_wait:
     minutes: 30
   warning_threshold: 2

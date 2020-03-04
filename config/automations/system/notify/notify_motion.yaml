@@ -16,7 +16,7 @@ action:
   - event: event_camera_blink_trigger_picture
   - service: script.notify
     data:
-      notify_id: everyone
+      notify_id: laurent
       priority: 1
       title: "Alert"
       message: >
