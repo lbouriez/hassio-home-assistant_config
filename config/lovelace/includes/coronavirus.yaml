@@ -1,23 +1,96 @@
 type: vertical-stack
 cards:
-- type: glance
-  title: Worldwide
+- type: custom:mini-graph-card
+  color_thresholds:
+  - color: '#e74c3c'
+    value: 3500
+  - color: '#ffff00'
+    value: 1750
+  - color: '#1db954'
+    value: 0
   entities:
-    - sensor.worldwide_current
-    - sensor.worldwide_recovered
-    - sensor.worldwide_confirmed
-    - sensor.worldwide_deaths
-- type: glance
-  title: Canada
+    - entity: sensor.italy_confirmed
+      index: 0
+    - entity: sensor.italy_deaths
+      index: 0
+    - entity: sensor.italy_current
+      index: 0
+  font_size: 65
+  height: 46
+  hours_to_show: 168
+  line_width: 2
+  name: Italy
+  points_per_hour: 1
+  show:
+    extrema: true
+    icon: false
+- type: custom:mini-graph-card
+  color_thresholds:
+  - color: '#e74c3c'
+    value: 50
+  - color: '#ffff00'
+    value: 25
+  - color: '#1db954'
+    value: 0
   entities:
-    - sensor.canada_current
-    - sensor.canada_recovered
-    - sensor.canada_confirmed
-    - sensor.canada_deaths
-- type: glance
-  title: Italy
+    - entity: sensor.canada_confirmed
+      index: 0
+    - entity: sensor.canada_deaths
+      index: 0
+    - entity: sensor.canada_current
+      index: 0
+  font_size: 65
+  height: 46
+  hours_to_show: 168
+  line_width: 2
+  name: Canada
+  points_per_hour: 1
+  show:
+    extrema: true
+    icon: false
+- type: custom:mini-graph-card
+  color_thresholds:
+  - color: '#e74c3c'
+    value: 100000
+  - color: '#ffff00'
+    value: 10000
+  - color: '#1db954'
+    value: 0
   entities:
-    - sensor.italy_current
-    - sensor.italy_recovered
-    - sensor.italy_confirmed
-    - sensor.italy_deaths
+    - entity: sensor.worldwide_confirmed
+      index: 0
+    - entity: sensor.worldwide_deaths
+      index: 0
+    - entity: sensor.worldwide_current
+      index: 0
+  font_size: 65
+  height: 46
+  hours_to_show: 168
+  line_width: 2
+  name: Worldwide
+  points_per_hour: 1
+  show:
+    extrema: true
+    icon: false
+
+# - type: glance
+#   title: Worldwide
+#   entities:
+#     - sensor.worldwide_current
+#     - sensor.worldwide_recovered
+#     - sensor.worldwide_confirmed
+#     - sensor.worldwide_deaths
+# - type: glance
+#   title: Canada
+#   entities:
+#     - sensor.canada_current
+#     - sensor.canada_recovered
+#     - sensor.canada_confirmed
+#     - sensor.canada_deaths
+# - type: glance
+#   title: Italy
+#   entities:
+#     - sensor.italy_current
+#     - sensor.italy_recovered
+#     - sensor.italy_confirmed
+#     - sensor.italy_deaths

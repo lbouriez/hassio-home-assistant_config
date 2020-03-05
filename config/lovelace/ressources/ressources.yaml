@@ -55,3 +55,5 @@
   type: module
 - url: /community_plugin/lovelace-swipe-navigation/swipe-navigation.js
   type: js
+- url: /community_plugin/mini-graph-card/mini-graph-card-bundle.js
+  type: module
