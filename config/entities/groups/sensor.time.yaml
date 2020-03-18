@@ -7,5 +7,3 @@ time:
     - sensor.date
     - sensor.time_date
     - sensor.time_utc
-    - sensor.worldclock_sensor
-    - sensor.worldclock_sensor_2

@@ -1,4 +1,5 @@
-type: vertical-stack
+type: custom:vertical-stack-in-card
+title: Coronavirus
 cards:
 - type: custom:mini-graph-card
   color_thresholds:

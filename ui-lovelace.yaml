@@ -1,6 +1,3 @@
-resources:
-  !include /config/config/lovelace/ressources/ressources.yaml
-
 custom_header:
   !include /config/config/lovelace/ressources/custom-header.yaml
 

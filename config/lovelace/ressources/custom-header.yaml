@@ -23,13 +23,13 @@ exceptions:
   - conditions:
       user_agent: Mobile
       media_query: "(max-width: 600px)"
-      user: Laurent
+      user: Laurent, Giulia
     config:
       menu_hide: hide
       options_hide: hide
       default_tab: 'house.home.light'
   - conditions:
-      user: Giulia, Vincenzo
+      user: Vincenzo
     config:
       menu_hide: hide
       disable_sidebar: true
