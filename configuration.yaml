@@ -17,3 +17,5 @@ homeassistant:
   auth_mfa_modules:
       - type: totp
         name: Authenticator app
+
+zone: !include_dir_list config/entities/zones

@@ -4,9 +4,9 @@ cards:
 - type: custom:mini-graph-card
   color_thresholds:
   - color: '#e74c3c'
-    value: 3500
+    value: 50000
   - color: '#ffff00'
-    value: 1750
+    value: 25000
   - color: '#1db954'
     value: 0
   entities:
@@ -28,9 +28,9 @@ cards:
 - type: custom:mini-graph-card
   color_thresholds:
   - color: '#e74c3c'
-    value: 50
+    value: 2000
   - color: '#ffff00'
-    value: 25
+    value: 1000
   - color: '#1db954'
     value: 0
   entities:
@@ -52,9 +52,33 @@ cards:
 - type: custom:mini-graph-card
   color_thresholds:
   - color: '#e74c3c'
-    value: 100000
+    value: 15000
   - color: '#ffff00'
-    value: 10000
+    value: 7500
+  - color: '#1db954'
+    value: 0
+  entities:
+    - entity: sensor.france_coronavirus_confirmed
+      index: 0
+    - entity: sensor.france_coronavirus_deaths
+      index: 0
+    - entity: sensor.france_coronavirus_current
+      index: 0
+  font_size: 65
+  height: 46
+  hours_to_show: 168
+  line_width: 2
+  name: France
+  points_per_hour: 1
+  show:
+    extrema: true
+    icon: false
+- type: custom:mini-graph-card
+  color_thresholds:
+  - color: '#e74c3c'
+    value: 300000
+  - color: '#ffff00'
+    value: 150000
   - color: '#1db954'
     value: 0
   entities:
@@ -73,25 +97,3 @@ cards:
   show:
     extrema: true
     icon: false
-
-# - type: glance
-#   title: Worldwide
-#   entities:
-#     - sensor.worldwide_current
-#     - sensor.worldwide_recovered
-#     - sensor.worldwide_confirmed
-#     - sensor.worldwide_deaths
-# - type: glance
-#   title: Canada
-#   entities:
-#     - sensor.canada_current
-#     - sensor.canada_recovered
-#     - sensor.canada_confirmed
-#     - sensor.canada_deaths
-# - type: glance
-#   title: Italy
-#   entities:
-#     - sensor.italy_current
-#     - sensor.italy_recovered
-#     - sensor.italy_confirmed
-#     - sensor.italy_deaths

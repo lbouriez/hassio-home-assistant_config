@@ -45,4 +45,5 @@ cards:
         variables:
           - entity1: 'system*'
           - entity2: 'entities*'
+          - entity3: 'information*'
       - !include ../includes/bottom-card.yaml
