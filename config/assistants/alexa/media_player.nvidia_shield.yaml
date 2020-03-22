@@ -1,0 +1,4 @@
+media_player.nvidia_shield:
+  name: Screen
+  description: Bedroom TV
+  display_categories: SWITCH
