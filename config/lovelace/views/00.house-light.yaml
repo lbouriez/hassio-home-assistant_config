@@ -60,7 +60,7 @@ cards:
           - sensor.humidity_158d0002461865
           - entity: media_player.bedroom
             name: Sonos
-      
+
   # Col 2
   - type: vertical-stack
     cards:

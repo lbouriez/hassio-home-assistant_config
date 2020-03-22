@@ -1,0 +1,12 @@
+platform: template
+switches:
+  bedroom_tv:
+    value_template: "{{ (not is_state('media_player.nvidia_shield', 'off')) and (not is_state('media_player.nvidia_shield', 'unavailable')) }}"
+    turn_on:
+      service: media_player.turn_on
+      data:
+        entity_id: media_player.nvidia_shield
+    turn_off:
+      service: media_player.turn_off
+      data:
+        entity_id: media_player.nvidia_shield

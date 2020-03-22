@@ -35,6 +35,7 @@ cards:
             variables:
               - entity: "living_room_echo_dot"
               - tts_plateform: alexa
+          - switch.vava_base
           # - type: divider
       - !include ../includes/bottom-card.yaml
   # Col 2

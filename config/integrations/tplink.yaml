@@ -5,6 +5,6 @@ tplink:
     - host: !secret integration_tplink_switch_hs105_ventilation
     - host: !secret integration_tplink_switch_hs105_2
     - host: !secret integration_tplink_switch_hs200_kitchen_led
-    - host: !secret integration_tplink_switch_hs105_bedroom_tv
+    - host: !secret integration_tplink_switch_hs105_vava_base
     - host: !secret integration_tplink_switch_hs103_christmas
     - host: !secret integration_tplink_switch_hs103_2

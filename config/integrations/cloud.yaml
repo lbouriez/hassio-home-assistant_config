@@ -22,6 +22,7 @@ cloud:
         # Switchs
         - switch.ventilation
         - switch.sonoff_100048cb54 #Bedroom closet
+        # Media players
         - media_player.nvidia_shield
         # Inputs boolean
         - input_boolean.guest_mode
