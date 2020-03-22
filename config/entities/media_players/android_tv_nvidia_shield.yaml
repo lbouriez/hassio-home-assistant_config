@@ -1,0 +1,30 @@
+platform: androidtv
+host: !secret entitie_media_player_android_tv_nvidia_shield_host
+name: "Nvidia Shield"
+device_class: androidtv
+adb_server_ip: 127.0.0.1
+adb_server_port: 5037
+apps:
+  "com.netflix.ninja": "Netflix"
+  "com.nvidia.tegrazone3": "NVIDIA Games"
+  "com.google.android.tvlauncher": "Launcher"
+  "com.amazon.amazonvideo.livingroom": "Amazon Prime"
+  "com.google.android.youtube.tv": "Youtube"
+  "com.plexapp.android": "Plex"
+  "com.spotify.tv.android": "Spotify"
+  "tv.twitch.android.app": "Twitch"
+state_detection_rules:
+  'com.google.android.tvlauncher':
+    - 'standby'
+  'com.netflix.ninja':
+    - 'media_session_state'
+  'com.ellation.vrv':
+    - 'audio_state'
+  'com.plexapp.android':
+    - 'playing':
+        'media_session_state': 3  # this indentation is important!
+        'wake_lock_size': 3       # this indentation is important!
+    - 'paused':
+        'media_session_state': 3  # this indentation is important!
+        'wake_lock_size': 1       # this indentation is important!
+    - 'standby'
