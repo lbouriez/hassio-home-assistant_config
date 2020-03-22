@@ -29,7 +29,10 @@ cards:
         title: 'Actions'
         show_header_toggle: false
         entities:
-          - switch.bedroom_tv
+          - type: custom:decluttering-card
+            template: media_player
+            variables:
+              - entity: "nvidia_shield"
           - type: divider
           - cover.bedroom_1
           - !include ../includes/areas/bedrooms/main/switch_soma.yaml
