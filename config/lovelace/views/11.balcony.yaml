@@ -6,8 +6,6 @@ panel: false
 badges:
   !include ../includes/_badges.yaml
 
-popup_cards: []
-
 cards:
   # Col 1
   - type: vertical-stack
