@@ -1,6 +1,6 @@
 type: custom:mini-media-player
 artwork: cover
-entity: media_player.living_room
+entity: media_player.sonos_living_room
 hide:
   power: true
   icon: true
@@ -11,16 +11,16 @@ tts:
 # sonos:
 #   show_group_count: true
 #   entities:
-#     - entity_id: media_player.living_room
-#     - entity_id: media_player.bathroom
-#     - entity_id: media_player.bedroom
+#     - entity_id: media_player.sonos_living_room
+#     - entity_id: media_player.sonos_bathroom
+#     - entity_id: media_player.sonos_bedroom
 speaker_group:
   entities:
-    - entity_id: media_player.living_room
+    - entity_id: media_player.sonos_living_room
       name: Living room
-    - entity_id: media_player.bathroom
+    - entity_id: media_player.sonos_bathroom
       name: Bathroom
-    - entity_id: media_player.bedroom
+    - entity_id: media_player.sonos_bedroom
       name: Bedroom
   plateform: sonos
   show_group_count: true

@@ -15,15 +15,15 @@ condition:
     - condition: or
       conditions:
         - condition: state
-          entity_id: 'media_player.living_room'
+          entity_id: 'media_player.sonos_living_room'
           state: 'paused'
         - condition: template
-          value_template: '{{ states.media_player.living_room.attributes.source == "TV" }}'
+          value_template: '{{ states.media_player.sonos_living_room.attributes.source == "TV" }}'
 action:
   - service: media_player.select_source
     data:
-      entity_id: media_player.living_room
+      entity_id: media_player.sonos_living_room
       source: 'Song to Sing in the Shower!'
   - service: media_player.media_play
     data:
-      entity_id: media_player.living_room
+      entity_id: media_player.sonos_living_room

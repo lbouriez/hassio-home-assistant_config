@@ -3,23 +3,23 @@ sonos_say:
   sequence:
    - service: sonos.snapshot
      data_template:
-       entity_id: "{{ sonos_entity|default('media_player.living_room') }}"
+       entity_id: "{{ sonos_entity|default('media_player.sonos_living_room') }}"
    - service: sonos.unjoin
      data_template:
-       entity_id: "{{ sonos_entity|default('media_player.living_room') }}"
+       entity_id: "{{ sonos_entity|default('media_player.sonos_living_room') }}"
    - service: media_player.volume_set
      data_template:
-       entity_id: "{{ sonos_entity|default('media_player.living_room') }}"
+       entity_id: "{{ sonos_entity|default('media_player.sonos_living_room') }}"
        volume_level: "{{ volume|default(0.5) }}"
    - service: tts.google_translate_say
      data_template:
-       entity_id: "{{ sonos_entity|default('media_player.living_room') }}"
+       entity_id: "{{ sonos_entity|default('media_player.sonos_living_room') }}"
        message: "{{ message }}"
    - delay: "{{ delay|default('00:00:00') }}"
-   - wait_template: "{{ is_state(sonos_entity|default('media_player.living_room'), 'playing') }}"
+   - wait_template: "{{ is_state(sonos_entity|default('media_player.sonos_living_room'), 'playing') }}"
      timeout: '00:00:05'
-   - wait_template: "{{ not is_state(sonos_entity|default('media_player.living_room'), 'playing') }}"
+   - wait_template: "{{ not is_state(sonos_entity|default('media_player.sonos_living_room'), 'playing') }}"
      timeout: '00:02:00'
    - service: sonos.restore
      data_template:
-       entity_id: "{{ sonos_entity|default('media_player.living_room') }}"
+       entity_id: "{{ sonos_entity|default('media_player.sonos_living_room') }}"

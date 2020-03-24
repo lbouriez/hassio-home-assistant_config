@@ -6,7 +6,7 @@ import appdaemon.plugins.hass.hassapi as hass
 # Args:
 #   [event] {string} -- Event name that will be fired (ex: deconz_event)
 #   [remotes] {list} -- List of the symfonisk remote id in DeconZ (ex: - symfonisk_sound_controller)
-#   [sonos] {list} -- List of the sonos media player to control (ex: - media_player.bathroom)
+#   [sonos] {list} -- List of the sonos media player to control (ex: - media_player.sonos_bathroom)
 #   [sources] {list} -- Name of the source to play when double clicking (ex: - 'Sonos favoris name')
 #   [play_shuffle] {boolean} -- Shuffle play the playlist
 #
@@ -33,7 +33,7 @@ class DeconzSymfoniskRemote(hass.Hass):
     """ [summary]
         [event] {string} -- Event name that will be fired (ex: deconz_event)
         [remotes] {list} -- List of the symfonisk remote id in DeconZ (ex: - symfonisk_sound_controller)
-        [sonos] {list} -- List of the sonos media player to control (ex: - media_player.bathroom)
+        [sonos] {list} -- List of the sonos media player to control (ex: - media_player.sonos_bathroom)
         [sources] {list} -- Name of the source to play when double clicking (ex: - 'Sonos favoris name')
         [play_shuffle] {boolean} -- Shuffle play the playlist
     """

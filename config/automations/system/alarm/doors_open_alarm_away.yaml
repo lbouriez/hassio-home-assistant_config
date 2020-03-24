@@ -28,7 +28,7 @@ action:
         One door ({{ unlocked }}) has been opened, check the cameras !
   - service: script.sonos_say
     data:
-      sonos_entity: media_player.living_room
+      sonos_entity: media_player.sonos_living_room
       volume: 1
       message: 'Leave immediately the house, alarm will start in a few seconds !'
       delay: '00:00:05'

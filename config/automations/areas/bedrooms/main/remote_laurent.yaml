@@ -2,21 +2,21 @@ alias: Bedroom - Remote laurent
 initial_state: True
 trigger:
   - platform: state
-    entity_id: sensor.bedroom_bed
+    entity_id: remote.bedroom
 condition:
   condition: or
   conditions:
     - condition: state
-      entity_id: 'sensor.bedroom_bed'
+      entity_id: 'remote.bedroom'
       state: '4_click_up'
     - condition: state
-      entity_id: 'sensor.bedroom_bed'
+      entity_id: 'remote.bedroom'
       state: '4_click'
 action:
   - service_template: >
-      {% if is_state("sensor.bedroom_bed", "4_click_up") %}
+      {% if is_state("remote.bedroom", "4_click_up") %}
         light.turn_off
-      {% elif is_state("sensor.bedroom_bed", "4_click") %}
+      {% elif is_state("remote.bedroom", "4_click") %}
         light.turn_off
       {% endif %}
     entity_id: light.kitchen_led

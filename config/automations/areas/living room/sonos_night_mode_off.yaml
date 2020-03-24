@@ -14,9 +14,9 @@ trigger:
 action:
   - service: sonos.set_option
     data:
-      entity_id: media_player.living_room
+      entity_id: media_player.sonos_living_room
       night_sound: false
   - service: sonos.set_option
     data:
-      entity_id: media_player.living_room
+      entity_id: media_player.sonos_living_room
       speech_enhance: false

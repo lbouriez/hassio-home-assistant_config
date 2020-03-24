@@ -1,4 +1,4 @@
-media_player.living_room:
+media_player.sonos_living_room:
   name: Sonos Living room
   room: Living room
   aliases:

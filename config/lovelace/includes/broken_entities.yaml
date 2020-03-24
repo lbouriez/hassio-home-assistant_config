@@ -10,7 +10,6 @@ filter:
   exclude:
     - entity_id: group.*
     - entity_id: sensor.*edroom*
-    - entity_id: sensor.entrance
     - entity_id: sensor.kitchen_switch
     - entity_id: sensor.*_dot_*
     - entity_id: sensor.bouriez_s_sonos_one_*

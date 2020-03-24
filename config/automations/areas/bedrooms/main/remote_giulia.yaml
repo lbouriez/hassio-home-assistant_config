@@ -2,10 +2,10 @@ alias: Bedroom - Remote giulia
 initial_state: True
 trigger:
   - platform: state
-    entity_id: sensor.bedroom_giulia
+    entity_id: remote.bedroom_giulia
 condition:
   - condition: state
-    entity_id: sensor.bedroom_giulia
+    entity_id: remote.bedroom_giulia
     state: '1_click'
 action:
   - service: alarm_control_panel.alarm_arm_home

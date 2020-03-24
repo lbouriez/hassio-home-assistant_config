@@ -13,11 +13,11 @@ condition:
       entity_id: input_select.cube_mode
       state: 'Sonos'
     - condition: state
-      entity_id: 'media_player.living_room'
+      entity_id: 'media_player.sonos_living_room'
       state: 'playing'
     - condition: template
-      value_template: '{{ states.media_player.living_room.attributes.source != "TV" }}'
+      value_template: '{{ states.media_player.sonos_living_room.attributes.source != "TV" }}'
 action:
   - service: media_player.media_next_track
     data:
-      entity_id: media_player.living_room
+      entity_id: media_player.sonos_living_room

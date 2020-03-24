@@ -41,7 +41,7 @@ cards:
                   service: vacuum.return_to_base
                   entity_id: vacuum.living_room
           - sensor.humidity_158d000245a7d5
-          - entity: media_player.living_room
+          - entity: media_player.sonos_living_room
             name: Sonos
       - type: custom:banner-card
         heading: "🛏️ Bedroom"
@@ -56,7 +56,7 @@ cards:
           - entity: cover.bedroom_1
           - sensor.group_light_level_bedroom
           - sensor.humidity_158d0002461865
-          - entity: media_player.bedroom
+          - entity: media_player.sonos_bedroom
             name: Sonos
 
   # Col 2
@@ -122,7 +122,7 @@ cards:
             name: Light
           - entity: sensor.group_temperature_bathroom
             name: Temperature
-          - entity: media_player.bathroom
+          - entity: media_player.sonos_bathroom
             name: Sonos
   # Col 3
   - type: vertical-stack

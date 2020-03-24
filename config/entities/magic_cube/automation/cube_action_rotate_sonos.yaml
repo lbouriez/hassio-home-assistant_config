@@ -13,12 +13,12 @@ condition:
 action:
   - service: media_player.volume_set
     data_template:
-      entity_id: media_player.living_room
+      entity_id: media_player.sonos_living_room
       volume_level: >
         {%if trigger.event.data.action_value | float > 0 %}
-          {% set lvl = state_attr('media_player.living_room', 'volume_level') | float %}
+          {% set lvl = state_attr('media_player.sonos_living_room', 'volume_level') | float %}
           {{ [lvl+0.05, 1] | min }}
         {% else %}
-          {% set lvl = state_attr('media_player.living_room', 'volume_level') | float %}
+          {% set lvl = state_attr('media_player.sonos_living_room', 'volume_level') | float %}
           {{ [lvl-0.05, 0] | max }}
         {% endif %}
