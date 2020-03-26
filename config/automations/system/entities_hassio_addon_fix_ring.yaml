@@ -12,7 +12,7 @@ action:
       minutes: 1
   - service: hassio.addon_restart
     data:
-      addon: 1c0fc3cd_ring_alarm
+      addon: a98c085d_ring_mqtt
   - delay:
       seconds: 25
   - service: automation.turn_on

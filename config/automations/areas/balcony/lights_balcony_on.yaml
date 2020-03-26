@@ -3,22 +3,13 @@ initial_state: True
 trigger:
   - platform: sun
     event: sunset
-  - platform: time
-    at: '17:00:00'
-  - platform: time
-    at: '18:00:00'
-  - platform: time
-    at: '19:00:00'
-  - platform: time
-    at: '20:00:00'
-  - platform: time
-    at: '21:00:00'
+    offset: "-00:30:00"
 condition:
   condition: and
   conditions:
-    - condition: state
-      entity_id: 'sun.sun'
-      state: 'below_horizon'
+    # - condition: state
+    #   entity_id: 'sun.sun'
+    #   state: 'below_horizon'
     - condition: state
       entity_id: light.balcony_group
       state: 'off'
