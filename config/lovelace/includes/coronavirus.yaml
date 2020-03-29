@@ -1,132 +1,203 @@
 type: custom:vertical-stack-in-card
+title: Coronavirus
 cards:
 - type: entities
   show_header_toggle: false
   entities:
-    - type: weblink
-      name: Coronavirus - Johns Hopkins map
-      url: https://coronavirus.jhu.edu/map.html
-      icon: mdi:graphql
-    # - entity: sensor.italy_confirmed
-    # - entity: sensor.italy_deaths
-    # - entity: sensor.italy_current
-- type: custom:mini-graph-card
-  color_thresholds:
-  - color: '#e74c3c'
-    value: 150000
-  - color: '#ffff00'
-    value: 75000
-  - color: '#1db954'
-    value: 0
-  entities:
-    - entity: sensor.italy_confirmed
-      index: 0
-    - entity: sensor.italy_deaths
-      index: 0
-    - entity: sensor.italy_current
-      index: 0
-  font_size: 65
-  height: 46
-  hours_to_show: 168
-  line_width: 2
-  name: Italy
-  points_per_hour: 1
-  show:
-    extrema: true
-    icon: false
-- type: custom:mini-graph-card
-  color_thresholds:
-  - color: '#e74c3c'
-    value: 150000
-  - color: '#ffff00'
-    value: 75000
-  - color: '#1db954'
-    value: 0
-  entities:
-    - entity: sensor.us_coronavirus_confirmed
-      index: 0
-    - entity: sensor.us_coronavirus_deaths
-      index: 0
-    - entity: sensor.us_coronavirus_current
-      index: 0
-  font_size: 65
-  height: 46
-  hours_to_show: 168
-  line_width: 2
-  name: US
-  points_per_hour: 1
-  show:
-    extrema: true
-    icon: false
-- type: custom:mini-graph-card
-  color_thresholds:
-  - color: '#e74c3c'
-    value: 2000
-  - color: '#ffff00'
-    value: 1000
-  - color: '#1db954'
-    value: 0
-  entities:
-    - entity: sensor.canada_confirmed
-      index: 0
-    - entity: sensor.canada_deaths
-      index: 0
-    - entity: sensor.canada_current
-      index: 0
-  font_size: 65
-  height: 46
-  hours_to_show: 168
-  line_width: 2
-  name: Canada
-  points_per_hour: 1
-  show:
-    extrema: true
-    icon: false
-- type: custom:mini-graph-card
-  color_thresholds:
-  - color: '#e74c3c'
-    value: 15000
-  - color: '#ffff00'
-    value: 7500
-  - color: '#1db954'
-    value: 0
-  entities:
-    - entity: sensor.france_coronavirus_confirmed
-      index: 0
-    - entity: sensor.france_coronavirus_deaths
-      index: 0
-    - entity: sensor.france_coronavirus_current
-      index: 0
-  font_size: 65
-  height: 46
-  hours_to_show: 168
-  line_width: 2
-  name: France
-  points_per_hour: 1
-  show:
-    extrema: true
-    icon: false
-- type: custom:mini-graph-card
-  color_thresholds:
-  - color: '#e74c3c'
-    value: 300000
-  - color: '#ffff00'
-    value: 150000
-  - color: '#1db954'
-    value: 0
-  entities:
-    - entity: sensor.worldwide_confirmed
-      index: 0
-    - entity: sensor.worldwide_deaths
-      index: 0
-    - entity: sensor.worldwide_current
-      index: 0
-  font_size: 65
-  height: 46
-  hours_to_show: 168
-  line_width: 2
-  name: Worldwide
-  points_per_hour: 1
-  show:
-    extrema: true
-    icon: false
+    - type: custom:button-card
+      name: ⏩ Johns Hopkins map 📈
+      tap_action:
+        action: navigate
+        navigation_path: 'temp.coronavirus'
+    - entities:
+      - entity: sensor.italy_confirmed
+        name: Confirmed
+      - entity: sensor.italy_deaths
+        name: Deaths
+      - entity: sensor.italy_current
+        name: Current
+      entity: sensor.italy_confirmed
+      icon: 'mdi:biohazard'
+      name: Italy
+      show_state: false
+      type: 'custom:multiple-entity-row'
+    - entities:
+      - entity: sensor.us_coronavirus_confirmed
+        name: Confirmed
+      - entity: sensor.us_coronavirus_deaths
+        name: Deaths
+      - entity: sensor.us_coronavirus_current
+        name: Current
+      entity: sensor.us_coronavirus_confirmed
+      icon: 'mdi:biohazard'
+      name: US
+      show_state: false
+      type: 'custom:multiple-entity-row'
+    - entities:
+      - entity: sensor.canada_confirmed
+        name: Confirmed
+      - entity: sensor.canada_deaths
+        name: Deaths
+      - entity: sensor.canada_current
+        name: Current
+      entity: sensor.canada_confirmed
+      icon: 'mdi:biohazard'
+      name: Canada
+      show_state: false
+      type: 'custom:multiple-entity-row'
+    - entities:
+      - entity: sensor.france_coronavirus_confirmed
+        name: Confirmed
+      - entity: sensor.france_coronavirus_deaths
+        name: Deaths
+      - entity: sensor.france_coronavirus_current
+        name: Current
+      entity: sensor.france_coronavirus_confirmed
+      icon: 'mdi:biohazard'
+      name: France
+      show_state: false
+      type: 'custom:multiple-entity-row'
+    - entities:
+      - entity: sensor.worldwide_confirmed
+        name: Confirmed
+      - entity: sensor.worldwide_deaths
+        name: Deaths
+      - entity: sensor.worldwide_current
+        name: Current
+      entity: sensor.worldwide_confirmed
+      icon: 'mdi:biohazard'
+      name: Worldwide
+      show_state: false
+      type: 'custom:multiple-entity-row'
+    - type: custom:auto-entities
+      show_empty: false
+      filter:
+        include:
+          - type: custom:mini-graph-card
+            color_thresholds:
+            - color: '#e74c3c'
+              value: 150000
+            - color: '#ffff00'
+              value: 75000
+            - color: '#1db954'
+              value: 0
+            entities:
+              - entity: sensor.italy_confirmed
+                index: 0
+              - entity: sensor.italy_deaths
+                index: 0
+              - entity: sensor.italy_current
+                index: 0
+            font_size: 65
+            height: 46
+            hours_to_show: 168
+            line_width: 2
+            name: Italy
+            points_per_hour: 1
+            show:
+              extrema: true
+              icon: false
+          - type: custom:mini-graph-card
+            color_thresholds:
+            - color: '#e74c3c'
+              value: 150000
+            - color: '#ffff00'
+              value: 75000
+            - color: '#1db954'
+              value: 0
+            entities:
+              - entity: sensor.us_coronavirus_confirmed
+                index: 0
+              - entity: sensor.us_coronavirus_deaths
+                index: 0
+              - entity: sensor.us_coronavirus_current
+                index: 0
+            font_size: 65
+            height: 46
+            hours_to_show: 168
+            line_width: 2
+            name: US
+            points_per_hour: 1
+            show:
+              extrema: true
+              icon: false
+          - type: custom:mini-graph-card
+            color_thresholds:
+            - color: '#e74c3c'
+              value: 2000
+            - color: '#ffff00'
+              value: 1000
+            - color: '#1db954'
+              value: 0
+            entities:
+              - entity: sensor.canada_confirmed
+                index: 0
+              - entity: sensor.canada_deaths
+                index: 0
+              - entity: sensor.canada_current
+                index: 0
+            font_size: 65
+            height: 46
+            hours_to_show: 168
+            line_width: 2
+            name: Canada
+            points_per_hour: 1
+            show:
+              extrema: true
+              icon: false
+          - type: custom:mini-graph-card
+            color_thresholds:
+            - color: '#e74c3c'
+              value: 15000
+            - color: '#ffff00'
+              value: 7500
+            - color: '#1db954'
+              value: 0
+            entities:
+              - entity: sensor.france_coronavirus_confirmed
+                index: 0
+              - entity: sensor.france_coronavirus_deaths
+                index: 0
+              - entity: sensor.france_coronavirus_current
+                index: 0
+            font_size: 65
+            height: 46
+            hours_to_show: 168
+            line_width: 2
+            name: France
+            points_per_hour: 1
+            show:
+              extrema: true
+              icon: false
+          - type: custom:mini-graph-card
+            color_thresholds:
+            - color: '#e74c3c'
+              value: 300000
+            - color: '#ffff00'
+              value: 150000
+            - color: '#1db954'
+              value: 0
+            entities:
+              - entity: sensor.worldwide_confirmed
+                index: 0
+              - entity: sensor.worldwide_deaths
+                index: 0
+              - entity: sensor.worldwide_current
+                index: 0
+            font_size: 65
+            height: 46
+            hours_to_show: 168
+            line_width: 2
+            name: Worldwide
+            points_per_hour: 1
+            show:
+              extrema: true
+              icon: false
+      card:
+        type: custom:fold-entity-row
+        head:
+          type: section
+          label: 'Graphs'
+        padding: 0
+        group_config:
+          secondary_info: last-changed
