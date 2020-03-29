@@ -1,12 +1,21 @@
 type: custom:vertical-stack-in-card
-title: Coronavirus
 cards:
+- type: entities
+  show_header_toggle: false
+  entities:
+    - type: weblink
+      name: Coronavirus - Johns Hopkins map
+      url: https://coronavirus.jhu.edu/map.html
+      icon: mdi:graphql
+    # - entity: sensor.italy_confirmed
+    # - entity: sensor.italy_deaths
+    # - entity: sensor.italy_current
 - type: custom:mini-graph-card
   color_thresholds:
   - color: '#e74c3c'
-    value: 50000
+    value: 150000
   - color: '#ffff00'
-    value: 25000
+    value: 75000
   - color: '#1db954'
     value: 0
   entities:
@@ -21,6 +30,30 @@ cards:
   hours_to_show: 168
   line_width: 2
   name: Italy
+  points_per_hour: 1
+  show:
+    extrema: true
+    icon: false
+- type: custom:mini-graph-card
+  color_thresholds:
+  - color: '#e74c3c'
+    value: 150000
+  - color: '#ffff00'
+    value: 75000
+  - color: '#1db954'
+    value: 0
+  entities:
+    - entity: sensor.us_coronavirus_confirmed
+      index: 0
+    - entity: sensor.us_coronavirus_deaths
+      index: 0
+    - entity: sensor.us_coronavirus_current
+      index: 0
+  font_size: 65
+  height: 46
+  hours_to_show: 168
+  line_width: 2
+  name: US
   points_per_hour: 1
   show:
     extrema: true

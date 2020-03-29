@@ -1,0 +1,3 @@
+sensor.front_door_battery_2:
+  battery_alert_disabled: true
+  battery_sensor_creation_disabled: true
