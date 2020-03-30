@@ -10,6 +10,8 @@ cards:
   # Col 1
   - type: vertical-stack
     cards: 
+      # Temporary Coronavirus card
+      - !include ../includes/coronavirus.yaml
       - type: custom:banner-card
         background: "#EDE7B0"
         heading: "🛋️ Living room"
@@ -44,24 +46,15 @@ cards:
           - entity: media_player.sonos_living_room
             name: Sonos
       - type: custom:banner-card
-        heading: "🛏️ Bedroom"
-        background: "#ed9a73"
-        link: /lovelace/areas.bedrooms.main
-        row_size: 3
+        heading: "🍳 Kitchen"
+        background: "#57B07A"
+        link: /lovelace/areas.kitchen
         entities:
-          - entity: light.bedroom_group
+          - entity: light.kitchen_group
             name: Lights
-          - entity: switch.bedroom_tv
-          - sensor.group_temperature_bedroom
-          - entity: cover.bedroom_1
-          - sensor.group_light_level_bedroom
-          - sensor.humidity_158d0002461865
-          - entity: media_player.sonos_bedroom
-            name: Sonos
-
-  # Col 2
-  - type: vertical-stack
-    cards:
+          - entity: input_boolean.guest_mode
+            name: Disable lights auto
+          - sensor.time
       - type: custom:banner-card
         heading: "🚨 Security"
         background: "#dfdfdf"
@@ -101,16 +94,24 @@ cards:
                 name: Doors closed
                 value: mdi:door
           # - entity: sensor.group_temperature_balcony
+  # Col 2
+  - type: vertical-stack
+    cards:
       - type: custom:banner-card
-        heading: "🍳 Kitchen"
-        background: "#57B07A"
-        link: /lovelace/areas.kitchen
+        heading: "🛏️ Bedroom"
+        background: "#ed9a73"
+        link: /lovelace/areas.bedrooms.main
+        row_size: 3
         entities:
-          - entity: light.kitchen_group
+          - entity: light.bedroom_group
             name: Lights
-          - entity: input_boolean.guest_mode
-            name: Disable lights auto
-          - sensor.time
+          - entity: switch.bedroom_tv
+          - sensor.group_temperature_bedroom
+          - entity: cover.bedroom_1
+          - sensor.group_light_level_bedroom
+          - sensor.humidity_158d0002461865
+          - entity: media_player.sonos_bedroom
+            name: Sonos
       - type: custom:banner-card
         heading: "🛁 Bathroom"
         background: "#B0C2ED"

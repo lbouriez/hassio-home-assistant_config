@@ -31,8 +31,6 @@ cards:
   # Col 3
   - type: vertical-stack
     cards:
-      # Temporary Coronavirus card
-      - !include ../includes/coronavirus.yaml
       # VM
       - !include ../includes/admin/admin_monitoring_vm.yaml
       # Synology
