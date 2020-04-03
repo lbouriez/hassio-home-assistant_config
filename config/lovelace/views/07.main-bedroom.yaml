@@ -39,7 +39,7 @@ cards:
           - type: custom:decluttering-card
             template: media_player
             variables:
-              - entity: "bedroom"
+              - entity: "sonos_bedroom"
           - type: custom:decluttering-card
             template: media_player
             variables:

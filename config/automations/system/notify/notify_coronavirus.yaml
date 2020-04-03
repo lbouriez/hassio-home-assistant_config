@@ -2,11 +2,9 @@ alias: Information - Coronavirus
 initial_state: True
 trigger:
   - platform: time
-    at: '09:00:00'
+    at: '11:00:00'
   - platform: time
-    at: '12:00:00'
-  - platform: time
-    at: '17:00:00'
+    at: '18:00:00'
 action:
   - service: script.notify
     data:

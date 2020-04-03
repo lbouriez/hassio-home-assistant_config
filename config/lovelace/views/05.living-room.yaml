@@ -27,7 +27,7 @@ cards:
           - type: custom:decluttering-card
             template: media_player
             variables:
-              - entity: "living_room"
+              - entity: "sonos_living_room"
           - type: custom:decluttering-card
             template: media_player
             variables:
