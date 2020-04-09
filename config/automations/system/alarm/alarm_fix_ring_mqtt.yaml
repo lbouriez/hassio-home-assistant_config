@@ -1,4 +1,4 @@
-alias: Alarm - Fix MQTT plugin
+alias: Alarm - Fix MQTT plugin and notify
 initial_state: True
 trigger:
   - platform: state
@@ -19,6 +19,12 @@ action:
   - service: hassio.addon_restart
     data:
       addon: a98c085d_ring_mqtt
+  - service: script.notify
+    data:
+      notify_id: everyone
+      priority: 2
+      title: "Alert"
+      message: "Homeassistant is not able to handle Ring Alarm, connect ASAP."
   - delay:
       minutes: 1
       seconds: 30

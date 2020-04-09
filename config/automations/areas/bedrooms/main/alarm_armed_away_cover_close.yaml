@@ -1,0 +1,12 @@
+alias: Bedroom - Alarm armed away close cover
+trigger:
+  - platform: state
+    entity_id: alarm_control_panel.ring_alarm
+    to: 'armed_away'
+condition:
+  - condition: template
+    value_template: '{{ states.weather.dark_sky.temperature | float >= 10 }}'
+action:
+  - service: cover.close_cover
+    data:
+      entity_id: cover.bedroom_1

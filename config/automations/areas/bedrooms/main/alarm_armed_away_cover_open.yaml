@@ -1,4 +1,4 @@
-alias: Bedroom - Alarm armed away
+alias: Bedroom - Alarm armed away open cover
 trigger:
   - platform: state
     entity_id: alarm_control_panel.ring_alarm
@@ -6,6 +6,8 @@ trigger:
 condition:
   - condition: time
     before: '17:00:00'
+  - condition: template
+    value_template: '{{ states.weather.dark_sky.temperature | float < 10 }}'
 action:
   - service: cover.open_cover
     data:

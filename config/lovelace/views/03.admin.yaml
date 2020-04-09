@@ -18,7 +18,7 @@ cards:
       # UPS
       - !include ../includes/admin/admin_monitoring_ups.yaml
       # Pi-hole
-      - !include ../includes/admin/admin_monitoring_pi_hole.yaml
+      - !include ../includes/admin/admin_monitoring_ad_guard.yaml
       - !include ../includes/bottom-card.yaml
   # Col 2
   - type: vertical-stack
