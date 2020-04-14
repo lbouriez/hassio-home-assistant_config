@@ -7,8 +7,6 @@ lovelace:
       type: module
     - url: /hacsfiles/circle-sensor-card/circle-sensor-card.js
       type: module
-    - url: /hacsfiles/surveillance-card/surveillance-card.js
-      type: module
     - url: /hacsfiles/lovelace-layout-card/layout-card.js
       type: js
     - url: /hacsfiles/lovelace-card-tools/card-tools.js
