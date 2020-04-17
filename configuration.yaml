@@ -15,7 +15,9 @@ homeassistant:
   # Load packages
   packages: !include_dir_named config/integrations
   auth_mfa_modules:
-      - type: totp
-        name: Authenticator app
+    - type: totp
+      name: Authenticator app
+  whitelist_external_dirs:
+    - /config/captures
 
 zone: !include_dir_list config/entities/zones

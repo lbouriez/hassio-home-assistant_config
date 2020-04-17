@@ -1,7 +1,0 @@
-camera.blink_890_510_485:
-  battery_template_string: >-
-    {%- if value_json.value == 'ok' -%}
-    Full
-    {%- else -%}
-    Low
-    {%- endif -%}

@@ -1,0 +1,7 @@
+camera.blink_living_room:
+  battery_template_string: >-
+    {%- if value_json.value == 'ok' -%}
+    Full
+    {%- else -%}
+    Low
+    {%- endif -%}

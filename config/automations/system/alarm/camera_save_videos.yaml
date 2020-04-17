@@ -1,0 +1,23 @@
+alias: Camera - Save blink videos
+initial_state: True
+trigger:
+  - platform: state
+    entity_id: binary_sensor.blink_balcony_motion_detected
+    to: 'on'
+  - platform: state
+    entity_id: binary_sensor.blink_entrance_motion_detected
+    to: 'on'
+  - platform: state
+    entity_id: binary_sensor.blink_living_room_motion_detected
+    to: 'on'
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: 'alarm_control_panel.ring_alarm'
+      state: 'armed_away'
+action:
+    service: blink.save_video
+    data:
+        name: "{{ trigger.to_state.attributes.friendly_name }}"
+        filename: "captures/videos/blink_video_{{ trigger.to_state.attributes.friendly_name }}_{{ now().strftime('%Y%m%d_%H%M%S') }}.mp4"

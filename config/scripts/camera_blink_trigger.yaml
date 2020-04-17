@@ -5,9 +5,17 @@ camera_blink_trigger_camera:
     name:
       description: 'Camera name'
       example: 'Entrance'
+    entity_id:
+      description: 'Entity id'
+      example: 'camera.blink_living_room'
   sequence:
     - service: blink.trigger_camera
       data_template:
         name: "{{ name }}"
     - delay: 00:00:06
     - service: blink.blink_update
+    - service: camera.snapshot
+      data_template:
+        entity_id: "{{ entity_id }}"
+        filename: "captures/photos/{{ entity_id }}_{{ now().strftime('%Y%m%d_%H%M%S') }}.jpg"
+    - delay: 00:00:05

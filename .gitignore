@@ -17,6 +17,7 @@ node-red
 tts
 www/community/**
 www/github/**
+captures/
 
 # Specific file ignores
 .config_entries.json
