@@ -11,9 +11,4 @@ trigger:
 action:
   service_template: frontend.set_theme
   data_template:
-    name: "{% if states.sun.sun.state == 'above_horizon' %}slate{% else %}ios-dark-mode{% endif %}"
-    # name: >-
-    #   {% if (now().hour < 6) %} 'slate'
-    #   {% elif (now().hour < 20) %} 'ios-dark-mode'
-    #   {% else %} 'slate'
-    #   {% endif%}
+    name: "{% if states.sun.sun.state == 'above_horizon' %}default{% else %}ios-dark-mode{% endif %}"

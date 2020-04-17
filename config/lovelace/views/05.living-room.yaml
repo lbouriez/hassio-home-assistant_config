@@ -12,10 +12,20 @@ cards:
     cards:
       - !include ../includes/footer_card.yaml
       # Lights
-      - type: entities
-        entity: light.living_room_group
-        title: Lights
-        entities: !include ../includes/entities/lights_living-room.yaml
+      - type: custom:vertical-stack-in-card
+        cards:
+          - type: entities
+            entity: light.living_room_group
+            title: Lights
+            entities: !include ../includes/entities/lights_living-room.yaml
+          - type: conditional
+            conditions:
+              - entity: light.christmas_group
+                state_not: "unavailable"
+            card:
+              type: entities
+              entities:
+                - light.christmas_group
       # Switches
       - type: entities
         title: 'Actions'
