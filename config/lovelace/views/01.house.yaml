@@ -37,15 +37,24 @@ cards:
           - switch.living_room_netflix
           - switch.bedroom_tv
       # Divers
-      - type: entities
-        title: 'House actions'
-        show_header_toggle: false
-        entities:
-          - switch.ventilation
-          - input_boolean.guest_mode
-          - input_boolean.sleep_mode
-          - input_boolean.christmas_time
-          - input_select.cube_mode
+      - type: custom:vertical-stack-in-card
+        cards:
+          - type: entities
+            title: 'House actions'
+            show_header_toggle: false
+            entities:
+              - switch.ventilation
+              - input_boolean.guest_mode
+              - input_boolean.sleep_mode
+              - input_select.cube_mode
+          - type: conditional
+            conditions:
+              - entity: input_boolean.christmas_time
+                state_not: "unavailable"
+            card:
+              type: entities
+              entities:
+                - input_boolean.christmas_time
       # Sonos
       - !include ../includes/all/group_all_media_player_sonos.yaml
       - !include ../includes/bottom-card.yaml

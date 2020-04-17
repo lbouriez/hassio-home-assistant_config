@@ -1,16 +1,19 @@
 alias: System - Switch themes
 trigger:
-  - platform: time
-    at: '06:00:00'
-  - platform: time
-    at: '20:00:00'
+  - platform: state
+    entity_id: sun.sun
+    to: above_horizon
+  - platform: state
+    entity_id: sun.sun
+    to: below_horizon
   - platform: homeassistant
     event: start
 action:
-  service: frontend.set_theme
+  service_template: frontend.set_theme
   data_template:
-    name: >-
-      {% if (now().hour < 6) %} 'slate'
-      {% elif (now().hour < 20) %} 'ios-dark-mode'
-      {% else %} 'slate'
-      {% endif%}
+    name: "{% if states.sun.sun.state == 'above_horizon' %}slate{% else %}ios-dark-mode{% endif %}"
+    # name: >-
+    #   {% if (now().hour < 6) %} 'slate'
+    #   {% elif (now().hour < 20) %} 'ios-dark-mode'
+    #   {% else %} 'slate'
+    #   {% endif%}
