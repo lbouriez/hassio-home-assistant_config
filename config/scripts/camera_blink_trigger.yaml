@@ -17,5 +17,5 @@ camera_blink_trigger_camera:
     - service: camera.snapshot
       data_template:
         entity_id: "{{ entity_id }}"
-        filename: "captures/photos/{{ entity_id }}_{{ now().strftime('%Y%m%d_%H%M%S') }}.jpg"
+        filename: "captures/photos/{{ now().strftime('%Y%m%d_%H%M%S') }}_{{ entity_id }}.jpg"
     - delay: 00:00:05

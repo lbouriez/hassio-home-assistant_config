@@ -1,0 +1,19 @@
+house_water:
+  name: Water alert
+  message: >
+    {% set water = states | selectattr('entity_id', 'in', state_attr('group.water_all','entity_id')) | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+    Water detected in: {{ water }}
+  done_message: Water alert finished
+  entity_id: group.water_all
+  state: 'on'
+  repeat: 5
+  can_acknowledge: true
+  skip_first: false
+  notifiers:
+    - everyone
+  data:
+    title: "Water alert"
+    priority: 1
+    timestamp: true
+    expire: 3600
+    retry: 30

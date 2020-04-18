@@ -11,11 +11,14 @@ trigger:
     entity_id: binary_sensor.blink_living_room_motion_detected
     to: 'on'
 condition:
-  condition: and
+  condition: or
   conditions:
     - condition: state
       entity_id: 'alarm_control_panel.ring_alarm'
       state: 'armed_away'
+    - condition: state
+      entity_id: 'alarm_control_panel.ring_alarm'
+      state: 'armed_home'
 action:
     service: blink.save_video
     data:

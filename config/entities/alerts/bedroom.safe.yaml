@@ -1,0 +1,17 @@
+bedroom_safe:
+  name: Safe alert
+  message: The safe is open since a few minutes. Close it !
+  done_message: The safe is close
+  entity_id: binary_sensor.openclose_15
+  state: 'on'
+  repeat: 2
+  can_acknowledge: true
+  skip_first: true
+  notifiers:
+    - everyone
+  data:
+    title: "Safe alert"
+    priority: 2
+    timestamp: true
+    expire: 3600
+    retry: 30

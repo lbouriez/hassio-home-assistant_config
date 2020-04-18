@@ -1,0 +1,19 @@
+house_smoke:
+  name: Smoke alert
+  message: >
+    {% set smoke = states | selectattr('entity_id', 'in', state_attr('group.smoke_all','entity_id')) | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+    Smoke detected in: {{ smoke }}
+  done_message: Smoke alert finished
+  entity_id: group.smoke_all
+  state: 'on'
+  repeat: 5
+  can_acknowledge: true
+  skip_first: false
+  notifiers:
+    - everyone
+  data:
+    title: "Smoke alert"
+    priority: 1
+    timestamp: true
+    expire: 3600
+    retry: 30

@@ -12,6 +12,12 @@ homeassistant:
   time_zone: America/Toronto
   auth_providers:
     - type: homeassistant
+    - type: trusted_networks
+      trusted_networks:
+        - 192.168.1.0/24
+      trusted_users:
+        192.168.1.0/24:
+          - c0bc3abf501946fa9505282a1b024423
   # Load packages
   packages: !include_dir_named config/integrations
   auth_mfa_modules:

@@ -2,3 +2,4 @@ name: laurent
 platform: group
 services:
   - service: p_laurent_pushover
+  - service: mobile_app_asus_i01wd
