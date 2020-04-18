@@ -1,3 +1,0 @@
-platform: twinkly
-host: !secret entitie_light_twinkly_host
-name: Twinkly

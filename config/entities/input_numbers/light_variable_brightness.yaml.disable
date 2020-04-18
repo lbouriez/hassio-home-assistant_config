@@ -1,5 +1,0 @@
-light_variable_brightness:
-  name: Brightness
-  initial: 50
-  min: 0
-  max: 100

@@ -1,2 +1,0 @@
-# Moved to the configuration.yaml file since I get an error from here
-zone: !include_dir_list ../entities/zones

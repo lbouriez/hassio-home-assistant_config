@@ -1,8 +1,0 @@
-platform: template
-sensors:
-  group_temperature_kitchen:
-    friendly_name: "Kitchen"
-    unit_of_measurement: '°C'
-    icon_template: mdi:oil-temperature
-    value_template: >-
-      {{ ((states('sensor.???')|float) / 1) | round(2) }}

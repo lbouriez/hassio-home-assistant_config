@@ -1,5 +1,5 @@
 name: giulia
 platform: group
 services:
-  - service: p_giulia_pushbullet
+  # - service: p_giulia_pushbullet
   - service: mobile_app_giulias_iphone

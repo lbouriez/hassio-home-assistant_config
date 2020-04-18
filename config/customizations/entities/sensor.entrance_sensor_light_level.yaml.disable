@@ -1,3 +1,0 @@
-sensor.entrance_sensor_light_level:
-  battery_alert_disabled: true
-  battery_sensor_creation_disabled: true

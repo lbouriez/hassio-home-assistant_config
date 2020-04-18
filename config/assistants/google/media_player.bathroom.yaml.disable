@@ -1,5 +1,0 @@
-media_player.sonos_bathroom:
-  name: Sonos Bathroom
-  room: Bathroom
-  aliases:
-    - sonos bathroom
