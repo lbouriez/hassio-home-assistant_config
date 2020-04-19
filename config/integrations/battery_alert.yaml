@@ -380,7 +380,7 @@ input_number:
     mode: slider
     min: -1
     max: 100
-    initial: 25
+    initial: 20
 
   battery_alert_threshold_min:
     name: "Min Alert Threshold"
@@ -413,6 +413,7 @@ input_text:
   notifier_name:
     name: Notifier Name
     mode: text
+    # initial: 'laurent'
 
 ################################################
 ## Automation
