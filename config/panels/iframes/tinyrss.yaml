@@ -1,5 +1,0 @@
-ttrss:
-  title: Tiny-rss
-  icon: mdi:rss
-  url: https://rss.weeboo.fr
-  require_admin: true

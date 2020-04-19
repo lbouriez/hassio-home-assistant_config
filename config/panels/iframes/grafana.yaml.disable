@@ -1,5 +1,0 @@
-grafana:
-  title: Grafana
-  icon: mdi:chart-timeline
-  url: !secret global_url_grafana
-  require_admin: true
