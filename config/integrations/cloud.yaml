@@ -18,16 +18,14 @@ cloud:
         - light.kitchen_group
         - light.living_room_group
         - light.house_group
-        - light.christmas_group
+        # - light.christmas_group
         # Switchs
         - switch.ventilation
         - switch.sonoff_100048cb54 #Bedroom closet
         # Media players
-        # - media_player.nvidia_shield
         # Inputs boolean
         - input_boolean.guest_mode
         # Plugs
-        #- switch.circadian_lighting_circadian_lighting
         # Covers
         # Scripts
         - script.vacuum_clean_zone_kitchen

@@ -9,4 +9,4 @@ entities:
   - light.entrance_group
   - light.kitchen_group
   - light.living_room_group
-  - light.christmas_group
+  # - light.christmas_group

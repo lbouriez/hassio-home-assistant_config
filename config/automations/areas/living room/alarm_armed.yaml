@@ -19,6 +19,3 @@ action:
         - media_player.living_room_tv # TV
   # - service: switch.turn_off
   #   entity_id: switch.harmony_tv
-  # - service: light.turn_off # Moved into christmas.yaml
-  #   data:
-  #     entity_id: light.christmas_group
