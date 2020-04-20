@@ -1,0 +1,33 @@
+vacuum_clean_zone_kitchen:
+  alias: Script - Vacuum clean kitchen
+  description: Send the vacuum to clean the kitchen
+  sequence:
+    - service: xiaomi_miio.vacuum_clean_zone
+      data:
+        entity_id: vacuum.living_room
+        zone: [[18430,24562,20430,28662]]
+        repeats: 2
+
+vacuum_clean_zone_bathroom:
+  alias: Script - Vacuum clean bathroom
+  description: Send the vacuum to clean the bathroom
+  sequence:
+    - service: xiaomi_miio.vacuum_clean_zone
+      data:
+        entity_id: vacuum.living_room
+        zone: [[20786,30335,22286,32385],[20480,28838,21580,30338]]
+        repeats: 2
+
+
+
+# Kitchen
+# [[18430,24562,20430,28662,1]]
+
+# Dining room
+# [[19810,25081,23410,27131,1]]
+
+# Bathroom
+# [[20786,30335,22286,32385,1],[20480,28838,21580,30338,1]]
+
+# [[20786,30335,22286,32385,2],[20480,28838,21580,30338,2]]
+

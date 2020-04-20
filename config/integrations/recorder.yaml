@@ -14,5 +14,6 @@ recorder:
   #     - vacuum
   exclude:
     entities:
-     - sensor.last_boot
-     - sensor.date
+      - sensor.last_boot
+      - sensor.date
+      - sensor.time

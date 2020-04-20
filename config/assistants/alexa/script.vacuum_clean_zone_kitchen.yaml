@@ -1,0 +1,4 @@
+script.vacuum_clean_zone_kitchen:
+  name: Vacuum kitchen
+  description: Vacuum the kitchen
+  display_categories: SWITCH

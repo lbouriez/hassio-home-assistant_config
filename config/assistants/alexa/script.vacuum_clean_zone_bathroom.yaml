@@ -1,0 +1,4 @@
+script.vacuum_clean_zone_bathroom:
+  name: Vacuum bathroom
+  description: Vacuum the bathroom
+  display_categories: SWITCH
