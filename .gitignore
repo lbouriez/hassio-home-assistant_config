@@ -37,7 +37,7 @@ zwcfg_*
 zwscene.xml
 *.conf
 alexa_media*.pickle
-
+airsonos.xml
 
 
 # Ignore files created by IDE's
