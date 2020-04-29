@@ -3,12 +3,9 @@ cards:
   - type: glance
     title: Syno monitoring
     entities:
-      #- sensor.average_disk_temp_volume_1
-      #- sensor.maximum_disk_temp_volume_1
-      #- sensor.disk_smart_status
-      - sensor.synology_dsm_status_volume_1
-      - sensor.synology_dsm_used_space_volume_1
-      - sensor.synology_dsm_network_up
+      - sensor.synology_status_volume_1
+      - sensor.synology_used_space_volume_1
+      - sensor.synology_network_up
       # Weblink not working yet but it suppposed to arrive. See weblink in glance
       - entity: sensor.time
         name: Synology
@@ -19,7 +16,7 @@ cards:
   - type: horizontal-stack
     cards:
       - type: gauge
-        entity: sensor.synology_dsm_volume_used_volume_1
+        entity: sensor.synology_volume_used_volume_1
         title: Disk
         unit_of_measurement: '%'
         min: 0
@@ -29,7 +26,7 @@ cards:
           green: 10
           red: 90
       - type: gauge
-        entity: sensor.synology_dsm_cpu_load_total
+        entity: sensor.synology_cpu_load_total
         title: CPU
         unit_of_measurement: '%'
         min: 0
@@ -39,7 +36,7 @@ cards:
           green: 10
           red: 90
       - type: gauge
-        entity: sensor.synology_dsm_memory_usage_real
+        entity: sensor.synology_memory_usage_real
         title: RAM
         unit_of_measurement: '%'
         min: 0
