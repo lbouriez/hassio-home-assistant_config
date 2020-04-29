@@ -1,6 +1,5 @@
 # Depends of the History conponent - https://www.home-assistant.io/components/recorder/
 recorder:
-  purge_interval: 2
   purge_keep_days: 5
   db_url: mysql://hass:hass@core-mariadb/homeassistant?charset=utf8
   # include:

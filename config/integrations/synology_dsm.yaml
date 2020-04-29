@@ -1,0 +1,4 @@
+synology_dsm:
+  - host: !secret entitie_synology_host
+    username: !secret entitie_synology_username
+    password: !secret entitie_synology_password
