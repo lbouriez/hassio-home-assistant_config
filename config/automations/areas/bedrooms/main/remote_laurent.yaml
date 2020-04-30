@@ -1,22 +1,16 @@
 alias: Bedroom - Remote laurent
 initial_state: True
 trigger:
-  - platform: state
-    entity_id: remote.bedroom
-condition:
-  condition: or
-  conditions:
-    - condition: state
-      entity_id: 'remote.bedroom'
-      state: '4_click_up'
-    - condition: state
-      entity_id: 'remote.bedroom'
-      state: '4_click'
+  - device_id: 46c0befd6b29498cacc2b95a3c8f61ea
+    domain: hue
+    platform: device
+    type: remote_button_short_release
+    subtype: turn_off
+  - device_id: 46c0befd6b29498cacc2b95a3c8f61ea
+    domain: hue
+    platform: device
+    type: remote_button_long_release
+    subtype: turn_off
 action:
-  - service_template: >
-      {% if is_state("remote.bedroom", "4_click_up") %}
-        light.turn_off
-      {% elif is_state("remote.bedroom", "4_click") %}
-        light.turn_off
-      {% endif %}
+  - service: light.turn_off
     entity_id: light.kitchen_led
