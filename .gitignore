@@ -18,6 +18,7 @@ tts
 www/community/**
 www/github/**
 captures/
+themes/
 
 # Specific file ignores
 .config_entries.json
