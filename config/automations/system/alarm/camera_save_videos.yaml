@@ -1,4 +1,4 @@
-alias: Camera - Save blink videos
+alias: Camera - Save blink videos and photos
 initial_state: True
 trigger:
   - platform: state
@@ -20,7 +20,13 @@ condition:
       entity_id: 'alarm_control_panel.ring_alarm'
       state: 'armed_home'
 action:
-    service: blink.save_video
-    data:
-        name: "{{ trigger.to_state.attributes.friendly_name }}"
-        filename: "captures/videos/blink_video_{{ trigger.to_state.attributes.friendly_name }}_{{ now().strftime('%Y%m%d_%H%M%S') }}.mp4"
+    - service: blink.blink_update
+    - service: camera.snapshot
+      data_template:
+        entity_id: "{{ entity_id }}"
+        filename: "captures/photos/blink_photo_{{ trigger.to_state.attributes.friendly_name }}_{{ now().strftime('%Y%m%d_%H%M%S') }}.jpg"
+    - delay: 00:00:05
+    - service: blink.save_video
+      data:
+          name: "{{ trigger.to_state.attributes.friendly_name }}"
+          filename: "captures/videos/blink_video_{{ trigger.to_state.attributes.friendly_name }}_{{ now().strftime('%Y%m%d_%H%M%S') }}.mp4"
