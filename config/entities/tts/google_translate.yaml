@@ -1,0 +1,4 @@
+platform: google_translate
+cache: true
+time_memory: 300
+language: 'en'

@@ -14,9 +14,8 @@ deps
 custom_components
 icloud
 node-red
-tts
-www/community/**
-www/github/**
+/tts/
+www/*
 captures/
 themes/
 
@@ -40,7 +39,6 @@ zwscene.xml
 alexa_media*.pickle
 airsonos.xml
 
-
 # Ignore files created by IDE's
 .vscode
 .theia
@@ -48,3 +46,5 @@ airsonos.xml
 
 # Specific keeps
 !.gitkeep
+!www/img/
+!/*/tts/
