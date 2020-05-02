@@ -1,4 +1,4 @@
-alias: Camera - Save blink videos and photos
+alias: Camera - Captures files
 initial_state: True
 trigger:
   - platform: state
@@ -23,10 +23,15 @@ action:
     - service: blink.blink_update
     - service: camera.snapshot
       data_template:
-        entity_id: "{{ entity_id }}"
+        entity_id: >-
+          {% if trigger.to_state.attributes.friendly_name == 'Balcony' %} camera.blink_balcony
+          {% elif trigger.to_state.attributes.friendly_name == 'Entrance' %} camera.blink_entrance
+          {% elif trigger.to_state.attributes.friendly_name == 'Living room (Blink)' %} camera.blink_living_room
+          {% endif%}
         filename: "captures/photos/blink_photo_{{ trigger.to_state.attributes.friendly_name }}_{{ now().strftime('%Y%m%d_%H%M%S') }}.jpg"
-    - delay: 00:00:05
+    - delay: 00:00:06
+    - service: blink.blink_update
     - service: blink.save_video
       data:
-          name: "{{ trigger.to_state.attributes.friendly_name }}"
-          filename: "captures/videos/blink_video_{{ trigger.to_state.attributes.friendly_name }}_{{ now().strftime('%Y%m%d_%H%M%S') }}.mp4"
+        name: "{{trigger.to_state.attributes.friendly_name}}"
+        filename: "captures/videos/blink_video_{{ trigger.to_state.attributes.friendly_name }}_{{ now().strftime('%Y%m%d_%H%M%S') }}.mp4"
