@@ -6,15 +6,22 @@ trigger:
   - platform: time
     at: '15:00:00'
 condition:
-  - condition: template
-    value_template: "{{ (is_state('vacuum.living_room', 'docked')) and (((as_timestamp(now()) - as_timestamp(states.vacuum.living_room.attributes.clean_stop))) > 28800) }}"
-  - condition: state
-    entity_id: 'binary_sensor.workday_sensor'
-    state: 'on'
-  - condition: template
-    value_template: '{{ now().day != states.automation.living_room_vacuum_start_when_away.attributes.last_triggered.day | default(0) }}'
-  - condition: template
-    value_template: '{{ now().hour > 9 and now().hour < 18 }}'
+  condition: and
+  conditions:
+    - condition: template
+      value_template: "{{ (is_state('vacuum.living_room', 'docked')) and (((as_timestamp(now()) - as_timestamp(states.vacuum.living_room.attributes.clean_stop))) > 28800) }}"
+    - condition: template
+      value_template: '{{ now().day != states.automation.living_room_vacuum_start_when_away.attributes.last_triggered.day | default(0) }}'
+    - condition: template
+      value_template: '{{ now().hour > 9 and now().hour < 18 }}'
+    - condition: or
+      conditions:
+        - condition: state
+          entity_id: 'binary_sensor.workday_sensor'
+          state: 'on'
+        - condition: state
+          entity_id: 'group.family'
+          state: 'not_home'
 action:
   - service: vacuum.start
     entity_id: vacuum.living_room
