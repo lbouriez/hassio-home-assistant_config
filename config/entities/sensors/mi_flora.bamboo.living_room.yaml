@@ -1,0 +1,11 @@
+platform: miflora
+mac: !secret entitie_miflora_mac
+name: Living room Bamboo
+force_update: true
+median: 3
+monitored_conditions:
+  - moisture
+  - light
+  - temperature
+  - conductivity
+  - battery

@@ -45,3 +45,5 @@ lovelace:
       type: module
     - url: /hacsfiles/lovelace-multiple-entity-row/multiple-entity-row.js
       type: module
+    - url: /hacsfiles/miflora-card/miflora-card.js
+      type: module

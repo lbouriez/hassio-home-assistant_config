@@ -1,0 +1,9 @@
+platform: mitemp_bt
+mac: !secret entitie_mitemp_bt_mac
+name: Living room mi temperature
+force_update: true
+median: 3
+monitored_conditions:
+  - temperature
+  - humidity
+  - battery
