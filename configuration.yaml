@@ -19,7 +19,6 @@ homeassistant:
         192.168.1.0/24:
           - !secret entitie_person_laurent_user_id
           - !secret entitie_person_giulia_user_id
-          - !secret entitie_app_mqtt_user_id
   # Load packages
   packages: !include_dir_named config/integrations
   auth_mfa_modules:
