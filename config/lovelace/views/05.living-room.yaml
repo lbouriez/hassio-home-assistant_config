@@ -57,7 +57,7 @@ cards:
           - image: 'mi_flora_bamboo.jpg'
           - min_moisture: 15
           - max_moisture: 60
-          - min_conductivity: 500
+          - min_conductivity: 300
           - min_temperature: 12
       # Vacuum
       - !include ../includes/areas/living room/vacuum.yaml

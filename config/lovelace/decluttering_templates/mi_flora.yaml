@@ -21,8 +21,14 @@ card:
     min_conductivity: '[[min_conductivity]]'
     min_temperature: '[[min_temperature]]'
     entities:
-      - moisture:sensor.[[entity]]_moisture
-      - intensity:sensor.[[entity]]_light_intensity
-      - temperature:sensor.[[entity]]_temperature
-      - conductivity:sensor.[[entity]]_conductivity
-      - battery:sensor.[[entity]]_battery
+      - entity: sensor.[[entity]]_moisture
+        type: moisture
+      - entity: sensor.[[entity]]_light_intensity
+        type: intensity
+      - entity: sensor.[[entity]]_temperature
+        type: temperature
+      - entity: sensor.[[entity]]_conductivity
+        type: conductivity
+        name: Fertility
+      - entity: sensor.[[entity]]_battery
+        type: battery
