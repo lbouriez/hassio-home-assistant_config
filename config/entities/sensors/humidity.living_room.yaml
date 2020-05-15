@@ -1,0 +1,8 @@
+platform: template
+sensors:
+  group_humidity_living_room:
+    friendly_name: "Living room"
+    unit_of_measurement: '%'
+    icon_template: mdi:water-percent
+    value_template: >-
+      {{ ((states('sensor.slave_livingroom_living_room_mi_temperature_humidity')|float + states('sensor.humidity_158d000245a7d5')|float) / 2) | round(2) }}

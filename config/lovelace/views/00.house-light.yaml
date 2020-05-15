@@ -42,7 +42,7 @@ cards:
                 action:
                   service: vacuum.return_to_base
                   entity_id: vacuum.living_room
-          - sensor.humidity_158d000245a7d5
+          - group_humidity_living_room
           - entity: media_player.sonos_living_room
             name: Sonos
       - type: custom:banner-card

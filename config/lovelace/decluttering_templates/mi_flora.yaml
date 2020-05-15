@@ -25,6 +25,7 @@ card:
         type: moisture
       - entity: sensor.[[entity]]_light_intensity
         type: intensity
+        name: Light
       - entity: sensor.[[entity]]_temperature
         type: temperature
       - entity: sensor.[[entity]]_conductivity

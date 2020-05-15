@@ -1,0 +1,18 @@
+remote_homeassistant:
+  instances:
+  - host: !secret integration_remote_homeassistant_host
+    port: 8123
+    secure: false
+    verify_ssl: false
+    access_token: !secret integration_remote_homeassistant_access_token
+    entity_prefix: "slave_livingroom_"
+    include:
+      domains:
+      - sensor
+      - persistent_notification
+    exclude:
+      domains:
+      - person
+      entities:
+      - sensor.hacs
+      - binary_sensor.updater

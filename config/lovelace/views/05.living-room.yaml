@@ -52,7 +52,7 @@ cards:
       - type: custom:decluttering-card
         template: mi_flora
         variables:
-          - entity: 'living_room_bamboo'
+          - entity: 'slave_livingroom_living_room_bamboo'
           - title: 'Bamboo'
           - image: 'mi_flora_bamboo.jpg'
           - min_moisture: 15
@@ -75,7 +75,7 @@ cards:
         show_header_toggle: false
         entities:
           - sensor.group_temperature_living_room
-          - sensor.humidity_158d000245a7d5
+          - sensor.group_humidity_living_room
           - sensor.pressure_158d000245a7d5
           - binary_sensor.smoke_sensor_158d000257927b
           - type: divider
