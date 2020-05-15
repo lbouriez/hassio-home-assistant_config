@@ -1,6 +1,6 @@
 remote_homeassistant:
   instances:
-  - host: !secret integration_remote_homeassistant_host
+  - host: !secret global_ip_slave_living_room
     port: 8123
     secure: false
     verify_ssl: false

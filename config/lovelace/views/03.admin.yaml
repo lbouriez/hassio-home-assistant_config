@@ -11,6 +11,11 @@ cards:
   - type: vertical-stack
     cards:
       - !include ../includes/footer_card.yaml
+      - type: custom:button-card
+        name: 🔜 Slave instance 🛋️
+        tap_action:
+          action: url
+          url_path: !secret global_url_slave_living_room
       # Battery almost done
       - !include ../includes/low_battery_devices.yaml
       # Things with issues

@@ -1,4 +1,0 @@
-slave_living_room:
-  title: 'Slave Living-room'
-  url: !secret panels_slave_living_room_url
-  icon: mdi:home
