@@ -1,0 +1,11 @@
+type: custom:decluttering-card
+template: monitoring
+variables:
+  - title: 'RPI living-room monitoring'
+  - graph1_entity: 'slave_livingroom_processor_use'
+  - graph2_entity: 'slave_livingroom_cpu_temperature'
+  - bar1_entity: 'slave_livingroom_disk_use_percent'
+  - bar1_color: '#00ba6a'
+  - bar2_entity: 'slave_livingroom_memory_use_percent'
+  - other_entities:
+    - sensor.slave_livingroom_last_boot

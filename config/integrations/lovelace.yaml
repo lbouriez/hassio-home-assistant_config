@@ -47,3 +47,7 @@ lovelace:
       type: module
     - url: /hacsfiles/lovelace-miflora-card/miflora-card.js
       type: js
+    - url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
+      type: module
+    - url : /hacsfiles/bar-card/bar-card.js
+      type: module

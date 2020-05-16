@@ -1,0 +1,79 @@
+default:
+  - title: 'System monitor'
+  - graph1_entity: 'entity_id'
+  - graph2_entity: 'entity_id'
+  - bar1_entity: 'entity_id'
+  - bar1_color: 'var(--custom-bar-card-color, var(--primary-color))'
+  - bar2_entity: 'entity_id'
+  - bar2_color: 'var(--custom-bar-card-color, var(--primary-color))'
+  - bar3_entity: 'entity_id'
+  - bar3_color: 'var(--custom-bar-card-color, var(--primary-color))'
+  - other_entities:
+
+# Pre-requisites
+# * vertical-stack-in-card
+# * mini-graph-card
+# * bar-card
+card:
+  type: 'custom:vertical-stack-in-card'
+  title: '[[title]]'
+  cards:
+    - type: horizontal-stack
+      cards:
+        - type: conditional
+          conditions:
+            - entity: 'sensor.[[graph1_entity]]'
+              state_not: "unavailable"
+          card:
+            type: custom:mini-graph-card
+            entities:
+              - 'sensor.[[graph1_entity]]'
+            line_color: '#2980b9'
+            line_width: 2
+            hours_to_show: 24
+        - type: conditional
+          conditions:
+            - entity: 'sensor.[[graph2_entity]]'
+              state_not: "unavailable"
+          card:
+            type: custom:mini-graph-card
+            entities:
+              - 'sensor.[[graph2_entity]]'
+            line_color: '#2980b9'
+            line_width: 2
+            hours_to_show: 24
+    - type: conditional
+      conditions:
+        - entity: 'sensor.[[bar1_entity]]'
+          state_not: "unavailable"
+      card:
+        type: custom:bar-card
+        entity: 'sensor.[[bar1_entity]]'
+        title_position: inside
+        align: split
+        show_icon: true
+        color: '[[bar1_color]]'
+    - type: conditional
+      conditions:
+        - entity: 'sensor.[[bar2_entity]]'
+          state_not: "unavailable"
+      card:
+        type: custom:bar-card
+        entity: 'sensor.[[bar2_entity]]'
+        title_position: inside
+        align: split
+        show_icon: true
+        color: '[[bar2_color]]'
+    - type: conditional
+      conditions:
+        - entity: 'sensor.[[bar3_entity]]'
+          state_not: "unavailable"
+      card:
+        type: custom:bar-card
+        entity: 'sensor.[[bar3_entity]]'
+        title_position: inside
+        align: split
+        show_icon: true
+        color: '[[bar3_color]]'
+    - type: entities
+      entities: '[[other_entities]]'

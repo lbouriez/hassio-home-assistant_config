@@ -13,6 +13,14 @@ remote_homeassistant:
     exclude:
       domains:
       - person
+      - automation
+      - script
       entities:
       - sensor.hacs
       - binary_sensor.updater
+      - sensor.time_date
+      - sensor.time
+      - sensor.time_utc
+      - sensor.date
+      - sensor.date_time
+      - sensor.internet_time

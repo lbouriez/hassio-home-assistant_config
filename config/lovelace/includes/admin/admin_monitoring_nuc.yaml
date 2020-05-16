@@ -36,49 +36,16 @@ cards:
           padding: 0
           group_config:
             secondary_info: last-changed
-      - type: custom:vertical-stack-in-card
-        cards:
-          - type: horizontal-stack
-            cards:
-              - type: gauge
-                entity: sensor.pc_nuc_cpu_usage
-                unit_of_measurement: '%'
-                title: CPU Usage
-                min: 0
-                max: 100
-                severity:
-                  yellow: 45
-                  green: 10
-                  red: 90
-              - type: gauge
-                entity: sensor.pc_nuc_ram_usage
-                unit_of_measurement: '%'
-                title: RAM Usage
-                min: 0
-                max: 100
-                severity:
-                  yellow: 45
-                  green: 10
-                  red: 90
-          - type: horizontal-stack
-            cards:
-              - type: gauge
-                entity: sensor.pc_nuc_hdd_usage_c
-                unit_of_measurement: '%'
-                title: DDD C Usage
-                min: 0
-                max: 100
-                severity:
-                  yellow: 45
-                  green: 10
-                  red: 90
-              - type: gauge
-                entity: sensor.pc_nuc_hdd_usage_d
-                unit_of_measurement: '%'
-                title: HDD D Usage
-                min: 0
-                max: 100
-                severity:
-                  yellow: 45
-                  green: 10
-                  red: 90
+      - type: custom:decluttering-card
+        template: monitoring
+        variables:
+          - title: 'Syno monitoring'
+          - graph1_entity: 'pc_nuc_cpu_usage'
+          - graph2_entity: 'unavailable'
+          - bar1_entity: 'pc_nuc_hdd_usage_c'
+          - bar1_color: '#00ba6a'
+          - bar2_entity: 'pc_nuc_hdd_usage_d'
+          - bar2_color: '#00ba6a'
+          - bar3_entity: 'pc_nuc_ram_usage'
+          - other_entities:
+            - binary_sensor.pc_nuc_connected

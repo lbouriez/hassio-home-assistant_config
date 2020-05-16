@@ -1,51 +1,11 @@
-type: custom:vertical-stack-in-card
-cards:
-  - type: entities
-    show_header_toggle: false
-    title: VM monitoring
-    entities:
-      - sensor.last_boot
-  - type: horizontal-stack
-    cards:
-      - type: gauge
-        entity: sensor.processor_use
-        name: CPU
-        unit_of_measurement: '%'
-        min: 0
-        max: 100
-        severity:
-          yellow: 45
-          green: 10
-          red: 85
-      - type: gauge
-        entity: sensor.disk_use_percent
-        name: Disk
-        unit_of_measurement: '%'
-        min: 0
-        max: 100
-        severity:
-          yellow: 45
-          green: 90
-          red: 10
-  - type: horizontal-stack
-    cards:
-      - type: gauge
-        entity: sensor.memory_free
-        name: Memory
-        unit_of_measurement: '%'
-        min: 0
-        max: 2000
-        severity:
-          yellow: 1200
-          green: 250
-          red: 1800
-      - type: gauge
-        entity: sensor.memory_use_percent
-        name: Memory
-        unit_of_measurement: '%'
-        min: 0
-        max: 100
-        severity:
-          yellow: 45
-          green: 90
-          red: 10
+type: custom:decluttering-card
+template: monitoring
+variables:
+  - title: 'VM monitoring'
+  - graph1_entity: 'processor_use'
+  - graph2_entity: 'unavailable'
+  - bar1_entity: 'disk_use_percent'
+  - bar1_color: '#00ba6a'
+  - bar2_entity: 'memory_use_percent'
+  - other_entities:
+    - sensor.last_boot

@@ -20,6 +20,8 @@ cards:
       - !include ../includes/low_battery_devices.yaml
       # Things with issues
       - !include ../includes/broken_entities.yaml
+      # Speed test
+      - !include ../includes/admin/admin_monitoring_speed_test.yaml
       # UPS
       - !include ../includes/admin/admin_monitoring_ups.yaml
       # Pi-hole
@@ -28,8 +30,8 @@ cards:
   # Col 2
   - type: vertical-stack
     cards:
-      # Speed test
-      - !include ../includes/admin/admin_monitoring_speed_test.yaml
+      # RPI
+      - !include ../includes/admin/admin_monitoring_rpi_living_room.yaml
       # NUC
       - !include ../includes/admin/admin_monitoring_nuc.yaml
       - !include ../includes/bottom-card.yaml
