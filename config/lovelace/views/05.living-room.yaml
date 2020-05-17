@@ -55,7 +55,7 @@ cards:
           - entity: 'slave_livingroom_living_room_bamboo'
           - title: 'Bamboo'
           - image: 'mi_flora_bamboo.jpg'
-          - min_moisture: 15
+          - min_moisture: 20
           - max_moisture: 60
           - min_conductivity: 300
           - min_temperature: 12

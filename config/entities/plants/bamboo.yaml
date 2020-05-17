@@ -1,0 +1,12 @@
+bamboo:
+  sensors:
+    moisture: sensor.slave_livingroom_living_room_bamboo_moisture
+    battery: sensor.slave_livingroom_living_room_bamboo_battery
+    temperature: sensor.slave_livingroom_living_room_bamboo_temperature
+    conductivity: sensor.slave_livingroom_living_room_bamboo_conductivity
+    brightness: sensor.slave_livingroom_living_room_bamboo_intensity
+  min_moisture: 20
+  max_moisture: 60
+  min_battery: 17
+  min_conductivity: 500
+  min_temperature: 15

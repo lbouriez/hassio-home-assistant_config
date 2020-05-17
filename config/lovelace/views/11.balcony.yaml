@@ -16,6 +16,17 @@ cards:
         entity: light.balcony_group
         title: Lights
         entities: !include ../includes/entities/lights_balcony.yaml
+      # Pot mi flora
+      - type: custom:decluttering-card
+        template: mi_flora
+        variables:
+          - entity: 'slave_livingroom_basilic'
+          - title: 'Basilic'
+          - image: 'mi_flora_basilic.jpg'
+          - min_moisture: 20
+          - max_moisture: 60
+          - min_conductivity: 300
+          - min_temperature: 12
       # Camera
       - type: horizontal-stack
         cards:
