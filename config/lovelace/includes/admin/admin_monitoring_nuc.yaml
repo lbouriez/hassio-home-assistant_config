@@ -39,7 +39,7 @@ cards:
       - type: custom:decluttering-card
         template: monitoring
         variables:
-          - title: 'Syno monitoring'
+          - title: 'Nuc monitoring'
           - graph1_entity: 'pc_nuc_cpu_usage'
           - graph2_entity: 'unavailable'
           - bar1_entity: 'pc_nuc_hdd_usage_c'
