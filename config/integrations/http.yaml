@@ -5,7 +5,6 @@ http:
     - https://cast.home-assistant.io
   ip_ban_enabled: true
   login_attempts_threshold: 3
-  base_url: !secret integration_http_base_url
   trusted_proxies:
     # - 127.0.0.1
     - 172.30.33.0/24

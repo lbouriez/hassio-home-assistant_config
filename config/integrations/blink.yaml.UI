@@ -1,0 +1,13 @@
+# Enabled in the UI
+# blink:
+#   username: !secret integration_blink_username
+#   password: !secret integration_blink_password
+#   scan_interval: 300
+#   binary_sensors:
+#     monitored_conditions:
+#       - motion_enabled
+#       - motion_detected
+#   sensors:
+#     monitored_conditions:
+#       - battery
+#       - temperature

@@ -7,6 +7,8 @@ homeassistant:
   latitude: !secret entitie_zone_home_latitude
   longitude: !secret entitie_zone_home_longitude
   elevation: !secret entitie_zone_home_elevation
+  external_url: !secret integration_homeassistant_external_url
+  internal_url: !secret integration_homeassistant_internal_url
   unit_system: metric
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: America/Toronto

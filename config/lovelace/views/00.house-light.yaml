@@ -10,8 +10,6 @@ cards:
   # Col 1
   - type: vertical-stack
     cards: 
-      # Temporary Coronavirus card
-      - !include ../includes/coronavirus.yaml
       - type: custom:banner-card
         background: "#EDE7B0"
         heading: "🛋️ Living room"
