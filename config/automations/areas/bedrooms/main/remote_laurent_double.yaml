@@ -7,26 +7,5 @@ trigger:
     entity_id: binary_sensor.switch_158d000253d163
     click_type: double
 action:
-  - service: alarm_control_panel.alarm_arm_home
-    entity_id: alarm_control_panel.ring_alarm
-  - service: light.turn_off
-    data:
-      entity_id: 'light.house_group'
-  # For fun
-  - condition: and
-    conditions:
-      - condition: time
-        weekday:
-          - tue
-          - thu
-          - sat
-      - condition: time
-        after: '22:30:00'
-        before: '23:50:00'
-  - service: notify.alexa
-    data:
-      target:
-        - media_player.bedroom_dot
-      data:
-        type: announce
-      message: "Have a good night Giulia, Laurent and Papouille"
+  - service: switch.toggle
+    entity_id: switch.alarm_toggle_home

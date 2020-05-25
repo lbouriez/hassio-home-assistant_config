@@ -7,5 +7,4 @@ trigger:
     entity_id: binary_sensor.switch_158d000253d163
     click_type: long_click_press
 action:
-  - service: switch.toggle # Toggle ac during summer
-    entity_id: switch.alarm_toggle_home
+  - event: event_toggle_ac

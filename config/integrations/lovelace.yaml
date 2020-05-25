@@ -51,3 +51,5 @@ lovelace:
       type: module
     - url : /hacsfiles/bar-card/bar-card.js
       type: module
+    - url: /hacsfiles/favicon-counter/favicon-counter.js
+      type: module

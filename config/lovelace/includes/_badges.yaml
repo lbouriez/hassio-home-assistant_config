@@ -11,7 +11,7 @@
       name: 'Motions'
   state_filter:
     - "on"
-- entity: sensor.group_temperature_all
+- entity: weather.dark_sky
   name: 'Temperature'
 # Alarms
 - entity: alarm_control_panel.ring_alarm
