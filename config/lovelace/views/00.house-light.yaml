@@ -41,6 +41,7 @@ cards:
                   service: vacuum.return_to_base
                   entity_id: vacuum.living_room
           - entity: sensor.group_humidity_living_room
+          - entity: climate.living_room
           - entity: media_player.sonos_living_room
             name: Sonos
       - type: custom:banner-card
