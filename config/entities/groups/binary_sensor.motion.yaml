@@ -35,21 +35,21 @@ motion_guests_bedroom:
   icon: mdi:motion-sensor
   entities:
     - binary_sensor.motion_detector_48836 # Ring Bedroom guests
-    - binary_sensor.bedroom_guests_sensor_motion
+    - binary_sensor.presence_27 # Hue
 
 motion_entrance:
   name: Entrance
   icon: mdi:motion-sensor
   entities:
     - binary_sensor.blink_entrance_motion_detected # Blink entrance
-    - binary_sensor.entrance_sensor_motion
+    - binary_sensor.presence_22 # Hue
 
 motion_bathroom:
   name: Bathroom
   icon: mdi:motion-sensor
   entities:
-    - binary_sensor.bathroom_motion_deconz
-    - binary_sensor.shower_motion_deconz
+    - binary_sensor.bathroom_motion_deconz # Hue
+    - binary_sensor.shower_motion_deconz # Hue
 
 motion_balcony:
   name: Balcony

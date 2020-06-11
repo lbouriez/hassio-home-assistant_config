@@ -10,7 +10,6 @@ switches:
           entity_id: script.camera_blink_trigger_camera
       - service: script.camera_blink_trigger_camera
         data:
-          name: "Balcony"
           entity_id: "camera.blink_balcony"
     turn_off:
   camera_trigger_picture_entrance:
@@ -23,7 +22,6 @@ switches:
           entity_id: script.camera_blink_trigger_camera
       - service: script.camera_blink_trigger_camera
         data:
-          name: "Entrance"
           entity_id: "camera.blink_entrance"
     turn_off:
   camera_trigger_picture_living_room:
@@ -36,6 +34,5 @@ switches:
           entity_id: script.camera_blink_trigger_camera
       - service: script.camera_blink_trigger_camera
         data:
-          name: "Living room"
           entity_id: "camera.blink_living_room"
     turn_off:

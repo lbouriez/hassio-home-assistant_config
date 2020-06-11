@@ -2,16 +2,13 @@ camera_blink_trigger_camera:
   alias: Script - Blink take picture
   description: Take a picture of the moment on the camera to update the view in the blink app
   fields:
-    name:
-      description: 'Camera name'
-      example: 'Entrance'
     entity_id:
       description: 'Entity id'
       example: 'camera.blink_living_room'
   sequence:
     - service: blink.trigger_camera
       data_template:
-        name: "{{ name }}"
+        entity_id: "{{ entity_id }}"
     - delay: 00:00:06
     - service: blink.blink_update
     # - service: camera.snapshot
