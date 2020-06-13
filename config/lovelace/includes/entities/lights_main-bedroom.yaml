@@ -3,5 +3,6 @@
 - light.bedroom_2
 - light.bedroom_1
 - light.bedroom_led
+- light.corridor_bedrooms
 - entity: switch.sonoff_100048cb54
   type: custom:toggle-lock-entity-row

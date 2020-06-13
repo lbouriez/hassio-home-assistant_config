@@ -1,0 +1,31 @@
+alias: Bedroom - Remote all on hold
+initial_state: True
+trigger:
+  - platform: event
+    event_type: app_daemon_remote
+    event_data:
+      entity_id: bedroom_laurent
+      state: "on"
+      detail: "lr"
+  - platform: event
+    event_type: app_daemon_remote
+    event_data:
+      entity_id: bedroom_laurent
+      state: "on"
+      detail: "hold"
+  - platform: event
+    event_type: app_daemon_remote
+    event_data:
+      entity_id: bedroom_wall
+      state: "on"
+      detail: "lr"
+  - platform: event
+    event_type: app_daemon_remote
+    event_data:
+      entity_id: bedroom_wall
+      state: "on"
+      detail: "hold"
+action:
+  - service: scene.turn_on
+    data_template:
+      entity_id: scene.bedroom_romance

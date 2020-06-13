@@ -1,0 +1,12 @@
+alias: Bedroom - Remote all off
+initial_state: True
+trigger:
+  - platform: event
+    event_type: app_daemon_remote
+    event_data:
+      entity_id: bedroom_laurent
+      state: "off"
+action:
+  - service: light.turn_off
+    data_template:
+      entity_id: light.house_group

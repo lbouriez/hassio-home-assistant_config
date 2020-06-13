@@ -1,0 +1,6 @@
+platform: group
+name: Bedroom group color
+entities:
+  - light.bedroom_1
+  - light.bedroom_2
+  - light.bedroom_led

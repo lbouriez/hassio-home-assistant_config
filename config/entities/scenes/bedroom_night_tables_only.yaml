@@ -1,0 +1,11 @@
+- name: Bedroom - Night tables only
+  entities:
+    light.giulia_night_table:
+      state: on
+      brightness: 102
+    light.laurent_night_table:
+      state: on
+      brightness: 102
+    light.bedroom_2: off
+    light.bedroom_1: off
+    light.bedroom_led: off

@@ -1,8 +1,6 @@
 platform: group
 name: Bedroom group
 entities:
-  - light.giulia_night_table
   - light.laurent_night_table
-  - light.bedroom_2
-  - light.bedroom_1
-  - light.bedroom_led
+  - light.giulia_night_table
+  - light.bedroom_group_color

@@ -10,7 +10,7 @@
       state: on
       rgb_color: [255,230,152]
       brightness: 125
-    light.living_color:
+    light.livingcolors_1:
       state: on
       rgb_color: [255,230,152]
       brightness: 125

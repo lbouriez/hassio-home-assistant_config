@@ -1,0 +1,5 @@
+bedroom_wall_remote:
+  module: deconz_hue_dimmer
+  class: DeconzHueDimmer
+  event: deconz_event
+  id: bedroom_wall

@@ -1,5 +1,0 @@
-living_room_remote:
-  module: deconz_hue_dimmer
-  class: DeconzHueDimmer
-  event: deconz_event
-  id: living_room

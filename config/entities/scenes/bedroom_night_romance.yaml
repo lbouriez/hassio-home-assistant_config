@@ -1,0 +1,13 @@
+- name: Bedroom - Romance
+  entities:
+    light.giulia_night_table: off
+    light.laurent_night_table: off
+    light.bedroom_2:
+      state: on
+      rgb_color: [255, 82, 189]
+      brightness: 74
+    light.bedroom_1: off
+    light.bedroom_led:
+      state: on
+      rgb_color: [255, 82, 189]
+      brightness: 122
