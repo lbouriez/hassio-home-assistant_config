@@ -76,8 +76,8 @@ cards:
         entities:
           - sensor.group_temperature_living_room
           - sensor.group_humidity_living_room
-          - sensor.pressure_158d000245a7d5
-          - binary_sensor.smoke_sensor_158d000257927b
+          - sensor.pressure_35
+          - group.smoke_living_room
           - type: divider
           - group.door_balcony
           - group.motion_living_room

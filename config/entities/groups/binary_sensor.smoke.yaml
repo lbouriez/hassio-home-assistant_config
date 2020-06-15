@@ -2,4 +2,10 @@ smoke_all:
   name: Smoke sensors
   icon: mdi:smoke-detector
   entities:
-    - binary_sensor.smoke_sensor_158d000257927b
+    - group.smoke_living_room
+
+smoke_living_room:
+  name: Living room
+  icon: mdi:smoke-detector
+  entities:
+    - binary_sensor.fire_36

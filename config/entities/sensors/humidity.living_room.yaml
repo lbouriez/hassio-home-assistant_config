@@ -5,4 +5,4 @@ sensors:
     unit_of_measurement: '%'
     icon_template: mdi:water-percent
     value_template: >-
-      {{ ((states('sensor.slave_livingroom_living_room_mi_temperature_humidity')|float + states('sensor.humidity_158d000245a7d5')|float) / 2) | round(2) }}
+      {{ ((states('sensor.slave_livingroom_living_room_mi_temperature_humidity')|float + states('sensor.humidity_31')|float) / 2) | round(2) }}
