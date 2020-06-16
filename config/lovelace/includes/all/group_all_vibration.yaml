@@ -1,0 +1,11 @@
+type: custom:auto-entities
+show_empty: false
+card:
+  type: glance
+  title: 'Vibration sensors'
+  show_header_toggle: false
+filter:
+  include:
+    - entity_id: "group.vibration_*"
+  exclude:
+    - entity_id: group.vibration_all

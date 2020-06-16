@@ -1,0 +1,11 @@
+vibration_all:
+  name: All vibrations
+  icon: mdi:vibrate
+  entities:
+    - group.vibration_living_room
+
+vibration_living_room:
+  name: Living room
+  icon: mdi:vibrate
+  entities:
+    - binary_sensor.vibration_37

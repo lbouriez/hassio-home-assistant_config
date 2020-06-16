@@ -7,8 +7,14 @@
     - "on"
 - type: entity-filter
   entities:
-    - entity: group.motion_inside
+    - entity: group.motion_all
       name: 'Motions'
+  state_filter:
+    - "on"
+- type: entity-filter
+  entities:
+    - entity: group.vibration_all
+      name: 'Vibrations'
   state_filter:
     - "on"
 - entity: weather.dark_sky

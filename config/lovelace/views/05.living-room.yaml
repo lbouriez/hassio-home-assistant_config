@@ -81,6 +81,7 @@ cards:
           - type: divider
           - group.door_balcony
           - group.motion_living_room
+          - group.vibration_living_room
       # Camera
       - type: horizontal-stack
         cards:

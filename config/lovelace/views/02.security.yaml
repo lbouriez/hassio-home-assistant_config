@@ -37,6 +37,7 @@ cards:
   - type: vertical-stack
     cards:
       - !include ../includes/all/group_all_water_smoke.yaml
+      - !include ../includes/all/group_all_vibration.yaml
       # Automations
       - type: custom:decluttering-card
         template: automation

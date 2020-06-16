@@ -1,0 +1,22 @@
+alias: Security - Vibration detected
+initial_state: True
+trigger:
+  - platform: state
+    entity_id: group.vibration_all
+    to: 'on'
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: 'group.family'
+      state: 'not_home'
+action:
+  - event: event_camera_blink_trigger_picture
+  - service: script.notify
+    data:
+      notify_id: laurent
+      priority: 1
+      title: "Alert"
+      message: >
+        {% set vibration = states | selectattr('entity_id', 'in', state_attr('group.vibration_all','entity_id')) | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+        Vibration detected in: {{ motion }}
