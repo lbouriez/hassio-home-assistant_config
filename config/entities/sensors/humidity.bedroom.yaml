@@ -1,0 +1,8 @@
+platform: template
+sensors:
+  group_humidity_bedroom:
+    friendly_name: "Bedroomm"
+    unit_of_measurement: '%'
+    icon_template: mdi:water-percent
+    value_template: >-
+      {{ ((states('sensor.humidity_39')|float) / 1) | round(2) }}

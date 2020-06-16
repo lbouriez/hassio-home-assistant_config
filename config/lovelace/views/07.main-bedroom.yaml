@@ -57,7 +57,7 @@ cards:
           - binary_sensor.openclose_15
           - sensor.group_light_level_bedroom
           - sensor.group_temperature_bedroom
-          - sensor.humidity_158d0002461865
+          - sensor.group_humidity_bedroom
           - type: divider
           - group.motion_bedroom
       # Thermostat

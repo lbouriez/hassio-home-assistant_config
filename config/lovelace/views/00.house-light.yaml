@@ -108,7 +108,7 @@ cards:
           - sensor.group_temperature_bedroom
           - entity: cover.bedroom_1
           - sensor.group_light_level_bedroom
-          - sensor.humidity_158d0002461865
+          - sensor.group_humidity_bedroom
           - entity: media_player.sonos_bedroom
             name: Sonos
       - type: custom:banner-card
