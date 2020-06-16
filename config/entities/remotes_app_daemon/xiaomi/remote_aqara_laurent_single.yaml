@@ -1,11 +1,11 @@
 alias: Bedroom - Remote laurent single click
 initial_state: True
 trigger:
-  platform: event
-  event_type: xiaomi_aqara.click
-  event_data:
-    entity_id: binary_sensor.switch_158d000253d163
-    click_type: single
+  - platform: event
+    event_type: app_daemon_remote
+    event_data:
+      entity_id: bedroom_laurent_switch
+      state: "single_click"
 action:
   - service: light.turn_off
     data:
