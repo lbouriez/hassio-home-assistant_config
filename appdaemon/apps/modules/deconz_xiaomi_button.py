@@ -15,6 +15,9 @@ import datetime
 #
 # Release Notes
 #
+# Version 2.0.3
+#   added the events so we can handle everything with automation
+#
 # Version 2.0.2
 #   use else when toggling
 #
@@ -33,6 +36,7 @@ class DeconzXiaomiButton(hass.Hass):
         self.listen_event_handle_list = []
         self.timer_handle_list = []
 
+        self.event_name = "app_daemon_remote"
         self.actor_single = self.args.get("actor_single")
         self.actor_double = self.args.get("actor_double")
         self.actor_hold = self.args.get("actor_hold")
@@ -57,6 +61,9 @@ class DeconzXiaomiButton(hass.Hass):
                 else:
                     self.log("Turning {} on".format(self.actor_single))
                     self.turn_on(self.actor_single)
+            elif data["event"] == 1002 and self.actor_single is None:
+                self.log(data["id"] + ": Single click")
+                self.fire_event(self.event_name, entity_id = self.id, state="single_click")
 
             if data["event"] == 1004 and self.actor_double is not None:
                 self.log("Double Button Click: {}".format(data["id"]))
@@ -68,6 +75,9 @@ class DeconzXiaomiButton(hass.Hass):
                 else:
                     self.log("Turning {} on".format(self.actor_double))
                     self.turn_on(self.actor_double)
+            elif data["event"] == 1004 and self.actor_double is None:
+                self.log(data["id"] + ": Double click")
+                self.fire_event(self.event_name, entity_id = self.id, state="double_click")
 
             if data["event"] == 1001 and self.actor_hold is not None:
                 self.log("Long Button Click: {}".format(data["id"]))
@@ -79,6 +89,9 @@ class DeconzXiaomiButton(hass.Hass):
                     entity_id=self.actor_hold,
                 )
                 self.timer_handle_list.append(self.dimmer_timer_handle)
+            elif data["event"] == 1001 and self.actor_hold is None:
+                self.log(data["id"] + ": Long click")
+                self.fire_event(self.event_name, entity_id = self.id, state="long_click")
 
             if data["event"] == 1003 and self.actor_hold is not None:
                 self.log("Button Release: {}".format(data["id"]))

@@ -1,0 +1,19 @@
+alias: Living room - Remote on hold
+initial_state: True
+trigger:
+  - platform: event
+    event_type: app_daemon_remote
+    event_data:
+      entity_id: living_room
+      state: "on"
+      detail: "lr"
+  - platform: event
+    event_type: app_daemon_remote
+    event_data:
+      entity_id: living_room
+      state: "on"
+      detail: "hold"
+action:
+  - service: scene.turn_on
+    data_template:
+      entity_id: scene.living_room_ambiance_tv

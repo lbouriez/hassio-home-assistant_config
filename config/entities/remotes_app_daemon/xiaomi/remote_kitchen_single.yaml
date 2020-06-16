@@ -1,0 +1,13 @@
+alias: Kitchen - Remote single click
+initial_state: True
+trigger:
+  - platform: event
+    event_type: app_daemon_remote
+    event_data:
+      entity_id: kitchen_switch
+      state: "single_click"
+action:
+  - service: light.turn_on
+    entity_id: 'light.kitchen_group'
+    data:
+      brightness_pct: 100

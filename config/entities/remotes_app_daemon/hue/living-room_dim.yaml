@@ -1,0 +1,25 @@
+alias: Living room - Remote dim
+initial_state: True
+trigger:
+  - platform: event
+    event_type: app_daemon_remote
+    event_data:
+      entity_id: living_room
+      state: "dimup"
+  - platform: event
+    event_type: app_daemon_remote
+    event_data:
+      entity_id: living_room
+      state: "dimdown"
+action:
+  - service: light.turn_on
+    data_template:
+      entity_id: light.living_room_group
+      brightness: >-
+        {% if trigger.event.data.state == "dimup" %}
+          {% set bri = state_attr('light.living_room_group', 'brightness') | int %}
+          {{ [bri+15, 249] | min }}
+        {% elif trigger.event.data.state == "dimdown" %}
+          {% set bri = state_attr('light.living_room_group', 'brightness') | int %}
+          {{ [bri-15, 0] | max }}
+        {% endif%}
