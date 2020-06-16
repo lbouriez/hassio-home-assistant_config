@@ -9,12 +9,12 @@ door_entrance:
   name: Front door
   icon: mdi:door
   entities:
-    - binary_sensor.door_window_sensor_158d00022d2c98 # Xiaomi front door
+    - binary_sensor.openclose_43 # Xiaomi front door
     - binary_sensor.front_door # Ring front door
 
 door_balcony:
   name: Balcony
   icon: mdi:door
   entities:
-    - binary_sensor.door_window_sensor_158d0002131f3a # Xiaomi balcony
+    - binary_sensor.openclose_42 # Xiaomi balcony
     - binary_sensor.balcony # Ring balcony

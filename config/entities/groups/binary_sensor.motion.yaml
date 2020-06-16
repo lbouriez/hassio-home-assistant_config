@@ -28,7 +28,7 @@ motion_bedroom:
   name: Bedroom
   icon: mdi:motion-sensor
   entities:
-    - binary_sensor.motion_sensor_158d0004140234 # Aqara Bedroom
+    - binary_sensor.presence_45 # Aqara Bedroom
 
 motion_guests_bedroom:
   name: Guests bedroom

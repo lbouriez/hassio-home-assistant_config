@@ -2,5 +2,17 @@ water_all:
   name: Water sensors
   icon: mdi:water
   entities:
-    - binary_sensor.water_leak_sensor_158d000271bf19 # Washing machine
+    - group.water_entrance
+    - group.water_bathroom
+
+water_entrance:
+  name: Entrance
+  icon: mdi:water
+  entities:
+    - binary_sensor.water_44 # Washing machine
+
+water_bathroom:
+  name: Bathroom
+  icon: mdi:water
+  entities:
     - binary_sensor.water_16 # Bathroom

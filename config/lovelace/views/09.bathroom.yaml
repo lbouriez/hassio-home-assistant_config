@@ -41,7 +41,7 @@ cards:
         entities:
           - sensor.group_light_level_bathroom
           - sensor.group_temperature_bathroom
-          - binary_sensor.water_16
+          - group.water_bathroom
           - type: divider
           - group.motion_bathroom
       # Automations
