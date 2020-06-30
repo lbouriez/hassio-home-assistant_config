@@ -1,0 +1,7 @@
+plants:
+  name: All plants
+  entities:
+    - plant.bamboo
+    - plant.basilic
+    - plant.pachira
+    - plant.caisse_basilic

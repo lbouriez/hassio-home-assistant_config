@@ -1,0 +1,12 @@
+caisse_basilic:
+  sensors:
+    moisture: sensor.slave_livingroom_basilic_moisture
+    battery: sensor.slave_livingroom_basilic_battery
+    temperature: sensor.slave_livingroom_basilic_temperature
+    conductivity: sensor.slave_livingroom_basilic_conductivity
+    brightness: sensor.slave_livingroom_basilic_intensity
+  min_moisture: 30
+  max_moisture: 70
+  min_battery: 17
+  min_conductivity: 500
+  min_temperature: 15
