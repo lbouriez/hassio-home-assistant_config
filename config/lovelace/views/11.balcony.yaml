@@ -35,7 +35,7 @@ cards:
           - title: 'Caisse basilic'
           - image: 'mi_flora_basilic.jpg'
           - min_moisture: 20
-          - max_moisture: 60
+          - max_moisture: 70
           - min_conductivity: 300
           - min_temperature: 12
       # Camera
