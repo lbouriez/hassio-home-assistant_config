@@ -27,6 +27,17 @@ cards:
           - max_moisture: 60
           - min_conductivity: 300
           - min_temperature: 12
+      # Caisse basilic
+      - type: custom:decluttering-card
+        template: mi_flora
+        variables:
+          - entity: 'slave_livingroom_caisse_basilic'
+          - title: 'Caisse basilic'
+          - image: 'mi_flora_basilic.jpg'
+          - min_moisture: 20
+          - max_moisture: 60
+          - min_conductivity: 300
+          - min_temperature: 12
       # Camera
       - type: horizontal-stack
         cards:

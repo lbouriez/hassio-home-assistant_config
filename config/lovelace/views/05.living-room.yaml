@@ -49,12 +49,24 @@ cards:
   # Col 2
   - type: vertical-stack
     cards:
+      # Bamboo
       - type: custom:decluttering-card
         template: mi_flora
         variables:
           - entity: 'slave_livingroom_living_room_bamboo'
           - title: 'Bamboo'
           - image: 'mi_flora_bamboo.jpg'
+          - min_moisture: 20
+          - max_moisture: 60
+          - min_conductivity: 300
+          - min_temperature: 12
+      # Pachira
+      - type: custom:decluttering-card
+        template: mi_flora
+        variables:
+          - entity: 'slave_livingroom_pachira'
+          - title: 'Pachira'
+          - image: 'mi_flora_pachira.jpg'
           - min_moisture: 20
           - max_moisture: 60
           - min_conductivity: 300
