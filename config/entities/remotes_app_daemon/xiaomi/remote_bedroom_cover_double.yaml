@@ -1,0 +1,18 @@
+alias: Bedroom - Remote cover double click
+initial_state: True
+trigger:
+  - platform: event
+    event_type: app_daemon_remote
+    event_data:
+      entity_id: bedroom_cover
+      state: "double_click"
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: 'group.family'
+      state: 'home'
+action:
+  - service: cover.close_cover
+    data:
+      entity_id: 'cover.bedroom_1'

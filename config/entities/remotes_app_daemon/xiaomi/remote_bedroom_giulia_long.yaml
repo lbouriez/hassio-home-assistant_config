@@ -1,0 +1,10 @@
+alias: Bedroom - Remote giulia long click
+initial_state: True
+trigger:
+  - platform: event
+    event_type: app_daemon_remote
+    event_data:
+      entity_id: bedroom_giulia
+      state: "long_click"
+action:
+  - event: event_toggle_ac

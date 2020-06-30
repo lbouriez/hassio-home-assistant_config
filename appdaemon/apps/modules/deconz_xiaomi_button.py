@@ -49,7 +49,6 @@ class DeconzXiaomiButton(hass.Hass):
         )
 
     def event_detected(self, event_name, data, kwargs):
-        # self.log(data["id"])
         if data["id"] == self.id:
             if data["event"] == 1002 and self.actor_single is not None:
                 self.log("ButtonClicked: {}".format(data["id"]))

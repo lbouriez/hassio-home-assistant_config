@@ -1,0 +1,13 @@
+alias: Bedroom - Remote giulia single click
+initial_state: True
+trigger:
+  - platform: event
+    event_type: app_daemon_remote
+    event_data:
+      entity_id: bedroom_giulia
+      state: "single_click"
+action:
+  - service: light.turn_on
+    entity_id: 'light.bedroom_group'
+    data:
+      brightness_pct: 10

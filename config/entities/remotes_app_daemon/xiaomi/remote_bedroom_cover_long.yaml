@@ -1,0 +1,12 @@
+alias: Bedroom - Remote cover long click
+initial_state: True
+trigger:
+  - platform: event
+    event_type: app_daemon_remote
+    event_data:
+      entity_id: bedroom_cover
+      state: "long_click"
+action:
+  - service: cover.stop_cover
+    data:
+      entity_id: 'cover.bedroom_1'

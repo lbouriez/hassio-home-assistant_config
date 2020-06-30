@@ -1,0 +1,4 @@
+bedroom_giulia_xiaomi_button_remote:
+  module: deconz_xiaomi_button
+  class: DeconzXiaomiButton
+  id: bedroom_giulia
