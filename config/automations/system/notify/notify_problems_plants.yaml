@@ -1,0 +1,24 @@
+alias: Information - Plants
+initial_state: True
+trigger:
+  - platform: state
+    entity_id: group.plants
+    to: problem
+  - platform: time
+    at: '18:00:00'
+action:
+  - service: script.notify
+    data:
+      notify_id: laurent
+      priority: 0
+      title: "Plants"
+      message: >
+        {%- set problems = expand('group.plants') | selectattr('state','eq','problem') | list %}
+        {%- if problems | count > 1 %}
+          There are {{ problems | count }} problems:
+        {%- else %}
+          There is 1 problem:
+        {%- endif %}
+        {%- for problem in problems %}
+          {{ problem.name }} - {{ problem.attributes.problem }}
+        {%- endfor %}
