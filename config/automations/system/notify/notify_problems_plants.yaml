@@ -6,10 +6,14 @@ trigger:
     to: problem
   - platform: time
     at: '18:00:00'
+condition:
+  - condition: state
+    entity_id: 'group.plants'
+    state: 'problem'
 action:
   - service: script.notify
     data:
-      notify_id: laurent
+      notify_id: everyone
       priority: 0
       title: "Plants"
       message: >
