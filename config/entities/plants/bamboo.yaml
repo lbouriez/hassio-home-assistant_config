@@ -8,5 +8,5 @@ bamboo:
   min_moisture: 20
   max_moisture: 60
   min_battery: 17
-  min_conductivity: 400
+  min_conductivity: 100
   min_temperature: 15

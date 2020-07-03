@@ -8,5 +8,5 @@ caisse_basilic:
   min_moisture: 30
   max_moisture: 70
   min_battery: 17
-  min_conductivity: 300
+  min_conductivity: 350
   min_temperature: 15

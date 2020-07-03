@@ -1,0 +1,10 @@
+fuchsia:
+  sensors:
+    moisture: sensor.slave_livingroom_fuchsia_moisture
+    battery: sensor.slave_livingroom_fuchsia_battery
+    conductivity: sensor.slave_livingroom_fuchsia_conductivity
+  min_moisture: 20
+  max_moisture: 60
+  min_battery: 17
+  min_conductivity: 350
+  min_temperature: 15
