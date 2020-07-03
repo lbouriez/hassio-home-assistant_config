@@ -20,9 +20,9 @@ cards:
       - type: custom:decluttering-card
         template: mi_flora
         variables:
-          - entity: 'slave_livingroom_basilic'
-          - title: 'Basilic'
-          - image: 'mi_flora_basilic.jpg'
+          - entity: 'slave_livingroom_fuchsia'
+          - title: 'Fuchsia'
+          - image: 'mi_flora_fuchsia.jpg'
           - min_moisture: 20
           - max_moisture: 60
           - min_conductivity: 300
