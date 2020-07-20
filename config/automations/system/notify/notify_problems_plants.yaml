@@ -5,7 +5,7 @@ trigger:
     entity_id: group.plants
     to: problem
   - platform: time
-    at: '18:00:00'
+    at: "18:02:00"
 condition:
   - condition: state
     entity_id: 'group.plants'
