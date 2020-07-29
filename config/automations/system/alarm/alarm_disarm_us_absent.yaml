@@ -1,0 +1,18 @@
+alias: Alarm - Actions when alarm disabled
+initial_state: True
+trigger:
+  - platform: state
+    entity_id: alarm_control_panel.ring_alarm
+    to: 'disarmed'
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: 'alarm_control_panel.ring_alarm'
+      state: 'disarmed'
+    - condition: state
+      entity_id: 'group.family'
+      state: 'home'
+action:
+  - service: switch.turn_off
+    entity_id: switch.alarm_toggle_blink

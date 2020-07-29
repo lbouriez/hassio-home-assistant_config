@@ -12,8 +12,8 @@ switches:
       - service: switch.turn_on
         entity_id: switch.camera_toggle_motion
     turn_off:
-      - service: switch.turn_off
-        entity_id: switch.alarm_toggle_blink
+      # - service: switch.turn_off
+      #   entity_id: switch.alarm_toggle_blink
       - service: alarm_control_panel.alarm_disarm
         entity_id: alarm_control_panel.alexa_guard_851bb
       - service: switch.turn_off
