@@ -4,7 +4,7 @@ trigger:
     entity_id: alarm_control_panel.ring_alarm
     to: 'armed_away'
   - platform: time
-    at: '15:00:00'
+    at: '17:00:00'
 condition:
   condition: and
   conditions:

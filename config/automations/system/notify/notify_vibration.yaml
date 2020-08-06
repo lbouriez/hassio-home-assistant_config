@@ -5,11 +5,14 @@ trigger:
     entity_id: group.vibration_all
     to: 'on'
 condition:
-  condition: and
+  condition: or
   conditions:
     - condition: state
-      entity_id: 'group.family'
-      state: 'not_home'
+      entity_id: 'alarm_control_panel.ring_alarm'
+      state: 'armed_away'
+    - condition: state
+      entity_id: 'alarm_control_panel.ring_alarm'
+      state: 'armed_home'
 action:
   - event: event_camera_blink_trigger_picture
   - service: script.notify

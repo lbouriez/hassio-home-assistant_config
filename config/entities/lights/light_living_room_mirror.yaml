@@ -1,0 +1,11 @@
+platform: template
+lights:
+  mirror_living_room:
+    friendly_name: "Mirror living room"
+    value_template: "{{ states('switch.sonoff_1000dbf169_1') }}"
+    turn_on:
+      service: switch.turn_on
+      entity_id: switch.sonoff_1000dbf169_1
+    turn_off:
+      service: switch.turn_off
+      entity_id: switch.sonoff_1000dbf169_1
