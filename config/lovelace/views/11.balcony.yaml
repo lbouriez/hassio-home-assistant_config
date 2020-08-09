@@ -42,6 +42,7 @@ cards:
       - type: horizontal-stack
         cards:
           - !include ../includes/areas/balcony/camera_blink.yaml
+          - !include ../includes/areas/balcony/camera_blink_cabane.yaml
       - !include ../includes/bottom-card.yaml
   # Col 2
   - type: vertical-stack
@@ -52,6 +53,7 @@ cards:
         show_header_toggle: false
         entities:
           - sensor.group_temperature_balcony
+          - sensor.blink_cabane_papouille_temperature
           - type: divider
           - group.door_balcony
           - group.motion_balcony

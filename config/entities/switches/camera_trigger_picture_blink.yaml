@@ -36,3 +36,15 @@ switches:
         data:
           entity_id: "camera.blink_living_room"
     turn_off:
+  camera_trigger_picture_balcony_cabane:
+    friendly_name: 'Blink trigger picture'
+    icon_template: mdi:camera
+    value_template: "{{ is_state('script.camera_blink_trigger_camera', 'on') }}"
+    turn_on:
+      - service: script.turn_off
+        data:
+          entity_id: script.camera_blink_trigger_camera
+      - service: script.camera_blink_trigger_camera
+        data:
+          entity_id: "camera.blink_cabane_papouille"
+    turn_off:
