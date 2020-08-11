@@ -1,0 +1,7 @@
+type: entities
+entities:
+  - entity: sensor.openskyflights
+    type: 'custom:multiple-entity-row'
+    name: Flights Overhead
+    icon: 'mdi:airplane'
+    secondary_info: last-changed

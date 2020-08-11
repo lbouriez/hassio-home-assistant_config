@@ -1,35 +1,34 @@
 default:
-  - entity: 'living_room_bamboo'
-  - title: 'Living room Bamboo'
+  - entity: 'plant.bansai'
+  - title: 'Living room bonsai Japanese'
   - image: 'mi_flora.jpg'
-  - min_moisture: 15
-  - max_moisture: 60
-  - min_conductivity: 350
-  - min_temperature: 12
 
 card:
   type: conditional
   conditions:
-    - entity: 'sensor.[[entity]]_moisture'
+    - entity: 'plant.[[entity]]'
       state_not: "unavailable"
   card:
-    type: custom:miflora-card
-    title: '[[title]]'
-    image: img/[[image]]
-    min_moisture: '[[min_moisture]]'
-    max_moisture: '[[max_moisture]]'
-    min_conductivity: '[[min_conductivity]]'
-    min_temperature: '[[min_temperature]]'
-    entities:
-      - entity: sensor.[[entity]]_moisture
-        type: moisture
-      - entity: sensor.[[entity]]_light_intensity
-        type: intensity
-        name: Light
-      - entity: sensor.[[entity]]_temperature
-        type: temperature
-      - entity: sensor.[[entity]]_conductivity
-        type: conductivity
-        name: Fertility
-      - entity: sensor.[[entity]]_battery
-        type: battery
+    type: plant-status
+    entity: 'plant.[[entity]]'
+    name: '[[title]]'
+    # type: custom:miflora-card
+    # title: '[[title]]'
+    # image: img/[[image]]
+    # min_moisture: '[[min_moisture]]'
+    # max_moisture: '[[max_moisture]]'
+    # min_conductivity: '[[min_conductivity]]'
+    # min_temperature: '[[min_temperature]]'
+    # entities:
+    #   - entity: '[[entity]].attributes.moisture'
+    #     type: moisture
+    #   - entity: '[[state_attr("plant.bonsai_ficus", "light_intensity")]]'
+    #     type: intensity
+    #     name: Light
+    #   - entity: plant.bonsai_ficus.attributes.temperature
+    #     type: temperature
+    #   - entity: '[[ plant.bonsai_ficus.attributes.conductivity ]]'
+    #     type: conductivity
+    #     name: Fertility
+    #   - entity: '[[[ state_attr("plant.bonsai_ficus", "battery") ]]]'
+    #     type: battery

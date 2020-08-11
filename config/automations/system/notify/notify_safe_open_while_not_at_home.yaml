@@ -2,7 +2,7 @@ alias: Security - Safe opened while not there
 initial_state: True
 trigger:
   - platform: state
-    entity_id: binary_sensor.openclose_15
+    entity_id: group.safe_bedroom
     to: 'on'
 condition:
   condition: or
@@ -11,7 +11,7 @@ condition:
       entity_id: 'group.family'
       state: 'not_home'
     - condition: template
-      value_template: "{{ not is_state('alarm_control_panel.ring_alarm', 'disarmed') }}"
+      value_template: "{{ not is_state('alarm_control_panel.verdun_alarm', 'disarmed') }}"
 action:
   - service: script.notify
     data:

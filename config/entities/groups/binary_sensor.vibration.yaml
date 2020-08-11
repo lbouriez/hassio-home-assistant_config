@@ -8,4 +8,4 @@ vibration_living_room:
   name: Living room
   icon: mdi:vibrate
   entities:
-    - binary_sensor.vibration_37
+    - binary_sensor.balcony_door_vibration

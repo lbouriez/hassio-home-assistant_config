@@ -23,6 +23,7 @@ cards:
       - !include ../includes/divers_notify_what_is_on.yaml
       # Lights group
       - !include ../includes/all/group_all_lights.yaml
+      # - !include ../includes/opensky.yaml
       - !include ../includes/bottom-card.yaml
   # Col 2
   - type: vertical-stack

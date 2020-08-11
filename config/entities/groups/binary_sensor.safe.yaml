@@ -1,0 +1,7 @@
+safe_bedroom:
+  name: Bedroom
+  icon:  mdi:safe
+  entities:
+    - binary_sensor.safe # Bedroom
+
+

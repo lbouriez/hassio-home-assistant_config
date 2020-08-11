@@ -1,5 +1,5 @@
 platform: ping
 name: Wan
-host: 192.168.1.38
+host: !secret global_ip_vm
 count: 2
 scan_interval: 30

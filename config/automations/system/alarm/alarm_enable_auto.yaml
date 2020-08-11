@@ -15,11 +15,11 @@ condition:
       entity_id: input_boolean.guest_mode
       state: 'off'
     - condition: template
-      value_template: "{{ (not is_state('alarm_control_panel.ring_alarm', 'armed_home')) and ((as_timestamp(now()) - as_timestamp(states.alarm_control_panel.ring_alarm.last_changed)) > 300) }}"
+      value_template: "{{ (not is_state('alarm_control_panel.verdun_alarm', 'armed_home')) and ((as_timestamp(now()) - as_timestamp(states.alarm_control_panel.verdun_alarm.last_changed)) > 300) }}"
     - condition: template
-      value_template: "{{ (not is_state('alarm_control_panel.ring_alarm', 'armed_away')) and ((as_timestamp(now()) - as_timestamp(states.alarm_control_panel.ring_alarm.last_changed)) > 300) }}"
+      value_template: "{{ (not is_state('alarm_control_panel.verdun_alarm', 'armed_away')) and ((as_timestamp(now()) - as_timestamp(states.alarm_control_panel.verdun_alarm.last_changed)) > 300) }}"
     # - condition: state
-    #   entity_id: 'alarm_control_panel.ring_alarm'
+    #   entity_id: 'alarm_control_panel.verdun_alarm'
     #   state: 'disarmed'
     #   for:
     #     minutes: 5
@@ -28,4 +28,4 @@ condition:
       state: 'not_home'
 action:
   - service: alarm_control_panel.alarm_arm_away
-    entity_id: alarm_control_panel.ring_alarm
+    entity_id: alarm_control_panel.verdun_alarm

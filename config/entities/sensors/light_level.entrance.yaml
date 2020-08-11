@@ -5,4 +5,4 @@ sensors:
     unit_of_measurement: 'lx'
     icon_template: mdi:brightness-6
     value_template: >-
-      {{ ((states('sensor.lightlevel_24')|float) / 1) | round(2) }}
+      {{ ((states('sensor.entrance_motion_2')|float) / 1) | round(2) }}

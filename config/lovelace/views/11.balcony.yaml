@@ -16,28 +16,17 @@ cards:
         entity: light.balcony_group
         title: Lights
         entities: !include ../includes/entities/lights_balcony.yaml
-      # Pot mi flora
-      - type: custom:decluttering-card
-        template: mi_flora
-        variables:
-          - entity: 'slave_livingroom_fuchsia'
-          - title: 'Fuchsia'
-          - image: 'mi_flora_fuchsia.jpg'
-          - min_moisture: 20
-          - max_moisture: 60
-          - min_conductivity: 300
-          - min_temperature: 12
-      # Caisse basilic
-      - type: custom:decluttering-card
-        template: mi_flora
-        variables:
-          - entity: 'slave_livingroom_caisse_basilic'
-          - title: 'Caisse basilic'
-          - image: 'mi_flora_basilic.jpg'
-          - min_moisture: 20
-          - max_moisture: 70
-          - min_conductivity: 300
-          - min_temperature: 12
+      # # Pot mi flora
+      # - type: custom:decluttering-card
+      #   template: mi_flora
+      #   variables:
+      #     - entity: 'slave_livingroom_fuchsia'
+      #     - title: 'Fuchsia'
+      #     - image: 'mi_flora_fuchsia.jpg'
+      #     - min_moisture: 20
+      #     - max_moisture: 60
+      #     - min_conductivity: 300
+      #     - min_temperature: 12
       # Camera
       - type: horizontal-stack
         cards:
@@ -57,6 +46,7 @@ cards:
           - type: divider
           - group.door_balcony
           - group.motion_balcony
+          - group.motion_balcony_cabane
       # Automations
       - type: custom:decluttering-card
         template: automation

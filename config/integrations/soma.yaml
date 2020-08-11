@@ -1,3 +1,0 @@
-soma:
-  host: !secret integration_soma_host
-  port: 3000

@@ -1,0 +1,12 @@
+bonsai_japanese:
+  sensors:
+    moisture: sensor.slave_livingroom_bonsai_japanese_moisture
+    battery: sensor.slave_livingroom_bonsai_japanese_battery
+    temperature: sensor.slave_livingroom_bonsai_japanese_temperature
+    conductivity: sensor.slave_livingroom_bonsai_japanese_conductivity
+    brightness: sensor.slave_livingroom_bonsai_japanese_light_intensity
+  min_moisture: 20
+  max_moisture: 60
+  min_battery: 17
+  min_conductivity: 100
+  min_temperature: 15

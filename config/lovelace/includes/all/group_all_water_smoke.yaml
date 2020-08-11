@@ -6,8 +6,10 @@ card:
   show_header_toggle: false
 filter:
   include:
-    - entity_id: "binary_sensor.water*"
-    - entity_id: "binary_sensor.smoke*"
+    # - entity_id: "binary_sensor.water*"
+    # - entity_id: "binary_sensor.smoke*"
     - entity_id: "group.smoke_*"
+    - entity_id: "group.water_*"
   exclude:
     - entity_id: "group.smoke_all"
+    - entity_id: "group.water_all"

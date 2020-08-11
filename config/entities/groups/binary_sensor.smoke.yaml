@@ -8,4 +8,4 @@ smoke_living_room:
   name: Living room
   icon: mdi:smoke-detector
   entities:
-    - binary_sensor.fire_36
+    - binary_sensor.smoke_sensor

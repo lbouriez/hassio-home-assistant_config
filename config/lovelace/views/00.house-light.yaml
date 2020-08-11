@@ -12,6 +12,7 @@ cards:
     cards: 
       - type: custom:banner-card
         background: "#EDE7B0"
+        color: "#FFFFFF"
         heading: "🛋️ Living room"
         link: /lovelace/areas.living_room
         entities:
@@ -19,8 +20,21 @@ cards:
             name: Lights
           - entity: light.christmas_group
             name: 🎄 lights
-          - entity: sensor.group_temperature_living_room
-            name: Temperature
+          - entity: light.table_spots
+            map_state:
+              "off":
+                name: Desktop
+                value: mdi:lightbulb-on
+                action:
+                  service: light.turn_on
+                  entity_id: light.table_spots
+                  brightness_pct: 100
+              "on":
+                name: Desktop
+                value: mdi:lightbulb-off
+                action:
+                  service: light.turn_off
+                  entity_id: light.table_spots
           - entity: scene.living_room_ambiance_tv
             name: TV light
             value: mdi:projector-screen
@@ -40,13 +54,15 @@ cards:
                 action:
                   service: vacuum.return_to_base
                   entity_id: vacuum.living_room
-          - entity: sensor.group_humidity_living_room
+          - entity: sensor.group_temperature_living_room
+            name: Temperature
           - entity: climate.living_room
           - entity: media_player.sonos_living_room
             name: Sonos
       - type: custom:banner-card
         heading: "🍳 Kitchen"
         background: "#57B07A"
+        color: "#FFFFFF"
         link: /lovelace/areas.kitchen
         entities:
           - entity: light.kitchen_group
@@ -57,20 +73,21 @@ cards:
       - type: custom:banner-card
         heading: "🚨 Security"
         background: "#dfdfdf"
+        color: "#FFFFFF"
         row_size: 4
         link: /lovelace/house.security
         entities:
-          - entity: alarm_control_panel.ring_alarm
+          - entity: alarm_control_panel.verdun_alarm
             name: Alarm away
             action:
               service: alarm_control_panel.alarm_arm_away
             when: disarmed
-          - entity: alarm_control_panel.ring_alarm
+          - entity: alarm_control_panel.verdun_alarm
             name: Alarm home
             action:
               service: alarm_control_panel.alarm_arm_home
             when: disarmed
-          - entity: alarm_control_panel.ring_alarm
+          - entity: alarm_control_panel.verdun_alarm
             name: Disarm
             action:
               service: alarm_control_panel.alarm_disarm
@@ -99,6 +116,7 @@ cards:
       - type: custom:banner-card
         heading: "🛏️ Bedroom"
         background: "#ed9a73"
+        color: "#FFFFFF"
         link: /lovelace/areas.bedrooms.main
         row_size: 3
         entities:
@@ -114,6 +132,7 @@ cards:
       - type: custom:banner-card
         heading: "🛁 Bathroom"
         background: "#B0C2ED"
+        color: "#FFFFFF"
         link: /lovelace/areas.bathroom
         entities:
           - entity: light.bathroom_group
@@ -130,6 +149,7 @@ cards:
       - type: custom:banner-card
         heading: "🚪 Entrance"
         background: "#99d8d0"
+        color: "#FFFFFF"
         link: /lovelace/areas.entrance
         row_size: 4
         entities:
@@ -155,6 +175,7 @@ cards:
       - type: custom:banner-card
         heading: "🍖 Balcony"
         background: "#fff1ac"
+        color: "#FFFFFF"
         row_size: 2
         link: /lovelace/areas.balcony
         entities:
@@ -164,6 +185,7 @@ cards:
       - type: custom:banner-card
         heading: "👫 Guests"
         background: "#C07373"
+        color: "#FFFFFF"
         link: /lovelace/areas.bedrooms.guests
         entities:
           - entity: light.bedroom_guests_group

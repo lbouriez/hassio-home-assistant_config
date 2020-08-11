@@ -5,4 +5,4 @@ sensors:
     unit_of_measurement: '%'
     icon_template: mdi:water-percent
     value_template: >-
-      {{ ((states('sensor.humidity_39')|float) / 1) | round(2) }}
+      {{ ((states('sensor.bedroom_temperature_2')|float) / 1) | round(2) }}

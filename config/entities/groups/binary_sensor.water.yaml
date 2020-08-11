@@ -9,10 +9,10 @@ water_entrance:
   name: Entrance
   icon: mdi:water
   entities:
-    - binary_sensor.water_44 # Washing machine
+    - binary_sensor.washing_machine_water_sensor # Washing machine
 
 water_bathroom:
   name: Bathroom
   icon: mdi:water
   entities:
-    - binary_sensor.water_16 # Bathroom
+    - binary_sensor.bathroom_water # Bathroom

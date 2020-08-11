@@ -3,5 +3,5 @@ name: Kitchen group dimmable
 entities:
   - light.kitchen_bake_left
   - light.kitchen_bake_right
-  - light.kitchen_led_right
+  - light.dimmable_light_18
   - light.kitchen_spots

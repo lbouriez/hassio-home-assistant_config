@@ -5,5 +5,5 @@ sensors:
     unit_of_measurement: '°C'
     icon_template: mdi:oil-temperature
     value_template: >-
-      {{ ((states('sensor.slave_livingroom_living_room_mi_temperature_temperature')|float + states('sensor.temperature_30')|float) / 2) | round(2) }}
-# With blink=> {{ ((states('sensor.slave_livingroom_living_room_mi_temperature_temperature')|float + states('sensor.temperature_30')|float + states('sensor.blink_890_510_485_temperature')|float) / 3) | round(2) }}
+      {{ ((states('sensor.slave_livingroom_living_room_mi_temperature_temperature')|float + states('sensor.living_room_temperature')|float) / 2) | round(2) }}
+# With blink=> {{ ((states('sensor.slave_livingroom_living_room_mi_temperature_temperature')|float + states('sensor.living_room_temperature')|float + states('sensor.blink_890_510_485_temperature')|float) / 3) | round(2) }}

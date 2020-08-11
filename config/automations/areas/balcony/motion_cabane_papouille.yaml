@@ -1,0 +1,14 @@
+alias: Balcony - Motion Cabane Papouille
+trigger:
+  - platform: state
+    entity_id: group.motion_balcony_cabane
+    to: 'on'
+action:
+  - service: switch.turn_on
+    entity_id: switch.camera_trigger_picture_balcony_cabane
+  - service: script.notify
+    data:
+      notify_id: laurent
+      priority: 0
+      title: "Information"
+      message: "Mouvement in Papouille's shack"

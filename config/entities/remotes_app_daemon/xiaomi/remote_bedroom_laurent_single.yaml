@@ -11,7 +11,7 @@ action:
     data:
       entity_id: 'light.house_group'
   - service: alarm_control_panel.alarm_arm_home
-    entity_id: alarm_control_panel.ring_alarm
+    entity_id: alarm_control_panel.verdun_alarm
   - condition: time
     after: '08:00:00'
   - delay:

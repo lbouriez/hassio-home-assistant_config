@@ -1,10 +1,10 @@
 alias: Living room - Vacuum start when away
 trigger:
   - platform: state
-    entity_id: alarm_control_panel.ring_alarm
+    entity_id: alarm_control_panel.verdun_alarm
     to: 'armed_away'
   - platform: time
-    at: '17:00:00'
+    at: '08:20:00'
 condition:
   condition: and
   conditions:

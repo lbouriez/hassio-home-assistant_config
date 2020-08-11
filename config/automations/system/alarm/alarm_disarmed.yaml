@@ -1,0 +1,9 @@
+alias: Alarm - Actions when alarm disabled
+initial_state: True
+trigger:
+  - platform: state
+    entity_id: alarm_control_panel.verdun_alarm
+    to: 'disarmed'
+action:
+  - service: switch.turn_off
+    entity_id: switch.alarm_toggle_away

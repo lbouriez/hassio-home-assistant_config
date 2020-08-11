@@ -2,12 +2,12 @@ type: custom:decluttering-card
 template: monitoring
 variables:
   - title: 'Syno monitoring'
-  - graph1_entity: 'synology_cpu_load_total'
+  - graph1_entity: 'synology_4b_cpu_load_total'
   - graph2_entity: 'unavailable'
-  - bar1_entity: 'synology_volume_used_volume_1'
+  - bar1_entity: 'synology_4b_volume_1_used_space'
   - bar1_color: '#00ba6a'
-  - bar2_entity: 'synology_memory_usage_real'
+  - bar2_entity: 'sensor.synology_4b_memory_usage_real'
   - other_entities:
-    - sensor.synology_status_volume_1
-    - sensor.synology_used_space_volume_1
-    - sensor.synology_network_up
+    - sensor.synology_4b_volume_1_status
+    - sensor.synology_4b_volume_1_volume_used
+    - sensor.synology_4b_network_up

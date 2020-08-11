@@ -18,3 +18,7 @@ action:
       seconds: 15
   - service: switch.turn_on
     entity_id: switch.camera_trigger_picture_balcony
+  - delay:
+      seconds: 15
+  - service: switch.turn_on
+    entity_id: switch.camera_trigger_picture_balcony_cabane

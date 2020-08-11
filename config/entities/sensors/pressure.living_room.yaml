@@ -1,0 +1,8 @@
+platform: template
+sensors:
+  group_pressure_living_room:
+    friendly_name: "Living room"
+    unit_of_measurement: 'hPa'
+    icon_template: mdi:thermometer
+    value_template: >-
+      {{ ((states('sensor.living_room_temperature_3')|float) / 1) | round(2) }}

@@ -8,10 +8,10 @@ condition:
   condition: or
   conditions:
     - condition: state
-      entity_id: 'alarm_control_panel.ring_alarm'
+      entity_id: 'alarm_control_panel.verdun_alarm'
       state: 'armed_away'
     - condition: state
-      entity_id: 'alarm_control_panel.ring_alarm'
+      entity_id: 'alarm_control_panel.verdun_alarm'
       state: 'armed_home'
 action:
   - event: event_camera_blink_trigger_picture

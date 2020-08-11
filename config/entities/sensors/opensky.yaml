@@ -1,0 +1,4 @@
+# https://blog.swakes.co.uk/home-assistant-opensky-integration-whos-flying-above-your-house/
+platform: opensky
+name: OpenSky  # Optional
+radius: 2 # Radius of region to monitor (uses default HA location)

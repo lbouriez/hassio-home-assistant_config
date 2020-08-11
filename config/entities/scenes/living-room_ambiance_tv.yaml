@@ -2,15 +2,13 @@
   entities:
     light.living_room_spots: off
     light.table_spots: off
+    light.livingcolors: off
+    light.mirror_living_room: off
     light.tv_led_1:
       state: on
       rgb_color: [255,230,152]
-      brightness: 125
+      brightness: 70
     light.tv_led_2:
       state: on
       rgb_color: [255,230,152]
-      brightness: 125
-    light.livingcolors_1:
-      state: on
-      rgb_color: [255,230,152]
-      brightness: 125
+      brightness: 70

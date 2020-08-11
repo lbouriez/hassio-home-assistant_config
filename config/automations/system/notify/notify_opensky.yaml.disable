@@ -1,0 +1,16 @@
+alias: Entities - Opensky Planes around the house
+initial_state: True
+trigger:
+  - platform: event
+    event_type: opensky_entry
+condition:
+  - condition: state
+    entity_id: 'group.family'
+    state: 'not_home'
+action:
+  - service: script.notify
+    data:
+      notify_id: laurent
+      priority: 0
+      title: "Information"
+      message: 'There is a flight around the house: {{ trigger.event.data.callsign }}'

@@ -1,0 +1,12 @@
+bird-of-paradise:
+  sensors:
+    moisture: sensor.slave_livingroom_bird_of_paradise_moisture
+    battery: sensor.slave_livingroom_bird_of_paradise_battery
+    temperature: sensor.slave_livingroom_bird_of_paradise_temperature
+    conductivity: sensor.slave_livingroom_bird_of_paradise_conductivity
+    brightness: sensor.slave_livingroom_bird_of_paradise_light_intensity
+  min_moisture: 20
+  max_moisture: 60
+  min_battery: 17
+  min_conductivity: 350
+  min_temperature: 15

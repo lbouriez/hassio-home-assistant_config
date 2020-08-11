@@ -10,7 +10,7 @@ condition:
   condition: and
   conditions:
     - condition: template
-      value_template: "{{ not is_state('alarm_control_panel.ring_alarm', 'armed_away') }}"
+      value_template: "{{ not is_state('alarm_control_panel.verdun_alarm', 'armed_away') }}"
     - condition: template
       value_template: "{{ (trigger.entity_id == 'group.motion_bathroom') and is_state('light.bathroom_group', 'off') }}"
     - condition: time

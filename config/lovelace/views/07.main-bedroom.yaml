@@ -54,7 +54,7 @@ cards:
         title: 'Sensors'
         show_header_toggle: false
         entities:
-          - binary_sensor.openclose_15
+          - group.safe_bedroom
           - sensor.group_light_level_bedroom
           - sensor.group_temperature_bedroom
           - sensor.group_humidity_bedroom

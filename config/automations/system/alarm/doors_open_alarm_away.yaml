@@ -8,14 +8,14 @@ condition:
   condition: and
   conditions:
     - condition: state
-      entity_id: 'alarm_control_panel.ring_alarm'
+      entity_id: 'alarm_control_panel.verdun_alarm'
       state: 'armed_away'
 action:
   # We wait 20 seconds to see if the alarm still enable
   - delay:
       seconds: 20
   - condition: state
-    entity_id: 'alarm_control_panel.ring_alarm'
+    entity_id: 'alarm_control_panel.verdun_alarm'
     state: 'armed_away'
   - event: event_camera_blink_trigger_picture
   - service: script.notify

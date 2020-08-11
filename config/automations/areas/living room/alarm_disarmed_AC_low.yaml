@@ -1,0 +1,26 @@
+alias: Living room - A/C switch low fan
+initial_state: True
+trigger:
+  - platform: state
+    entity_id: alarm_control_panel.verdun_alarm
+    to: 'disarmed'
+condition:
+  condition: and
+  conditions:
+    - condition: template
+      value_template: "{{ state_attr('weather.dark_sky', 'temperature') | float >= 25 }}"
+    - condition: state
+      entity_id: sensor.season
+      state:
+        - 'summer'
+        - 'spring'
+        - 'autumn'
+action:
+  - service: climate.set_fan_mode
+    data:
+      entity_id:  climate.living_room
+      fan_mode: 'low'
+  - service:  climate.set_swing_mode
+    data:
+      entity_id:  climate.living_room
+      swing_mode: 'stopped'

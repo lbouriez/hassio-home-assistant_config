@@ -2,7 +2,7 @@ bedroom_safe:
   name: Safe alert
   message: The safe is open since a few minutes. Close it !
   done_message: The safe is close
-  entity_id: binary_sensor.openclose_15
+  entity_id: group.safe_bedroom
   state: 'on'
   repeat: 2
   can_acknowledge: true

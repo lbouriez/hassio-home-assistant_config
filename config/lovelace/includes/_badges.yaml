@@ -1,6 +1,15 @@
 # No more than 6 for the mobile view to be good
 - type: entity-filter
   entities:
+    - entity: binary_sensor.remote_ui
+      name: 'Remote HA'
+  state_filter:
+    - "initializing"
+    - "connecting"
+    - "reconnecting"
+    - "disconnected"
+- type: entity-filter
+  entities:
     - entity: group.door_all
       name: 'Doors'
   state_filter:
@@ -20,7 +29,7 @@
 - entity: weather.dark_sky
   name: 'Temperature'
 # Alarms
-- entity: alarm_control_panel.ring_alarm
+- entity: alarm_control_panel.verdun_alarm
 - entity: alarm_control_panel.alexa_guard_851bb
   name: 'Guard'
 - entity: alarm_control_panel.blink_home

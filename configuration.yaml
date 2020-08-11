@@ -16,9 +16,9 @@ homeassistant:
     - type: homeassistant
     - type: trusted_networks
       trusted_networks:
-        - 192.168.1.0/24
+        - 192.168.10.0/24
       trusted_users:
-        192.168.1.0/24:
+        192.168.10.0/24:
           - !secret entitie_person_laurent_user_id
           - !secret entitie_person_giulia_user_id
   # Load packages
@@ -28,5 +28,6 @@ homeassistant:
       name: Authenticator app
   whitelist_external_dirs:
     - /config/captures
-
+  media_dirs:
+    capture: /config/captures
 zone: !include_dir_list config/entities/zones

@@ -1,7 +1,7 @@
 plants:
   name: All plants
   entities:
-    - plant.bamboo
-    - plant.fuchsia
-    - plant.pachira
-    - plant.caisse_basilic
+    - plant.bonsai_japanese
+    # - plant.fuchsia
+    - plant.bonsai_ficus
+    - plant.lavande

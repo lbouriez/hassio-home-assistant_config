@@ -1,7 +1,12 @@
 # https://github.com/peterbuga/HASS-sonoff-ewelink
+# sonoff:
+#   username: !secret integration_sonoff_username
+#   password: !secret integration_sonoff_password
+#   api_region: 'us'
+#   entity_prefix: True
+#   debug: False
+# https://github.com/AlexxIT/SonoffLAN
 sonoff:
   username: !secret integration_sonoff_username
   password: !secret integration_sonoff_password
-  api_region: 'us'
-  entity_prefix: True
-  debug: False
+  mode: cloud

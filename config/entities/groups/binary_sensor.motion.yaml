@@ -28,28 +28,28 @@ motion_bedroom:
   name: Bedroom
   icon: mdi:motion-sensor
   entities:
-    - binary_sensor.presence_45 # Aqara Bedroom
+    - binary_sensor.bedroom_motion_sensor # Aqara Bedroom
 
 motion_guests_bedroom:
   name: Guests bedroom
   icon: mdi:motion-sensor
   entities:
     - binary_sensor.motion_detector_48836 # Ring Bedroom guests
-    - binary_sensor.presence_27 # Hue
+    - binary_sensor.bedroom_guests_motion # Hue
 
 motion_entrance:
   name: Entrance
   icon: mdi:motion-sensor
   entities:
     - binary_sensor.blink_entrance_motion_detected # Blink entrance
-    - binary_sensor.presence_22 # Hue
+    - binary_sensor.entrance_motion # Hue
 
 motion_bathroom:
   name: Bathroom
   icon: mdi:motion-sensor
   entities:
-    - binary_sensor.bathroom_motion_deconz # Hue
-    - binary_sensor.shower_motion_deconz # Hue
+    - binary_sensor.bathroom_motion # Hue
+    - binary_sensor.shower_motion # Hue
 
 motion_balcony:
   name: Balcony
@@ -57,8 +57,14 @@ motion_balcony:
   entities:
     - binary_sensor.blink_balcony_motion_detected # Blink balcony
 
+motion_balcony_cabane:
+  name: Cabane Papouille
+  icon: mdi:motion-sensor
+  entities:
+    - binary_sensor.blink_cabane_papouille_motion_detected # Blink cabane papouille
+
 motion_kitchen:
   name: Kitchen
   icon: mdi:motion-sensor
   entities:
-    - binary_sensor.presence_8 # Aqara
+    - binary_sensor.kitchen # Aqara

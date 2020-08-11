@@ -1,5 +1,5 @@
 tplink:
-  discovery: false
+  discovery: true
   switch:
     - host: !secret integration_tplink_switch_hs200_balcony
     - host: !secret integration_tplink_switch_hs105_ventilation

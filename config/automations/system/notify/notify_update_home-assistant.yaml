@@ -1,0 +1,18 @@
+alias: System - Home-assistant update alert
+initial_state: True
+trigger:
+  - platform: state
+    entity_id: binary_sensor.updater
+    from: 'off'
+    to: 'on'
+action:
+  - service: script.notify
+    data:
+      notify_id: laurent
+      priority: 0
+      title: "New Home Assistant Release"
+      persistent_notification: True
+      persistent_notification_id: hassio_upgrade
+      message: >-
+        The {{ state_attr('binary_sensor.updater', 'newest_version') }} version of Home Assistant is pending update!
+        {{ state_attr('binary_sensor.updater', 'release_notes') }}

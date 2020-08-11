@@ -26,6 +26,7 @@ themes/
 .spotify-token-cache
 .tradfri_psk.conf
 .uuid
+.sonoff.json
 core
 html5_push_registrations.conf
 known_devices.yaml

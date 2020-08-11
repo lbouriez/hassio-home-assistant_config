@@ -4,6 +4,7 @@ logger:
     homeassistant.core: warning
     homeassistant.components.mqtt: warning
     homeassistant.components.life360: fatal
+    # miio.miioprotocol: debug
     # pynetgear: debug
     # homeassistant.components.sensor.miflora: debug
     # miflora.miflora_poller: debug

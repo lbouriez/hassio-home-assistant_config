@@ -1,8 +1,0 @@
-speedtestdotnet:
-  server_id: 22079
-  scan_interval:
-    days: 0
-    hours: 1
-    minutes: 0
-    seconds: 0
-    milliseconds: 0

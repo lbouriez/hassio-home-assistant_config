@@ -5,4 +5,4 @@ sensors:
     unit_of_measurement: '°C'
     icon_template: mdi:oil-temperature
     value_template: >-
-      {{ ((states('sensor.bathroom_temperature_deconz')|float + states('sensor.shower_temperature_deconz')|float) / 2) | round(2) }}
+      {{ ((states('sensor.bathroom_motion')|float + states('sensor.shower_motion')|float) / 2) | round(2) }}

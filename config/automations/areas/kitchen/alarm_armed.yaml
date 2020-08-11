@@ -1,10 +1,10 @@
 alias: Kitchen - Alarm armed
 trigger:
   - platform: state
-    entity_id: alarm_control_panel.ring_alarm
+    entity_id: alarm_control_panel.verdun_alarm
     to: 'armed_away'
   - platform: state
-    entity_id: alarm_control_panel.ring_alarm
+    entity_id: alarm_control_panel.verdun_alarm
     to: 'armed_home'
 action:
   service: light.turn_off

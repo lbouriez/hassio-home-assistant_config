@@ -49,17 +49,19 @@ cards:
   # Col 2
   - type: vertical-stack
     cards:
-      # Bamboo
+      # Petit bonsai
       - type: custom:decluttering-card
         template: mi_flora
         variables:
-          - entity: 'slave_livingroom_living_room_bamboo'
-          - title: 'Bamboo'
+          - entity: 'bonsai_japanese'
+          - title: 'Bonsai Japanese'
           - image: 'mi_flora_bamboo.jpg'
-          - min_moisture: 20
-          - max_moisture: 60
-          - min_conductivity: 300
-          - min_temperature: 12
+      - type: custom:decluttering-card
+        template: mi_flora
+        variables:
+          - entity: 'bird_of_paradise'
+          - title: 'Bird of Paradise'
+          - image: 'mi_flora_bird-of-paradise.jpg'
       # Vacuum
       - !include ../includes/areas/living room/vacuum.yaml
       # AC
@@ -70,17 +72,13 @@ cards:
   # Col 3
   - type: vertical-stack
     cards:
-      # Pachira
+      # Bonsai Ficus
       - type: custom:decluttering-card
         template: mi_flora
         variables:
-          - entity: 'slave_livingroom_pachira'
-          - title: 'Pachira'
+          - entity: 'bonsai_ficus'
+          - title: 'Bonsai Ficus'
           - image: 'mi_flora_pachira.jpg'
-          - min_moisture: 20
-          - max_moisture: 60
-          - min_conductivity: 300
-          - min_temperature: 12
       # Sensors
       - type: entities
         title: 'Sensors'
@@ -88,7 +86,7 @@ cards:
         entities:
           - sensor.group_temperature_living_room
           - sensor.group_humidity_living_room
-          - sensor.pressure_35
+          - sensor.group_pressure_living_room
           - group.smoke_living_room
           - type: divider
           - group.door_balcony

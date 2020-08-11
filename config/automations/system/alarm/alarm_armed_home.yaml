@@ -2,7 +2,7 @@ alias: Alarm - Actions when alarm enabled home
 initial_state: True
 trigger:
   - platform: state
-    entity_id: alarm_control_panel.ring_alarm
+    entity_id: alarm_control_panel.verdun_alarm
     from: 'disarmed'
     to: 'armed_home'
 action:

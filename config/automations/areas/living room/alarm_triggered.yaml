@@ -2,7 +2,7 @@ alias: Living room - Alarm triggered
 initial_state: True
 trigger:
   - platform: state
-    entity_id: alarm_control_panel.ring_alarm
+    entity_id: alarm_control_panel.verdun_alarm
     to: 'triggered'
 action:
   - service: light.turn_on

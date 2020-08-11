@@ -1,12 +1,16 @@
 alias: Living room - Vacuum disable when arriving
 trigger:
   platform: state
-  entity_id: alarm_control_panel.ring_alarm
+  entity_id: alarm_control_panel.verdun_alarm
   to: 'disarmed'
 condition:
   condition: state
   entity_id: vacuum.living_room
   state: 'cleaning'
 action:
-  service: vacuum.return_to_base
-  entity_id: vacuum.living_room
+  - service: vacuum.stop
+    entity_id: vacuum.living_room
+  - delay:
+      seconds: 5
+  - service: vacuum.return_to_base
+    entity_id: vacuum.living_room
