@@ -20,21 +20,21 @@ cards:
             name: Lights
           - entity: light.christmas_group
             name: 🎄 lights
-          - entity: light.table_spots
+          - entity: light.living_room_spots
             map_state:
               "off":
                 name: Desktop
                 value: mdi:lightbulb-on
                 action:
                   service: light.turn_on
-                  entity_id: light.table_spots
+                  entity_id: light.living_room_spots
                   brightness_pct: 100
               "on":
                 name: Desktop
                 value: mdi:lightbulb-off
                 action:
                   service: light.turn_off
-                  entity_id: light.table_spots
+                  entity_id: light.living_room_spots
           - entity: scene.living_room_ambiance_tv
             name: TV light
             value: mdi:projector-screen

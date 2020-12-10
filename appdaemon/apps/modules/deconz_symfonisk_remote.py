@@ -27,7 +27,7 @@ import appdaemon.plugins.hass.hassapi as hass
 CHANGE_VOLUME_TIME_MAX = 10
 # Define the interval between
 # each call to change volume, smaller = faster
-CHANGE_VOLUME_INTERVAL = 1
+CHANGE_VOLUME_INTERVAL = 0.75
 
 class DeconzSymfoniskRemote(hass.Hass):
     """ [summary]

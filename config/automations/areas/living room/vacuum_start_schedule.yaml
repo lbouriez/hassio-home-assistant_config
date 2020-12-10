@@ -1,0 +1,19 @@
+alias: Living room - Vacuum start everyday
+trigger:
+  - platform: time
+    at: '08:20:00'
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: 'binary_sensor.workday_sensor'
+      state: 'on'
+    - condition: template
+      value_template: '{{ now().day != states.automation.living_room_vacuum_start_when_away.attributes.last_triggered.day | default(0) }}'
+action:
+  - service: vacuum.start
+    entity_id: vacuum.living_room
+  - service: vacuum.set_fan_speed
+    data:
+      entity_id: vacuum.living_room
+      fan_speed: 'Silent'

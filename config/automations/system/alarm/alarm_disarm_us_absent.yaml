@@ -1,18 +1,13 @@
-alias: Alarm - Actions when alarm disabled
+alias: Alarm - Actions when alarm disabled and us absent
 initial_state: True
 trigger:
   - platform: state
     entity_id: alarm_control_panel.verdun_alarm
     to: 'disarmed'
-condition:
-  condition: and
-  conditions:
-    - condition: state
-      entity_id: 'alarm_control_panel.verdun_alarm'
-      state: 'disarmed'
-    - condition: state
-      entity_id: 'group.family'
-      state: 'home'
 action:
-  - service: switch.turn_off
+  - delay: 00:00:15
+  - condition: state
+    entity_id: 'group.family'
+    state: 'not_home'
+  - service: switch.turn_on
     entity_id: switch.alarm_toggle_blink

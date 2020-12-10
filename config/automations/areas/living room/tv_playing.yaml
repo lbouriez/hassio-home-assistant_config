@@ -12,11 +12,15 @@ trigger:
     entity_id: media_player.living_room_tv
     from: 'paused'
     to: 'playing'
+  - platform: state
+    entity_id: media_player.living_room_tv
+    from: 'idle'
+    to: 'playing'
 condition:
   condition: and
   conditions:
     - condition: time
-      after: '19:00:00'
+      after: '20:00:00'
     - condition: state
       entity_id: input_boolean.guest_mode
       state: 'off'

@@ -8,3 +8,4 @@ tplink:
     - host: !secret integration_tplink_switch_hs105_vava_base
     - host: !secret integration_tplink_switch_hs103_christmas
     - host: !secret integration_tplink_switch_hs103_2
+    - host: !secret integration_tplink_prise_kp303
