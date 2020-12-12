@@ -1,0 +1,11 @@
+platform: group
+name: House inside group
+entities:
+  - light.bathroom_group
+  - light.bedroom_group
+  - light.bedroom_guests_group
+  - light.corridor_group
+  - light.entrance_group
+  - light.kitchen_group
+  - light.living_room_group
+  # - light.christmas_group

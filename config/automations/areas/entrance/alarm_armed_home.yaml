@@ -13,5 +13,11 @@ condition:
       entity_id: sensor.season
       state: 'autumn'
 action:
+  - condition: or
+    conditions:
+      - condition: time
+        after: '20:00:00'
+      - condition: time
+        before: '06:00:00'
   - service: switch.turn_off
     entity_id: switch.ventilation

@@ -2,11 +2,4 @@ platform: group
 name: House group
 entities:
   - light.balcony_group
-  - light.bathroom_group
-  - light.bedroom_group
-  - light.bedroom_guests_group
-  - light.corridor_group
-  - light.entrance_group
-  - light.kitchen_group
-  - light.living_room_group
-  # - light.christmas_group
+  - light.all_inside_group
